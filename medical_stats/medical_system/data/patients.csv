@@ -1,0 +1,31 @@
+patient_id,name,age,gender,blood_type,medical_condition,date_of_admission,doctor,hospital,insurance_provider,billing_amount,room_number,admission_type,discharge_date,medication,test_results
+P001,김민수,45,Male,A+,Diabetes,2025-12-15,Dr. 박지훈,서울대병원,국민건강보험,1500000.0,302,Emergency,,Metformin,Normal
+P002,이영희,32,Female,B+,Asthma,2025-12-20,Dr. 김수진,연세세브란스,삼성생명,850000.0,215,Elective,2025-12-28,Ventolin,Normal
+P003,박철수,58,Male,O-,Hypertension,2025-12-22,Dr. 이민호,서울아산병원,현대해상,1200000.0,401,Urgent,,Amlodipine,Abnormal
+P004,정수연,27,Female,AB+,Obesity,2025-12-25,Dr. 최유리,삼성서울병원,국민건강보험,650000.0,108,Elective,2026-01-02,Orlistat,Normal
+P005,최동훈,63,Male,A-,Cancer,2025-12-28,Dr. 강민재,국립암센터,메리츠화재,5500000.0,512,Emergency,,Chemotherapy,Abnormal
+P006,한지민,41,Female,B-,Arthritis,2025-12-30,Dr. 박지훈,서울대병원,국민건강보험,980000.0,203,Elective,,Ibuprofen,Normal
+P007,윤서준,35,Male,O+,Diabetes,2026-01-02,Dr. 김수진,연세세브란스,삼성생명,1350000.0,310,Urgent,,Insulin,Abnormal
+P008,장미래,29,Female,A+,Asthma,2026-01-03,Dr. 이민호,서울아산병원,현대해상,720000.0,118,Elective,,Symbicort,Normal
+P009,송태양,52,Male,AB-,Hypertension,2026-01-04,Dr. 최유리,삼성서울병원,국민건강보험,1100000.0,405,Emergency,,Losartan,Inconclusive
+P010,임하늘,38,Female,B+,Cancer,2026-01-05,Dr. 강민재,국립암센터,메리츠화재,4800000.0,520,Emergency,,Radiation,Abnormal
+P011,강지우,44,Male,O+,Obesity,2026-01-05,Dr. 박지훈,서울대병원,국민건강보험,550000.0,112,Elective,,Diet Plan,Normal
+P012,오수빈,56,Female,A-,Arthritis,2026-01-06,Dr. 김수진,연세세브란스,삼성생명,890000.0,220,Urgent,,Methotrexate,Normal
+P013,신준혁,67,Male,B-,Diabetes,2026-01-06,Dr. 이민호,서울아산병원,현대해상,1650000.0,315,Emergency,,Glipizide,Abnormal
+P014,권예진,24,Female,AB+,Asthma,2026-01-07,Dr. 최유리,삼성서울병원,국민건강보험,480000.0,125,Elective,,Montelukast,Normal
+P015,조민기,71,Male,O-,Hypertension,2026-01-07,Dr. 강민재,국립암센터,메리츠화재,1450000.0,410,Urgent,,Lisinopril,Inconclusive
+P016,배소영,33,Female,A+,Obesity,2026-01-07,Dr. 박지훈,서울대병원,국민건강보험,620000.0,130,Elective,,Phentermine,Normal
+P017,류현우,48,Male,B+,Cancer,2026-01-08,Dr. 김수진,연세세브란스,삼성생명,6200000.0,525,Emergency,,Surgery,Abnormal
+P018,문채원,39,Female,O+,Arthritis,2026-01-08,Dr. 이민호,서울아산병원,현대해상,920000.0,208,Elective,,Celebrex,Normal
+P019,안재현,55,Male,AB-,Diabetes,2026-01-08,Dr. 최유리,삼성서울병원,국민건강보험,1380000.0,320,Urgent,,Januvia,Normal
+P020,황보름,31,Female,A-,Hypertension,2026-01-09,Dr. 강민재,국립암센터,메리츠화재,780000.0,415,Emergency,,Hydrochlorothiazide,Abnormal
+P021,정우성,62,Male,B-,Asthma,2026-01-09,Dr. 박지훈,서울대병원,국민건강보험,950000.0,135,Urgent,,Advair,Normal
+P022,김태희,28,Female,O-,Obesity,2026-01-09,Dr. 김수진,연세세브란스,삼성생명,580000.0,140,Elective,,Contrave,Normal
+P023,이병헌,59,Male,A+,Cancer,2026-01-09,Dr. 이민호,서울아산병원,현대해상,7500000.0,530,Emergency,,Immunotherapy,Abnormal
+P024,송혜교,36,Female,AB+,Arthritis,2026-01-09,Dr. 최유리,삼성서울병원,국민건강보험,1050000.0,212,Elective,,Humira,Inconclusive
+P025,전지현,42,Female,B+,Diabetes,2026-01-09,Dr. 강민재,국립암센터,메리츠화재,1420000.0,325,Urgent,,Trulicity,Normal
+P026,현빈,50,Male,O+,Hypertension,2026-01-09,Dr. 박지훈,서울대병원,국민건강보험,1180000.0,420,Emergency,,Norvasc,Abnormal
+P027,손예진,34,Female,A-,Asthma,2026-01-09,Dr. 김수진,연세세브란스,삼성생명,690000.0,145,Elective,,Flovent,Normal
+P028,공유,47,Male,B-,Obesity,2026-01-09,Dr. 이민호,서울아산병원,현대해상,720000.0,150,Elective,,Saxenda,Normal
+P029,김고은,30,Female,AB-,Cancer,2026-01-09,Dr. 최유리,삼성서울병원,국민건강보험,5900000.0,535,Emergency,,Targeted Therapy,Abnormal
+P030,조인성,53,Male,O-,Arthritis,2026-01-09,Dr. 강민재,국립암센터,메리츠화재,1020000.0,218,Urgent,,Enbrel,Normal
