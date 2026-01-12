@@ -1,2 +1,5 @@
 # KDT12th
-knu_kdt_mini_porject
+'''
+경북대학교 KDT 12기 
+미니 프로젝트
+'''
