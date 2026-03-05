@@ -1,0 +1,62 @@
+============================================================
+1. Esports Market Status (2024, US)
+============================================================
+  - Esports Revenue: $8,576.5M
+  - Gaming Revenue: $127.07B
+  - Esports Viewers: 149.4M
+  - Pro Player Count: 485
+
+============================================================
+2. Esports Player Prize Distribution
+============================================================
+  - Mean Prize: $397,793.22
+  - Median: $168,328.40
+  - Maximum: $6,952,596.58
+  - Std Dev: $690,849.21
+  - Top 10% Threshold: $899,293.08
+
+============================================================
+3. Total Prize by Game - TOP 10
+============================================================
+  - Dota 2: $360,461,163.42 (1934 tournaments)
+  - Fortnite: $191,012,698.69 (2291 tournaments)
+  - Counter-Strike: Global Offensive: $162,489,706.76 (7033 tournaments)
+  - League of Legends: $113,596,024.63 (3000 tournaments)
+  - Arena of Valor: $98,746,138.92 (179 tournaments)
+  - PLAYERUNKNOWN'S BATTLEGROUNDS Mobile: $87,322,954.82 (341 tournaments)
+  - PLAYERUNKNOWN’S BATTLEGROUNDS: $64,200,450.19 (631 tournaments)
+  - Rainbow Six Siege: $48,130,526.59 (568 tournaments)
+  - StarCraft II: $42,692,707.57 (7510 tournaments)
+  - Rocket League: $42,262,497.19 (4542 tournaments)
+
+============================================================
+4. Yearly Esports Prize Growth Rate
+============================================================
+  - 2011: $10.7M (+67.8%)
+  - 2012: $14.7M (+36.9%)
+  - 2013: $23.0M (+56.6%)
+  - 2014: $38.3M (+66.7%)
+  - 2015: $68.3M (+78.2%)
+  - 2016: $100.9M (+47.7%)
+  - 2017: $121.6M (+20.5%)
+  - 2018: $174.1M (+43.2%)
+  - 2019: $258.1M (+48.2%)
+  - 2020: $152.6M (-40.9%)
+  - 2021: $261.8M (+71.5%)
+  - 2022: $260.2M (-0.6%)
+  - 2023: $232.3M (-10.7%)
+  - 2024: $146.3M (-37.0%)
+
+============================================================
+5. NFL Salary vs Esports Prize Comparison
+============================================================
+  NFL Player Mean Salary: $2,250,829.53
+  NFL Player Median Salary: $690,000.00
+  Esports Player Mean Prize: $397,793.22
+  Esports Player Median Prize: $168,328.40
+
+============================================================
+6. Esports CAGR (Compound Annual Growth Rate)
+============================================================
+  - Period: 2010 - 2024
+  - CAGR: 25.05%
