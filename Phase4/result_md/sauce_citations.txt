@@ -1,0 +1,28 @@
+
+================================================================================
+📚 데이터 출처 인용 (APA 형식)
+================================================================================
+
+[1] FAOSTAT - 작물 생산량 (토마토, 고추)
+    FAO. (2024). FAOSTAT: Crops and livestock products.
+    Food and Agriculture Organization of the United Nations.
+    Retrieved from https://www.fao.org/faostat/en/#data/QCL
+
+[2] FAOSTAT - 축산물 생산량 (계란)
+    FAO. (2024). FAOSTAT: Livestock Primary.
+    Food and Agriculture Organization of the United Nations.
+    Retrieved from https://www.fao.org/faostat/en/#data/QL
+
+[3] FAOSTAT - 기온 변화
+    FAO. (2024). FAOSTAT: Temperature change on land.
+    Food and Agriculture Organization of the United Nations.
+    Retrieved from https://www.fao.org/faostat/en/#data/ET
+
+    Note: Based on NASA Goddard Institute for Space Studies (GISTEMP) data.
+
+[4] FAOSTAT - 무역 데이터
+    FAO. (2024). FAOSTAT: Crops and livestock products (Trade).
+    Food and Agriculture Organization of the United Nations.
+    Retrieved from https://www.fao.org/faostat/en/#data/TCL
+
+================================================================================
