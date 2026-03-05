@@ -1,0 +1,2 @@
+date,name,age,gender,height,weight,ap_hi,ap_lo,cholesterol,gluc,smoke,alco,active,bmi,risk_score
+2026-01-08 06:36,테스트,35,남성,175,70,120,80,1,1,0,0,1,22.9,15
