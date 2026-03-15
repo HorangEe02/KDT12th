@@ -1,0 +1,33 @@
+{
+  "best_params": {
+    "n_estimators": 442,
+    "max_depth": 4,
+    "learning_rate": 0.07251439567522225,
+    "min_child_weight": 4,
+    "subsample": 0.7946450361931856,
+    "colsample_bytree": 0.9299140927848994,
+    "reg_alpha": 0.0005509693050176569,
+    "reg_lambda": 0.05699112249243538,
+    "gamma": 5.067413464794525e-08
+  },
+  "best_cv_r2": 0.8849748979529604,
+  "test_r2_optuna": 0.9252801354585033,
+  "test_r2_baseline": 0.9396105565706492,
+  "test_rmse_optuna": 1.0932778373775993,
+  "cv_baseline": {
+    "mean": 0.8682120440324608,
+    "std": 0.04819555172833743
+  },
+  "cv_optuna": {
+    "mean": 0.8849748979529604,
+    "std": 0.030723914032324304
+  },
+  "n_trials": 100,
+  "sampler": "TPE",
+  "findings": {
+    "target_transform": "NOT_NEEDED",
+    "hurdle_model": "NOT_NEEDED",
+    "interaction_features": "NO_IMPROVEMENT",
+    "optuna_tpe": "CV_STABILITY_IMPROVED"
+  }
+}

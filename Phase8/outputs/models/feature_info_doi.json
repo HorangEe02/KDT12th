@@ -1,0 +1,58 @@
+{
+  "phase_a": {
+    "model_name": "Random Forest (Tuned)",
+    "test_r2": 0.2579,
+    "test_rmse": 3.4454,
+    "features": [
+      "Unit_Cost_USD",
+      "Reorder_Point",
+      "Safety_Stock",
+      "Lead_Time_Days",
+      "Order_Frequency_per_month",
+      "Supplier_OnTime_Pct",
+      "Category_Beverages",
+      "Category_Dairy",
+      "Category_Fresh Produce",
+      "Category_Frozen",
+      "Category_Household",
+      "Category_Meat",
+      "Category_Pantry",
+      "Category_Personal Care",
+      "Category_Seafood",
+      "ABC_B",
+      "ABC_C"
+    ],
+    "n_features": 17,
+    "excluded_features": {
+      "Quantity_On_Hand": "DOI = QOH/ADS → 타겟 산출 분자 (Leakage)",
+      "Avg_Daily_Sales": "DOI = QOH/ADS → 타겟 산출 분모 (Leakage)",
+      "Days_Since_Last_Order": "DOI와 상관 0.004 (무관)"
+    },
+    "leakage_note": "DOI ≈ QOH/ADS (97.2% 일치). QOH+ADS 포함시 R²=0.92 (Leakage). 제거후 R²≈0.25 (실질적)"
+  },
+  "phase_b": {
+    "algorithm": "K-Means",
+    "k": 3,
+    "silhouette_score": 0.2609320362810461,
+    "features": [
+      "Quantity_On_Hand",
+      "Reorder_Point",
+      "Safety_Stock",
+      "Days_of_Inventory",
+      "Order_Frequency_per_month",
+      "Lead_Time_Days",
+      "Supplier_OnTime_Pct"
+    ],
+    "n_features": 7,
+    "cluster_names": {
+      "0": "Light Stock (소량 재고)",
+      "1": "Bulk Mover (대량 고회전)",
+      "2": "High Buffer (고안전재고)"
+    },
+    "cluster_sizes": {
+      "0": 661,
+      "1": 250,
+      "2": 89
+    }
+  }
+}

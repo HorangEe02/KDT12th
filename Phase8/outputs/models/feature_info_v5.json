@@ -1,0 +1,73 @@
+{
+  "version": "v5",
+  "baseline_regression_features": [
+    "Unit_Cost_USD",
+    "Reorder_Point",
+    "Safety_Stock",
+    "Lead_Time_Days",
+    "Order_Frequency_per_month",
+    "Supplier_OnTime_Pct"
+  ],
+  "enhanced_regression_features": [
+    "Unit_Cost_USD",
+    "Reorder_Point",
+    "Safety_Stock",
+    "Lead_Time_Days",
+    "Order_Frequency_per_month",
+    "Supplier_OnTime_Pct",
+    "Demand_Variability",
+    "Supply_Risk",
+    "EOQ",
+    "Reorder_Urgency",
+    "RP_SS_Ratio"
+  ],
+  "baseline_cluster_features": [
+    "Quantity_On_Hand",
+    "Reorder_Point",
+    "Safety_Stock",
+    "Days_of_Inventory",
+    "Order_Frequency_per_month",
+    "Lead_Time_Days",
+    "Supplier_OnTime_Pct"
+  ],
+  "enhanced_cluster_features": [
+    "Quantity_On_Hand",
+    "Reorder_Point",
+    "Safety_Stock",
+    "Days_of_Inventory",
+    "Order_Frequency_per_month",
+    "Lead_Time_Days",
+    "Supplier_OnTime_Pct",
+    "Dynamic_ROP",
+    "Demand_Variability",
+    "EOQ",
+    "Supply_Risk",
+    "Available_Stock",
+    "RP_SS_Ratio"
+  ],
+  "optimal_k_baseline": 2,
+  "optimal_k_enhanced": 2,
+  "eoq_params": {
+    "ordering_cost": 50,
+    "holding_rate": 0.2
+  },
+  "phase_a_optuna": {
+    "model_file": "phase_a_best_model_v5_optuna.pkl",
+    "scaler_file": "phase_a_scaler_v5_optuna.pkl",
+    "results_file": "phase_a_optuna_results.json",
+    "cv_r2_mean": 0.885,
+    "cv_r2_std": 0.031,
+    "test_r2": 0.925,
+    "n_trials": 100,
+    "sampler": "TPE"
+  },
+  "notes": {
+    "added_derived_features": [
+      "Available_Stock",
+      "RP_SS_Ratio"
+    ],
+    "demand_variability_limitation": "CV range 0.52-0.56, low discriminative power",
+    "no_supplementary_data": true,
+    "imp7_findings": "target_transform/hurdle NOT_NEEDED; interaction NO_IMPROVEMENT; optuna CV_STABILITY_IMPROVED (std -36%)"
+  }
+}

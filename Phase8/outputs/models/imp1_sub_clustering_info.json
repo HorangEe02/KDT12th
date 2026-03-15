@@ -1,0 +1,25 @@
+{
+  "description": "Cluster 1 internal sub-clustering",
+  "optimal_k_sub": 2,
+  "hopkins_c1": 0.7660439818944526,
+  "silhouette_sub": 0.2522081449544671,
+  "sub_cluster_sizes": {
+    "0": 146,
+    "1": 36
+  },
+  "features": [
+    "Quantity_On_Hand",
+    "Reorder_Point",
+    "Safety_Stock",
+    "Days_of_Inventory",
+    "Order_Frequency_per_month",
+    "Lead_Time_Days",
+    "Supplier_OnTime_Pct",
+    "Dynamic_ROP",
+    "Demand_Variability",
+    "EOQ",
+    "Supply_Risk",
+    "Available_Stock",
+    "RP_SS_Ratio"
+  ]
+}

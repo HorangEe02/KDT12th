@@ -1,0 +1,42 @@
+# ──────────────────────────────────────
+# Phase8_mini - .gitignore
+# ──────────────────────────────────────
+
+# ── 휴지통 (백업/삭제 파일, 1.9GB) ──
+휴지통/
+
+# ── macOS 시스템 파일 ──
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# ── Python 캐시 ──
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# ── Jupyter Notebook 체크포인트 ──
+.ipynb_checkpoints/
+
+# ── 가상환경 ──
+venv/
+env/
+.venv/
+.env
+
+# ── IDE / Editor ──
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Claude 프로젝트 설정 ──
+.claude/
+
+# ── PDF 버전 README (md만 유지) ──
+README.pdf

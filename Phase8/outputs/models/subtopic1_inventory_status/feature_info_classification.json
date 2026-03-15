@@ -1,0 +1,51 @@
+{
+  "num_features": [
+    "Quantity_On_Hand",
+    "Reorder_Point",
+    "Safety_Stock",
+    "Unit_Cost_USD",
+    "Avg_Daily_Sales",
+    "Days_of_Inventory",
+    "Stock_Age_Days",
+    "Lead_Time_Days",
+    "Quantity_Reserved",
+    "Quantity_Committed",
+    "Days_Since_Last_Order",
+    "Available_Stock"
+  ],
+  "cat_features": [
+    "Category",
+    "ABC_Class"
+  ],
+  "leakage_removed": [
+    "Days_To_Expiry",
+    "Stock_Gap"
+  ],
+  "all_features_after_encoding": [
+    "Quantity_On_Hand",
+    "Reorder_Point",
+    "Safety_Stock",
+    "Unit_Cost_USD",
+    "Avg_Daily_Sales",
+    "Days_of_Inventory",
+    "Stock_Age_Days",
+    "Lead_Time_Days",
+    "Quantity_Reserved",
+    "Quantity_Committed",
+    "Days_Since_Last_Order",
+    "Available_Stock",
+    "Category_Beverages",
+    "Category_Dairy",
+    "Category_Fresh Produce",
+    "Category_Frozen",
+    "Category_Household",
+    "Category_Meat",
+    "Category_Pantry",
+    "Category_Personal Care",
+    "Category_Seafood",
+    "ABC_Class_B",
+    "ABC_Class_C"
+  ],
+  "best_model": "LightGBM",
+  "scenario": "B (Leakage-Free)"
+}

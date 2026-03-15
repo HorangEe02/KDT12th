@@ -1,0 +1,39 @@
+{
+  "feature_names": [
+    "Unit_Cost_USD",
+    "Quantity_On_Hand",
+    "Reorder_Point",
+    "Safety_Stock",
+    "Lead_Time_Days",
+    "Stock_Age_Days",
+    "Order_Frequency_per_month",
+    "Received_Month",
+    "Category_Beverages",
+    "Category_Dairy",
+    "Category_Fresh Produce",
+    "Category_Frozen",
+    "Category_Household",
+    "Category_Meat",
+    "Category_Pantry",
+    "Category_Personal Care",
+    "Category_Seafood",
+    "ABC_Class_B",
+    "ABC_Class_C"
+  ],
+  "num_features": [
+    "Unit_Cost_USD",
+    "Quantity_On_Hand",
+    "Reorder_Point",
+    "Safety_Stock",
+    "Lead_Time_Days",
+    "Stock_Age_Days",
+    "Order_Frequency_per_month",
+    "Received_Month"
+  ],
+  "n_features": 19,
+  "best_model": "XGBoost (Tuned)",
+  "test_r2": 0.9477,
+  "rmse": 4.79,
+  "mae": 3.32,
+  "scenario": "B (Clean — Days_of_Inventory 제거)"
+}
