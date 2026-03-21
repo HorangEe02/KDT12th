@@ -1,0 +1,22 @@
+# 데이터셋 (저작권 보호)
+data/
+*.jpg
+*.png.orig
+
+# 학습된 모델 (대용량)
+outputs/models_severstal/
+outputs/models_ad/
+outputs/models_dl/
+*.pt
+*.joblib
+*.pkl
+
+# Python 캐시
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+
+# 환경
+.env
+*.egg-info/

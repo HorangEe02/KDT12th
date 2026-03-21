@@ -1,0 +1,1 @@
+# Insight mode tabs
