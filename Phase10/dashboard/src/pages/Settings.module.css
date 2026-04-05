@@ -1,0 +1,197 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: fadeIn 0.3s ease;
+  max-width: 720px;
+}
+
+/* ── 섹션 ── */
+.sectionTitle {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--cyan);
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── 설정 행 ── */
+.settingRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.settingInfo {
+  flex: 1;
+}
+
+.settingLabel {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.settingDesc {
+  font-family: var(--sans);
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+
+/* ── 토글 스위치 ── */
+.toggle {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background: var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border: none;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.toggle::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: var(--text-dim);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.toggleOn {
+  background: var(--cyan);
+}
+
+.toggleOn::after {
+  left: 22px;
+  background: var(--bg);
+}
+
+/* ── 셀렉트 ── */
+.select {
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 6px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text);
+  cursor: pointer;
+  appearance: none;
+  min-width: 120px;
+  transition: border-color 0.2s ease;
+}
+
+.select:hover,
+.select:focus {
+  border-color: var(--cyan-dim);
+  outline: none;
+}
+
+/* ── 슬라이더 ── */
+.sliderWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100px;
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: var(--cyan);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(0, 255, 213, 0.4);
+}
+
+.sliderValue {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--cyan);
+  min-width: 30px;
+  text-align: right;
+}
+
+/* ── 시스템 정보 ── */
+.sysGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.sysItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.sysKey {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+}
+
+.sysVal {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text);
+}
+
+/* ── 리셋 버튼 ── */
+.resetBtn {
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+  letter-spacing: 1px;
+  margin-top: 16px;
+  transition: all 0.2s ease;
+}
+
+.resetBtn:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+/* ── 반응형 ── */
+@media (max-width: 768px) {
+  .sysGrid { grid-template-columns: 1fr; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

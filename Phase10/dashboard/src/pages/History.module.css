@@ -1,0 +1,163 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: fadeIn 0.3s ease;
+}
+
+/* 모듈 선택 */
+.moduleSelector {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.moduleBtn {
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.15s ease;
+}
+
+.moduleBtn:hover { border-color: var(--cyan-dim); color: var(--text); }
+.moduleBtnActive { border-color: var(--cyan); background: var(--cyan-glow); color: var(--cyan); }
+
+/* 차트 영역 */
+.chartHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.rangeSelector {
+  display: flex;
+  gap: 4px;
+}
+
+.rangeBtn {
+  font-family: var(--mono);
+  font-size: 9px;
+  padding: 3px 8px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.rangeBtn:hover { border-color: var(--cyan-dim); color: var(--text-dim); }
+.rangeBtnActive { border-color: var(--cyan); background: var(--cyan-glow); color: var(--cyan); }
+
+/* 모델 토글 */
+.modelToggles {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.modelToggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.modelToggle:hover { background: var(--panel-hover); }
+
+.modelDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.modelToggleOff {
+  opacity: 0.4;
+}
+
+/* 요약 테이블 */
+.summaryTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--mono);
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.summaryTable th {
+  padding: 8px 10px;
+  text-align: center;
+  color: var(--text-dim);
+  border-bottom: 1px solid var(--border);
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.summaryTable th:first-child { text-align: left; }
+
+.summaryTable td {
+  padding: 8px 10px;
+  text-align: center;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+.summaryTable td:first-child { text-align: left; }
+
+.bestCell {
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+/* 툴팁 */
+.tooltip {
+  background: rgba(11, 14, 22, 0.95);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.tooltipEpoch {
+  color: var(--text-dim);
+  font-size: 9px;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.tooltipRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text);
+  padding: 2px 0;
+}
+
+.tooltipDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

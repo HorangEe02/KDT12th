@@ -1,0 +1,135 @@
+.layout {
+  display: none;
+  font-family: 'Noto Sans KR', system-ui, sans-serif;
+  color: #1a1a1a;
+  background: white;
+  padding: 24px;
+}
+
+.header {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #1a1a1a;
+  margin-bottom: 30px;
+}
+
+.headerTitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.headerSub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: #666;
+  letter-spacing: 2px;
+  margin-top: 4px;
+}
+
+.headerDate {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: #999;
+  margin-top: 8px;
+}
+
+/* 섹션 */
+.section {
+  margin-bottom: 30px;
+}
+
+.sectionTitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 6px;
+  margin-bottom: 14px;
+}
+
+.metricRow {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.metricValue {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.metricLabel {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: #666;
+  letter-spacing: 1px;
+}
+
+/* 데이터셋 정보 */
+.datasetList {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  line-height: 2;
+  color: #333;
+}
+
+/* 테이블 */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  margin-top: 10px;
+}
+
+.table th {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 2px solid #333;
+  font-size: 9px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.table th:first-child { text-align: left; }
+
+.table td {
+  padding: 5px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.table td:first-child { text-align: left; }
+
+.bestRow { font-weight: 700; }
+
+/* 인사이트 */
+.insightList { margin-top: 14px; }
+
+.insight {
+  font-size: 11px;
+  line-height: 1.8;
+  padding: 3px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.insightIcon {
+  margin-right: 6px;
+  color: #333;
+}
+
+/* 푸터 */
+.footer {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: #999;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,54 @@
+{
+  "project": "소주제 C — PCB 기판 결함 자동 탐지",
+  "framework": "Ultralytics YOLOv8",
+  "dataset": "PCB Defects (693장, 6클래스)",
+  "classes": [
+    "missing_hole",
+    "mouse_bite",
+    "open_circuit",
+    "short",
+    "spur",
+    "spurious_copper"
+  ],
+  "data_split": {
+    "train": 485,
+    "val": 138,
+    "test": 70
+  },
+  "main_model": {
+    "name": "yolov8s",
+    "epochs": 50,
+    "test_mAP50": 0.9378,
+    "test_mAP50_95": 0.5111,
+    "test_precision": 0.9679,
+    "test_recall": 0.8948
+  },
+  "model_comparison": {
+    "yolov8n": {
+      "mAP50": 0.8359,
+      "mAP50_95": 0.4053,
+      "precision": 0.8758,
+      "recall": 0.7773,
+      "fps": 15.3939,
+      "params": 3006818
+    },
+    "yolov8s": {
+      "mAP50": 0.938,
+      "mAP50_95": 0.4723,
+      "precision": 0.9481,
+      "recall": 0.878,
+      "fps": 12.1664,
+      "params": 11127906
+    },
+    "yolov8m": {
+      "mAP50": 0.9496,
+      "mAP50_95": 0.5161,
+      "precision": 0.9626,
+      "recall": 0.9178,
+      "fps": 8.2571,
+      "params": 25843234
+    }
+  },
+  "best_variant": "yolov8m",
+  "seed": 42
+}

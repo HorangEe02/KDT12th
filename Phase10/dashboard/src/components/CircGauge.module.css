@@ -1,0 +1,14 @@
+.gauge {
+  transform: rotate(-90deg);
+}
+
+.track {
+  fill: none;
+  stroke: var(--border);
+}
+
+.value {
+  fill: none;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1.2s ease;
+}

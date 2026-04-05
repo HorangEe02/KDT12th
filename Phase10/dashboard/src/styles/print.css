@@ -1,0 +1,16 @@
+@media print {
+  /* 앱 본문 숨기기 */
+  body { overflow: visible !important; background: white !important; }
+  #root > div > aside,
+  #root > div > div > header,
+  #root > div > div > main { display: none !important; }
+
+  /* 프린트 레이아웃만 표시 */
+  .printLayout { display: block !important; }
+
+  /* 기본 프린트 스타일 */
+  .printLayout * { color: #1a1a1a !important; }
+  .printLayout table { page-break-inside: avoid; }
+  .printLayout .printSection { page-break-before: always; }
+  .printLayout .printSection:first-child { page-break-before: auto; }
+}

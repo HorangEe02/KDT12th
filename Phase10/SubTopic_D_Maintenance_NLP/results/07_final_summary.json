@@ -1,0 +1,38 @@
+{
+  "project": "소주제 D — 설비 고장 유형 예측",
+  "dataset": "Machine Predictive Maintenance (10,000건)",
+  "num_classes": 6,
+  "classes": [
+    "Heat Dissipation Failure",
+    "No Failure",
+    "Overstrain Failure",
+    "Power Failure",
+    "Random Failures",
+    "Tool Wear Failure"
+  ],
+  "approach": "수치→텍스트 변환 후 NLP 모델 적용",
+  "data_split": {
+    "train": 3500,
+    "val": 1500,
+    "test": 1500
+  },
+  "model_comparison": {
+    "DNN (수치)": {
+      "accuracy": 0.8133,
+      "f1_macro": 0.3403,
+      "f1_weighted": 0.8736
+    },
+    "LSTM (텍스트)": {
+      "accuracy": 0.9653,
+      "f1_macro": 0.1637,
+      "f1_weighted": 0.9483
+    },
+    "BERT (텍스트)": {
+      "accuracy": 0.974,
+      "f1_macro": 0.4773,
+      "f1_weighted": 0.9714
+    }
+  },
+  "best_model": "BERT (텍스트)",
+  "seed": 42
+}

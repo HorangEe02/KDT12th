@@ -1,0 +1,45 @@
+{
+  "project": "소주제 A — 주조 제품 불량/정상 자동 분류",
+  "dataset": "Casting Product Image Data for Quality Inspection",
+  "image_size": "300x300 → 224x224",
+  "classes": {
+    "0": "Defective (불량)",
+    "1": "OK (정상)"
+  },
+  "data_split": {
+    "train": 5306,
+    "val": 1327,
+    "test": 715
+  },
+  "training_config": {
+    "epochs": 15,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "optimizer": "Adam",
+    "scheduler": "ReduceLROnPlateau (factor=0.5, patience=3)",
+    "early_stopping_patience": 5,
+    "seed": 42
+  },
+  "models": {
+    "ResNet50": {
+      "accuracy": 0.9524,
+      "precision": 0.9772,
+      "recall": 0.947,
+      "f1_score": 0.9619
+    },
+    "VGG16": {
+      "accuracy": 0.9049,
+      "precision": 0.9508,
+      "recall": 0.8962,
+      "f1_score": 0.9227
+    },
+    "EfficientNet-B0": {
+      "accuracy": 0.965,
+      "precision": 0.9798,
+      "recall": 0.9647,
+      "f1_score": 0.9722
+    }
+  },
+  "best_model": "EfficientNet-B0"
+}
