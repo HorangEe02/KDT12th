@@ -1,0 +1,257 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: fadeIn 0.3s ease;
+}
+
+/* ── 메트릭 카드 그리드 ── */
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.metricCard {
+  text-align: center;
+  padding: 20px 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metricCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px var(--cyan-dim);
+}
+
+.gaugeWrap {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.gaugeValue {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.modelName {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--cyan);
+  margin-top: 4px;
+}
+
+.statusRow { margin-top: 6px; }
+
+/* ── 중단 2열 ── */
+.midGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* ── 레이더 차트 ── */
+.radarWrap { margin-top: 8px; }
+.healthList { margin-top: 4px; }
+
+/* ── 모델 헬스 ── */
+.healthRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.healthLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.healthCode {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text);
+}
+
+.healthValue {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cyan);
+}
+
+/* ── 차트 헤더 & 컨트롤 ── */
+.chartHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chartControls {
+  display: flex;
+  gap: 4px;
+}
+
+.rangeBtn {
+  font-family: var(--mono);
+  font-size: 9px;
+  padding: 3px 8px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.15s ease;
+}
+
+.rangeBtn:hover {
+  border-color: var(--cyan-dim);
+  color: var(--text-dim);
+}
+
+.rangeBtnActive {
+  border-color: var(--cyan);
+  background: var(--cyan-glow);
+  color: var(--cyan);
+}
+
+.rangeBtnPaused {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+/* ── 차트 영역 ── */
+.chartWrap { margin-top: 8px; }
+.alertList { margin-top: 10px; }
+
+/* ── 차트 범례 ── */
+.legend {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+/* 툴팁 도트 색상 */
+.dotCyan { background: var(--cyan); }
+.dotOrange { background: var(--orange); }
+
+/* ── 차트 툴팁 ── */
+.tooltip {
+  background: rgba(11, 14, 22, 0.95);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.tooltipLabel {
+  color: var(--text-dim);
+  font-size: 9px;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.tooltipRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text);
+  padding: 2px 0;
+}
+
+.tooltipDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+/* ── 알림 피드 ── */
+.alertHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.alertLive {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--green);
+  letter-spacing: 1px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.alertRow {
+  display: flex;
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+  font-family: var(--mono);
+  transition: background 0.15s ease;
+}
+
+.alertRow:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.alertNew {
+  animation: slideIn 0.4s ease;
+}
+
+.alertTime {
+  color: var(--text-muted);
+  min-width: 70px;
+}
+
+.alertDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.alertDotCrit { background: var(--red); }
+.alertDotWarn { background: var(--orange); }
+.alertDotOk { background: var(--green); }
+
+.alertMsg { color: var(--text-dim); }
+.alertMsgCrit { color: var(--red); }
+
+/* ── 반응형 ── */
+@media (max-width: 1024px) {
+  .metricsGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .metricsGrid { grid-template-columns: 1fr; }
+  .midGrid { grid-template-columns: 1fr; }
+}
+
+/* ── 애니메이션 ── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-12px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}

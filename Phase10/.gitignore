@@ -1,0 +1,32 @@
+# 의존성
+node_modules/
+package-lock.json
+
+# 빌드 산출물
+dist/
+build/
+
+# 모델 가중치 (GitHub 100MB 제한 초과)
+*.pth
+*.pt
+*.h5
+*.onnx
+
+# 데이터셋 (저작권 + 대용량)
+data/
+*.zip
+
+# YOLO 학습 산출물
+runs/
+
+# 시스템 파일
+.DS_Store
+__pycache__/
+*.pyc
+.claude/
+
+# 환경 설정
+.env
+.env.*
+*.key
+*.pem

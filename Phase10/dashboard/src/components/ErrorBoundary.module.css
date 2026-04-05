@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  gap: 12px;
+  animation: fadeIn 0.3s ease;
+}
+
+.icon {
+  font-size: 36px;
+  color: var(--red);
+  filter: drop-shadow(0 0 10px rgba(255, 51, 85, 0.4));
+}
+
+.title {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--red);
+  letter-spacing: 2px;
+}
+
+.message {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  max-width: 400px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.retryBtn {
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 8px 20px;
+  border: 1px solid var(--cyan);
+  border-radius: 4px;
+  background: var(--cyan-glow);
+  color: var(--cyan);
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+}
+
+.retryBtn:hover {
+  background: rgba(0, 255, 213, 0.15);
+  box-shadow: 0 0 12px rgba(0, 255, 213, 0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

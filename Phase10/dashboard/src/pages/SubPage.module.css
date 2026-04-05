@@ -1,0 +1,291 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: fadeIn 0.3s ease;
+}
+
+.topGrid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 12px;
+}
+
+.metricPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.gaugeWrap {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.gaugeValue {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.modelBadge {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--cyan);
+  margin-top: 4px;
+  padding: 3px 10px;
+  border: 1px solid var(--cyan-dim);
+  border-radius: 4px;
+}
+
+.statusRow {
+  margin-top: 8px;
+}
+
+/* 데이터셋 정보 */
+.datasetInfo {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text);
+  line-height: 2.2;
+  margin-top: 10px;
+}
+
+.datasetRow {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+}
+
+/* ── 벤치마크 헤더 & 컨트롤 ── */
+.benchmarkHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.benchmarkControls {
+  display: flex;
+  gap: 4px;
+}
+
+.viewBtn {
+  font-family: var(--mono);
+  font-size: 12px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.viewBtn:hover { border-color: var(--cyan-dim); color: var(--text-dim); }
+.viewBtnActive { border-color: var(--cyan); background: var(--cyan-glow); color: var(--cyan); }
+
+.exportBtn {
+  font-family: var(--mono);
+  font-size: 9px;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.15s ease;
+  margin-left: 4px;
+}
+
+.exportBtn:hover { border-color: var(--cyan); color: var(--cyan); }
+
+/* ── 차트 영역 ── */
+.chartArea {
+  margin-top: 10px;
+}
+
+.metricSelector {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.metricBtn {
+  font-family: var(--mono);
+  font-size: 9px;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.15s ease;
+}
+
+.metricBtn:hover { border-color: var(--cyan-dim); color: var(--text-dim); }
+.metricBtnActive { border-color: var(--cyan); background: var(--cyan-glow); color: var(--cyan); }
+
+.chartTooltip {
+  background: rgba(11, 14, 22, 0.95);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.chartTooltipLabel {
+  color: var(--cyan);
+  font-size: 10px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.chartTooltipRow {
+  color: var(--text);
+  padding: 1px 0;
+}
+
+/* ── 벤치마크 테이블 ── */
+.tableWrap {
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--mono);
+  font-size: 12px;
+}
+
+.th {
+  padding: 8px 10px;
+  color: var(--text-dim);
+  border-bottom: 1px solid var(--border);
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.thLeft { text-align: left; }
+.thCenter { text-align: center; }
+
+.tr {
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s ease;
+}
+
+.tr:hover {
+  background: rgba(0, 255, 213, 0.03);
+}
+
+.trBest {
+  background: var(--cyan-glow);
+}
+
+.td {
+  padding: 8px 10px;
+  color: var(--text);
+}
+
+.tdLeft { text-align: left; }
+.tdCenter { text-align: center; }
+
+.tdBest {
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+.bestStar {
+  color: var(--cyan);
+}
+
+/* 분석 이미지 갤러리 */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.imgCard {
+  cursor: zoom-in;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: border-color 0.3s ease, transform 0.2s ease;
+  min-height: 80px;
+}
+
+.imgCard:hover {
+  border-color: var(--cyan);
+  transform: translateY(-1px);
+}
+
+.imgCard img {
+  width: 100%;
+  display: block;
+}
+
+.imgLabel {
+  padding: 6px 10px;
+  background: var(--surface);
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+}
+
+/* 인사이트 */
+.insightList { margin-top: 10px; }
+
+.insightRow {
+  display: flex;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.insightIcon {
+  color: var(--cyan);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.insightText {
+  font-size: 12px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .topGrid {
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

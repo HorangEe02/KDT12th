@@ -1,0 +1,29 @@
+.toggleGroup {
+  display: flex;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.toggleBtn {
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-dim);
+}
+
+.toggleBtn:hover {
+  border-color: var(--cyan-dim);
+  color: var(--text);
+}
+
+.toggleBtnActive {
+  border-color: var(--cyan);
+  background: var(--cyan-glow);
+  color: var(--cyan);
+}

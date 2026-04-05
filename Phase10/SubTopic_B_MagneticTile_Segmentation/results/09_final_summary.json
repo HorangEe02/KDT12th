@@ -1,0 +1,62 @@
+{
+  "project": "자석 타일 표면 결함 세그먼테이션",
+  "dataset": "Magnetic Tile Surface Defects (1,344장, 5종 결함)",
+  "dataset_url": "https://www.kaggle.com/datasets/alex000kim/magnetic-tile-surface-defects",
+  "task": "이진 세그먼테이션 (결함 vs 배경)",
+  "img_size": 224,
+  "batch_size": 16,
+  "models": {
+    "vanilla_unet": {
+      "loss": "BCE(0.5) + Dice(0.5)",
+      "epochs": 40,
+      "best_dice": 0.1115,
+      "best_iou": 0.0592,
+      "tta_dice": 0.1108,
+      "tta_iou": 0.0664
+    },
+    "attention_unet": {
+      "loss": "BCE(0.4) + FocalTversky(0.6, α=0.3, β=0.7, γ=0.75)",
+      "epochs": 40,
+      "best_dice": 0.0946,
+      "best_iou": 0.0542,
+      "tta_dice": 0.099,
+      "tta_iou": 0.0582
+    },
+    "resnet34_unet": {
+      "loss": "BCE(0.4) + FocalTversky(0.6, α=0.3, β=0.7, γ=0.75)",
+      "epochs": 30,
+      "best_dice": 0.8002,
+      "best_iou": 0.671,
+      "tta_dice": 0.2321,
+      "tta_iou": 0.1751
+    }
+  },
+  "per_defect_tta": {
+    "Blowhole": {
+      "dice": 0.0046,
+      "iou": 0.0024
+    },
+    "Break": {
+      "dice": 0.0578,
+      "iou": 0.0317
+    },
+    "Crack": {
+      "dice": 0.0107,
+      "iou": 0.0055
+    },
+    "Fray": {
+      "dice": 0.1845,
+      "iou": 0.1066
+    },
+    "Uneven": {
+      "dice": 0.2635,
+      "iou": 0.1596
+    }
+  },
+  "key_techniques": [
+    "Attention Gate — Skip Connection 소프트 어텐션",
+    "Focal Tversky Loss — FN 패널티 강화 (α=0.3, β=0.7, γ=0.75)",
+    "TTA (Test-Time Augmentation) — 4방향 플립 앙상블",
+    "Albumentations — 강한 증강 (392장 보완)"
+  ]
+}

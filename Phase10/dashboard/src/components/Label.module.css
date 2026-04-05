@@ -1,0 +1,19 @@
+.label {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+/* 사이즈 변형 */
+.sm { font-size: 9px; }
+.xs { font-size: 8px; }
+
+/* 색상 변형 */
+.cyan { color: var(--cyan); }
+.orange { color: var(--orange); }
+.red { color: var(--red); }
+.green { color: var(--green); }
+.text { color: var(--text); }
