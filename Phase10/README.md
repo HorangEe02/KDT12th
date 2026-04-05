@@ -232,7 +232,7 @@ Smart-Factory-AI/
 
 | 항목 | 내용 |
 |------|------|
-| 담당 | 팀원 A |
+| 담당 | 김현정|
 | 핵심 기술 | CNN 전이학습 (ResNet50, VGG16, EfficientNet) |
 | 데이터셋 | Casting Product Image Data (7,348장, 2클래스) |
 | 데이터 출처 | https://www.kaggle.com/datasets/ravirajsinh45/real-life-industrial-dataset-of-casting-product |
@@ -242,7 +242,7 @@ Smart-Factory-AI/
 
 | 항목 | 내용 |
 |------|------|
-| 담당 | 팀원 B |
+| 담당 | 박준영 |
 | 핵심 기술 | U-Net (인코더-디코더 + Skip Connection) |
 | 데이터셋 | Crack Segmentation Dataset (11,200장, 바이너리 마스크 포함) |
 | 데이터 출처 | https://www.kaggle.com/datasets/lakshaymiddha/crack-segmentation-dataset |
@@ -274,7 +274,7 @@ Smart-Factory-AI/
 
 | 항목 | 내용 |
 |------|------|
-| 담당 | 팀원 C |
+| 담당 | 정유진(팀장) |
 | 핵심 기술 | YOLOv8 (Ultralytics) |
 | 데이터셋 | PCB Defects Dataset (693장, 6 결함 유형) |
 | 데이터 출처 | https://www.kaggle.com/datasets/akhatova/pcb-defects |
@@ -284,7 +284,7 @@ Smart-Factory-AI/
 
 | 항목 | 내용 |
 |------|------|
-| 담당 | 팀원 D |
+| 담당 | 박영현 |
 | 핵심 기술 | LSTM / BERT 텍스트 분류 |
 | 데이터셋 | Machine Predictive Maintenance Classification (10,000건) |
 | 데이터 출처 | https://www.kaggle.com/datasets/shivamb/machine-predictive-maintenance-classification |
