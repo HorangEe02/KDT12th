@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HELC-AI - My Diary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#fcf9f8",
+                        "on-background": "#ffffff",
+                        "on-error": "#450900",
+                        "error-container": "#b92902",
+                        "primary-fixed": "#a2fe00",
+                        "on-surface-variant": "#adaaaa",
+                        "secondary-container": "#454747",
+                        "surface-container-highest": "#262626",
+                        "primary": "#ddffaf",
+                        "tertiary-container": "#3afea0",
+                        "on-primary-fixed": "#2b4900",
+                        "secondary": "#e2e2e2",
+                        "secondary-fixed-dim": "#d4d4d4",
+                        "outline-variant": "#484847",
+                        "surface-tint": "#ddffaf",
+                        "on-primary": "#3f6600",
+                        "on-tertiary": "#00663b",
+                        "error": "#ff7351",
+                        "surface-variant": "#262626",
+                        "secondary-fixed": "#e2e2e2",
+                        "tertiary": "#b2ffcb",
+                        "on-surface": "#ffffff",
+                        "on-primary-container": "#395d00",
+                        "primary-fixed-dim": "#98ee00",
+                        "primary-dim": "#98ee00",
+                        "on-secondary-fixed": "#3e4040",
+                        "on-secondary-fixed-variant": "#5a5c5c",
+                        "error-dim": "#d53d18",
+                        "surface-container-lowest": "#000000",
+                        "inverse-primary": "#416a00",
+                        "tertiary-fixed": "#3afea0",
+                        "surface": "#0e0e0e",
+                        "surface-dim": "#0e0e0e",
+                        "background": "#0e0e0e",
+                        "surface-container-high": "#201f1f",
+                        "on-primary-fixed-variant": "#406800",
+                        "on-error-container": "#ffd2c8",
+                        "on-secondary": "#505252",
+                        "on-tertiary-fixed": "#004828",
+                        "surface-container": "#1a1919",
+                        "on-secondary-container": "#d0d0d0",
+                        "tertiary-fixed-dim": "#1bef93",
+                        "outline": "#767575",
+                        "on-tertiary-fixed-variant": "#00673c",
+                        "surface-bright": "#2c2c2c",
+                        "inverse-on-surface": "#565555",
+                        "tertiary-dim": "#1bef93",
+                        "surface-container-low": "#131313",
+                        "on-tertiary-container": "#005d35",
+                        "secondary-dim": "#d4d4d4",
+                        "primary-container": "#a2fe00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#0e0e0e]/60 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border-2 border-primary-fixed overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close up portrait of a determined athlete with sweat on brow, dramatic high-contrast studio lighting on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ8iHlrF5hMaIl9WxSyIl8cIV_tMw4DgNuP34p_EHEf_-sbttz21iwv7oaBMduqJ9NDQM0QM-8k-1w3daWOob35tKymj44ciA8_sgegLZ9Y84gBxunpFS_qBsF8cnszawLGlqHTv09kpu4vVsB7M4B8bXiV8hzfv14puRyi0J6xxuFPQ8ZekyWt9miWlChurohIU2z50toxaU0-u07Y-UEgBnZDha3EZUDbMXmMtHZhMfkottikaUwuCwgrh0D5o6KxDkJzptw-3Q"/>
+</div>
+<span class="text-2xl font-black italic text-[#a3ff00] tracking-tighter">HELC-AI</span>
+</div>
+<button class="text-[#a3ff00] hover:text-[#ddffaf] transition-colors scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+</button>
+</header>
+<main class="pt-24 px-6 max-w-md mx-auto space-y-8">
+<!-- Page Title -->
+<section>
+<h1 class="text-4xl font-bold tracking-tight text-on-background">My Diary</h1>
+<p class="text-on-surface-variant text-sm mt-1">Reflect on today's performance</p>
+</section>
+<!-- Diary Entry Area -->
+<section class="space-y-4">
+<div class="bg-surface-container-low p-5 rounded-xl">
+<label class="block text-primary-fixed text-xs font-bold uppercase tracking-widest mb-3">Today's Log</label>
+<textarea class="w-full bg-surface-container-high border-none text-on-surface placeholder:text-outline focus:ring-1 focus:ring-primary-fixed rounded-lg p-4 min-h-[140px] resize-none" placeholder="Describe your workout vibes...">오늘 하체 운동 너무 힘들었지만 뿌듯했다. 스쿼트 100kg 드디어 성공! 내일은 상체 위주로 가야지.</textarea>
+<div class="flex justify-end mt-4">
+<button class="bg-primary-container text-on-primary-fixed px-6 py-2 rounded-full font-bold text-sm shadow-[0_0_15px_rgba(163,255,0,0.2)]">
+                        Analyze Entry
+                    </button>
+</div>
+</div>
+</section>
+<!-- Bento Grid for AI Insights -->
+<section class="grid grid-cols-2 gap-4">
+<!-- Sentiment Analysis -->
+<div class="col-span-2 bg-surface-container-high p-5 rounded-xl border-l-4 border-primary-fixed">
+<div class="flex justify-between items-center mb-4">
+<span class="text-sm font-bold text-on-surface">AI Sentiment Analysis</span>
+<span class="bg-primary-fixed/20 text-primary-fixed text-[10px] px-2 py-1 rounded-full font-bold uppercase">Positive</span>
+</div>
+<div class="relative h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-gradient-to-r from-primary to-primary-container w-[85%]"></div>
+</div>
+<div class="flex justify-between mt-2 text-[10px] text-on-surface-variant font-medium">
+<span>Negative</span>
+<span class="text-primary-fixed">Extreme Focus / 85% Positive</span>
+<span>Positive</span>
+</div>
+</div>
+<!-- Weekly Progress Summary -->
+<div class="bg-surface-container-low p-5 rounded-xl flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary-fixed mb-2" data-icon="insights">insights</span>
+<h3 class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Weekly Streak</h3>
+</div>
+<div class="mt-4">
+<span class="text-3xl font-black text-on-surface">5</span>
+<span class="text-sm text-on-surface-variant ml-1">Days</span>
+</div>
+</div>
+<!-- Total Volume -->
+<div class="bg-surface-container-low p-5 rounded-xl flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-tertiary mb-2" data-icon="fitness_center">fitness_center</span>
+<h3 class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Volume</h3>
+</div>
+<div class="mt-4">
+<span class="text-3xl font-black text-on-surface">+12%</span>
+<span class="text-[10px] block text-tertiary">vs Last Week</span>
+</div>
+</div>
+</section>
+<!-- AI Coach Feedback (The Anchor) -->
+<section>
+<div class="bg-gradient-to-br from-surface-container-highest to-surface-container-low p-6 rounded-2xl relative overflow-hidden group">
+<!-- Background Decoration -->
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-primary-fixed/5 blur-3xl rounded-full"></div>
+<div class="flex items-center gap-3 mb-4">
+<div class="bg-primary-container p-2 rounded-lg">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="smart_toy">smart_toy</span>
+</div>
+<h2 class="text-lg font-bold tracking-tight">AI Coach Feedback</h2>
+</div>
+<div class="space-y-4">
+<p class="text-on-surface leading-relaxed italic">
+                        "스쿼트 100kg 달성을 진심으로 축하합니다! 오늘의 강도 높은 하체 훈련은 근성장의 핵심입니다. 하체의 피로도가 높을 것으로 예상되니 내일 상체 루틴에서는 'Pull' 위주의 동작으로 밸런스를 맞추는 것을 추천합니다. 당신의 페이스는 지금 완벽합니다!"
+                    </p>
+<div class="pt-4 flex items-center gap-4 border-t border-outline-variant/20">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-surface bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-primary-fixed" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-surface bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-tertiary" data-icon="monitoring">monitoring</span>
+</div>
+</div>
+<span class="text-[11px] text-on-surface-variant font-medium">Personalized based on 14 recent entries</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Weekly Summary Card -->
+<section class="bg-surface-container-low rounded-xl p-5">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-sm font-bold uppercase tracking-widest text-on-surface">Weekly Distribution</h3>
+<span class="text-xs text-on-surface-variant">Last 7 Days</span>
+</div>
+<div class="flex items-end justify-between h-24 gap-2">
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-surface-container-highest rounded-t-sm h-[40%]"></div>
+<span class="text-[9px] text-on-surface-variant">M</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-surface-container-highest rounded-t-sm h-[60%]"></div>
+<span class="text-[9px] text-on-surface-variant">T</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-primary-container rounded-t-sm h-[90%] shadow-[0_0_10px_rgba(163,255,0,0.3)]"></div>
+<span class="text-[9px] text-primary-fixed font-bold">W</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-surface-container-highest rounded-t-sm h-[20%]"></div>
+<span class="text-[9px] text-on-surface-variant">T</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-surface-container-highest rounded-t-sm h-[75%]"></div>
+<span class="text-[9px] text-on-surface-variant">F</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-surface-container-highest rounded-t-sm h-[10%]"></div>
+<span class="text-[9px] text-on-surface-variant">S</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-surface-container-highest rounded-t-sm h-[0%]"></div>
+<span class="text-[9px] text-on-surface-variant">S</span>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-[#131313]/80 backdrop-blur-lg rounded-t-xl z-50 shadow-[0_-4px_20px_rgba(163,255,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-[#a3ff00] bg-[#201f1f] rounded-xl px-4 py-2 shadow-[0_0_15px_rgba(163,255,0,0.1)] active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="event_note">event_note</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase font-bold tracking-widest">Diary</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] px-4 py-2 hover:bg-[#262626] transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="fitness_center">fitness_center</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase font-bold tracking-widest">Workout</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] px-4 py-2 hover:bg-[#262626] transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="restaurant">restaurant</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase font-bold tracking-widest">Diet</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] px-4 py-2 hover:bg-[#262626] transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase font-bold tracking-widest">Profile</span>
+</a>
+</nav>
+</body></html>

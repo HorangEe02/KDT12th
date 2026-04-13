@@ -1,0 +1,704 @@
+{
+  "experiment_date": "2026-04-10T18:47:37.254575",
+  "project": "헬창지피티 (HelChangGPT)",
+  "stages": {
+    "stage1": {
+      "ner": {
+        "field_accuracy": 1.0,
+        "total_fields": 21,
+        "correct_fields": 21,
+        "details": [
+          {
+            "text": "25세 남성이고 키 178cm에 몸무게 82kg입니다. 주 3회 운동 가능합니다.",
+            "fields": {
+              "age": {
+                "expected": 25,
+                "actual": 25,
+                "match": true
+              },
+              "gender": {
+                "expected": "남성",
+                "actual": "남성",
+                "match": true
+              },
+              "height_cm": {
+                "expected": 178.0,
+                "actual": 178.0,
+                "match": true
+              },
+              "weight_kg": {
+                "expected": 82.0,
+                "actual": 82.0,
+                "match": true
+              },
+              "exercise_frequency": {
+                "expected": 3,
+                "actual": 3,
+                "match": true
+              }
+            }
+          },
+          {
+            "text": "30대 여자, 163cm 58kg이에요. 무릎이 안 좋아서 달리기는 어렵습니다.",
+            "fields": {
+              "age": {
+                "expected": 35,
+                "actual": 35,
+                "match": true
+              },
+              "gender": {
+                "expected": "여성",
+                "actual": "여성",
+                "match": true
+              },
+              "height_cm": {
+                "expected": 163.0,
+                "actual": 163.0,
+                "match": true
+              },
+              "weight_kg": {
+                "expected": 58.0,
+                "actual": 58.0,
+                "match": true
+              },
+              "constraints": {
+                "expected": [
+                  "무릎 부상"
+                ],
+                "actual": [
+                  "무릎 부상"
+                ],
+                "match": true
+              }
+            }
+          },
+          {
+            "text": "45세 남성 172cm 90kg 당뇨 전단계입니다. 주 5회 운동 가능해요.",
+            "fields": {
+              "age": {
+                "expected": 45,
+                "actual": 45,
+                "match": true
+              },
+              "gender": {
+                "expected": "남성",
+                "actual": "남성",
+                "match": true
+              },
+              "height_cm": {
+                "expected": 172.0,
+                "actual": 172.0,
+                "match": true
+              },
+              "weight_kg": {
+                "expected": 90.0,
+                "actual": 90.0,
+                "match": true
+              },
+              "exercise_frequency": {
+                "expected": 5,
+                "actual": 5,
+                "match": true
+              },
+              "constraints": {
+                "expected": [
+                  "당뇨"
+                ],
+                "actual": [
+                  "당뇨"
+                ],
+                "match": true
+              }
+            }
+          },
+          {
+            "text": "20살 여자 160센티 50킬로예요. 운동 처음이에요.",
+            "fields": {
+              "age": {
+                "expected": 20,
+                "actual": 20,
+                "match": true
+              },
+              "gender": {
+                "expected": "여성",
+                "actual": "여성",
+                "match": true
+              },
+              "height_cm": {
+                "expected": 160.0,
+                "actual": 160.0,
+                "match": true
+              },
+              "weight_kg": {
+                "expected": 50.0,
+                "actual": 50.0,
+                "match": true
+              },
+              "experience_level": {
+                "expected": "입문",
+                "actual": "입문",
+                "match": true
+              }
+            }
+          }
+        ]
+      },
+      "goal_classification": {
+        "accuracy": 0.85,
+        "macro_f1": 0.849,
+        "per_class": {
+          "체지방감소": {
+            "precision": 0.8,
+            "recall": 1.0,
+            "f1": 0.889
+          },
+          "건강개선": {
+            "precision": 0.75,
+            "recall": 0.75,
+            "f1": 0.75
+          },
+          "체중관리": {
+            "precision": 0.75,
+            "recall": 0.75,
+            "f1": 0.75
+          },
+          "근력증가": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.857
+          },
+          "체력향상": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "total_samples": 20,
+        "correct": 17,
+        "misclassified": [
+          {
+            "text": "요요 없이 건강하게 관리하고 싶어요",
+            "predicted": "건강개선",
+            "truth": "체중관리"
+          },
+          {
+            "text": "린매스업 하고 싶어요",
+            "predicted": "체지방감소",
+            "truth": "근력증가"
+          },
+          {
+            "text": "허리디스크 때문에 코어 강화가 필요해요",
+            "predicted": "체중관리",
+            "truth": "건강개선"
+          }
+        ]
+      },
+      "bmr_comparison": [
+        {
+          "weight_kg": 82,
+          "height_cm": 178,
+          "age": 25,
+          "gender": "남성",
+          "mifflin_st_jeor": 1812,
+          "harris_benedict": 1899,
+          "difference": -87
+        },
+        {
+          "weight_kg": 58,
+          "height_cm": 163,
+          "age": 35,
+          "gender": "여성",
+          "mifflin_st_jeor": 1263,
+          "harris_benedict": 1337,
+          "difference": -74
+        },
+        {
+          "weight_kg": 90,
+          "height_cm": 172,
+          "age": 45,
+          "gender": "남성",
+          "mifflin_st_jeor": 1755,
+          "harris_benedict": 1864,
+          "difference": -109
+        },
+        {
+          "weight_kg": 50,
+          "height_cm": 160,
+          "age": 20,
+          "gender": "여성",
+          "mifflin_st_jeor": 1239,
+          "harris_benedict": 1319,
+          "difference": -80
+        },
+        {
+          "weight_kg": 59.1,
+          "height_cm": 156.9,
+          "age": 51,
+          "gender": "여성",
+          "mifflin_st_jeor": 1156,
+          "harris_benedict": 1259,
+          "difference": -103
+        }
+      ]
+    },
+    "stage2": {
+      "demo_analysis": [
+        {
+          "goal": "체지방감소",
+          "target_kcal": 1800,
+          "actual_kcal": 1551,
+          "calorie_diff": -249,
+          "calorie_accuracy_pct": 86.2,
+          "macro_accuracy": {
+            "carb": {
+              "target": 40.0,
+              "actual": 42.6,
+              "diff": 2.6
+            },
+            "protein": {
+              "target": 35.0,
+              "actual": 32.9,
+              "diff": -2.1
+            },
+            "fat": {
+              "target": 25.0,
+              "actual": 24.5,
+              "diff": -0.5
+            }
+          },
+          "constraint_warnings": [],
+          "overall_score": 37,
+          "grade": "D",
+          "keywords": [
+            "고구마",
+            "고단백",
+            "그릭요거트",
+            "닭가슴살",
+            "바나나",
+            "브로콜리",
+            "아몬드",
+            "연어",
+            "오트밀",
+            "저지방",
+            "프로틴",
+            "현미"
+          ]
+        },
+        {
+          "goal": "근력증가",
+          "target_kcal": 1800,
+          "actual_kcal": 1551,
+          "calorie_diff": -249,
+          "calorie_accuracy_pct": 86.2,
+          "macro_accuracy": {
+            "carb": {
+              "target": 45.0,
+              "actual": 42.6,
+              "diff": -2.4
+            },
+            "protein": {
+              "target": 30.0,
+              "actual": 32.9,
+              "diff": 2.9
+            },
+            "fat": {
+              "target": 25.0,
+              "actual": 24.5,
+              "diff": -0.5
+            }
+          },
+          "constraint_warnings": [],
+          "overall_score": 36,
+          "grade": "D",
+          "keywords": [
+            "고구마",
+            "고단백",
+            "그릭요거트",
+            "닭가슴살",
+            "바나나",
+            "브로콜리",
+            "아몬드",
+            "연어",
+            "오트밀",
+            "저지방",
+            "프로틴",
+            "현미"
+          ]
+        },
+        {
+          "goal": "건강개선",
+          "target_kcal": 1800,
+          "actual_kcal": 1551,
+          "calorie_diff": -249,
+          "calorie_accuracy_pct": 86.2,
+          "macro_accuracy": {
+            "carb": {
+              "target": 45.0,
+              "actual": 42.6,
+              "diff": -2.4
+            },
+            "protein": {
+              "target": 25.0,
+              "actual": 32.9,
+              "diff": 7.9
+            },
+            "fat": {
+              "target": 30.0,
+              "actual": 24.5,
+              "diff": -5.5
+            }
+          },
+          "constraint_warnings": [
+            "[당뇨] lunch 탄수화물 56.6g → 50g 이하 권장"
+          ],
+          "overall_score": 16,
+          "grade": "D",
+          "keywords": [
+            "고구마",
+            "고단백",
+            "그릭요거트",
+            "닭가슴살",
+            "바나나",
+            "브로콜리",
+            "아몬드",
+            "연어",
+            "오트밀",
+            "저지방",
+            "프로틴",
+            "현미"
+          ]
+        }
+      ],
+      "prompt_comparison": {
+        "zero_shot": {
+          "특성": "간결, JSON 구조 준수율 높음",
+          "적합": "빠른 생성, 단순 식단"
+        },
+        "few_shot": {
+          "특성": "예시 기반 학습, 품질 안정적",
+          "적합": "기본 권장 방식"
+        },
+        "cot": {
+          "특성": "추론 과정 포함, 영양소 계산 정확",
+          "적합": "제약사항 복잡한 경우"
+        }
+      },
+      "temperature_design": {
+        "0.3": {
+          "예상": "안정적 반복, 다양성 부족",
+          "적합": "인바디 수치 파싱 등 정확도 필요 시"
+        },
+        "0.7": {
+          "예상": "균형 잡힌 다양성+정확성",
+          "적합": "일반 식단 생성 기본값"
+        },
+        "1.0": {
+          "예상": "창의적 메뉴, 때때로 부정확",
+          "적합": "다양한 식단 탐색 시"
+        }
+      }
+    },
+    "stage3": {
+      "search_comparisons": [
+        {
+          "query": "하체 운동 추천",
+          "constraints": null,
+          "bm25_results": [
+            {
+              "name": "사이클",
+              "score": 0.726
+            },
+            {
+              "name": "트레드밀 걷기",
+              "score": 0.702
+            },
+            {
+              "name": "버피",
+              "score": 0.679
+            }
+          ],
+          "filter_results": [
+            {
+              "name": "스쿼트",
+              "score": 1.0
+            },
+            {
+              "name": "레그프레스",
+              "score": 1.0
+            },
+            {
+              "name": "런지",
+              "score": 1.0
+            }
+          ]
+        },
+        {
+          "query": "무릎에 부담 적은 하체 운동",
+          "constraints": [
+            "무릎 부상"
+          ],
+          "bm25_results": [
+            {
+              "name": "덤벨 플라이",
+              "score": 2.53
+            },
+            {
+              "name": "사이클",
+              "score": 0.726
+            },
+            {
+              "name": "트레드밀 걷기",
+              "score": 0.702
+            }
+          ],
+          "filter_results": [
+            {
+              "name": "벤치프레스",
+              "score": 1.0
+            },
+            {
+              "name": "푸쉬업",
+              "score": 1.0
+            },
+            {
+              "name": "덤벨 플라이",
+              "score": 1.0
+            }
+          ]
+        },
+        {
+          "query": "가슴 운동 초보",
+          "constraints": null,
+          "bm25_results": [
+            {
+              "name": "버피",
+              "score": 1.296
+            },
+            {
+              "name": "랫풀다운",
+              "score": 1.199
+            },
+            {
+              "name": "푸쉬업",
+              "score": 1.181
+            }
+          ],
+          "filter_results": [
+            {
+              "name": "벤치프레스",
+              "score": 1.0
+            },
+            {
+              "name": "푸쉬업",
+              "score": 1.0
+            },
+            {
+              "name": "덤벨 플라이",
+              "score": 1.0
+            }
+          ]
+        },
+        {
+          "query": "유산소 심폐 체력",
+          "constraints": null,
+          "bm25_results": [
+            {
+              "name": "러닝",
+              "score": 4.047
+            },
+            {
+              "name": "줄넘기",
+              "score": 1.86
+            },
+            {
+              "name": "사이클",
+              "score": 1.385
+            }
+          ],
+          "filter_results": []
+        },
+        {
+          "query": "어깨 부상 대체 운동",
+          "constraints": [
+            "어깨 부상"
+          ],
+          "bm25_results": [
+            {
+              "name": "플랭크",
+              "score": 0.518
+            },
+            {
+              "name": "줄넘기",
+              "score": 0.509
+            }
+          ],
+          "filter_results": [
+            {
+              "name": "푸쉬업",
+              "score": 1.0
+            },
+            {
+              "name": "랫풀다운",
+              "score": 1.0
+            },
+            {
+              "name": "바벨 로우",
+              "score": 1.0
+            }
+          ]
+        }
+      ],
+      "exercise_db_stats": {
+        "total_exercises": 24,
+        "muscle_groups": [
+          "가슴",
+          "등",
+          "어깨",
+          "하체",
+          "이두",
+          "삼두",
+          "코어"
+        ]
+      }
+    },
+    "stage4": {
+      "sentiment_accuracy": 0.7,
+      "emotion_accuracy": 0.6,
+      "test_count": 10,
+      "details": [
+        {
+          "text": "레그프레스 무게 올렸다! 뿌듯하다.",
+          "true_sentiment": "긍정",
+          "predicted_sentiment": "긍정",
+          "sentiment_correct": true,
+          "true_emotion": "성취감",
+          "predicted_emotion": "성취감",
+          "emotion_correct": true,
+          "confidence": 0.99
+        },
+        {
+          "text": "친구랑 같이 운동해서 재밌었다ㅋㅋ",
+          "true_sentiment": "긍정",
+          "predicted_sentiment": "긍정",
+          "sentiment_correct": true,
+          "true_emotion": "즐거움",
+          "predicted_emotion": "즐거움",
+          "emotion_correct": true,
+          "confidence": 0.99
+        },
+        {
+          "text": "체중이 2kg 줄었다! 식단 효과!",
+          "true_sentiment": "긍정",
+          "predicted_sentiment": "중립",
+          "sentiment_correct": false,
+          "true_emotion": "성취감",
+          "predicted_emotion": "일상",
+          "emotion_correct": false,
+          "confidence": 0.5
+        },
+        {
+          "text": "너무 피곤해서 겨우 30분 하고 나왔다.",
+          "true_sentiment": "부정",
+          "predicted_sentiment": "부정",
+          "sentiment_correct": true,
+          "true_emotion": "피로",
+          "predicted_emotion": "피로",
+          "emotion_correct": true,
+          "confidence": 0.99
+        },
+        {
+          "text": "2주째 체중이 안 줄어서 스트레스.",
+          "true_sentiment": "부정",
+          "predicted_sentiment": "부정",
+          "sentiment_correct": true,
+          "true_emotion": "좌절",
+          "predicted_emotion": "스트레스",
+          "emotion_correct": false,
+          "confidence": 0.99
+        },
+        {
+          "text": "무릎이 좀 아팠다. 내일은 쉬어야겠다.",
+          "true_sentiment": "부정",
+          "predicted_sentiment": "중립",
+          "sentiment_correct": false,
+          "true_emotion": "통증",
+          "predicted_emotion": "일상",
+          "emotion_correct": false,
+          "confidence": 0.5
+        },
+        {
+          "text": "운동 의욕이 없어서 빠졌다.",
+          "true_sentiment": "부정",
+          "predicted_sentiment": "부정",
+          "sentiment_correct": true,
+          "true_emotion": "무기력",
+          "predicted_emotion": "무기력",
+          "emotion_correct": true,
+          "confidence": 0.99
+        },
+        {
+          "text": "계획대로 루틴 소화. 보통이었음.",
+          "true_sentiment": "중립",
+          "predicted_sentiment": "중립",
+          "sentiment_correct": true,
+          "true_emotion": "일상",
+          "predicted_emotion": "일상",
+          "emotion_correct": true,
+          "confidence": 0.99
+        },
+        {
+          "text": "오트밀 40분 + 복근 15분. 무난.",
+          "true_sentiment": "중립",
+          "predicted_sentiment": "중립",
+          "sentiment_correct": true,
+          "true_emotion": "일상",
+          "predicted_emotion": "일상",
+          "emotion_correct": true,
+          "confidence": 0.99
+        },
+        {
+          "text": "새 운동 배웠는데 신기했다.",
+          "true_sentiment": "긍정",
+          "predicted_sentiment": "중립",
+          "sentiment_correct": false,
+          "true_emotion": "즐거움",
+          "predicted_emotion": "기록",
+          "emotion_correct": false,
+          "confidence": 0.99
+        }
+      ],
+      "feedback_modes": [
+        {
+          "mode_id": "coach",
+          "mode_name": "코치 모드",
+          "emoji": "🏋️",
+          "description": "전문 트레이너처럼 체계적이고 건설적인 피드백"
+        },
+        {
+          "mode_id": "friend",
+          "mode_name": "친구 모드",
+          "emoji": "😄",
+          "description": "편하게 말하는 운동 친구 같은 피드백"
+        },
+        {
+          "mode_id": "drill",
+          "mode_name": "드릴교관 모드",
+          "emoji": "🫡",
+          "description": "엄격하지만 애정 있는 군대식 피드백"
+        },
+        {
+          "mode_id": "mammykim",
+          "mode_name": "매미킴 모드",
+          "emoji": "🥊",
+          "description": "김동현(스턴건) 스타일 — '운동 많이 된다' 긍정 마인드"
+        },
+        {
+          "mode_id": "marine",
+          "mode_name": "해병문학 모드",
+          "emoji": "🫡",
+          "description": "해병문학 스타일 — 과장된 감성 + 하드코어 군기"
+        }
+      ]
+    }
+  }
+}
