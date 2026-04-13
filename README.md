@@ -2,8 +2,8 @@
 
 > **경북대학교 K-Digital Training 12기** (고용노동부 주관)
 >
-> AI 빅데이터 전문가 양성 과정에서 수행한 **9개 Phase 미니 프로젝트** 모음입니다.
-> Python 기초부터 통계 분석, 데이터 시각화, 웹 크롤링, 머신러닝, 딥러닝, 컴퓨터 비전까지
+> AI 빅데이터 전문가 양성 과정에서 수행한 **11개 Phase 미니 프로젝트** 모음입니다.
+> Python 기초부터 통계 분석, 데이터 시각화, 웹 크롤링, 머신러닝, 딥러닝, 컴퓨터 비전, 자연어 처리까지
 > 전 파이프라인을 실전 프로젝트로 경험하며 데이터 분석 역량을 체계적으로 쌓았습니다.
 
 <br>
@@ -31,6 +31,8 @@
 | **[Phase 7](#phase-7--mbtI혈액형-성격-이론-검증)** | MBTI/혈액형 성격 이론 검증 | 2026.03 | NumPy/통계 분석 | NumPy, 카이제곱, ANOVA, t-test | 팀 |
 | **[Phase 8](#phase-8--머신러닝-재고-관리-최적화)** | 머신러닝 기반 식료품 재고 관리 최적화 | 2026.03 | 머신러닝 | Scikit-learn, XGBoost, LightGBM, Streamlit | 팀장 |
 | **[Phase 9](#phase-9--opencv--ml-결함-자동-검수-시스템)** | OpenCV & ML 하이브리드 부품 결함 자동 검수 | 2026.03 | 컴퓨터 비전 | OpenCV, PyTorch, Autoencoder, Streamlit | 팀장 |
+| **[Phase 10](#phase-10--ai-스마트-팩토리-품질관리-시스템)** | AI 기반 스마트 팩토리 품질관리 시스템 | 2026.04 | 딥러닝 | CNN, U-Net, YOLOv8, BERT, Streamlit | 팀 |
+| **[Phase 11](#phase-11--헬창지피티-nlp-피트니스-코칭-서비스)** | 헬창지피티 — NLP 기반 피트니스 코칭 서비스 | 2026.04 | 자연어 처리 | Ollama LLM, EXAONE, NER, 감성분석, React | 팀 |
 
 ---
 
@@ -171,6 +173,39 @@
 
 ---
 
+### Phase 10 — AI 스마트 팩토리 품질관리 시스템
+
+> **기간**: 2026.04.01 ~ 04.02 | **과목**: 딥러닝
+
+| 항목 | 내용 |
+|------|------|
+| **주제** | 딥러닝을 활용한 제조 공정 품질 검사 자동화 및 설비 예지보전 통합 플랫폼 |
+| **핵심 기술** | CNN 이미지 분류, U-Net 세그먼테이션, YOLOv8 객체탐지, BERT/LSTM 텍스트 분류 |
+| **소주제** | A. 주조 제품 불량 분류 · B. 표면 균열 세그먼테이션 · C. PCB 결함 탐지 · D. 설비 고장 예측 |
+| **활용 도구** | PyTorch, Ultralytics, HuggingFace Transformers, Streamlit, Google Colab |
+| **팀** | KPJ 팩토리 (4명, 소주제별 1인 담당) |
+
+📂 [Phase10 폴더](./Phase10)
+
+---
+
+### Phase 11 — 헬창지피티: NLP 피트니스 코칭 서비스
+
+> **기간**: 2026.04.07 ~ 04.13 | **과목**: 자연어 처리
+
+| 항목 | 내용 |
+|------|------|
+| **주제** | LLM 기반 맞춤형 피트니스 토탈 코칭 서비스 (헬창지피티) |
+| **핵심 기술** | Ollama 로컬 LLM (EXAONE, Qwen, Gemma), NER, 텍스트 분류, 감성분석, 텍스트 생성 |
+| **파이프라인** | 4단계 NLP: 프로필 분석(기) → 식단 생성(승) → 운동 루틴(전) → 동기부여 피드백(결) |
+| **주요 기능** | 인바디 이미지 OCR 파싱, 자연어 목표 분류, 맞춤 식단/운동 추천, 운동일기 감성분석 |
+| **프론트엔드** | React + Vite + Tailwind CSS |
+| **팀** | 오운완 4팀 |
+
+📂 [Phase11 폴더](./Phase11)
+
+---
+
 ## 🛠️ 기술 스택 성장 로드맵
 
 ```
@@ -191,6 +226,10 @@ Phase 7  ─── 통계 검정 (NumPy, 카이제곱, ANOVA, t-test)
 Phase 8  ─── 머신러닝 (Scikit-learn, XGBoost, LightGBM, Streamlit WMS)
     │
 Phase 9  ─── 컴퓨터 비전 (OpenCV, PyTorch, ResNet-18, Autoencoder, Streamlit)
+    │
+Phase 10 ─── 딥러닝 (CNN, U-Net, YOLOv8, BERT, HuggingFace Transformers)
+    │
+Phase 11 ─── 자연어 처리 (Ollama LLM, EXAONE, NER, 감성분석, React)
 ```
 
 ---
@@ -208,7 +247,9 @@ Phase 9  ─── 컴퓨터 비전 (OpenCV, PyTorch, ResNet-18, Autoencoder, St
 | Phase 7 | 153개 | 75.8KB | 통계 검정 보고서, 시각화 |
 | Phase 8 | 428개 | 66.8KB | Streamlit WMS v3.5, 4개 소주제 보고서 |
 | Phase 9 | 162개 | 47.2KB | 12개 노트북, Streamlit 8탭, 5개 보고서 |
-| **합계** | **1,697개** | — | **9개 Phase 프로젝트 완성** |
+| Phase 10 | 150개 | 34.5KB | 4개 소주제 DL 모델, Streamlit 대시보드 |
+| Phase 11 | 149개 | 18.3KB | NLP 파이프라인, React 프론트엔드, 기능설명서 |
+| **합계** | **1,996개** | — | **11개 Phase 프로젝트 완성** |
 
 ---
 
