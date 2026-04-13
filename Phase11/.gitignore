@@ -1,0 +1,26 @@
+# === 환경 설정 / API 키 ===
+.env
+*.secret
+*.key
+*.pem
+
+# === 사용자 데이터 (개인정보) ===
+helchanggpt/data/users/
+helchanggpt/data/user_profiles/
+
+# === 빌드 산출물 ===
+node_modules/
+dist/
+__pycache__/
+*.pyc
+
+# === 대용량 미디어 ===
+*.mp4
+
+# === macOS / IDE ===
+.DS_Store
+.claude/
+
+# === 저작권 보호 (외부 교육자료/API문서) ===
+# GUIDELINE/*.pdf (KDT 과정 구현가이드)
+# helchanggpt/api/*.pdf (외부 API 문서)

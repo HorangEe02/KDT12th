@@ -1,0 +1,28 @@
+{
+  "total_items": 1146,
+  "collected_at": "2026-04-10T14:28:07.032437",
+  "food_groups": {
+    "반찬": 574,
+    "국&찌개": 103,
+    "후식": 142,
+    "일품": 171,
+    "밥": 119,
+    "기타": 37
+  },
+  "fields": [
+    "food_name",
+    "food_code",
+    "food_group",
+    "cooking_method",
+    "serving_size",
+    "calories_kcal",
+    "carb_g",
+    "protein_g",
+    "fat_g",
+    "sodium_mg",
+    "hash_tag",
+    "ingredients",
+    "image_url",
+    "sodium_tip"
+  ]
+}

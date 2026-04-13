@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HELC-AI | Profile Analysis</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#fcf9f8",
+                        "on-background": "#ffffff",
+                        "on-error": "#450900",
+                        "error-container": "#b92902",
+                        "primary-fixed": "#a2fe00",
+                        "on-surface-variant": "#adaaaa",
+                        "secondary-container": "#454747",
+                        "surface-container-highest": "#262626",
+                        "primary": "#ddffaf",
+                        "tertiary-container": "#3afea0",
+                        "on-primary-fixed": "#2b4900",
+                        "secondary": "#e2e2e2",
+                        "secondary-fixed-dim": "#d4d4d4",
+                        "outline-variant": "#484847",
+                        "surface-tint": "#ddffaf",
+                        "on-primary": "#3f6600",
+                        "on-tertiary": "#00663b",
+                        "error": "#ff7351",
+                        "surface-variant": "#262626",
+                        "secondary-fixed": "#e2e2e2",
+                        "tertiary": "#b2ffcb",
+                        "on-surface": "#ffffff",
+                        "on-primary-container": "#395d00",
+                        "primary-fixed-dim": "#98ee00",
+                        "primary-dim": "#98ee00",
+                        "on-secondary-fixed": "#3e4040",
+                        "on-secondary-fixed-variant": "#5a5c5c",
+                        "error-dim": "#d53d18",
+                        "surface-container-lowest": "#000000",
+                        "inverse-primary": "#416a00",
+                        "tertiary-fixed": "#3afea0",
+                        "surface": "#0e0e0e",
+                        "surface-dim": "#0e0e0e",
+                        "background": "#0e0e0e",
+                        "surface-container-high": "#201f1f",
+                        "on-primary-fixed-variant": "#406800",
+                        "on-error-container": "#ffd2c8",
+                        "on-secondary": "#505252",
+                        "on-tertiary-fixed": "#004828",
+                        "surface-container": "#1a1919",
+                        "on-secondary-container": "#d0d0d0",
+                        "tertiary-fixed-dim": "#1bef93",
+                        "outline": "#767575",
+                        "on-tertiary-fixed-variant": "#00673c",
+                        "surface-bright": "#2c2c2c",
+                        "inverse-on-surface": "#565555",
+                        "tertiary-dim": "#1bef93",
+                        "surface-container-low": "#131313",
+                        "on-tertiary-container": "#005d35",
+                        "secondary-dim": "#d4d4d4",
+                        "primary-container": "#a2fe00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .headline { font-family: 'Space Grotesk', sans-serif; }
+        .glass { background: rgba(38, 38, 38, 0.6); backdrop-filter: blur(20px); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- TopAppBar Navigation Shell Suppressed for Onboarding Flow per Destination Rule -->
+<header class="fixed top-0 w-full z-50 bg-[#0e0e0e]/60 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="close up portrait of a fit young man with focused expression in a dark moody athletic studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiPaDnIMgOfoaa21Mgv32xjl9x9OqPSpw_hB3esoxxFAlk8XNGGcBjaiLxv-4xrJ8UtU1n1UsYLNNU0wRuJL7w4VAhZofA9dyiS0JsHSI-JYKVxkpMJuVUetTGRM9gwpYC-WeaytX1SqFQQXR5FsyHcIwvTax7RakuMYL_Q4TESU0S7oHApjVg_iWJ5yQfNXiINDbs8oOPWW1pkki-YWbRYvk8HF8ldrzNSUviU3ao24xpt4M42WOYSmu_n3Nk25JZ1mKfztTSB0k"/>
+</div>
+<span class="text-2xl font-black italic text-[#a3ff00] tracking-tighter font-['Space_Grotesk']">HELC-AI</span>
+</div>
+<div class="text-[#a3ff00] material-symbols-outlined">bolt</div>
+</header>
+<main class="pt-24 px-6 max-w-md mx-auto space-y-8">
+<!-- Title & Hero Section -->
+<section>
+<h1 class="text-4xl font-bold tracking-tight text-white mb-2">My Profile</h1>
+<p class="text-on-surface-variant text-sm">Onboarding Step 2 of 3: AI Analysis</p>
+</section>
+<!-- Natural Language Chat Input Area -->
+<section class="space-y-4">
+<div class="flex items-end gap-3 justify-end">
+<div class="bg-surface-container-high rounded-t-xl rounded-bl-xl p-4 max-w-[85%] shadow-lg">
+<p class="text-on-surface text-sm leading-relaxed">
+                        25세 남성, 178cm 82kg, 주 3회 웨이트 트레이닝 중이고 체지방을 줄이면서 근육량을 늘리고 싶어.
+                    </p>
+</div>
+<div class="w-6 h-6 rounded-full bg-primary-container flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[14px] text-on-primary-fixed" style="font-variation-settings: 'FILL' 1;">person</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-[#131313] flex items-center justify-center border border-primary/20">
+<span class="material-symbols-outlined text-primary text-[18px]">psychology</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-b-xl rounded-tr-xl border-l-2 border-primary-container/40">
+<p class="text-primary text-xs font-bold uppercase tracking-widest mb-1">AI Analyst</p>
+<p class="text-on-surface-variant text-sm">분석이 완료되었습니다. 당신의 신체 데이터에 기반한 맞춤형 리포트입니다.</p>
+</div>
+</div>
+</section>
+<!-- Bento Grid Analysis Results -->
+<section class="grid grid-cols-2 gap-4">
+<!-- BMI Card -->
+<div class="col-span-1 bg-surface-container-low rounded-xl p-5 flex flex-col justify-between aspect-square relative overflow-hidden group">
+<div class="z-10">
+<p class="text-on-surface-variant text-xs font-medium uppercase tracking-wider mb-1">BMI Index</p>
+<h3 class="text-3xl font-black text-white">25.9</h3>
+</div>
+<div class="z-10 space-y-2">
+<div class="flex justify-between text-[10px] text-on-surface-variant">
+<span>Normal</span>
+<span class="text-primary">Overweight</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container w-[68%]"></div>
+</div>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-8xl">monitor_weight</span>
+</div>
+</div>
+<!-- TDEE Card -->
+<div class="col-span-1 bg-surface-container-low rounded-xl p-5 flex flex-col justify-between aspect-square relative overflow-hidden group">
+<div class="z-10">
+<p class="text-on-surface-variant text-xs font-medium uppercase tracking-wider mb-1">TDEE</p>
+<h3 class="text-3xl font-black text-white">2,840</h3>
+<p class="text-[10px] text-primary mt-1 font-bold">KCAL / DAY</p>
+</div>
+<div class="z-10">
+<div class="flex items-center gap-1 text-[10px] text-on-surface-variant">
+<span class="material-symbols-outlined text-xs">info</span>
+<span>Maintenance level</span>
+</div>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-8xl">bolt</span>
+</div>
+</div>
+<!-- Target Category - Wide Card -->
+<div class="col-span-2 bg-surface-container-high rounded-xl p-6 relative overflow-hidden">
+<div class="flex justify-between items-start mb-6">
+<div>
+<p class="text-primary text-[10px] font-black uppercase tracking-[0.2em] mb-2">Target Category</p>
+<h2 class="text-2xl font-bold tracking-tight text-white leading-tight">Body Fat Reduction &amp;<br/>Muscle Gain</h2>
+</div>
+<div class="bg-primary/10 p-3 rounded-full">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="space-y-1.5">
+<div class="flex justify-between items-end">
+<span class="text-xs font-bold text-on-surface-variant uppercase">Current Status</span>
+<span class="text-xs text-white font-mono">24.5% Fat</span>
+</div>
+<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary/40 to-primary-container w-[75%]"></div>
+</div>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between items-end">
+<span class="text-xs font-bold text-on-surface-variant uppercase">Growth Potential</span>
+<span class="text-xs text-white font-mono">High Precision</span>
+</div>
+<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container w-[92%]"></div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex gap-2">
+<span class="bg-surface-container-highest text-[10px] font-bold text-on-surface-variant px-3 py-1 rounded-full border border-outline-variant/20 uppercase tracking-tighter">Endomorph-Mesomorph</span>
+<span class="bg-surface-container-highest text-[10px] font-bold text-on-surface-variant px-3 py-1 rounded-full border border-outline-variant/20 uppercase tracking-tighter">High Recovery</span>
+</div>
+</div>
+</section>
+<!-- Dynamic Recommendation -->
+<section class="bg-primary-container rounded-xl p-6 shadow-[0_0_30px_rgba(162,254,0,0.15)] group transition-all">
+<div class="flex items-center gap-4">
+<div class="flex-1">
+<p class="text-on-primary-fixed text-xs font-bold uppercase tracking-widest mb-1">AI Recommendation</p>
+<h4 class="text-on-primary-fixed font-black text-lg leading-tight">Start Personalized 12-Week Transformation</h4>
+</div>
+<div class="bg-on-primary-fixed text-primary-container rounded-full w-10 h-10 flex items-center justify-center transition-transform group-active:scale-90">
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+</section>
+<section class="pb-8">
+<button class="w-full py-4 text-on-surface-variant font-bold text-sm hover:text-white transition-colors">
+                Skip for now, use manual inputs
+            </button>
+</section>
+</main>
+<!-- BottomNavBar Suppressed for Onboarding Task-Focused Flow -->
+<!-- The user is in a focused journey (onboarding), thus navigation shell is hidden to prioritize the canvas. -->
+</body></html>

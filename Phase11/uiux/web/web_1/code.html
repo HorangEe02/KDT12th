@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#262626",
+                        "error": "#ff7351",
+                        "secondary-fixed-dim": "#d4d4d4",
+                        "outline-variant": "#484847",
+                        "surface-tint": "#ddffaf",
+                        "on-primary": "#3f6600",
+                        "on-tertiary": "#00663b",
+                        "secondary": "#e2e2e2",
+                        "surface-container-highest": "#262626",
+                        "primary": "#ddffaf",
+                        "tertiary-container": "#3afea0",
+                        "on-primary-fixed": "#2b4900",
+                        "error-container": "#b92902",
+                        "primary-fixed": "#a2fe00",
+                        "secondary-container": "#454747",
+                        "on-surface-variant": "#adaaaa",
+                        "on-error": "#450900",
+                        "on-background": "#ffffff",
+                        "inverse-surface": "#fcf9f8",
+                        "secondary-dim": "#d4d4d4",
+                        "primary-container": "#a2fe00",
+                        "tertiary-dim": "#1bef93",
+                        "inverse-on-surface": "#565555",
+                        "surface-container-low": "#131313",
+                        "on-tertiary-container": "#005d35",
+                        "surface-container": "#1a1919",
+                        "on-secondary-container": "#d0d0d0",
+                        "tertiary-fixed-dim": "#1bef93",
+                        "outline": "#767575",
+                        "on-tertiary-fixed-variant": "#00673c",
+                        "surface-bright": "#2c2c2c",
+                        "surface-container-high": "#201f1f",
+                        "on-primary-fixed-variant": "#406800",
+                        "background": "#0e0e0e",
+                        "on-error-container": "#ffd2c8",
+                        "on-secondary": "#505252",
+                        "on-tertiary-fixed": "#004828",
+                        "inverse-primary": "#416a00",
+                        "tertiary-fixed": "#3afea0",
+                        "surface": "#0e0e0e",
+                        "surface-dim": "#0e0e0e",
+                        "on-secondary-fixed-variant": "#5a5c5c",
+                        "on-secondary-fixed": "#3e4040",
+                        "error-dim": "#d53d18",
+                        "surface-container-lowest": "#000000",
+                        "primary-fixed-dim": "#98ee00",
+                        "primary-dim": "#98ee00",
+                        "tertiary": "#b2ffcb",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-surface": "#ffffff",
+                        "on-primary-container": "#395d00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .kinetic-gradient {
+            background: linear-gradient(135deg, #ddffaf 0%, #a2fe00 100%);
+        }
+        .glass-overlay {
+            background: rgba(38, 38, 38, 0.6);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- SideNavBar (Shared Component) -->
+<nav class="fixed left-0 top-0 flex flex-col h-full z-40 h-screen w-64 border-r border-outline-variant/20 bg-[#0e0e0e]">
+<div class="p-8">
+<h1 class="text-[#A3FF00] font-black text-2xl tracking-tighter italic font-headline">HELCHANG</h1>
+<p class="font-headline font-bold tracking-tight uppercase text-xs text-on-surface-variant mt-1">AI PERFORMANCE LAB</p>
+</div>
+<div class="flex-1 mt-4">
+<!-- Active: Onboarding -->
+<a class="flex items-center text-[#A3FF00] bg-[#201f1f] rounded-r-full border-l-4 border-[#A3FF00] font-bold py-4 px-6 mb-2 font-headline uppercase tracking-tight scale-95 transition-all" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="person_add">person_add</span>
+                Onboarding
+            </a>
+<a class="flex items-center text-[#adaaaa] hover:text-[#A3FF00] py-4 px-6 mb-2 transition-all hover:bg-[#131313] font-headline uppercase tracking-tight" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="restaurant">restaurant</span>
+                Diet
+            </a>
+<a class="flex items-center text-[#adaaaa] hover:text-[#A3FF00] py-4 px-6 mb-2 transition-all hover:bg-[#131313] font-headline uppercase tracking-tight" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="fitness_center">fitness_center</span>
+                Workout
+            </a>
+<a class="flex items-center text-[#adaaaa] hover:text-[#A3FF00] py-4 px-6 mb-2 transition-all hover:bg-[#131313] font-headline uppercase tracking-tight" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="menu_book">menu_book</span>
+                Diary
+            </a>
+<a class="flex items-center text-[#adaaaa] hover:text-[#A3FF00] py-4 px-6 mb-2 transition-all hover:bg-[#131313] font-headline uppercase tracking-tight" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="query_stats">query_stats</span>
+                Comparison
+            </a>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-xl border border-outline-variant/10">
+<img alt="Athlete Profile" class="w-10 h-10 rounded-full bg-surface-container-high object-cover" data-alt="close-up portrait of a determined elite athlete with sweat, cinematic lighting, dark gym background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzvtG1u9bj3k0-NqgXxB7TsSPc7iVY17RlNnOggKUHhV90BTl44vJiAbD9NCb3UzXmp-LKzoHcSq1O2BXSvgYaKe0pONHaNnhgGtMk7V2GEewo_i_ctMv9V6rsKynaxkg2T_9KIlhs_wsGKeRU9VN23jaaF4wuZs92WWzN0YwoObzj_bGFlN7U-u-k-tLX9tcYXLy1hAOQGDITTbj16LIgooddDFM-rX6ODIW9BDa3RFCbRKt4YYJv800nHP_fGO2e43DGIgL5Apc"/>
+<div class="overflow-hidden">
+<p class="text-xs font-bold font-headline truncate">CHAMPION_01</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">Elite Tier</p>
+</div>
+</div>
+</div>
+</nav>
+<!-- TopAppBar (Shared Component) -->
+<header class="fixed top-0 right-0 left-64 flex justify-between items-center px-8 z-50 h-16 bg-[#0e0e0e]/60 backdrop-blur-xl">
+<div class="flex items-center flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-lg pl-10 pr-4 py-2 text-xs font-headline tracking-widest focus:ring-1 focus:ring-primary" placeholder="SEARCH LAB DATA..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="h-4 w-[1px] bg-outline-variant/30"></div>
+<span class="font-headline text-xs font-bold tracking-widest text-primary">HELCHANG GPT</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-24 px-8 pb-12 min-h-screen">
+<!-- Dashboard Hero / Profile Header -->
+<div class="grid grid-cols-12 gap-6 mb-8">
+<div class="col-span-12 lg:col-span-8">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-8 border border-outline-variant/10">
+<div class="relative z-10">
+<span class="inline-block px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold font-headline tracking-[0.2em] uppercase rounded-full mb-4">SYSTEM_ONBOARDING_INITIALIZED</span>
+<h2 class="text-5xl font-black font-headline tracking-tighter italic mb-2 uppercase">ATHLETE <span class="text-primary">PROFILE</span> ANALYSIS</h2>
+<p class="text-on-surface-variant font-medium max-w-xl">AI-driven biometric assessment complete. We have synthesized your physiological data into a high-performance roadmap.</p>
+</div>
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-20 pointer-events-none">
+<div class="w-full h-full kinetic-gradient mix-blend-overlay"></div>
+</div>
+</div>
+</div>
+<!-- User Summary Card -->
+<div class="col-span-12 lg:col-span-4">
+<div class="bg-surface-container-high rounded-xl p-6 h-full flex flex-col justify-between border-b-2 border-primary">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 bg-surface-container-highest rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">account_circle</span>
+</div>
+<span class="text-[10px] font-headline text-on-surface-variant uppercase tracking-widest">Subject ID: #4402</span>
+</div>
+<div class="mt-4 grid grid-cols-2 gap-4">
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Age</p>
+<p class="text-2xl font-black font-headline italic">28 <span class="text-xs font-normal not-italic text-on-surface-variant">YRS</span></p>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Height</p>
+<p class="text-2xl font-black font-headline italic">184 <span class="text-xs font-normal not-italic text-on-surface-variant">CM</span></p>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Weight</p>
+<p class="text-2xl font-black font-headline italic">92.5 <span class="text-xs font-normal not-italic text-on-surface-variant">KG</span></p>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Goal</p>
+<p class="text-xs font-bold text-primary font-headline uppercase leading-tight">Hypertrophy &amp; Shred</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- AI Analyst Reports -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<!-- BMI Card -->
+<div class="bg-surface-container-low p-6 rounded-xl relative overflow-hidden group">
+<div class="relative z-10">
+<p class="text-[10px] font-headline font-bold text-on-surface-variant uppercase tracking-[0.2em] mb-6">Biometric Index (BMI)</p>
+<div class="flex items-baseline gap-2">
+<span class="text-6xl font-black font-headline tracking-tighter italic">27.3</span>
+<span class="text-primary text-xs font-bold font-headline uppercase tracking-widest">Overweight</span>
+</div>
+<div class="mt-6 h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full kinetic-gradient w-[73%]"></div>
+</div>
+<p class="mt-4 text-xs text-on-surface-variant leading-relaxed">System Note: Elevated BMI is likely due to significant lean muscle mass. Further DXA scanning recommended.</p>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-[120px]" style="font-variation-settings: 'FILL' 1;">monitoring</span>
+</div>
+</div>
+<!-- TDEE Card -->
+<div class="bg-surface-container-low p-6 rounded-xl relative overflow-hidden group">
+<div class="relative z-10">
+<p class="text-[10px] font-headline font-bold text-on-surface-variant uppercase tracking-[0.2em] mb-6">Maintenance (TDEE)</p>
+<div class="flex items-baseline gap-2">
+<span class="text-6xl font-black font-headline tracking-tighter italic">2,840</span>
+<span class="text-primary text-xs font-bold font-headline uppercase tracking-widest">Kcal/Day</span>
+</div>
+<div class="mt-6 flex gap-1">
+<div class="h-8 w-1 kinetic-gradient opacity-20"></div>
+<div class="h-8 w-1 kinetic-gradient opacity-40"></div>
+<div class="h-8 w-1 kinetic-gradient opacity-60"></div>
+<div class="h-8 w-1 kinetic-gradient opacity-80"></div>
+<div class="h-8 w-1 kinetic-gradient"></div>
+<div class="h-8 w-1 bg-surface-container-highest"></div>
+<div class="h-8 w-1 bg-surface-container-highest"></div>
+</div>
+<p class="mt-4 text-xs text-on-surface-variant leading-relaxed">Estimated based on 'Moderately Active' profile. Caloric deficit recommended for phase 1.</p>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-[120px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+</div>
+<!-- Target Category Visualization -->
+<div class="md:col-span-2 bg-surface-container-high rounded-xl p-6 relative">
+<p class="text-[10px] font-headline font-bold text-on-surface-variant uppercase tracking-[0.2em] mb-6">Transformation Trajectory</p>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-xs font-bold uppercase tracking-widest">Body Fat Reduction</span>
+<span class="text-xs font-headline text-primary font-bold">42% POTENTIAL</span>
+</div>
+<div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="h-full bg-primary/40 w-[58%]"></div>
+<div class="h-full kinetic-gradient w-[15%]"></div>
+</div>
+<div class="flex justify-between mt-1">
+<span class="text-[9px] text-on-surface-variant uppercase italic">Current: 22% BF</span>
+<span class="text-[9px] text-on-surface-variant uppercase italic">Target: 14% BF</span>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-xs font-bold uppercase tracking-widest">Muscle Gain Capacity</span>
+<span class="text-xs font-headline text-tertiary-fixed font-bold">88% OPTIMIZED</span>
+</div>
+<div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-fixed w-[88%]"></div>
+</div>
+<div class="flex justify-between mt-1">
+<span class="text-[9px] text-on-surface-variant uppercase italic">Peak State Proximity</span>
+<span class="text-[9px] text-on-surface-variant uppercase italic">Volume Grade: S-Tier</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Big CTA & Secondary Meta -->
+<div class="flex flex-col lg:flex-row gap-8 items-center justify-between mt-12 bg-surface-container-low/40 p-8 rounded-2xl border border-outline-variant/10">
+<div class="flex-1">
+<h3 class="text-3xl font-black font-headline tracking-tighter uppercase italic leading-none mb-2">READY TO ASCEND?</h3>
+<p class="text-on-surface-variant text-sm max-w-md">Initializing your 12-week protocol. This will integrate AI diet modulation, kinetic loading schemes, and performance bio-tracking.</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-surface-container-highest text-primary font-headline font-bold uppercase text-xs px-8 py-4 rounded-xl hover:bg-surface-variant transition-all active:scale-95 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">history</span>
+                    View Lab History
+                </button>
+<button class="kinetic-gradient text-on-primary-fixed font-headline font-black uppercase italic tracking-tighter text-xl px-12 py-5 rounded-xl shadow-[0_0_40px_rgba(162,254,0,0.2)] hover:shadow-[0_0_60px_rgba(162,254,0,0.4)] transition-all active:scale-95 group flex items-center gap-3">
+                    Start Transformation
+                    <span class="material-symbols-outlined font-black group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Bento Details -->
+<div class="grid grid-cols-3 gap-6 mt-12">
+<div class="bg-surface-container-low p-6 rounded-xl border-l-2 border-outline-variant">
+<span class="material-symbols-outlined text-primary-container mb-4">psychology</span>
+<h4 class="font-headline font-bold uppercase tracking-tight mb-2">Cognitive Load</h4>
+<p class="text-xs text-on-surface-variant">AI recommends higher rest intervals during initial week to manage CNS adaptation.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border-l-2 border-outline-variant">
+<span class="material-symbols-outlined text-primary-container mb-4">science</span>
+<h4 class="font-headline font-bold uppercase tracking-tight mb-2">Metabolic Stress</h4>
+<p class="text-xs text-on-surface-variant">Phase 1 focuses on insulin sensitivity through targeted peri-workout nutrition.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border-l-2 border-outline-variant">
+<span class="material-symbols-outlined text-primary-container mb-4">speed</span>
+<h4 class="font-headline font-bold uppercase tracking-tight mb-2">Recovery Velocity</h4>
+<p class="text-xs text-on-surface-variant">Sleep tracking integrated. Recovery window estimated at 36 hours post-leg session.</p>
+</div>
+</div>
+</main>
+<!-- Visual Accents -->
+<div class="fixed bottom-0 left-0 w-full h-[307px] bg-gradient-to-t from-primary/5 to-transparent pointer-events-none z-0"></div>
+</body></html>

@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══ Theme CSS Variables (RGB components for Tailwind opacity support) ═══ */
+
+/* 라이트 모드 (기본값) — 부드러운 그린 */
+:root {
+  --color-surface: 245 245 240;
+  --color-surface-dim: 236 236 236;
+  --color-surface-bright: 255 255 255;
+  --color-surface-container-lowest: 255 255 255;
+  --color-surface-container-low: 240 240 235;
+  --color-surface-container: 234 234 229;
+  --color-surface-container-high: 224 224 219;
+  --color-surface-container-highest: 214 214 209;
+  --color-surface-variant: 220 220 215;
+
+  --color-on-surface: 26 26 26;
+  --color-on-surface-variant: 90 90 90;
+  --color-on-background: 26 26 26;
+
+  --color-neon: 46 125 50;
+  --color-primary: 200 230 201;
+  --color-primary-fixed: 46 125 50;
+  --color-primary-dim: 56 142 60;
+  --color-primary-container: 46 125 50;
+  --color-on-primary: 255 255 255;
+  --color-on-primary-fixed: 27 94 32;
+
+  --color-secondary: 66 66 66;
+  --color-secondary-container: 224 224 224;
+  --color-secondary-dim: 97 97 97;
+
+  --color-tertiary: 0 137 123;
+  --color-tertiary-container: 38 166 154;
+  --color-tertiary-dim: 0 121 107;
+
+  --color-error: 211 47 47;
+  --color-error-container: 183 28 28;
+  --color-error-dim: 198 40 40;
+
+  --color-outline: 189 189 189;
+  --color-outline-variant: 200 200 200;
+
+  --neon-glow-rgb: 46, 125, 50;
+  --neon-gradient-start: #c8e6c9;
+  --neon-gradient-end: #2e7d32;
+
+  --scrollbar-track: #e8e8e8;
+  --scrollbar-thumb: #bdbdbd;
+  --scrollbar-hover: #9e9e9e;
+}
+
+/* 다크 모드 — 네온 그린 */
+.dark {
+  --color-surface: 14 14 14;
+  --color-surface-dim: 14 14 14;
+  --color-surface-bright: 44 44 44;
+  --color-surface-container-lowest: 0 0 0;
+  --color-surface-container-low: 19 19 19;
+  --color-surface-container: 26 25 25;
+  --color-surface-container-high: 32 31 31;
+  --color-surface-container-highest: 38 38 38;
+  --color-surface-variant: 38 38 38;
+
+  --color-on-surface: 255 255 255;
+  --color-on-surface-variant: 173 170 170;
+  --color-on-background: 255 255 255;
+
+  --color-neon: 162 254 0;
+  --color-primary: 221 255 175;
+  --color-primary-fixed: 162 254 0;
+  --color-primary-dim: 152 238 0;
+  --color-primary-container: 162 254 0;
+  --color-on-primary: 63 102 0;
+  --color-on-primary-fixed: 43 73 0;
+
+  --color-secondary: 226 226 226;
+  --color-secondary-container: 69 71 71;
+  --color-secondary-dim: 212 212 212;
+
+  --color-tertiary: 178 255 203;
+  --color-tertiary-container: 58 254 160;
+  --color-tertiary-dim: 27 239 147;
+
+  --color-error: 255 115 81;
+  --color-error-container: 185 41 2;
+  --color-error-dim: 213 61 24;
+
+  --color-outline: 118 117 117;
+  --color-outline-variant: 72 72 71;
+
+  --neon-glow-rgb: 162, 254, 0;
+  --neon-gradient-start: #ddffaf;
+  --neon-gradient-end: #a2fe00;
+
+  --scrollbar-track: #131313;
+  --scrollbar-thumb: #484847;
+  --scrollbar-hover: #767575;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: rgb(var(--color-surface));
+  color: rgb(var(--color-on-surface));
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ═══ Neon Kinetic Design System ═══ */
+
+@layer components {
+  /* Glass surfaces */
+  .glass {
+    @apply bg-surface-variant/60 backdrop-blur-[20px];
+  }
+
+  /* Primary CTA button — neon gradient */
+  .btn-neon {
+    @apply bg-neon-gradient text-on-primary-fixed font-headline font-bold
+           py-3 px-6 rounded-full tracking-tight uppercase text-sm
+           hover:shadow-neon-glow-strong active:scale-95
+           transition-all duration-200;
+  }
+
+  /* Ghost button */
+  .btn-ghost {
+    @apply text-on-surface font-headline font-bold
+           py-3 px-6 rounded-full tracking-tight uppercase text-sm
+           border border-outline-variant/20 hover:text-neon hover:border-neon/30
+           transition-all duration-200;
+  }
+
+  /* Surface cards — NO borders, tonal layering */
+  .card-surface {
+    @apply bg-surface-container-high rounded-xl p-6;
+  }
+  .card-elevated {
+    @apply bg-surface-container-highest rounded-xl p-6;
+  }
+  .card-glass {
+    @apply glass rounded-xl p-6;
+  }
+
+  /* Metric display — big numbers */
+  .metric-value {
+    @apply font-headline font-bold text-4xl tracking-tighter text-on-surface;
+  }
+  .metric-unit {
+    @apply font-headline font-light text-lg text-on-surface-variant ml-1;
+  }
+  .metric-label {
+    @apply font-label text-xs text-on-surface-variant uppercase tracking-widest;
+  }
+
+  /* Input — no border, underline active */
+  .input-dark {
+    @apply w-full bg-surface-container-highest rounded-xl px-4 py-3
+           text-on-surface placeholder-on-surface-variant/50
+           border-b-2 border-transparent focus:border-neon
+           focus:outline-none transition-colors duration-200;
+  }
+
+  /* Neon badge/tag */
+  .badge-neon {
+    @apply inline-flex items-center gap-1 bg-neon/10 text-neon
+           font-label text-[10px] font-bold uppercase tracking-widest
+           px-3 py-1 rounded-full;
+  }
+
+  /* Progress bar — neon fill */
+  .progress-track {
+    @apply w-full h-2 bg-surface-container-high rounded-full overflow-hidden;
+  }
+  .progress-fill {
+    @apply h-full bg-neon-gradient rounded-full transition-all duration-500;
+  }
+
+  /* Section heading */
+  .section-title {
+    @apply font-headline font-black text-2xl tracking-tighter uppercase;
+  }
+  .section-subtitle {
+    @apply font-body text-sm text-on-surface-variant mt-1;
+  }
+
+  /* Nav item */
+  .nav-item {
+    @apply flex items-center gap-3 py-3 px-6 font-headline font-bold text-sm
+           tracking-tight uppercase text-on-surface-variant
+           hover:text-neon hover:bg-surface-container-low
+           transition-all duration-300 cursor-pointer;
+  }
+  .nav-item-active {
+    @apply text-neon bg-neon/10 rounded-lg mx-2;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-hover); }
+
+/* Neon glow animation */
+@keyframes neon-pulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(var(--neon-glow-rgb), 0.1); }
+  50% { box-shadow: 0 0 25px rgba(var(--neon-glow-rgb), 0.2); }
+}
+.animate-neon-pulse { animation: neon-pulse 3s ease-in-out infinite; }
