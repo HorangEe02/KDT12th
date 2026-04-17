@@ -44,7 +44,8 @@ async function stadiumByShort(short: string) {
 
 export const searchGame = tool({
   description:
-    "특정 팀의 원정 경기를 날짜 범위로 검색합니다. 사용자가 '다음 원정', '이번 주말 경기' 같은 질문 시 호출.",
+    "특정 팀의 원정 경기를 날짜 범위로 검색합니다. 2026 시즌 실제 KBO 데이터 (종료 경기는 score/status/pitchers 포함). " +
+    "'다음 원정', '이번 주말 경기', '최근 경기 결과', 'KIA 지난주 경기' 같은 질문 시 호출.",
   inputSchema: z.object({
     team: z
       .string()
@@ -66,9 +67,47 @@ export const searchGame = tool({
         .toISOString()
         .slice(0, 10);
     const games = await filterAwayGames(team, start, end);
+    const recent = games.slice(0, 8).map((g) => ({
+      game_id: g.game_id,
+      date: g.date,
+      day_of_week: g.day_of_week,
+      home_team: g.home_team,
+      away_team: g.away_team,
+      stadium: g.stadium,
+      start_time: g.start_time,
+      status: g.status ?? "SCHEDULED",
+      score: g.score ?? null,
+      home_pitcher: g.home_pitcher ?? null,
+      away_pitcher: g.away_pitcher ?? null,
+      win_pitcher: g.win_pitcher ?? null,
+      lose_pitcher: g.lose_pitcher ?? null,
+      save_pitcher: g.save_pitcher ?? null,
+      current_inning: g.current_inning ?? null,
+      broadcast: g.broadcast ?? null,
+    }));
+    // 응원팀 관점 W/L/D 계산 (종료 경기만)
+    const summary = {
+      wins: 0,
+      losses: 0,
+      draws: 0,
+      scheduled: 0,
+    };
+    for (const g of games) {
+      if (g.status !== "FINISHED" || !g.score) {
+        if (g.status === "SCHEDULED") summary.scheduled++;
+        continue;
+      }
+      const teamIsAway = g.away_team === team;
+      const my = teamIsAway ? g.score.away : g.score.home;
+      const opp = teamIsAway ? g.score.home : g.score.away;
+      if (my > opp) summary.wins++;
+      else if (my < opp) summary.losses++;
+      else summary.draws++;
+    }
     return {
       count: games.length,
-      games: games.slice(0, 8),
+      summary,
+      games: recent,
     };
   },
 });
