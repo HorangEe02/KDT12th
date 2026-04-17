@@ -8,7 +8,7 @@ KBO 10개 구단, 전국 8개 도시, 연간 720경기 — 원정 응원러를 �
 
 ## 🚀 Phase 6 — Live (Next.js 16 + Firebase App Hosting)
 
-**현재 아키텍처** (2026-04-17 기준, Session A~F 완료):
+**배포 완료** (2026-04-17) — 전 세션 smoke test 통과 ✅
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -16,7 +16,7 @@ KBO 10개 구단, 전국 8개 도시, 연간 720경기 — 원정 응원러를 �
 └───────────────────────────┬──────────────────────────────────┘
                             │ HTTPS · SSR · UIMessageStream
 ┌───────────────────────────┴──────────────────────────────────┐
-│  Firebase App Hosting (Next.js 16 / Cloud Run asia-northeast3)│
+│  Firebase App Hosting (Next.js 16 / Cloud Run asia-east1)     │
 │  ├ App Router: /matches /map /places /ai /badges /share/[id]  │
 │  ├ API Routes: /api/{predict,route,chat,plans}                │
 │  └ Static data: /public/data/*.json (schedule·stadiums·POI)   │
@@ -27,9 +27,36 @@ KBO 10개 구단, 전국 8개 도시, 연간 720경기 — 원정 응원러를 �
         (Tool SDK)    (3-tier route)  (단기예보)         (visited · plans)
 ```
 
-**실제 URL** (배포 이후 업데이트):
-- 🌐 App Hosting: `https://away-game-companion--mini12-310f5.us-central1.hosted.app`
-- 📘 레거시 Streamlit (참고용): `https://away-game-companion-262552815882.asia-northeast3.run.app`
+### 🌐 라이브 URL (Production)
+
+| 서비스 | URL | 상태 |
+|---|---|---|
+| **Next.js (Phase 6 · 현재)** | https://my-web-app--mini12-310f5.asia-east1.hosted.app | ✅ Live |
+| 레거시 Streamlit (Phase 5a · 참고용) | https://away-game-companion-262552815882.asia-northeast3.run.app | 🟡 Legacy |
+
+### ✅ 배포 smoke test 결과 (2026-04-17)
+
+| 엔드포인트 | 응답 | 확인 사항 |
+|---|---|---|
+| 6 페이지 (`/`, `/matches`, `/map`, `/places`, `/ai`, `/badges`) | 200 OK | SSR 렌더 · Hero · Sidebar 정상 |
+| `GET /api/predict?team=LG&opponent=KT` | `{"prob":0,"source":"logreg"}` | Python 모델 계수 TS 포팅 일치 |
+| `POST /api/route` 잠실→수원 | `source: "osrm"`, 33.5km, 537 polyline pts | Kakao 401 → OSRM 자동 폴백 |
+| `POST /api/chat` (Gemini) | Tool `predict_win_rate` 호출 + 텍스트 스트리밍 | "LG가 KT를 상대로 승리할 확률은 0%입니다." |
+| `POST /api/chat` (🎬 demoMode) | Mock 시나리오 "광주 가족 원정" 즉시 스트리밍 | LLM 호출 없이 사전 녹화 응답 |
+| `/logos/LG.svg`, `/data/schedule.json` | 5.6KB · 133KB | 정적 에셋 서빙 |
+
+### 🗺️ 배포 설정
+
+| 항목 | 값 |
+|---|---|
+| Firebase Project | `mini12-310f5` |
+| App Hosting Backend | `my-web-app` |
+| Primary Region | `asia-east1` (Taiwan) |
+| GitHub Source | [HorangEe02/KNU_KDT_12th](https://github.com/HorangEe02/KNU_KDT_12th) · main branch |
+| Root Directory | `/Phase12/frontend` |
+| Secrets (Secret Manager) | `GEMINI_API_KEY` · `KAKAO_REST_API_KEY` · `WEATHER_API_KEY_ENCODED` · `TOUR_API_KEY_ENCODED` |
+| Runtime | Node.js 22 · Next.js 16.2.4 · React 19.2.4 |
+| Auto rollout | 사용 설정됨 (main 브랜치 push 시 자동 재배포) |
 
 **주요 기능**:
 - **/matches**: Plotly 승률 게이지 + 최근 3년 원정 승률 막대 (scikit-learn 모델 계수 → TS 이식)
