@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stadium Editorial - AI Planner</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed-dim": "#e9c400",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#edeeef",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#abc7ff",
+                        "on-tertiary-fixed-variant": "#544600",
+                        "surface-variant": "#e1e3e4",
+                        "tertiary-container": "#c9a900",
+                        "surface": "#f8f9fa",
+                        "on-secondary-fixed": "#002204",
+                        "primary-container": "#002d62",
+                        "surface-tint": "#3e5e95",
+                        "on-surface": "#191c1d",
+                        "on-primary-fixed": "#001b3f",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f3f4f5",
+                        "secondary": "#1b6d24",
+                        "tertiary-fixed": "#ffe16d",
+                        "on-surface-variant": "#43474f",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#7796d1",
+                        "on-background": "#191c1d",
+                        "secondary-container": "#a0f399",
+                        "primary-fixed": "#d7e2ff",
+                        "outline-variant": "#c4c6d1",
+                        "tertiary": "#705d00",
+                        "surface-container-high": "#e7e8e9",
+                        "on-tertiary-container": "#4c3f00",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#221b00",
+                        "outline": "#747781",
+                        "surface-dim": "#d9dadb",
+                        "inverse-surface": "#2e3132",
+                        "on-primary-fixed-variant": "#24467c",
+                        "surface-container-highest": "#e1e3e4",
+                        "background": "#f8f9fa",
+                        "surface-bright": "#f8f9fa",
+                        "secondary-fixed": "#a3f69c",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#abc7ff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-secondary-container": "#217128",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#88d982",
+                        "on-secondary-fixed-variant": "#005312",
+                        "primary": "#00193c"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Plus Jakarta Sans"],
+                        body: ["Manrope"],
+                        label: ["Plus Jakarta Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(248, 249, 250, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .ai-glass {
+            background: rgba(225, 227, 228, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: inset 0 0 20px rgba(62, 94, 149, 0.1);
+        }
+        .ambient-shadow {
+            box-shadow: 0 0 24px rgba(25, 28, 29, 0.06);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body antialiased min-h-screen flex flex-col relative pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl no-border bg-surface-container-low shadow-sm opacity-90 flex justify-between items-center px-6 h-16">
+<div class="flex items-center gap-4 text-slate-400 hover:opacity-80 transition-opacity active:scale-95 duration-200 cursor-pointer">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</div>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-[#00193c] dark:text-white text-lg tracking-tighter">STADIUM EDITORIAL</h1>
+<div class="flex items-center text-slate-400 hover:opacity-80 transition-opacity active:scale-95 duration-200 cursor-pointer">
+<img alt="User Profile" class="w-8 h-8 rounded-full border border-surface-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC93FVZgDN7eGmljvj3213vmaaXgqd5bHL9WtJaZzc1wIdz0anKTVkM5mt3PRF1_ya3Y5ObiAK0NLw2eoJgmaMeNVf32lmlUqcMvtsFeaJmwPfr3H5mbh_6hhZbdMMnLSl2U2suAvX7q-zyG-_t1Q9LW70l3chV0DhMr6_EAzKE94zV9zRjp2IvvCr3DrQuk2VMVNGokNYujZcgqznA1Wqsd1CUWSDpA2TmJC3QJw5lalutv2kVREF8LbRcU6TSv8GlsC8HfI-MTvk"/>
+</div>
+</header>
+<!-- Main Chat Canvas -->
+<main class="flex-grow pt-24 px-4 pb-24 overflow-y-auto flex flex-col gap-6">
+<!-- Initial AI Greeting -->
+<div class="flex gap-4 items-start max-w-[90%]">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-surface-tint/10 flex items-center justify-center ambient-shadow">
+<span class="material-symbols-outlined text-surface-tint" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div class="ai-glass rounded-2xl rounded-tl-sm p-4 text-on-surface-variant">
+<p class="font-body text-base">Welcome to the KBO Concierge. How can I craft your perfect stadium experience this weekend?</p>
+</div>
+</div>
+<!-- User Request -->
+<div class="flex gap-4 items-start max-w-[90%] self-end flex-row-reverse">
+<div class="flex-shrink-0 w-10 h-10 rounded-full overflow-hidden ambient-shadow">
+<img alt="User" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-ata7QpfLDixwmPX1553vH9n3pFnNjb78biIP2broNRhZuL5xoOxgCmSIXFTNzDLGb5O0Mb-lN-AgxvH-wAsWBDBvlY-xCmRv1aEdXLBP7SXDFG5NTpU2IMliX4zOInlSXDDndL9dKBBG6Rq2XCDAwW8xlK_c9fKylGxUII8geYtO4HW01TGPVA3anhsW7AvuImvwsAkSHaZRI_FOF9strAmyETwTT53bmT2Xzoz9x1oVFzAJB2dqeeU3BnloPuJbwsOerbIEMs8"/>
+</div>
+<div class="bg-primary text-on-primary rounded-2xl rounded-tr-sm p-4 shadow-md bg-gradient-to-br from-primary to-primary-container">
+<p class="font-body text-base">I want to see the LG Twins play this Saturday. Need a hotel nearby and some good food recs before the game.</p>
+</div>
+</div>
+<!-- AI Response (Generating/Typing simulation - just static for now) -->
+<div class="flex gap-4 items-start max-w-[95%]">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-surface-tint/10 flex items-center justify-center ambient-shadow">
+<span class="material-symbols-outlined text-surface-tint" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div class="w-full flex flex-col gap-4">
+<div class="ai-glass rounded-2xl rounded-tl-sm p-4 text-on-surface-variant">
+<p class="font-body text-base mb-2">Excellent choice. The LG Twins are hosting the Doosan Bears at Jamsil Baseball Stadium this Saturday. Here is a curated itinerary for your weekend.</p>
+</div>
+<!-- Itinerary Card: Day 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 ambient-shadow relative overflow-hidden flex flex-col gap-4">
+<!-- Accent Bar -->
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary-fixed"></div>
+<div class="flex justify-between items-center border-b border-outline-variant/15 pb-3">
+<h3 class="font-headline font-bold text-lg text-primary">Saturday Game Day</h3>
+<span class="font-label text-xs uppercase tracking-widest text-secondary font-bold">Confirmed</span>
+</div>
+<!-- Event Item -->
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">hotel</span>
+</div>
+<div class="flex-grow">
+<p class="font-headline font-bold text-base text-on-surface">Check-in: Signiel Seoul</p>
+<p class="font-body text-sm text-on-surface-variant">14:00 • Jamsil-dong (10 min walk to stadium)</p>
+</div>
+</div>
+<!-- Event Item -->
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">restaurant</span>
+</div>
+<div class="flex-grow">
+<p class="font-headline font-bold text-base text-on-surface">Pre-game Dinner: Jamsil Saenae Alley</p>
+<p class="font-body text-sm text-on-surface-variant">16:30 • Korean BBQ &amp; Beer</p>
+</div>
+</div>
+<!-- Event Item -->
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">sports_baseball</span>
+</div>
+<div class="flex-grow">
+<p class="font-headline font-bold text-base text-on-surface">LG Twins vs Doosan Bears</p>
+<p class="font-body text-sm text-on-surface-variant">18:00 • Jamsil Baseball Stadium</p>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-4 py-2 rounded-md font-label text-sm font-bold shadow-md hover:opacity-90 transition-opacity">Tickets</button>
+</div>
+</div>
+<!-- Action Chips -->
+<div class="flex gap-2 flex-wrap">
+<button class="bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full font-body text-sm font-medium hover:bg-secondary-fixed-dim transition-colors ambient-shadow">Book Itinerary</button>
+<button class="bg-surface-container-low border border-outline-variant/20 text-on-surface-variant px-4 py-2 rounded-full font-body text-sm font-medium hover:bg-surface-container transition-colors">Modify Hotel</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Chat Input Area -->
+<div class="fixed bottom-[88px] w-full px-4 z-40">
+<div class="glass-panel rounded-full p-2 flex items-center gap-3 ambient-shadow border border-outline-variant/20">
+<input class="flex-grow bg-transparent border-none focus:ring-0 text-on-surface font-body px-4 placeholder-on-surface-variant/50" placeholder="Ask the concierge..." type="text"/>
+<button class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors flex-shrink-0">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full rounded-t-[2rem] z-50 bg-white dark:bg-[#00193c] no-border shadow-[0_-4px_20px_0_rgba(0,0,0,0.05)] shadow-2xl flex justify-around items-end pb-6 pt-2 px-4">
+<!-- Tab 1 -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 hover:text-[#1b6d24] dark:hover:text-[#a3f69c] active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">sports_baseball</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">Matches</span>
+</a>
+<!-- Tab 2 -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 hover:text-[#1b6d24] dark:hover:text-[#a3f69c] active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">explore</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">Map</span>
+</a>
+<!-- Tab 3 -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 hover:text-[#1b6d24] dark:hover:text-[#a3f69c] active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">hotel</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">Stays</span>
+</a>
+<!-- Tab 4 (Active) -->
+<a class="flex flex-col items-center justify-center bg-[#a3f69c] dark:bg-[#1b6d24] text-[#00193c] dark:text-white rounded-full p-3 mb-1 scale-110 transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">AI</span>
+</a>
+<!-- Tab 5 -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 hover:text-[#1b6d24] dark:hover:text-[#a3f69c] active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">military_tech</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">Badges</span>
+</a>
+</nav>
+</body></html>

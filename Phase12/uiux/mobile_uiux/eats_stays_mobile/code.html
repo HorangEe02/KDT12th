@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stays - Away Game Companion</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#f8f9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#abc7ff",
+                        "on-secondary-fixed": "#002204",
+                        "outline": "#747781",
+                        "surface": "#f8f9fa",
+                        "secondary-fixed-dim": "#88d982",
+                        "surface-container-low": "#f3f4f5",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#abc7ff",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#e9c400",
+                        "secondary-container": "#a0f399",
+                        "primary-fixed": "#d7e2ff",
+                        "on-tertiary-fixed-variant": "#544600",
+                        "on-tertiary-fixed": "#221b00",
+                        "on-background": "#191c1d",
+                        "secondary-fixed": "#a3f69c",
+                        "on-primary-fixed-variant": "#24467c",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c4c6d1",
+                        "tertiary": "#705d00",
+                        "on-tertiary-container": "#4c3f00",
+                        "on-primary-fixed": "#001b3f",
+                        "inverse-surface": "#2e3132",
+                        "surface-variant": "#e1e3e4",
+                        "surface-bright": "#f8f9fa",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#005312",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary-container": "#7796d1",
+                        "inverse-on-surface": "#f0f1f2",
+                        "primary": "#00193c",
+                        "on-secondary-container": "#217128",
+                        "surface-dim": "#d9dadb",
+                        "secondary": "#1b6d24",
+                        "tertiary-container": "#c9a900",
+                        "tertiary-fixed": "#ffe16d",
+                        "primary-container": "#002d62",
+                        "on-surface-variant": "#43474f",
+                        "on-surface": "#191c1d",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#3e5e95",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-container": "#edeeef"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-label { font-family: 'Plus Jakarta Sans', sans-serif; }
+        
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, var(--tw-colors-primary) 0%, var(--tw-colors-primary-container) 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-24 flex flex-col md:flex-row relative">
+<!-- Top Navigation (Hidden on Mobile) -->
+<nav class="hidden md:flex justify-between items-center px-8 py-4 max-w-7xl mx-auto fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none font-['Plus_Jakarta_Sans'] font-semibold tracking-tight">
+<div class="text-2xl font-extrabold tracking-tighter text-blue-950 dark:text-white">The Stadium Editorial</div>
+<div class="flex gap-6">
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-800 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors px-3 py-2 rounded-md" href="#">Home</a>
+<a class="text-blue-900 dark:text-blue-400 border-b-2 border-blue-900 dark:border-blue-400 pb-1 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors px-3 py-2 rounded-md" href="#">Stays</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-800 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors px-3 py-2 rounded-md" href="#">Games</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-800 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors px-3 py-2 rounded-md" href="#">Itinerary</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-800 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors px-3 py-2 rounded-md" href="#">Explore</a>
+</div>
+<div class="flex gap-4 text-blue-900 dark:text-blue-400">
+<span class="material-symbols-outlined scale-95 active:scale-90 transition-transform cursor-pointer hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-full p-2" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined scale-95 active:scale-90 transition-transform cursor-pointer hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-full p-2" data-icon="account_circle">account_circle</span>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 w-full max-w-lg mx-auto pt-6 px-4 md:pt-24 pb-20 overflow-y-auto no-scrollbar">
+<!-- Header & Search -->
+<div class="mb-6 sticky top-0 bg-background/95 backdrop-blur-md z-40 py-2">
+<h1 class="text-3xl font-headline font-extrabold text-primary mb-4 tracking-tight">Find Stays</h1>
+<div class="relative bg-surface-container-lowest rounded-full shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-outline-variant/15 flex items-center px-4 py-3">
+<span class="material-symbols-outlined text-outline mr-3" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body p-0 w-full text-on-surface placeholder-outline font-medium text-sm" placeholder="Search hotels near Jamsil..." type="text"/>
+<button class="bg-surface-container-low text-on-surface p-2 rounded-full hover:bg-surface-variant transition-colors ml-2">
+<span class="material-symbols-outlined text-[20px]" data-icon="tune">tune</span>
+</button>
+</div>
+</div>
+<!-- Filter Chips (Horizontal Scroll) -->
+<div class="flex gap-3 mb-6 overflow-x-auto no-scrollbar pb-2 pt-1 -mx-4 px-4">
+<button class="bg-secondary-fixed-dim text-on-secondary-fixed font-label font-bold text-xs uppercase tracking-wider py-2 px-4 rounded-full whitespace-nowrap shadow-[0_2px_8px_rgba(0,0,0,0.05)]">All</button>
+<button class="bg-surface-container-lowest text-on-surface font-label font-bold text-xs uppercase tracking-wider py-2 px-4 rounded-full whitespace-nowrap border border-outline-variant/20 hover:bg-surface-container-low transition-colors">Near Stadium</button>
+<button class="bg-surface-container-lowest text-on-surface font-label font-bold text-xs uppercase tracking-wider py-2 px-4 rounded-full whitespace-nowrap border border-outline-variant/20 hover:bg-surface-container-low transition-colors">Luxury</button>
+<button class="bg-surface-container-lowest text-on-surface font-label font-bold text-xs uppercase tracking-wider py-2 px-4 rounded-full whitespace-nowrap border border-outline-variant/20 hover:bg-surface-container-low transition-colors">Budget</button>
+<button class="bg-surface-container-lowest text-on-surface font-label font-bold text-xs uppercase tracking-wider py-2 px-4 rounded-full whitespace-nowrap border border-outline-variant/20 hover:bg-surface-container-low transition-colors">Pet Friendly</button>
+</div>
+<!-- Hotel List (Vertical Scroll) -->
+<div class="flex flex-col gap-4">
+<!-- Hotel Card 1 (Recommended) -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.04)] border border-outline-variant/15 flex relative h-32 hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-shadow">
+<!-- Recommended Accent Bar -->
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary-fixed z-10"></div>
+<!-- Thumbnail -->
+<div class="w-1/3 relative h-full">
+<img alt="Luxury hotel exterior" class="w-full h-full object-cover" data-alt="Modern luxury hotel exterior at dusk with warm glowing lights and sleek architecture, high-end travel vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXTKG2DZLEvYKeksF7mgrLHID3ZwP--Uk_YHqesPsVytX-rW9-wcFQJnYVsDHAGXvwQ9qSyQ8BrPMxvt1EDSeaJbma31AQuQvpKOQvYOuAtAmIjKJbd3zrelLuilDo8VcnjPA0yBC-q7RZ6LUj6oPZb80q183OA9WNkhIi3MFZ_wbK2pfbQ_xbcBC2n29PioWmrdQ_og9s7omdAtDOVDKKWFhEw3Cu6nqf46Rougvk0eTedhUpra3M8c3ZyRkUbFcQSilI0J_0lpc"/>
+<div class="absolute top-2 left-2 bg-background/80 backdrop-blur-sm rounded px-1.5 py-0.5 flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[12px] text-tertiary-fixed-dim" data-icon="star" data-weight="fill">star</span>
+<span class="font-label text-[10px] font-bold text-on-surface">4.8</span>
+</div>
+</div>
+<!-- Info -->
+<div class="w-2/3 p-3 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-bold text-sm text-on-surface leading-tight line-clamp-1">Grand Intercontinental Seoul Parnas</h3>
+<button class="text-outline hover:text-error transition-colors ml-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite_border">favorite_border</span>
+</button>
+</div>
+<p class="font-body text-xs text-on-surface-variant flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span>
+                            0.8 mi to Jamsil Stadium
+                        </p>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-surface-container-low text-on-surface-variant font-label text-[9px] uppercase font-bold px-1.5 py-0.5 rounded">Luxury</span>
+<span class="bg-secondary-container/50 text-on-secondary-container font-label text-[9px] uppercase font-bold px-1.5 py-0.5 rounded">Top Rated</span>
+</div>
+</div>
+<div class="flex justify-between items-end">
+<div>
+<p class="font-body text-[10px] text-outline line-through">$320</p>
+<p class="font-headline font-bold text-primary text-base leading-none">$285 <span class="text-[10px] font-normal text-on-surface-variant">/night</span></p>
+</div>
+</div>
+</div>
+</div>
+<!-- Hotel Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.04)] border border-outline-variant/15 flex relative h-32 hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-shadow">
+<!-- Thumbnail -->
+<div class="w-1/3 relative h-full">
+<img alt="Boutique hotel room" class="w-full h-full object-cover" data-alt="Chic boutique hotel room interior with warm natural light, modern minimalist furniture, and subtle navy accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZWlewPFZ7bKiicdoTjAbY1dVjD3NKr_0tOXEvsFK257NVm9FlDqB4qmMHyQVcaS08jO0cDd4FUv3O03CwHQRjQ4Z_0aKMuNSwnZKekHVdozt6BKtHRw03oh8aUgBw8wgWIqmbn3hyosHcbxRz-8VAsbK2EEPvtQ7-4AQ6914Za8Ei4UCCLoODUrZNFT7KGVyJ8YYIEQPYk9jHGLAs8Fi9tn3UbKdQDx4MQCsPdPXzNQis2hnw4cQD5_jnKekIDLPKgjjxLLQ3QXs"/>
+<div class="absolute top-2 left-2 bg-background/80 backdrop-blur-sm rounded px-1.5 py-0.5 flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[12px] text-tertiary-fixed-dim" data-icon="star" data-weight="fill">star</span>
+<span class="font-label text-[10px] font-bold text-on-surface">4.5</span>
+</div>
+</div>
+<!-- Info -->
+<div class="w-2/3 p-3 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-bold text-sm text-on-surface leading-tight line-clamp-1">Hotel Peyto Samseong</h3>
+<button class="text-outline hover:text-error transition-colors ml-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite_border">favorite_border</span>
+</button>
+</div>
+<p class="font-body text-xs text-on-surface-variant flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span>
+                            1.2 mi to Jamsil Stadium
+                        </p>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-surface-container-low text-on-surface-variant font-label text-[9px] uppercase font-bold px-1.5 py-0.5 rounded">Boutique</span>
+</div>
+</div>
+<div class="flex justify-between items-end">
+<div>
+<p class="font-headline font-bold text-primary text-base leading-none">$145 <span class="text-[10px] font-normal text-on-surface-variant">/night</span></p>
+</div>
+</div>
+</div>
+</div>
+<!-- Hotel Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.04)] border border-outline-variant/15 flex relative h-32 hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-shadow">
+<!-- Thumbnail -->
+<div class="w-1/3 relative h-full">
+<img alt="Modern minimalist hotel lobby" class="w-full h-full object-cover" data-alt="Sleek modern hotel lobby with floor-to-ceiling windows, minimalist design, and elegant lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf-2HaFZC1wopY_sS5dhpDertADODHZ-B4DbegTSkocalf-6YIWXXRyA2FI3z2CcCrP4Q6DBYcAhJyymghsWOTvk3_A1Z45MCkJ5mnnmkVMFCtbZl0QjqMGmbH2fu6KYuHbvYWKtrFFGNtmJ4Oac0fH0E9f-WQFUki-imKUmeK-jOnd7R9PF1jZyDS3GYJpTcNEXbGq4XUnTc5rlf_9ogyZ9BZoqhokemhDEnoRc0tsmgGSECu2f58XNpn-HjhSfFRia0sTMYubrU"/>
+<div class="absolute top-2 left-2 bg-background/80 backdrop-blur-sm rounded px-1.5 py-0.5 flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[12px] text-tertiary-fixed-dim" data-icon="star" data-weight="fill">star</span>
+<span class="font-label text-[10px] font-bold text-on-surface">4.2</span>
+</div>
+</div>
+<!-- Info -->
+<div class="w-2/3 p-3 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-bold text-sm text-on-surface leading-tight line-clamp-1">GLAD Gangnam COEX Center</h3>
+<button class="text-outline hover:text-error transition-colors ml-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite_border">favorite_border</span>
+</button>
+</div>
+<p class="font-body text-xs text-on-surface-variant flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span>
+                            1.5 mi to Jamsil Stadium
+                        </p>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-surface-container-low text-on-surface-variant font-label text-[9px] uppercase font-bold px-1.5 py-0.5 rounded">Business</span>
+<span class="bg-surface-container-low text-on-surface-variant font-label text-[9px] uppercase font-bold px-1.5 py-0.5 rounded">Eco-friendly</span>
+</div>
+</div>
+<div class="flex justify-between items-end">
+<div>
+<p class="font-headline font-bold text-primary text-base leading-none">$110 <span class="text-[10px] font-normal text-on-surface-variant">/night</span></p>
+</div>
+</div>
+</div>
+</div>
+<!-- Hotel Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.04)] border border-outline-variant/15 flex relative h-32 hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-shadow">
+<!-- Thumbnail -->
+<div class="w-1/3 relative h-full">
+<img alt="Cozy budget hotel room" class="w-full h-full object-cover" data-alt="Cozy, clean budget hotel room with simple modern decor, white linens, and a small desk near a window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm81imS4dLz-JYxageBeyfITyaYOA3MEVdGj3eAENMRsRY7iynP7janNt771OIg5ZFUCXNBgITy2lA-LXKZ0si-nUo-GTfhSEQE93wV7xO0VizMMGKGT2yEDpvsmxtM4JmxhBZOLJcbc6ZwoxV1OYlLi30pLxcMeuS6FgS33tXNui7niLhg4lzunaNYIc-kO1gf_y4LknIcWawinG0JoZZpiH2Txec7x6MxYSQRXbWugkmTzpfWAC_7A9OVmw4u81kFgqCBGmdRYU"/>
+<div class="absolute top-2 left-2 bg-background/80 backdrop-blur-sm rounded px-1.5 py-0.5 flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[12px] text-tertiary-fixed-dim" data-icon="star" data-weight="fill">star</span>
+<span class="font-label text-[10px] font-bold text-on-surface">4.0</span>
+</div>
+</div>
+<!-- Info -->
+<div class="w-2/3 p-3 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-bold text-sm text-on-surface leading-tight line-clamp-1">Shilla Stay Yeoksam</h3>
+<button class="text-outline hover:text-error transition-colors ml-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite_border">favorite_border</span>
+</button>
+</div>
+<p class="font-body text-xs text-on-surface-variant flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span>
+                            2.1 mi to Jamsil Stadium
+                        </p>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-surface-container-low text-on-surface-variant font-label text-[9px] uppercase font-bold px-1.5 py-0.5 rounded">Budget</span>
+</div>
+</div>
+<div class="flex justify-between items-end">
+<div>
+<p class="font-headline font-bold text-primary text-base leading-none">$85 <span class="text-[10px] font-normal text-on-surface-variant">/night</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Map View FAB (Floating Action Button) -->
+<button class="fixed bottom-28 right-6 bg-gradient-primary text-on-primary rounded-full p-4 shadow-[0_8px_24px_rgba(0,25,60,0.25)] flex items-center justify-center hover:scale-105 active:scale-95 transition-transform z-40 md:hidden">
+<span class="material-symbols-outlined text-[24px]" data-icon="map">map</span>
+</button>
+<!-- Map View CTA (Desktop) -->
+<div class="hidden md:flex fixed bottom-8 right-8 z-40">
+<button class="bg-gradient-primary text-on-primary rounded-full px-6 py-3 shadow-[0_8px_24px_rgba(0,25,60,0.25)] flex items-center gap-2 hover:scale-105 active:scale-95 transition-transform font-headline font-bold text-sm">
+<span class="material-symbols-outlined text-[20px]" data-icon="map">map</span>
+            Map View
+        </button>
+</div>
+<!-- Bottom Navigation Shell (Mobile) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 md:hidden bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg rounded-t-[2rem] shadow-[0_-4px_20px_0_rgba(0,0,0,0.05)]">
+<!-- Home -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 scale-110 transition-transform duration-300 ease-out group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:text-blue-900 transition-colors" data-icon="home">home</span>
+<span class="text-[10px] font-bold uppercase tracking-widest font-['Plus_Jakarta_Sans'] group-hover:text-blue-900 transition-colors">Home</span>
+</a>
+<!-- Stays (ACTIVE STATE) -->
+<a class="flex flex-col items-center justify-center bg-blue-900 dark:bg-blue-600 text-white rounded-full w-14 h-14 -mt-6 shadow-lg scale-110 transition-transform duration-300 ease-out relative" href="#">
+<span class="material-symbols-outlined" data-icon="hotel">hotel</span>
+<!-- Visually hidden text for accessibility, as the JSON style dictates strict layout for active -->
+<span class="sr-only">Stays</span>
+</a>
+<!-- Games -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 scale-110 transition-transform duration-300 ease-out group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:text-blue-900 transition-colors" data-icon="sports_baseball">sports_baseball</span>
+<span class="text-[10px] font-bold uppercase tracking-widest font-['Plus_Jakarta_Sans'] group-hover:text-blue-900 transition-colors">Games</span>
+</a>
+<!-- Plan -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 scale-110 transition-transform duration-300 ease-out group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:text-blue-900 transition-colors" data-icon="edit_calendar">edit_calendar</span>
+<span class="text-[10px] font-bold uppercase tracking-widest font-['Plus_Jakarta_Sans'] group-hover:text-blue-900 transition-colors">Plan</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 scale-110 transition-transform duration-300 ease-out group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:text-blue-900 transition-colors" data-icon="account_circle">account_circle</span>
+<span class="text-[10px] font-bold uppercase tracking-widest font-['Plus_Jakarta_Sans'] group-hover:text-blue-900 transition-colors">Profile</span>
+</a>
+</nav>
+</body></html>

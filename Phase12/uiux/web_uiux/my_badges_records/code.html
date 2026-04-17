@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Badges &amp; Records - The Stadium Editorial</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#a0f399",
+                        "on-secondary-fixed-variant": "#005312",
+                        "on-primary-fixed-variant": "#24467c",
+                        "tertiary-container": "#c9a900",
+                        "surface-container": "#edeeef",
+                        "secondary-fixed-dim": "#88d982",
+                        "inverse-primary": "#abc7ff",
+                        "primary-container": "#002d62",
+                        "surface": "#f8f9fa",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#d7e2ff",
+                        "on-tertiary-container": "#4c3f00",
+                        "tertiary-fixed": "#ffe16d",
+                        "on-surface": "#191c1d",
+                        "surface-container-low": "#f3f4f5",
+                        "on-secondary-fixed": "#002204",
+                        "on-secondary-container": "#217128",
+                        "secondary-fixed": "#a3f69c",
+                        "tertiary": "#705d00",
+                        "on-primary-fixed": "#001b3f",
+                        "tertiary-fixed-dim": "#e9c400",
+                        "surface-variant": "#e1e3e4",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "primary": "#00193c",
+                        "on-primary-container": "#7796d1",
+                        "outline-variant": "#c4c6d1",
+                        "on-tertiary-fixed": "#221b00",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#3e5e95",
+                        "inverse-surface": "#2e3132",
+                        "surface-container-highest": "#e1e3e4",
+                        "secondary": "#1b6d24",
+                        "outline": "#747781",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#544600",
+                        "surface-bright": "#f8f9fa",
+                        "primary-fixed-dim": "#abc7ff",
+                        "on-surface-variant": "#43474f",
+                        "on-error-container": "#93000a",
+                        "on-background": "#191c1d",
+                        "background": "#f8f9fa",
+                        "surface-dim": "#d9dadb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased min-h-screen pb-24 md:pb-0">
+<!-- TopNavBar (Hidden on Mobile, Visible on md+) -->
+<header class="hidden md:flex fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none justify-between items-center px-6 py-4 max-w-7xl mx-auto border-b-0">
+<div class="text-xl font-extrabold text-blue-950 dark:text-white font-headline tracking-tight">The Stadium Editorial</div>
+<nav class="flex space-x-6">
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-blue-700 dark:hover:text-blue-300 transition-colors" href="#">Matches</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-blue-700 dark:hover:text-blue-300 transition-colors" href="#">Map</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-blue-700 dark:hover:text-blue-300 transition-colors" href="#">Stays</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-blue-700 dark:hover:text-blue-300 transition-colors" href="#">Planner</a>
+<a class="text-blue-900 dark:text-white border-b-2 border-blue-900 dark:border-blue-400 pb-1 font-headline tracking-tight" href="#">Badges</a>
+</nav>
+<div class="flex space-x-4">
+<button class="scale-95 active:opacity-80 transition-all duration-300"><span class="material-symbols-outlined text-blue-900 dark:text-blue-400">notifications</span></button>
+<button class="scale-95 active:opacity-80 transition-all duration-300"><span class="material-symbols-outlined text-blue-900 dark:text-blue-400">person</span></button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="pt-6 md:pt-28 px-4 md:px-8 max-w-7xl mx-auto space-y-12">
+<!-- Header Section -->
+<section class="mb-10 text-center">
+<h1 class="font-headline text-4xl md:text-5xl font-bold text-primary tracking-tight mb-2">My Records</h1>
+<p class="font-body text-on-surface-variant text-lg">Your legacy across the KBO.</p>
+</section>
+<!-- Stadium Completion Grid -->
+<section class="bg-surface-container-low rounded-xl p-6 md:p-8">
+<div class="flex justify-between items-end mb-6">
+<div>
+<h2 class="font-headline text-2xl font-bold text-primary">Stadium Tour</h2>
+<p class="text-sm font-label text-on-surface-variant uppercase tracking-widest mt-1">6 / 10 Completed</p>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+<!-- Completed -->
+<div class="bg-surface-container-lowest rounded-lg p-4 flex flex-col items-center justify-center relative overflow-hidden group border-l-4 border-secondary-fixed">
+<span class="material-symbols-outlined text-secondary text-3xl mb-2" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body font-semibold text-primary">Jamsil</span>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-4 flex flex-col items-center justify-center relative overflow-hidden group border-l-4 border-secondary-fixed">
+<span class="material-symbols-outlined text-secondary text-3xl mb-2" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body font-semibold text-primary">Gocheok</span>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-4 flex flex-col items-center justify-center relative overflow-hidden group border-l-4 border-secondary-fixed">
+<span class="material-symbols-outlined text-secondary text-3xl mb-2" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body font-semibold text-primary">Munhak</span>
+</div>
+<!-- Not Completed -->
+<div class="bg-surface-container rounded-lg p-4 flex flex-col items-center justify-center relative overflow-hidden opacity-60">
+<span class="material-symbols-outlined text-outline text-3xl mb-2">stadium</span>
+<span class="font-body font-semibold text-on-surface-variant">Suwon</span>
+</div>
+<div class="bg-surface-container rounded-lg p-4 flex flex-col items-center justify-center relative overflow-hidden opacity-60">
+<span class="material-symbols-outlined text-outline text-3xl mb-2">stadium</span>
+<span class="font-body font-semibold text-on-surface-variant">Daejeon</span>
+</div>
+<!-- Completed -->
+<div class="bg-surface-container-lowest rounded-lg p-4 flex flex-col items-center justify-center relative overflow-hidden group border-l-4 border-secondary-fixed">
+<span class="material-symbols-outlined text-secondary text-3xl mb-2" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body font-semibold text-primary">Gwangju</span>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-4 flex flex-col items-center justify-center relative overflow-hidden group border-l-4 border-secondary-fixed">
+<span class="material-symbols-outlined text-secondary text-3xl mb-2" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body font-semibold text-primary">Daegu</span>
+</div>
+<!-- Not Completed -->
+<div class="bg-surface-container rounded-lg p-4 flex flex-col items-center justify-center relative overflow-hidden opacity-60">
+<span class="material-symbols-outlined text-outline text-3xl mb-2">stadium</span>
+<span class="font-body font-semibold text-on-surface-variant">Changwon</span>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-4 flex flex-col items-center justify-center relative overflow-hidden group border-l-4 border-secondary-fixed">
+<span class="material-symbols-outlined text-secondary text-3xl mb-2" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body font-semibold text-primary">Sajik</span>
+</div>
+<div class="bg-surface-container rounded-lg p-4 flex flex-col items-center justify-center relative overflow-hidden opacity-60">
+<span class="material-symbols-outlined text-outline text-3xl mb-2">stadium</span>
+<span class="font-body font-semibold text-on-surface-variant">Pohang</span>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Badges & Timeline -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Badges Gallery (Spans 2 columns) -->
+<section class="lg:col-span-2 bg-surface-container-low rounded-xl p-6 md:p-8">
+<h2 class="font-headline text-2xl font-bold text-primary mb-6">Achievement Badges</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-primary-container flex items-center justify-center mb-3 shadow-[0_4px_24px_rgba(0,0,0,0.06)]">
+<span class="material-symbols-outlined text-on-primary text-3xl" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+</div>
+<span class="font-headline text-sm font-bold text-primary">First Away Win</span>
+<span class="font-body text-xs text-on-surface-variant mt-1">May 12, 2023</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 rounded-full bg-surface-container-lowest flex items-center justify-center mb-3 shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-outline-variant/15">
+<span class="material-symbols-outlined text-tertiary-container text-3xl" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<span class="font-headline text-sm font-bold text-primary">Rain-out Warrior</span>
+<span class="font-body text-xs text-on-surface-variant mt-1">Jul 04, 2023</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 rounded-full bg-surface-container-lowest flex items-center justify-center mb-3 shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-outline-variant/15">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-headline text-sm font-bold text-primary">KBO Collector</span>
+<span class="font-body text-xs text-on-surface-variant mt-1">5 Stadiums</span>
+</div>
+<div class="flex flex-col items-center text-center opacity-50 grayscale">
+<div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center mb-3 border border-outline-variant/15">
+<span class="material-symbols-outlined text-outline text-3xl">local_fire_department</span>
+</div>
+<span class="font-headline text-sm font-bold text-primary">Sweep</span>
+<span class="font-body text-xs text-on-surface-variant mt-1">Locked</span>
+</div>
+</div>
+</section>
+<!-- Away Timeline (1 Column) -->
+<section class="bg-surface-container-low rounded-xl p-6 md:p-8">
+<h2 class="font-headline text-2xl font-bold text-primary mb-6">Away Timeline</h2>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="w-10 flex-shrink-0 flex flex-col items-center">
+<div class="w-3 h-3 rounded-full bg-secondary-fixed mb-1"></div>
+<div class="w-0.5 h-16 bg-outline-variant/30"></div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-4 flex-grow shadow-[0_4px_24px_rgba(0,0,0,0.02)]">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label text-xs font-bold text-secondary uppercase tracking-widest">W 5-3</span>
+<span class="font-body text-xs text-on-surface-variant">Aug 15</span>
+</div>
+<span class="font-headline font-bold text-primary">@ SSG Landers</span>
+<p class="font-body text-sm text-on-surface-variant mt-1">Incheon SSG Landers Field</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 flex-shrink-0 flex flex-col items-center">
+<div class="w-3 h-3 rounded-full bg-error mb-1"></div>
+<div class="w-0.5 h-16 bg-outline-variant/30"></div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-4 flex-grow shadow-[0_4px_24px_rgba(0,0,0,0.02)]">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label text-xs font-bold text-error uppercase tracking-widest">L 1-4</span>
+<span class="font-body text-xs text-on-surface-variant">Jul 22</span>
+</div>
+<span class="font-headline font-bold text-primary">@ Lotte Giants</span>
+<p class="font-body text-sm text-on-surface-variant mt-1">Sajik Baseball Stadium</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 flex-shrink-0 flex flex-col items-center">
+<div class="w-3 h-3 rounded-full bg-secondary-fixed mb-1"></div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-4 flex-grow shadow-[0_4px_24px_rgba(0,0,0,0.02)]">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label text-xs font-bold text-secondary uppercase tracking-widest">W 8-7</span>
+<span class="font-body text-xs text-on-surface-variant">Jun 10</span>
+</div>
+<span class="font-headline font-bold text-primary">@ KIA Tigers</span>
+<p class="font-body text-sm text-on-surface-variant mt-1">Gwangju-Kia Champions Field</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar (Visible on Mobile, Hidden on md+) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-3xl bg-white/90 dark:bg-slate-900/90 backdrop-blur-md tonal-shift shadow-[0_-4px_24px_rgba(0,0,0,0.06)]">
+<div class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2">
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 w-14 h-14 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full">
+<span class="material-symbols-outlined mb-1">sports_baseball</span>
+<span class="font-plus-jakarta-sans text-[10px] font-bold uppercase tracking-widest">Matches</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 w-14 h-14 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full">
+<span class="material-symbols-outlined mb-1">map</span>
+<span class="font-plus-jakarta-sans text-[10px] font-bold uppercase tracking-widest">Map</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 w-14 h-14 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full">
+<span class="material-symbols-outlined mb-1">hotel</span>
+<span class="font-plus-jakarta-sans text-[10px] font-bold uppercase tracking-widest">Stays</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 w-14 h-14 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full">
+<span class="material-symbols-outlined mb-1">bolt</span>
+<span class="font-plus-jakarta-sans text-[10px] font-bold uppercase tracking-widest">AI</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-blue-50 dark:bg-blue-900/30 text-blue-900 dark:text-blue-200 rounded-full w-14 h-14 Active: scale-90 transition-transform duration-200 ease-out">
+<span class="material-symbols-outlined mb-1">military_tech</span>
+<span class="font-plus-jakarta-sans text-[10px] font-bold uppercase tracking-widest">Badges</span>
+</button>
+</div>
+</nav>
+</body></html>

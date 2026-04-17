@@ -1,0 +1,29 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // 공개 읽기 허용 컬렉션 (공유 계획은 누구나 불러오기)
+    match /shared_plans/{planId} {
+      allow read: if true;
+      // 쓰기는 서비스 계정(서버)에서만 (Cloud Run)
+      allow create, update, delete: if false;
+    }
+
+    // 방문 구장 기록: 읽기·쓰기 모두 서버(서비스 계정)에서만 처리
+    // 클라이언트는 Streamlit 경유로만 접근 → 규칙으로는 외부 차단
+    match /visited_stadiums/{userId} {
+      allow read, write: if false;
+    }
+
+    // 챗 세션 백업 — 서버 전용
+    match /chat_sessions/{sessionId} {
+      allow read, write: if false;
+    }
+
+    // 그 외 전부 거부
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

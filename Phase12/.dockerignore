@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Environment secrets
+.env
+.env.local
+secrets/
+*.serviceaccount.json
+.firebase/
+
+# Data caches (생성 가능)
+data/route_cache/
+data/chroma_db/
+
+# Large UIUX assets (React 에셋만 필요, zip은 제외)
+uiux/*.zip
+uiux/**/screen.png
+uiux/**/*.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# OMC
+.omc/
+.claude/
+
+# Git
+.git/
+.gitignore
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Docs (배포 이미지에 불필요)
+guide/
+md/
+uiux/web_uiux.zip
+uiux/mobile_uiux.zip
+idea/
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Firebase
+firebase.json
+.firebaserc
+public/
+firestore.rules
+firestore.indexes.json

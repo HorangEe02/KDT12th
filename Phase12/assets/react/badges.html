@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "se-primary": "#00193c",
+            "se-primary-container": "#002d62",
+            "se-secondary": "#1b6d24",
+            "se-secondary-fixed": "#a3f69c",
+            "se-secondary-container": "#a0f399",
+            "se-on-secondary-container": "#217128",
+            "se-surface": "#f8f9fa",
+            "se-surface-container-low": "#f3f4f5",
+            "se-surface-container-lowest": "#ffffff",
+            "se-surface-container": "#edeeef",
+            "se-outline": "#747781",
+            "se-on-surface-variant": "#43474f",
+          },
+          fontFamily: {
+            headline: ["'Plus Jakarta Sans'", "sans-serif"],
+            body: ["Manrope", "sans-serif"],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html, body { margin: 0; padding: 0; background: transparent; font-family: 'Manrope', sans-serif; }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .stadium-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .stadium-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,0.12); }
+    .stadium-card--not-visited img { filter: grayscale(100%); opacity: 0.45; }
+    .check-icon { font-variation-settings: 'FILL' 1; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    function Badges() {
+      const cfg = window.APP_CONFIG || { stadiums: [], totalVisited: 0, viewport: "web", logos: {} };
+      const { stadiums, totalVisited, viewport, logos } = cfg;
+      const isMobile = viewport === "mobile";
+      const total = stadiums.length || 1;
+      const pct = Math.round((totalVisited / total) * 100);
+      const complete = totalVisited === stadiums.length && stadiums.length > 0;
+      const gridCls = isMobile ? "grid grid-cols-2 gap-3" : "grid grid-cols-5 gap-3";
+
+      return (
+        <div className="bg-se-surface-container-low rounded-[28px] p-6 md:p-7">
+          <div className="flex justify-between items-end mb-5">
+            <div>
+              <h2 className="font-headline font-extrabold text-se-primary text-[1.4rem] tracking-tight m-0">Stadium Tour</h2>
+              <p className="font-headline text-[0.72rem] uppercase tracking-[0.16em] text-se-on-surface-variant mt-1 m-0">
+                {totalVisited} / {stadiums.length} COMPLETED
+              </p>
+            </div>
+            <div className="font-headline font-extrabold text-se-primary text-[1.9rem] leading-none">
+              {pct}<span className="text-se-outline text-base font-semibold ml-1">%</span>
+            </div>
+          </div>
+
+          {complete && (
+            <div className="bg-gradient-to-br from-se-secondary to-se-secondary-container text-white font-headline font-bold px-4 py-3 rounded-xl mb-4 shadow-lg">
+              🎉 10개 구장 완주! 진정한 원정 응원러!
+            </div>
+          )}
+
+          <div className={gridCls}>
+            {stadiums.map(s => {
+              const teamCode = s.team_code || "LG";
+              const logoSrc = logos[teamCode] || "";
+              const bgGradient = s.visited
+                ? `linear-gradient(135deg, ${s.color} 0%, ${s.color}cc 60%, #00193c 100%)`
+                : "#edeeef";
+              const variantCls = s.visited ? "stadium-card--visited" : "stadium-card--not-visited";
+
+              return (
+                <div
+                  key={s.short_name}
+                  className={`stadium-card ${variantCls} relative rounded-2xl overflow-hidden aspect-square shadow-[0_4px_14px_rgba(0,0,0,0.08)]`}
+                  style={{ background: bgGradient }}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center p-6">
+                    {logoSrc ? (
+                      <img src={logoSrc} alt={teamCode} className="w-3/5 h-3/5 object-contain" style={s.visited ? { filter: "drop-shadow(0 2px 6px rgba(0,0,0,0.3))" } : {}} />
+                    ) : (
+                      <span className="material-symbols-outlined text-se-outline text-5xl">stadium</span>
+                    )}
+                  </div>
+
+                  {s.visited && (
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                  )}
+
+                  <div className={`absolute bottom-2 left-3 ${s.visited ? 'text-white' : 'text-se-on-surface-variant'}`}>
+                    <p className="font-headline font-bold text-sm m-0 leading-tight">{s.short_name}</p>
+                    <p className="text-[10px] uppercase tracking-widest opacity-80 m-0 mt-0.5">{s.city}</p>
+                  </div>
+
+                  {s.visited && (
+                    <div className="absolute top-2 right-2 w-7 h-7 rounded-full bg-se-secondary-fixed flex items-center justify-center shadow-md">
+                      <span className="material-symbols-outlined check-icon text-se-primary text-[16px]">check</span>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<Badges />);
+  </script>
+</body>
+</html>

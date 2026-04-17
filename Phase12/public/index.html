@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>원정 응원 플래너 — 로딩 중</title>
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; background: #00193c; color: #FFFDF5; font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; }
+    .wrap { display: flex; align-items: center; justify-content: center; height: 100vh; text-align: center; }
+    h1 { font-size: 2.2rem; letter-spacing: -0.02em; margin-bottom: 12px; }
+    p { opacity: 0.85; }
+    .spinner { margin: 24px auto; width: 42px; height: 42px; border: 4px solid rgba(255,255,255,0.2); border-top-color: #a3f69c; border-radius: 50%; animation: spin 1s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div>
+      <h1>⚾ 원정 응원 플래너</h1>
+      <div class="spinner"></div>
+      <p>Cloud Run 컨테이너 시작 중... 잠시만 기다려 주세요.</p>
+      <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 24px;">Powered by Firebase Hosting + Cloud Run + Gemini</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Digital Curator - AI Planner</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .tonal-layering {
+                @apply bg-slate-50 dark:bg-slate-900;
+            }
+            .tonal-shift-bg {
+                @apply bg-white/80 dark:bg-slate-900/80 backdrop-blur-md;
+            }
+            .no-line {
+                @apply border-none;
+            }
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                primary: "#0071E3",
+                "primary-dark": "#005bb5",
+                surface: "#ffffff",
+                "surface-muted": "#f5f5f7",
+              },
+              fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+                headline: ['Inter', 'sans-serif'],
+                body: ['Inter', 'sans-serif'],
+                label: ['Inter', 'sans-serif'],
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-surface-muted text-slate-900 font-sans min-h-screen flex flex-col antialiased">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200/50 dark:border-slate-800/50 transition-colors duration-300">
+<div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+<!-- Logo -->
+<a class="text-lg font-semibold text-slate-900 dark:text-white tracking-tight flex items-center gap-2 hover:opacity-70 transition-opacity duration-200" href="#">
+            Digital Curator
+        </a>
+<!-- Desktop Nav Links -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Matches &amp; Predictions</a>
+<a class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Route Map</a>
+<a class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Eats &amp; Stays</a>
+<a class="text-sm font-medium text-primary dark:text-blue-400 border-b-2 border-primary dark:border-blue-400 py-5" href="#">AI Planner</a>
+<a class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">My Badges</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white scale-95 hover:scale-100 duration-150 ease-in-out transition-all">
+<span class="material-symbols-outlined text-xl">search</span>
+</button>
+<button class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white scale-95 hover:scale-100 duration-150 ease-in-out transition-all">
+<span class="material-symbols-outlined text-xl">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 pt-24 pb-32 px-4 md:px-8 flex flex-col max-w-4xl mx-auto w-full relative">
+<header class="mb-8 text-center">
+<h1 class="text-4xl font-semibold tracking-tight text-slate-900 mb-2">The Concierge</h1>
+<p class="text-slate-500 text-lg">Your personal travel assistant.</p>
+</header>
+<!-- Chat Container -->
+<div class="flex-1 overflow-y-auto flex flex-col gap-8 pb-4">
+<!-- User Message -->
+<div class="flex justify-end">
+<div class="bg-primary text-white rounded-3xl rounded-tr-sm px-6 py-4 max-w-[80%] shadow-sm">
+<p class="text-[15px] leading-relaxed">Plan a 1-night trip to Changwon for a family of 3 with a ₩400,000 budget.</p>
+</div>
+</div>
+<!-- AI Status Indicator -->
+<div class="flex items-start gap-4 max-w-[85%]">
+<div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm border border-slate-100 shrink-0">
+<span class="material-symbols-outlined text-primary text-xl">auto_awesome</span>
+</div>
+<div class="bg-white text-slate-500 rounded-3xl rounded-tl-sm px-5 py-3 text-sm border border-slate-100 shadow-sm flex items-center gap-3">
+<div class="flex gap-1.5">
+<span class="w-1.5 h-1.5 bg-slate-300 rounded-full animate-pulse"></span>
+<span class="w-1.5 h-1.5 bg-slate-300 rounded-full animate-pulse delay-75"></span>
+<span class="w-1.5 h-1.5 bg-slate-300 rounded-full animate-pulse delay-150"></span>
+</div>
+<span>Searching for family-friendly hotels in Changwon...</span>
+</div>
+</div>
+<!-- AI Response -->
+<div class="flex items-start gap-4 max-w-[95%]">
+<div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm border border-slate-100 shrink-0 mt-1">
+<span class="material-symbols-outlined text-primary text-xl">auto_awesome</span>
+</div>
+<div class="bg-white rounded-3xl rounded-tl-sm p-8 shadow-sm border border-slate-100 flex flex-col gap-6 w-full relative overflow-hidden">
+<div class="mb-2">
+<p class="text-[15px] text-slate-700 leading-relaxed">Here's your Grand Slam Trip for the NC Series, optimized for a family of 3 within your ₩400,000 budget.</p>
+</div>
+<!-- Bento Grid for Itinerary -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<!-- Day 1 Card -->
+<div class="bg-slate-50 rounded-2xl p-6 border border-slate-100/50">
+<div class="flex items-center gap-3 mb-5">
+<span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-1 rounded-md tracking-wide uppercase">Day 1</span>
+<h3 class="font-semibold text-lg text-slate-900">Arrival &amp; Game Day</h3>
+</div>
+<ul class="flex flex-col gap-5 text-[14px]">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-slate-400 mt-0.5">train</span>
+<div>
+<p class="font-medium text-slate-900">14:00 - Arrival</p>
+<p class="text-slate-500 mt-0.5">Check-in at Changwon Station Hotel (₩120k/night).</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-slate-400 mt-0.5">restaurant</span>
+<div>
+<p class="font-medium text-slate-900">15:30 - Pre-game Lunch</p>
+<p class="text-slate-500 mt-0.5">Family BBQ near NC Park (Est. ₩60k).</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-0.5" style="font-variation-settings: 'FILL' 1;">sports_baseball</span>
+<div>
+<p class="font-medium text-slate-900">18:30 - Playball!</p>
+<p class="text-slate-500 mt-0.5">LG Twins vs NC Dinos at Changwon NC Park. Family seating (₩75k).</p>
+</div>
+</li>
+</ul>
+</div>
+<!-- Day 2 Card -->
+<div class="bg-slate-50 rounded-2xl p-6 border border-slate-100/50">
+<div class="flex items-center gap-3 mb-5">
+<span class="bg-slate-200 text-slate-600 text-xs font-semibold px-2.5 py-1 rounded-md tracking-wide uppercase">Day 2</span>
+<h3 class="font-semibold text-lg text-slate-900">Explore &amp; Depart</h3>
+</div>
+<ul class="flex flex-col gap-5 text-[14px]">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-slate-400 mt-0.5">local_cafe</span>
+<div>
+<p class="font-medium text-slate-900">09:00 - Breakfast</p>
+<p class="text-slate-500 mt-0.5">Local bakery near hotel (Est. ₩25k).</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-slate-400 mt-0.5">park</span>
+<div>
+<p class="font-medium text-slate-900">10:30 - Park Visit</p>
+<p class="text-slate-500 mt-0.5">Stroll through Yongji Lake Park. Free entry.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-slate-400 mt-0.5">train</span>
+<div>
+<p class="font-medium text-slate-900">14:00 - Departure</p>
+<p class="text-slate-500 mt-0.5">Train back home. Budget remaining: ~₩120k for transport/extras.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex gap-3 mt-4">
+<button class="bg-primary text-white font-medium text-sm px-6 py-3 rounded-full flex items-center gap-2 hover:bg-primary-dark transition-colors shadow-sm">
+<span class="material-symbols-outlined text-sm">add_task</span>
+                            Add to Itinerary
+                        </button>
+<button class="bg-white text-slate-700 border border-slate-200 font-medium text-sm px-6 py-3 rounded-full hover:bg-slate-50 transition-colors">
+                            Adjust Budget
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Chat Input Area -->
+<div class="fixed bottom-0 left-0 right-0 p-6 bg-white/80 backdrop-blur-xl border-t border-slate-200/50 z-40">
+<div class="max-w-4xl mx-auto relative">
+<input class="w-full bg-slate-100 border border-transparent rounded-full py-4 pl-6 pr-16 text-slate-900 placeholder:text-slate-500 focus:bg-white focus:border-primary/30 focus:ring-4 focus:ring-primary/10 transition-all shadow-sm" placeholder="Ask for adjustments or more details..." type="text"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-primary-dark transition-colors shadow-sm">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">arrow_upward</span>
+</button>
+</div>
+</div>
+</main>
+</body></html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "se-primary": "#00193c",
+            "se-primary-container": "#002d62",
+            "se-secondary": "#1b6d24",
+            "se-secondary-fixed": "#a3f69c",
+            "se-surface": "#f8f9fa",
+            "se-surface-container-low": "#f3f4f5",
+            "se-surface-container-lowest": "#ffffff",
+            "se-surface-container": "#edeeef",
+            "se-outline": "#747781",
+            "se-outline-variant": "#c4c6d1",
+            "se-on-surface-variant": "#43474f",
+          },
+          fontFamily: {
+            headline: ["'Plus Jakarta Sans'", "sans-serif"],
+            body: ["Manrope", "sans-serif"],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html, body { margin: 0; padding: 0; background: transparent; font-family: 'Manrope', sans-serif; }
+    .team-card {
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .team-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+      text-decoration: none;
+    }
+    .team-card.selected {
+      border-color: #00193c !important;
+      box-shadow: 0 10px 22px rgba(0,25,60,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    function TeamSelector() {
+      const cfg = window.APP_CONFIG || { teams: [], selected: "LG", viewport: "web", logos: {} };
+      const { teams, selected, viewport, logos } = cfg;
+      const isMobile = viewport === "mobile";
+
+      const gridCls = isMobile
+        ? "grid grid-cols-3 gap-3"
+        : "grid grid-cols-5 gap-3";
+
+      return (
+        <div className="bg-se-surface-container-low rounded-2xl p-5 md:p-6 relative overflow-hidden">
+          <div className="absolute -top-10 -right-10 w-36 h-36 bg-se-secondary-fixed opacity-20 rounded-full blur-3xl pointer-events-none" />
+          <div className="relative z-10 flex justify-between items-baseline mb-4">
+            <h3 className="font-headline font-extrabold text-se-primary text-[1.05rem] tracking-wide m-0">SELECT YOUR TEAM</h3>
+            <span className="font-headline text-[0.7rem] uppercase tracking-[0.12em] text-se-on-surface-variant">⚡ 클릭 → URL 동기화</span>
+          </div>
+          <div className={`relative z-10 ${gridCls}`}>
+            {teams.map(t => (
+              <a
+                key={t.code}
+                href={`?team=${t.code}`}
+                target="_top"
+                title={t.nameKo}
+                className={`team-card flex flex-col items-center justify-center p-3 rounded-2xl bg-se-surface-container-lowest border-2 border-transparent min-h-[108px] ${t.code === selected ? 'selected' : ''}`}
+              >
+                <div
+                  className="w-12 h-12 rounded-full flex items-center justify-center mb-2 shadow-[0_4px_10px_rgba(0,0,0,0.08)]"
+                  style={{ background: `${t.color}18`, border: `2px solid ${t.color}33` }}
+                >
+                  {logos[t.code] ? (
+                    <img src={logos[t.code]} alt={t.code} className="w-9 h-9 object-contain" />
+                  ) : (
+                    <span className="font-headline font-extrabold text-xs" style={{ color: t.color }}>{t.code}</span>
+                  )}
+                </div>
+                <div className="font-headline font-bold text-se-primary text-[0.85rem]">{t.code}</div>
+                <div className="text-se-on-surface-variant text-[0.68rem] text-center mt-0.5">{t.nameKo}</div>
+              </a>
+            ))}
+          </div>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<TeamSelector />);
+  </script>
+</body>
+</html>
