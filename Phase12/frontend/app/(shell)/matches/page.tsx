@@ -75,16 +75,43 @@ export default async function MatchesPage({
             </p>
             <p className="mt-1 text-sm">
               🕐 경기 시작:{" "}
-              <strong>
-                {selected.time ??
-                  (selected as unknown as { start_time?: string }).start_time ??
-                  "미정"}
-              </strong>
+              <strong>{selected.start_time || selected.time || "미정"}</strong>
             </p>
-            {(selected as unknown as { broadcast?: string }).broadcast ? (
+            {selected.status === "FINISHED" && selected.score ? (
+              <p className="mt-1 text-sm">
+                🏁 최종 스코어:{" "}
+                <strong className="tabular-nums">
+                  {team === selected.away_team
+                    ? `${selected.score.away} - ${selected.score.home}`
+                    : `${selected.score.home} - ${selected.score.away}`}
+                </strong>
+                {selected.win_pitcher ? ` · 승 ${selected.win_pitcher}` : ""}
+                {selected.lose_pitcher ? ` · 패 ${selected.lose_pitcher}` : ""}
+                {selected.save_pitcher ? ` · 세 ${selected.save_pitcher}` : ""}
+              </p>
+            ) : null}
+            {selected.status === "IN_PROGRESS" && selected.score ? (
+              <p className="mt-1 text-sm text-red-700">
+                🔴 LIVE{" "}
+                {selected.current_inning
+                  ? `${selected.current_inning}회 · `
+                  : ""}
+                {selected.score.away}-{selected.score.home}
+              </p>
+            ) : null}
+            {selected.status === "SCHEDULED" &&
+            (selected.home_pitcher || selected.away_pitcher) ? (
+              <p className="mt-1 text-sm text-se-on-surface-variant">
+                🧤 선발: {selected.away_pitcher ?? "미정"} (원정) vs{" "}
+                {selected.home_pitcher ?? "미정"} (홈)
+              </p>
+            ) : null}
+            {selected.broadcast ? (
               <p className="mt-1 text-sm text-se-on-surface-variant">
                 📺 중계:{" "}
-                {(selected as unknown as { broadcast?: string }).broadcast}
+                {Array.isArray(selected.broadcast)
+                  ? selected.broadcast.join(", ")
+                  : selected.broadcast}
               </p>
             ) : null}
             <p className="mt-4 text-xs text-se-on-surface-variant">
@@ -112,6 +139,7 @@ export default async function MatchesPage({
         </h3>
         <MatchList
           games={games}
+          team={team}
           selectedGameId={selected?.game_id}
           baseQuery={Object.fromEntries(
             Object.entries(p).filter(([, v]) => typeof v === "string"),
