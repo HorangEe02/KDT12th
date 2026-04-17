@@ -1,6 +1,6 @@
 {
   "apphosting": {
-    "backendId": "away-game-companion",
+    "backendId": "my-web-app",
     "rootDir": "frontend",
     "ignore": [
       "node_modules",
