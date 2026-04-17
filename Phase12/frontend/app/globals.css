@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* ================================================================
+   Stadium Editorial — Tailwind v4 @theme tokens
+   (포팅: assets/css/style.css)
+   ================================================================ */
+@theme {
+  --font-display: var(--font-jakarta), "Plus Jakarta Sans", -apple-system,
+    BlinkMacSystemFont, sans-serif;
+  --font-body: var(--font-manrope), "Manrope", var(--font-noto-kr),
+    "Noto Sans KR", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --color-se-primary: #00193c;
+  --color-se-primary-container: #002d62;
+  --color-se-secondary: #1b6d24;
+  --color-se-secondary-fixed: #a3f69c;
+  --color-se-secondary-container: #a0f399;
+  --color-se-on-secondary-container: #217128;
+  --color-se-tertiary: #705d00;
+  --color-se-tertiary-container: #c9a900;
+  --color-se-surface: #f8f9fa;
+  --color-se-surface-container: #edeeef;
+  --color-se-surface-container-low: #f3f4f5;
+  --color-se-surface-container-lowest: #ffffff;
+  --color-se-surface-variant: #e1e3e4;
+  --color-se-on-surface: #191c1d;
+  --color-se-on-surface-variant: #43474f;
+  --color-se-outline: #747781;
+  --color-se-outline-variant: #c4c6d1;
+  --color-se-error: #ba1a1a;
+
+  --radius-se-card: 14px;
+  --radius-se-hero: 24px;
+}
+
+:root {
+  --se-signature-gradient: linear-gradient(135deg, #00193c 0%, #002d62 100%);
+}
+
+body {
+  background: var(--color-se-surface);
+  color: var(--color-se-on-surface);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-se-primary);
+}
+
+/* -------- Material Symbols Outlined -------- */
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* -------- Hero 볼 애니메이션 -------- */
+@keyframes se-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px) rotate(12deg);
+  }
+}
+.se-ball {
+  display: inline-block;
+  animation: se-bounce 2.6s ease-in-out infinite;
+}
+
+/* -------- Focus ring (accessibility) -------- */
+*:focus-visible {
+  outline: 2px solid var(--color-se-primary);
+  outline-offset: 2px;
+}

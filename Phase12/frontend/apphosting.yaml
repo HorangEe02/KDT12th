@@ -1,0 +1,101 @@
+# ============================================================================
+# Firebase App Hosting — Phase 6 Next.js 16 배포 설정
+# ----------------------------------------------------------------------------
+# 배포 커맨드:
+#   firebase apphosting:backends:create --project mini12-310f5  (최초 1회)
+#   firebase apphosting:secrets:set GEMINI_API_KEY               (각 시크릿)
+#   firebase deploy --only apphosting
+#
+# 참고: docs/SESSION_F_DEPLOY_RUNBOOK.md
+# ============================================================================
+
+runConfig:
+  # Cloud Run 인스턴스 설정 (Serverless — 유휴 시 자동 0으로)
+  cpu: 1
+  memoryMiB: 1024
+  minInstances: 0
+  maxInstances: 3
+  concurrency: 80
+  timeoutSeconds: 120
+
+env:
+  # -------- 공개 (클라이언트 번들에 포함) --------
+  - variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+    value: mini12-310f5
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+    value: mini12-310f5.appspot.com
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+    value: mini12-310f5.firebaseapp.com
+    availability:
+      - BUILD
+      - RUNTIME
+
+  # -------- 서버 전용 (Cloud Run 런타임만) --------
+  - variable: FIREBASE_PROJECT_ID
+    value: mini12-310f5
+    availability:
+      - RUNTIME
+
+  - variable: GEMINI_CHAT_MODEL
+    value: gemini-2.5-flash-lite
+    availability:
+      - RUNTIME
+
+  - variable: GEMINI_FALLBACK_MODEL
+    value: gemini-flash-lite-latest
+    availability:
+      - RUNTIME
+
+  # -------- 시크릿 (Secret Manager — `firebase apphosting:secrets:set NAME`) --------
+  - variable: GEMINI_API_KEY
+    secret: GEMINI_API_KEY
+    availability:
+      - RUNTIME
+
+  - variable: KAKAO_REST_API_KEY
+    secret: KAKAO_REST_API_KEY
+    availability:
+      - RUNTIME
+
+  # KAKAO_MOBILITY_API_KEY 는 선택 — 없으면 OSRM 폴백 동작
+  - variable: KAKAO_MOBILITY_API_KEY
+    secret: KAKAO_MOBILITY_API_KEY
+    availability:
+      - RUNTIME
+
+  - variable: WEATHER_API_KEY_ENCODED
+    secret: WEATHER_API_KEY_ENCODED
+    availability:
+      - RUNTIME
+
+  - variable: TOUR_API_KEY_ENCODED
+    secret: TOUR_API_KEY_ENCODED
+    availability:
+      - RUNTIME
+
+  # -------- Firebase Web SDK (옵션 — Badges/Share Firestore 활성화 시) --------
+  - variable: NEXT_PUBLIC_FIREBASE_API_KEY
+    secret: NEXT_PUBLIC_FIREBASE_API_KEY
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: NEXT_PUBLIC_FIREBASE_APP_ID
+    secret: NEXT_PUBLIC_FIREBASE_APP_ID
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+    secret: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+    availability:
+      - BUILD
+      - RUNTIME
