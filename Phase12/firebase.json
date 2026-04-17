@@ -14,7 +14,8 @@
       "*.pkl",
       ".env",
       ".env.local"
-    ]
+    ],
+    "alwaysDeployFromSource": true
   },
   "firestore": {
     "rules": "firestore.rules",

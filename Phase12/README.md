@@ -66,11 +66,16 @@ KBO 10개 구단, 전국 8개 도시, 연간 720경기 — 원정 응원러를 �
 - **/badges**: Stadium Tour 10 구장 체크 + Firestore 이중화 (graceful localStorage fallback)
 - **공유**: URL 직렬화 primary + Firestore 단축 링크 optional
 
-**핵심 설계 문서**:
+**핵심 설계 문서** (모두 `docs/` 하위):
 - `docs/PHASE6_NEXTJS_MIGRATION.md` — 6 세션 마이그레이션 로드맵
 - `docs/OSM_FALLBACK_PLAN.md` — 길찾기 3-tier 폴백 설계 (Kakao → OSRM → Haversine)
 - `docs/SESSION_E_PLAN.md` — AI 챗봇 + Badges 구현 설계
 - `docs/SESSION_F_DEPLOY_RUNBOOK.md` — App Hosting 배포 단계별 가이드
+- `docs/CLEANUP_PLAN.md` — 디렉토리 정리 계획 (2026-04-18 수행)
+- `docs/IMPLEMENTATION_PLAN.md` — 전체 로드맵 (구 `md/` 에서 이동)
+- `docs/guides/PHASE[0-5]_GUIDE.md` — Phase 별 상세 가이드 (구 `guide/` 에서 이동)
+- `docs/reference/` — KBO · Tour · 기상청 API 레퍼런스 (구 `api/` 에서 이동)
+- `legacy/` — Phase 1~5 Python 레거시 (참고용 보존)
 
 **개발/배포**:
 ```bash

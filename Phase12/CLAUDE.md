@@ -13,7 +13,7 @@ AI 기반 여행 플래너. 경기 선택 한 번으로 티켓·교통·맛집·
 - 주 사용자: MZ세대 프로야구 팬 (원정 응원러)
 - 플랫폼: Streamlit 웹 앱 (로컬 실행 + Streamlit Cloud 배포)
 - 프로젝트 기간: 5일 (Day 4~5 집중 개발, 총 실작업 약 12시간)
-- 상세 기획: `README.md`, `md/IMPLEMENTATION_PLAN.md`, `guide/PHASE*_GUIDE.md`
+- 상세 기획: `README.md`, `docs/IMPLEMENTATION_PLAN.md`, `docs/guides/PHASE*_GUIDE.md`
 
 ---
 
@@ -36,102 +36,156 @@ AI 기반 여행 플래너. 경기 선택 한 번으로 티켓·교통·맛집·
 ## 3. 디렉토리 맵
 
 ```
-Phase12/
-├── app.py                      # Streamlit 엔트리 포인트
-├── requirements.txt
-├── CLAUDE.md                   # 이 문서
-├── README.md                   # 프로젝트 소개 및 기획 의도
-├── .env.example                # API 키 템플릿
-├── .gitignore
-├── guide/                      # Phase 0~5 상세 가이드 (INDEX.md 포함)
-├── md/IMPLEMENTATION_PLAN.md   # 전체 로드맵
-├── uiux/                       # 웹/모바일 UIUX 레퍼런스
-├── data/
-│   └── poi_cache/              # TourAPI 응답 캐시 (gitignore)
-├── models/                     # 학습된 pkl 모델 (gitignore)
-├── assets/
-│   ├── css/                    # style.css 등 브랜딩
-│   └── images/
-├── src/
-│   ├── config.py               # 경로 상수 + load_dotenv
-│   ├── data_loader.py          # CSV·API 통합 로더
-│   ├── utils.py
-│   ├── api/
-│   │   ├── tour_api.py
-│   │   ├── kakao_map.py
-│   │   └── weather_api.py
-│   ├── ui/
-│   │   ├── sidebar.py
-│   │   ├── hero.py
-│   │   └── tabs/               # tab1~5_*.py (경기·지도·맛집·AI·뱃지)
-│   ├── viz/
-│   │   ├── folium_map.py
-│   │   └── plotly_charts.py
-│   └── ai/
-│       ├── agents.py           # Multi-Agent 오케스트레이션
-│       ├── tools.py            # Function Calling 도구
-│       ├── rag.py
-│       └── predict.py          # 승률 예측 모델
-└── tests/
-    └── test_data_loader.py
+Phase12/                        # 루트 11 항목 (2026-04-18 정리 완료)
+├── CLAUDE.md                   # 이 문서 — AI 에이전트 컨텍스트
+├── README.md                   # 프로젝트 소개 + Live URL
+├── firebase.json               # App Hosting + Firestore 배포 설정
+├── .firebaserc                 # project: mini12-310f5
+├── firestore.rules
+├── firestore.indexes.json
+│
+├── frontend/                   # ⭐ Next.js 16 메인 앱 (Production)
+│   ├── app/                    # App Router (/, /matches, /map, /places, /ai, /badges, /share/[id])
+│   │   ├── (shell)/            # TopNav + Sidebar 공통 레이아웃
+│   │   └── api/                # predict · route · chat · plans
+│   ├── components/             # hero · team-selector · matches · map · places · ai · badges
+│   ├── lib/                    # predict · api/{kakao,osrm,haversine,route} · ai/{tools,agents,rag,mock} · firebase · store · share
+│   ├── public/data/            # schedule · stadiums · team-stats · tips · poi/* (빌드 타임 JSON)
+│   ├── public/logos/           # KBO 팀 로고 SVG 12 개
+│   ├── apphosting.yaml         # Cloud Run 설정 + Secret Manager ref
+│   └── package.json            # Next 16 · React 19 · Tailwind v4 · ai · leaflet · plotly · zustand
+│
+├── data/                       # 원본 CSV (Python 레거시 생성 · Next.js 빌드 시 JSON 변환됨)
+│   ├── SCHEMA.md
+│   ├── kbo_schedule_2026.csv · stadiums.csv · team_stats_10yr.csv
+│
+├── docs/                       # 📚 모든 문서 (2026-04-18 통합)
+│   ├── PHASE6_NEXTJS_MIGRATION.md · OSM_FALLBACK_PLAN.md
+│   ├── SESSION_E_PLAN.md · SESSION_F_DEPLOY_RUNBOOK.md · CLEANUP_PLAN.md
+│   ├── ARCHITECTURE.md · DEMO_SCRIPT.md · QA_PREP.md
+│   ├── IMPLEMENTATION_PLAN.md  # (구 md/ 에서 이동)
+│   ├── guides/                 # (구 guide/ 에서 이동)
+│   │   └── INDEX.md · PHASE0_GUIDE.md ~ PHASE5_GUIDE.md
+│   ├── reference/              # (구 api/, fonts/ 에서 이동)
+│   │   ├── tourapi_ko.md · weather_*_forecast.md · maps/ · fonts/
+│   └── brief/project_brief.pdf
+│
+├── scripts/                    # Phase 6 유지보수 (shell only)
+│   ├── preflight.sh            # 배포 전 점검
+│   └── validate_data.py        # 데이터 구조 검증
+│
+├── uiux/                       # 원본 HTML/PNG 목업 (참고용)
+│   ├── web_uiux/               # 7 종 웹 화면 (Stadium Editorial 디자인 시스템 포함)
+│   └── mobile_uiux/            # 7 종 모바일 화면
+│
+└── legacy/                     # 📦 Phase 1~5 Python Streamlit 보존 (배포 미사용)
+    ├── README.md               # 레거시 설명 + 포팅 매핑
+    ├── app.py · Dockerfile · requirements.txt
+    ├── src/                    # Python 소스 (ai, api, db, ui, viz)
+    ├── models/win_rate_model.pkl · assets/ · public/ · tests/
+    ├── scripts/                # cache_poi · validate_phase[2-5] · deploy.sh · export_to_json.py
+    └── data_cache/             # poi_cache · chroma_db · knowledge · route_cache
 ```
 
 ---
 
 ## 4. 코딩 컨벤션
 
-- 함수·변수명: **snake_case**
-- 클래스명: **PascalCase**
-- 상수: **UPPER_SNAKE_CASE**
-- 한글 주석 허용, docstring은 영어/한국어 모두 가능
+### 4-1. Next.js (Phase 6 · Production · `frontend/`)
+
+- 함수·변수명: **camelCase** · 컴포넌트: **PascalCase** · 상수: **UPPER_SNAKE_CASE**
+- TypeScript 엄격 · `any` 금지 (필요 시 `unknown` + 가드)
+- Server Component 기본, 인터랙티브만 `"use client"`
+- Tailwind v4 유틸리티 + `@theme` 토큰 (`bg-se-primary` 등)
+- Zustand 로 클라이언트 상태 + `persist` 미들웨어
+- API Route: Zod body 검증 + `nodejs` 런타임 명시 (`export const runtime = "nodejs"`)
+- 외부 API: `AbortController` 5초 타임아웃 + graceful fallback
+- 비밀 키: `process.env.X` 는 서버 컴포넌트/API Route 에서만 · `NEXT_PUBLIC_*` 만 클라이언트 노출
+
+### 4-2. Python 레거시 (`legacy/` 디렉토리 내부에서만 적용)
+
+- 함수·변수명: **snake_case** · 클래스: **PascalCase** · 상수: **UPPER_SNAKE_CASE**
 - **타입 힌트 필수**: `def load_data(path: str) -> pd.DataFrame:`
 - 외부 API 호출은 반드시 `try-except` + 타임아웃 10초
 - 로깅은 `print` 금지, `import logging` 사용
 - Streamlit 데이터 로딩 함수는 `@st.cache_data(ttl=3600)` 필수
-- 경로·API 키는 `src/config.py`를 통해 접근 (직접 `os.getenv` 호출 지양)
+- 경로·API 키는 `legacy/src/config.py` 를 통해 접근
 
 ---
 
 ## 5. 실행 · 테스트 명령
 
+### 5-1. Next.js (Phase 6 · Production)
+
 ```bash
-# 의존성 설치
-pip install -r requirements.txt
+# 로컬 개발
+cd frontend
+pnpm install           # 최초 1회
+pnpm dev               # http://localhost:3000
 
-# 앱 실행
-streamlit run app.py
+# 프로덕션 빌드
+pnpm build
+pnpm start
 
-# 테스트 실행 (Phase 1 이후)
-pytest tests/
+# 타입 체크 / 린트
+npx tsc --noEmit
+pnpm lint
 
-# 린트 (선택)
-ruff check src/
+# 데이터 검증 (루트에서)
+bash scripts/preflight.sh
+python3 scripts/validate_data.py
+
+# 배포 (Firebase App Hosting)
+firebase deploy --only apphosting --project mini12-310f5
 ```
 
-작업 디렉토리는 항상 프로젝트 루트(`Phase12/`)에서 실행해야 합니다.
+### 5-2. Python 레거시 (`legacy/` 내부에서만)
+
+```bash
+cd legacy
+pip install -r requirements.txt
+streamlit run app.py
+# 데이터 재생성
+python3 scripts/export_to_json.py   # CSV → ../frontend/public/data/*.json
+```
+
+작업 디렉토리는 항상 프로젝트 루트(`Phase12/`) 또는 `frontend/` 를 기준으로 실행하세요.
 
 ---
 
 ## 6. 금지사항 (DO NOT)
 
-- ❌ API 키를 코드에 하드코딩하지 말 것. 반드시 `src/config.py`의 상수 사용
-- ❌ `.env`, `models/*.pkl`, `data/poi_cache/*.json`을 Git에 커밋하지 말 것
-- ❌ `pandas.read_csv()`를 Streamlit 렌더 함수 안에 직접 호출하지 말 것.
-      항상 `@st.cache_data` 래퍼를 통해 로딩
-- ❌ `time.sleep()`을 Streamlit UI 스레드에서 사용하지 말 것
-- ❌ `st.experimental_*` API는 가급적 피하고 정식 API 사용
-- ❌ 경로 하드코딩 금지. `src/config.py`의 `PROJECT_ROOT`, `DATA_DIR` 등 사용
+### 6-1. Next.js (Phase 6 · 적용)
+
+- ❌ API 키를 소스에 하드코딩하지 말 것. 서버: `process.env.X` · 클라: `NEXT_PUBLIC_X` 만
+- ❌ `.env`, `.env.local`, `secrets/`, `legacy/models/*.pkl` 를 Git 커밋 금지
+- ❌ `frontend/lib/firebase/admin.ts` 등 `"server-only"` 모듈을 클라이언트 컴포넌트에서 import 금지
+- ❌ `ai` SDK 응답을 그대로 `dangerouslySetInnerHTML` 로 넣지 말 것 — `useChat` + `message.parts` 사용
+- ❌ Leaflet · Plotly 를 서버 컴포넌트에서 import 금지 — 반드시 `dynamic(..., { ssr: false })`
+- ❌ 경로 하드코딩 금지 — `@/lib/...` alias 사용
+
+### 6-2. Python 레거시 (`legacy/` 작업 시 적용)
+
+- ❌ `pandas.read_csv()`를 Streamlit 렌더 함수 안에 직접 호출 금지 — `@st.cache_data` 래퍼
+- ❌ `time.sleep()`을 Streamlit UI 스레드에서 사용 금지
+- ❌ `st.experimental_*` API 피하고 정식 API 사용
+- ❌ 경로 하드코딩 금지 — `legacy/src/config.py` 의 `PROJECT_ROOT`, `DATA_DIR` 사용
 
 ---
 
 ## 7. 외부 문서 참조
 
 - 기획 의도·시장 조사: `README.md`
-- 전체 로드맵 및 리스크 관리: `md/IMPLEMENTATION_PLAN.md`
-- 단계별 상세 가이드: `guide/PHASE0_GUIDE.md` ~ `guide/PHASE5_GUIDE.md`
-- 문서 인덱스: `guide/INDEX.md`
+- 전체 로드맵 및 리스크 관리: `docs/IMPLEMENTATION_PLAN.md`
+- Phase 별 상세 가이드: `docs/guides/PHASE0_GUIDE.md` ~ `docs/guides/PHASE5_GUIDE.md`
+- 문서 인덱스: `docs/guides/INDEX.md`
+- Phase 6 마이그레이션: `docs/PHASE6_NEXTJS_MIGRATION.md`
+- OSM 3-tier 폴백 설계: `docs/OSM_FALLBACK_PLAN.md`
+- 정리 계획: `docs/CLEANUP_PLAN.md` (2026-04-18 수행)
 - UIUX 레퍼런스: `uiux/web_uiux/`, `uiux/mobile_uiux/`
 - 디자인 시스템: `uiux/web_uiux/grand_slam_voyage/DESIGN.md`
+- API 레퍼런스: `docs/reference/tourapi_ko.md`, `docs/reference/weather_*.md`
+- Phase 1~5 Python 레거시: `legacy/` (참고용 보존 · 배포 미사용)
 
 ---
 
@@ -330,8 +384,8 @@ firebase deploy --only firestore --project mini12-310f5           # 2분 (rules 
   - Plus Jakarta Sans + Manrope + Material Symbols Outlined
   - Signature Gradient, 카드/뱃지/Bottom Nav 스타일
 - [x] `src/ui/device.py` — 뷰포트 토글 (사이드바 최상단, `?device=mobile` 동기화)
-- [x] `src/ui/components/hero.py` — Streamlit 네이티브, 팀 컬러 그라디언트 유지, viewport 분기
-- [x] `src/ui/components/team_selector.py` — 웹 5×2 / 모바일 3열 카드 그리드
+- [x] `legacy/src/ui/components/hero.py` — Streamlit 네이티브, 팀 컬러 그라디언트 유지, viewport 분기
+- [x] `legacy/src/ui/components/team_selector.py` — 웹 5×2 / 모바일 3열 카드 그리드
 - [x] `src/ui/components/badges.py` — 웹 5열 / 모바일 2열 Stadium Tour, check_circle 아이콘
 - [x] `src/ui/components/bottom_nav.py` — 모바일 하단 네비 미러
 - [x] `src/ui/sidebar.py` — 5종 필터 유지 (device 토글은 device.py에서 먼저 렌더)
