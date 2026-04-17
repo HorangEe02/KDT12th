@@ -1,0 +1,14 @@
+{
+  "name": "phase12-scripts",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Node ESM scripts for Phase 6 maintenance (kbo-game data fetching etc.)",
+  "type": "module",
+  "scripts": {
+    "fetch-schedule": "node fetch_kbo_schedule.mjs",
+    "rebuild-stats": "node rebuild_team_stats.mjs"
+  },
+  "dependencies": {
+    "kbo-game": "^0.0.2"
+  }
+}
