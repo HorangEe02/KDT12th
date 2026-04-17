@@ -31,16 +31,45 @@ export interface Stadium {
   subway_station: string;
 }
 
+export type GameStatus =
+  | "SCHEDULED"
+  | "IN_PROGRESS"
+  | "FINISHED"
+  | "CANCELED";
+
+export interface GameScore {
+  home: number;
+  away: number;
+}
+
+/**
+ * KBO 경기 — kbo-game@0.0.2 + 자체 확장.
+ * 포팅 원본 스키마: scripts/fetch_kbo_schedule.mjs normalizeGame()
+ */
 export interface Game {
   game_id: string;
-  date: string;
-  time: string;
+  date: string;           // YYYY-MM-DD
+  day_of_week?: string;   // "일"~"토"
   home_team: string;
   away_team: string;
-  stadium: string;
+  stadium: string;        // short name (잠실, 수원 …)
+  start_time: string;     // "HH:MM"
+  /** @deprecated use start_time */
+  time?: string;
   stadium_short?: string;
   week?: number;
-  day_of_week?: string;
+
+  // kbo-game 실데이터 필드 (2026 시즌 교체 후 추가)
+  home_pitcher?: string | null;
+  away_pitcher?: string | null;
+  win_pitcher?: string | null;
+  lose_pitcher?: string | null;
+  save_pitcher?: string | null;
+  score?: GameScore | null;
+  status?: GameStatus;
+  current_inning?: number | null;
+  broadcast?: string[] | string | null;
+  season?: number;
 }
 
 export interface TeamStat {
