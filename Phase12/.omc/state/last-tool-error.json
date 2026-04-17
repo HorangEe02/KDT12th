@@ -1,7 +1,0 @@
-{
-  "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"chmod +x \\\"/Volumes/Corsair EX300U Media/00_work_out/01_complete/Phase12/scripts/preflight.sh\\\" && \\\"/Volumes/Corsair EX300U Media/00_work_out/01_complete/Phase12/scripts/preflight.sh\\\"\",\"...",
-  "error": "Exit code 1\n🔍 [1/7] 비밀 키 미커밋 확인\n  ✗ .env — NOT gitignored\n  ✗ frontend/.env.local — NOT gitignored\n  ✗ secrets/ — NOT gitignored\n\n🔍 [2/7] 하드코딩된 API 키 탐색\n  ✓ 소스 코드에 노출된 키 없음\n\n🔍 [3/7] 필수 배포 파일\n  ✓ frontend/apphosting.yaml\n  ✓ firebase.json\n  ✓ .firebaserc\n  ✓ firestore.rules\n  ✓ firestore.indexes.json\n  ✓ frontend/package.json\n\n🔍 [4/7] 데이터 에셋\n  ✓ frontend/public/data (436K)\n  ✓ frontend/public/logos (220K)\n\n🔍 [5/7] Node · pnpm · firebase CLI 버전\n  ✓ node v22.17.0\n  ✓ pnpm 10.8.1\n  ✓ firebase 1...",
-  "timestamp": "2026-04-17T11:48:27.699Z",
-  "retry_count": 1
-}
