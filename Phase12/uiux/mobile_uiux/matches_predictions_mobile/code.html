@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stadium Editorial - Matches</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800;900&amp;family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#e9c400",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#edeeef",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#abc7ff",
+                        "on-tertiary-fixed-variant": "#544600",
+                        "surface-variant": "#e1e3e4",
+                        "tertiary-container": "#c9a900",
+                        "surface": "#f8f9fa",
+                        "on-secondary-fixed": "#002204",
+                        "primary-container": "#002d62",
+                        "surface-tint": "#3e5e95",
+                        "on-surface": "#191c1d",
+                        "on-primary-fixed": "#001b3f",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f3f4f5",
+                        "secondary": "#1b6d24",
+                        "tertiary-fixed": "#ffe16d",
+                        "on-surface-variant": "#43474f",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#7796d1",
+                        "on-background": "#191c1d",
+                        "secondary-container": "#a0f399",
+                        "primary-fixed": "#d7e2ff",
+                        "outline-variant": "#c4c6d1",
+                        "tertiary": "#705d00",
+                        "surface-container-high": "#e7e8e9",
+                        "on-tertiary-container": "#4c3f00",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#221b00",
+                        "outline": "#747781",
+                        "surface-dim": "#d9dadb",
+                        "inverse-surface": "#2e3132",
+                        "on-primary-fixed-variant": "#24467c",
+                        "surface-container-highest": "#e1e3e4",
+                        "background": "#f8f9fa",
+                        "surface-bright": "#f8f9fa",
+                        "secondary-fixed": "#a3f69c",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#abc7ff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-secondary-container": "#217128",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#88d982",
+                        "on-secondary-fixed-variant": "#005312",
+                        "primary": "#00193c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Plus Jakarta Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .glass-gradient {
+                background: linear-gradient(135deg, theme('colors.primary'), theme('colors.primary-container'));
+            }
+            .ambient-shadow {
+                box-shadow: 0px 4px 24px rgba(25, 28, 29, 0.06);
+            }
+            .ghost-border {
+                border: 1px solid theme('colors.outline-variant');
+                opacity: 0.15;
+            }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body antialiased selection:bg-secondary selection:text-on-secondary pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm opacity-90 hidden md:flex">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-7xl mx-auto">
+<button class="text-[#00193c] dark:text-slate-100 hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-lg font-black tracking-tighter text-[#00193c] dark:text-white">
+                STADIUM EDITORIAL
+            </h1>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="close-up portrait of a young man with short dark hair in a casual blue shirt against a neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ0veIg5nbs9kQBcV4oenEKq9-wvwp-RebGe3STJ15VlXTP9qoCPgwHLKg20QCYRDtdu4RACXZ1K_P_fUtuEp9jxfvunP-A0fop9Bxr3qCH9pvgHHuCsXoYPDcw3_LL97YDd3_DOZKw5nkWJQlgSecCR439g835CjbExmUvjQHINGAj7hWmJTC5Y6-gnnJVGGI6hbPoWloTbnJjs5kgA0IrwzzXAFpOEvmkm0pXuwzHizuwdBzLIxKPnhw_xowgxf7RVFUkGAkzQ8"/>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="pt-6 md:pt-24 px-4 md:px-8 max-w-7xl mx-auto space-y-8">
+<!-- Mobile Header -->
+<div class="md:hidden flex justify-between items-center mb-6">
+<h1 class="font-headline text-3xl font-black tracking-tight text-primary">Matches</h1>
+<button class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center ambient-shadow active:scale-95 duration-200">
+<span class="material-symbols-outlined text-primary">tune</span>
+</button>
+</div>
+<!-- Upcoming Fixture Hero Card -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-headline text-xl font-bold tracking-tight text-on-surface">Upcoming Fixture</h2>
+<span class="font-label text-xs font-bold uppercase tracking-widest text-secondary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                    Live Odds
+                </span>
+</div>
+<div class="relative bg-surface-container-lowest rounded-[2rem] p-6 ambient-shadow overflow-hidden">
+<!-- Decorative Team Gradient Blur -->
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-error-container/40 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-10 -left-10 w-40 h-40 bg-primary-fixed/40 rounded-full blur-3xl"></div>
+<div class="relative z-10 flex flex-col items-center">
+<p class="font-label text-sm font-bold uppercase tracking-widest text-on-surface-variant mb-6">Seoul Jamsil Baseball Stadium</p>
+<div class="flex items-center justify-between w-full max-w-sm mx-auto mb-8">
+<!-- Team 1 -->
+<div class="flex flex-col items-center gap-3">
+<div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center ambient-shadow border-4 border-surface-container-lowest relative">
+<img alt="LG Twins Logo" class="w-12 h-12 object-contain" data-alt="abstract geometric logo featuring interlocking L and G letters in deep red and black on a clean white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChapsiBReOhIRh-1gMeKKfem2Zim2jYUO1p2TKE4-KvBPvibzYknubYVOLrhV6gejubsJRfu8j05cye-4mg6enpwTLal1q9dT2obj_T-un8R_hIkpJNVROi2hdEzo1b2UmHtcVWZcin_jy5qU_1iyn4GDT7CQOEdN4-ple6zOMx48vGD5rB9Ag_u9lJRq7O8lzATNWulKk0uWiEhVQUL_j0c3Gjt1rzACvFgeU7Zn-_BBg15RBqIZiV6iiNHCbNXLznE-UNe4YIxg"/>
+<div class="absolute -bottom-2 bg-error text-on-error font-label text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm">Home</div>
+</div>
+<span class="font-headline text-lg font-bold text-on-surface">LG Twins</span>
+</div>
+<!-- VS -->
+<div class="flex flex-col items-center px-4">
+<span class="font-headline text-3xl font-black text-primary-container">VS</span>
+<span class="font-body text-sm font-medium text-on-surface-variant mt-1">18:30 KST</span>
+</div>
+<!-- Team 2 -->
+<div class="flex flex-col items-center gap-3">
+<div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center ambient-shadow border-4 border-surface-container-lowest relative">
+<img alt="NC Dinos Logo" class="w-12 h-12 object-contain" data-alt="modern minimalist sports logo featuring a stylized dinosaur head in deep navy blue and gold on a white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaCjrBaLVh5cxxSpjGqaX2xjX-flEKgCHX6ANDYvH2Epa7vCPjvF5We63dptkJq3ZnpVot7sfG8aDTexT2UfyAHjOZKN8S_y29sg-7FhzqVhLygAmQkMiq62dv6_u1-1b-DIj_ezbBJJ3eb9ftFCiNaTAYvGaQJfqi6Oit_bBv_HQAwMobbe7J1sbmI5K-LQ6OJGcaXavJowjU9v2xX6F5R8OmBXRSWK8mtf8s5TI01RHKJ9LAIfmamiCZSs-pjqbTjSUagAN-5Bk"/>
+<div class="absolute -bottom-2 bg-primary-container text-on-primary font-label text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm">Away</div>
+</div>
+<span class="font-headline text-lg font-bold text-on-surface">NC Dinos</span>
+</div>
+</div>
+<!-- Winning Probability Gauge -->
+<div class="w-full max-w-sm mx-auto bg-surface-container-low rounded-2xl p-4">
+<div class="flex justify-between font-label text-xs font-bold uppercase tracking-wider mb-2">
+<span class="text-error">LG 52%</span>
+<span class="text-primary-container">NC 48%</span>
+</div>
+<div class="h-3 w-full bg-surface-variant rounded-full overflow-hidden flex">
+<div class="h-full bg-error" style="width: 52%"></div>
+<div class="h-full bg-primary-container" style="width: 48%"></div>
+</div>
+<p class="text-center font-body text-xs text-on-surface-variant mt-3">Prediction based on recent form and head-to-head</p>
+</div>
+<button class="mt-6 w-full max-w-sm glass-gradient text-on-primary font-headline text-sm font-bold uppercase tracking-wider py-4 rounded-xl shadow-[0_8px_16px_rgba(0,25,60,0.15)] active:scale-95 transition-transform">
+                        View Detailed Analysis
+                    </button>
+</div>
+</div>
+</section>
+<!-- Upcoming Away Matrix (Bento Grid Style) -->
+<section>
+<h2 class="font-headline text-xl font-bold tracking-tight text-on-surface mb-4">Away Matrix</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 ambient-shadow relative overflow-hidden flex items-start gap-4">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary-fixed"></div>
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">directions_car</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline text-base font-bold text-on-surface">vs SSG Landers</h3>
+<span class="font-label text-xs font-bold text-on-surface-variant bg-surface-container-low px-2 py-1 rounded-md">Tomorrow</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant mb-2">Incheon SSG Landers Field</p>
+<div class="flex gap-2">
+<span class="inline-flex items-center gap-1 font-label text-[10px] uppercase tracking-wider bg-surface-container-high text-on-surface px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[12px]">sunny</span> 22°C
+                            </span>
+<span class="inline-flex items-center gap-1 font-label text-[10px] uppercase tracking-wider bg-surface-container-high text-on-surface px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[12px]">hotel</span> 3 Stays
+                            </span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 ambient-shadow relative overflow-hidden flex items-start gap-4">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-surface-variant"></div>
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-variation-settings: 'FILL' 1;">train</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline text-base font-bold text-on-surface">vs Lotte Giants</h3>
+<span class="font-label text-xs font-bold text-on-surface-variant bg-surface-container-low px-2 py-1 rounded-md">Oct 12</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant mb-2">Busan Sajik Baseball Stadium</p>
+<div class="flex gap-2">
+<span class="inline-flex items-center gap-1 font-label text-[10px] uppercase tracking-wider bg-surface-container-high text-on-surface px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[12px]">cloud</span> 18°C
+                            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full rounded-t-[2rem] z-50 bg-white dark:bg-[#00193c] shadow-2xl flex justify-around items-end pb-6 pt-2 px-4">
+<button class="flex flex-col items-center justify-center bg-[#a3f69c] dark:bg-[#1b6d24] text-[#00193c] dark:text-white rounded-full p-3 mb-1 scale-110 transition-all active:scale-90 duration-300 ease-out hover:text-[#1b6d24] dark:hover:text-[#a3f69c]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">sports_baseball</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">Matches</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 hover:text-[#1b6d24] dark:hover:text-[#a3f69c] active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">explore</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">Map</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 hover:text-[#1b6d24] dark:hover:text-[#a3f69c] active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">hotel</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">Stays</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 hover:text-[#1b6d24] dark:hover:text-[#a3f69c] active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">auto_awesome</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">AI</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 hover:text-[#1b6d24] dark:hover:text-[#a3f69c] active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">military_tech</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">Badges</span>
+</button>
+</nav>
+</body></html>

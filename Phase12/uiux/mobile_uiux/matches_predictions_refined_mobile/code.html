@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Matches &amp; Predictions - Stadium Editorial</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f8f9fa",
+                        "on-tertiary-fixed-variant": "#544600",
+                        "tertiary": "#705d00",
+                        "secondary-container": "#a0f399",
+                        "surface-container-low": "#f3f4f5",
+                        "on-secondary-fixed": "#002204",
+                        "surface-tint": "#3e5e95",
+                        "outline-variant": "#c4c6d1",
+                        "on-primary-fixed": "#001b3f",
+                        "inverse-surface": "#2e3132",
+                        "on-background": "#191c1d",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#c9a900",
+                        "secondary-fixed-dim": "#88d982",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#edeeef",
+                        "primary-container": "#002d62",
+                        "on-tertiary-fixed": "#221b00",
+                        "tertiary-fixed": "#ffe16d",
+                        "surface-dim": "#d9dadb",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed-variant": "#005312",
+                        "primary-fixed": "#d7e2ff",
+                        "outline": "#747781",
+                        "on-tertiary-container": "#4c3f00",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-container-high": "#e7e8e9",
+                        "on-surface-variant": "#43474f",
+                        "surface": "#f8f9fa",
+                        "on-primary-container": "#7796d1",
+                        "primary-fixed-dim": "#abc7ff",
+                        "tertiary-fixed-dim": "#e9c400",
+                        "primary": "#00193c",
+                        "on-surface": "#191c1d",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-secondary-container": "#217128",
+                        "on-primary-fixed-variant": "#24467c",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#abc7ff",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "background": "#f8f9fa",
+                        "surface-variant": "#e1e3e4",
+                        "secondary-fixed": "#a3f69c",
+                        "secondary": "#1b6d24"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-bright/80 backdrop-blur-md flex justify-between items-center px-6 h-16 w-full">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">person</span>
+</div>
+<h1 class="font-headline text-sm font-bold uppercase tracking-tight text-primary">STADIUM EDITORIAL</h1>
+<button class="w-8 h-8 flex items-center justify-center text-primary hover:opacity-80 transition-opacity active:scale-95 duration-150">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+</header>
+<main class="pt-20 px-4 max-w-md mx-auto">
+<!-- Date & Location Context -->
+<div class="mb-4 text-center">
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold">Sat Apr 19 • 17:00 KST</p>
+<p class="font-body text-sm text-outline mt-1">Changwon NC Park</p>
+</div>
+<!-- Hero Matchup Card (Glassmorphism & Asymmetry) -->
+<div class="relative bg-surface-container-low rounded-2xl p-6 mb-8 overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.03)]">
+<!-- Decorative gradient orb -->
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+<div class="absolute -bottom-10 -left-10 w-32 h-32 bg-secondary/10 rounded-full blur-2xl"></div>
+<div class="flex items-center justify-between relative z-10">
+<!-- Away Team -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center mb-3">
+<img alt="LG Twins Logo placeholder" class="w-10 h-10 object-contain mix-blend-multiply" data-alt="Minimalist abstract geometric shape representing a baseball team logo in deep navy and bright red on white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7kSVdAxI9JZ7rty3dMTpAyMU0n71JYVYeJ4__8sp6FmNppX0rhS0OLGQy4sM5WL5W2FKbhN0dxOceuehsQwnz8rG47SlYqyxWf0e3W0c2m0NCj-GgX9wqN1VSfF5Hn9wxwKTXg1UQDOJfxBCl8tlAnmN5z71tAi77nAvdIdwqbMACMESFBYk2gSGMawEcSDMXhzEwQ0ZvChtu0RkpzoflsPA-1VaBTQTcLkl7uNIE2M1oEXuK1ua-yb_qUZUFVtCvxdm34amwGNA"/>
+</div>
+<h2 class="font-headline font-bold text-lg text-primary">LG Twins</h2>
+<span class="font-label text-xs uppercase tracking-wider text-outline mt-1">Away</span>
+</div>
+<!-- VS Indicator -->
+<div class="flex flex-col items-center px-4">
+<span class="font-headline font-black text-2xl text-surface-tint/30 italic">VS</span>
+</div>
+<!-- Home Team -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center mb-3">
+<img alt="NC Dinos Logo placeholder" class="w-10 h-10 object-contain mix-blend-multiply" data-alt="Minimalist abstract geometric shape representing a baseball team logo in teal and gold on white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmM9Dc_JnxghdBEVqHQf0LJ2LyncRjuSFbstlDXz2PsGHmHS9S2EXQdjNb5mqVUV7xKSTbtRD-1ZcW1BzaNs3PCiG6gL_r5E7V38s7qFvDpuMPgcMw5m2M5zIlMw9zdUEo_Tqu-GHbbkmdBClkn-PrxT2yvAq20KBI2K5LxTX7DapusiD5KgHMIghX3Sgnjji2JvXsRoPeTsvfeVVTf71PdMr_HXKnJhaRP0jjLxtM2t0heoMA4oqf-wZC6iVmIJhUv_cpWSC2Ggo"/>
+</div>
+<h2 class="font-headline font-bold text-lg text-primary">NC Dinos</h2>
+<span class="font-label text-xs uppercase tracking-wider text-outline mt-1">Home</span>
+</div>
+</div>
+<!-- Win Probability Gauge -->
+<div class="mt-8 relative z-10">
+<div class="flex justify-between font-label text-xs font-bold mb-2">
+<span class="text-primary">46% Win</span>
+<span class="text-secondary">54% Win</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden flex">
+<div class="h-full bg-primary" style="width: 46%;"></div>
+<div class="h-full bg-secondary" style="width: 54%;"></div>
+</div>
+</div>
+</div>
+<!-- Bento Grid: Key Details -->
+<h3 class="font-headline font-bold text-lg text-primary mb-3">Match Details</h3>
+<div class="grid grid-cols-2 gap-3 mb-8">
+<!-- Location Card (Full width span) -->
+<div class="col-span-2 bg-surface-container-lowest rounded-2xl p-4 flex items-center relative overflow-hidden shadow-[0_2px_12px_rgba(0,0,0,0.02)]">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary-fixed"></div>
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center mr-4">
+<span class="material-symbols-outlined text-primary">stadium</span>
+</div>
+<div>
+<p class="font-label text-xs uppercase tracking-wider text-outline font-bold">Venue</p>
+<p class="font-body font-semibold text-on-surface">Changwon NC Park</p>
+</div>
+<button class="ml-auto w-8 h-8 rounded-full bg-surface flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- Starter Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 flex flex-col relative overflow-hidden shadow-[0_2px_12px_rgba(0,0,0,0.02)]">
+<p class="font-label text-[10px] uppercase tracking-wider text-outline font-bold mb-2">LG Starter</p>
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest mr-2 overflow-hidden">
+<img alt="Player Profile" class="w-full h-full object-cover grayscale opacity-80" data-alt="Close up portrait of a male baseball pitcher looking focused, wearing a dark cap, shallow depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI8swyoX0E_kwz-xB12TcqCYa_3-Pv1MjJ4dJyNK7AmFKhheVFul21r55D_BLz-nqpFTHA953Pq-USb13lvSoZ7bqUwcPHzWxd7VWClRxybLMtFZ260txTlZ65JmmYF1X0dmfdzpDpQJRugHy47CZ_SBd1XLGCrFcI_7GgeXU-Fuaf4Ew_MBpTeSEIlhT_SRES25dGmS9G-0RCnpcq8HWrFe9p8hkKi8Ylzgfps6M2K4LiC2zqlQrHjBvS7XrXMA_7hV5mXOsJvSI"/>
+</div>
+<p class="font-body font-bold text-sm text-primary">Enns</p>
+</div>
+</div>
+<!-- Weather Card (Glassmorphic hint) -->
+<div class="bg-gradient-to-br from-surface-bright/80 to-surface-variant/50 backdrop-blur-md rounded-2xl p-4 flex flex-col justify-between shadow-[0_2px_12px_rgba(0,0,0,0.02)]">
+<div class="flex justify-between items-start mb-1">
+<p class="font-label text-[10px] uppercase tracking-wider text-outline font-bold">Weather</p>
+<span class="material-symbols-outlined text-tertiary text-lg" style="font-variation-settings: 'FILL' 1;">light_mode</span>
+</div>
+<div>
+<p class="font-headline font-bold text-lg text-on-surface">22°C</p>
+<p class="font-body text-xs text-on-surface-variant">Sunny &amp; Clear</p>
+</div>
+</div>
+</div>
+<!-- Away Win Rate Chart Section -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 mb-8 shadow-[0_4px_24px_rgba(0,0,0,0.02)] relative overflow-hidden">
+<!-- Spark AI Icon Hint -->
+<div class="absolute top-4 right-4 text-surface-tint opacity-50">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+</div>
+<h3 class="font-headline font-bold text-base text-primary mb-1">Away Win Rate</h3>
+<p class="font-body text-xs text-outline mb-6">Historical performance at Changwon</p>
+<div class="space-y-4">
+<!-- LG Bar -->
+<div>
+<div class="flex justify-between font-label text-xs mb-1">
+<span class="font-bold text-primary">LG</span>
+<span class="text-on-surface-variant">42%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container flex">
+<div class="h-full bg-primary rounded-full" style="width: 42%;"></div>
+</div>
+</div>
+<!-- SSG Bar -->
+<div>
+<div class="flex justify-between font-label text-xs mb-1">
+<span class="font-bold text-on-surface-variant">SSG</span>
+<span class="text-on-surface-variant">38%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container flex">
+<div class="h-full bg-surface-variant rounded-full" style="width: 38%;"></div>
+</div>
+</div>
+<!-- KIA Bar -->
+<div>
+<div class="flex justify-between font-label text-xs mb-1">
+<span class="font-bold text-on-surface-variant">KIA</span>
+<span class="text-on-surface-variant">51%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container flex">
+<div class="h-full bg-surface-variant rounded-full" style="width: 51%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA Button -->
+<button class="w-full py-4 rounded-xl bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-bold text-base tracking-wide flex items-center justify-center gap-2 shadow-[0_8px_24px_rgba(0,25,60,0.2)] active:scale-95 transition-transform duration-150">
+            Book Tickets
+            <span class="material-symbols-outlined text-sm">local_activity</span>
+</button>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-3 pb-8 bg-surface-bright tonal-shift bg-surface-bright shadow-[0_-4px_24px_rgba(0,0,0,0.06)] rounded-t-3xl z-50">
+<!-- Active Nav Item -->
+<button class="flex flex-col items-center justify-center bg-secondary-fixed-dim text-on-secondary-fixed rounded-full px-4 py-1.5 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined text-xl mb-0.5" style="font-variation-settings: 'FILL' 1;">sports_baseball</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-wider">Matches</span>
+</button>
+<!-- Inactive Nav Items -->
+<button class="flex flex-col items-center justify-center text-outline px-4 py-1.5 hover:bg-surface-container-low rounded-xl active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined text-xl mb-0.5">explore</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-wider">Map</span>
+</button>
+<button class="flex flex-col items-center justify-center text-outline px-4 py-1.5 hover:bg-surface-container-low rounded-xl active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined text-xl mb-0.5">hotel</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-wider">Stays</span>
+</button>
+<button class="flex flex-col items-center justify-center text-outline px-4 py-1.5 hover:bg-surface-container-low rounded-xl active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined text-xl mb-0.5">auto_awesome</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-wider">AI</span>
+</button>
+<button class="flex flex-col items-center justify-center text-outline px-4 py-1.5 hover:bg-surface-container-low rounded-xl active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined text-xl mb-0.5">military_tech</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-wider">Badges</span>
+</button>
+</nav>
+</body></html>

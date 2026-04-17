@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stays - Away Game Companion</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "background": "#f8f9fa",
+                      "surface-container-lowest": "#ffffff",
+                      "error": "#ba1a1a",
+                      "inverse-primary": "#abc7ff",
+                      "on-secondary-fixed": "#002204",
+                      "outline": "#747781",
+                      "surface": "#f8f9fa",
+                      "secondary-fixed-dim": "#88d982",
+                      "surface-container-low": "#f3f4f5",
+                      "on-error-container": "#93000a",
+                      "error-container": "#ffdad6",
+                      "primary-fixed-dim": "#abc7ff",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed-dim": "#e9c400",
+                      "secondary-container": "#a0f399",
+                      "primary-fixed": "#d7e2ff",
+                      "on-tertiary-fixed-variant": "#544600",
+                      "on-tertiary-fixed": "#221b00",
+                      "on-background": "#191c1d",
+                      "secondary-fixed": "#a3f69c",
+                      "on-primary-fixed-variant": "#24467c",
+                      "on-primary": "#ffffff",
+                      "outline-variant": "#c4c6d1",
+                      "tertiary": "#705d00",
+                      "on-tertiary-container": "#4c3f00",
+                      "on-primary-fixed": "#001b3f",
+                      "inverse-surface": "#2e3132",
+                      "surface-variant": "#e1e3e4",
+                      "surface-bright": "#f8f9fa",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-fixed-variant": "#005312",
+                      "surface-container-high": "#e7e8e9",
+                      "on-primary-container": "#7796d1",
+                      "inverse-on-surface": "#f0f1f2",
+                      "primary": "#00193c",
+                      "on-secondary-container": "#217128",
+                      "surface-dim": "#d9dadb",
+                      "secondary": "#1b6d24",
+                      "tertiary-container": "#c9a900",
+                      "tertiary-fixed": "#ffe16d",
+                      "primary-container": "#002d62",
+                      "on-surface-variant": "#43474f",
+                      "on-surface": "#191c1d",
+                      "on-error": "#ffffff",
+                      "surface-tint": "#3e5e95",
+                      "surface-container-highest": "#e1e3e4",
+                      "surface-container": "#edeeef"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {},
+              "fontFamily": {
+                      "headline": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body": [
+                              "Manrope"
+                      ],
+                      "label": [
+                              "Plus Jakarta Sans"
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen pb-24 md:pb-0">
+<!-- TopNavBar (Web) -->
+<nav class="hidden md:flex justify-between items-center px-8 py-4 max-w-7xl mx-auto fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none font-['Plus_Jakarta_Sans'] font-semibold tracking-tight">
+<div class="text-2xl font-extrabold tracking-tighter text-blue-950 dark:text-white">The Stadium Editorial</div>
+<ul class="flex gap-8">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-800 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors scale-95 active:scale-90 transition-transform" href="#">Home</a></li>
+<li><a class="text-blue-900 dark:text-blue-400 border-b-2 border-blue-900 dark:border-blue-400 pb-1 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors scale-95 active:scale-90 transition-transform" href="#">Stays</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-800 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors scale-95 active:scale-90 transition-transform" href="#">Games</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-800 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors scale-95 active:scale-90 transition-transform" href="#">Itinerary</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-800 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors scale-95 active:scale-90 transition-transform" href="#">Explore</a></li>
+</ul>
+<div class="flex gap-4 text-blue-900 dark:text-blue-400">
+<span class="material-symbols-outlined hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors scale-95 active:scale-90 transition-transform cursor-pointer">notifications</span>
+<span class="material-symbols-outlined hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors scale-95 active:scale-90 transition-transform cursor-pointer">account_circle</span>
+</div>
+</nav>
+<!-- BottomNavBar (Mobile) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 md:hidden bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg rounded-t-[2rem] shadow-2xl text-[10px] font-bold uppercase tracking-widest font-['Plus_Jakarta_Sans']">
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 scale-110 transition-transform duration-300 ease-out cursor-pointer">
+<span class="material-symbols-outlined mb-1">home</span>
+            Home
+        </div>
+<div class="flex flex-col items-center justify-center bg-blue-900 dark:bg-blue-600 text-white rounded-full w-14 h-14 -mt-6 shadow-lg scale-110 transition-transform duration-300 ease-out cursor-pointer">
+<span class="material-symbols-outlined mb-1">hotel</span>
+            Stays
+        </div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 scale-110 transition-transform duration-300 ease-out cursor-pointer">
+<span class="material-symbols-outlined mb-1">sports_baseball</span>
+            Games
+        </div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 scale-110 transition-transform duration-300 ease-out cursor-pointer">
+<span class="material-symbols-outlined mb-1">edit_calendar</span>
+            Plan
+        </div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 scale-110 transition-transform duration-300 ease-out cursor-pointer">
+<span class="material-symbols-outlined mb-1">account_circle</span>
+            Profile
+        </div>
+</nav>
+<main class="md:pt-28 pt-8 px-4 md:px-8 max-w-7xl mx-auto flex flex-col gap-8 h-full">
+<!-- Header & Filters -->
+<header class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="text-4xl md:text-5xl font-headline font-extrabold text-primary tracking-tight mb-2">Premium Stays near Jamsil Stadium</h1>
+<p class="text-on-surface-variant text-lg">Curated accommodations for the ultimate KBO experience.</p>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-lg font-headline font-bold flex items-center gap-2 shadow-[0_4px_24px_rgba(0,25,60,0.15)] hover:shadow-[0_8px_32px_rgba(0,25,60,0.2)] transition-shadow self-start md:self-auto">
+<span class="material-symbols-outlined">map</span>
+                View on Map
+            </button>
+</header>
+<section class="bg-surface-container-low p-2 rounded-xl flex overflow-x-auto gap-2 no-scrollbar">
+<button class="px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface font-headline text-sm font-semibold whitespace-nowrap shadow-sm hover:bg-surface-variant transition-colors flex items-center gap-1">
+                Price <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<button class="px-4 py-2 rounded-full bg-secondary-fixed-dim text-on-secondary-fixed font-headline text-sm font-semibold whitespace-nowrap shadow-sm flex items-center gap-1">
+                Distance to Stadium <span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface font-headline text-sm font-semibold whitespace-nowrap shadow-sm hover:bg-surface-variant transition-colors flex items-center gap-1">
+                Fan Rating <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface font-headline text-sm font-semibold whitespace-nowrap shadow-sm hover:bg-surface-variant transition-colors flex items-center gap-1">
+                Amenities <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</section>
+<!-- Stays Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 (Signiel) -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm relative group cursor-pointer flex flex-col border-l-4 border-secondary-fixed">
+<div class="relative h-64 overflow-hidden">
+<img alt="Signiel Seoul Exterior" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="High angle view of a sleek, modern luxury skyscraper hotel in a bustling city at dusk, warm interior lights glowing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKgDISAoserM8jyIp-Clv0FYloNc7L1IaEfZQA9FM7lc7E5Laa6-IGz5YkIzmiM-YjJzCp_9GAITr2__Kcp0KBCD2AmLyJ_3s0uNFdxkw-_fGthnVY9yyZ2JztJExbMMK3Yr9EjmMvRJLL6yMQiY8gzfcQ6_MGkHNY_83Xu5LeMVIErcdZTV4k9bwDzXvKNmFCr8SpmawEsiAt7zSCp0_3SWEyvPEpFuxnoPtDcYR3RLObywSz81pz2c2kn4CJ2_Zfyt24s1dpUzY"/>
+<div class="absolute top-4 right-4 bg-surface/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold font-headline text-primary shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">star</span> 4.9
+                    </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h2 class="text-xl font-headline font-bold text-primary">Signiel Seoul</h2>
+<span class="text-sm font-semibold text-on-surface-variant">KRW 850,000</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-4 font-medium">Unparalleled luxury with panoramic city views.</p>
+<div class="mt-auto flex items-center gap-2 text-secondary font-headline text-sm font-bold bg-surface-container-low w-fit px-3 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[16px]">directions_walk</span>
+                        15 mins walk to stadium
+                    </div>
+</div>
+</article>
+<!-- Card 2 (Shilla Stay) -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm relative group cursor-pointer flex flex-col">
+<div class="relative h-64 overflow-hidden">
+<img alt="Shilla Stay Mapo Exterior" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern business hotel facade with clean architectural lines, bright daylight, urban setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE8H-uqFuEwqOLZmA7sovxTQYEvGEwg_Cqr3AoMWN0UDdVGv-TIH6rpd_Ms2Ekd8der-vN8GR15pHIAUAmYJOXJyomvhaSEOVgVPPf8Bvy_98hxqnl9GkEuZA3vJCwyVY1Wb80666eukpJvE4u4Ix7-r0wxOCTNo7d7ogvsfPw5Olty07bLfkHhdJXeLpwUpLt9ytaLmGx0cKKZ79Vjx0y5AU0KRnHDh2GCxxls8IyqGQDUR4-9dDe34ZzkW6lNo2LlXNFMp_VLYc"/>
+<div class="absolute top-4 right-4 bg-surface/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold font-headline text-primary shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">star</span> 4.5
+                    </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h2 class="text-xl font-headline font-bold text-primary">Shilla Stay Mapo</h2>
+<span class="text-sm font-semibold text-on-surface-variant">KRW 180,000</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-4 font-medium">Sleek, comfortable stay focused on the essentials.</p>
+<div class="mt-auto flex items-center gap-2 text-secondary font-headline text-sm font-bold bg-surface-container-low w-fit px-3 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[16px]">directions_subway</span>
+                        2 stops to stadium
+                    </div>
+</div>
+</article>
+<!-- Card 3 (Lotte Hotel) -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm relative group cursor-pointer flex flex-col border-l-4 border-primary-fixed-dim">
+<div class="relative h-64 overflow-hidden">
+<img alt="Lotte Hotel World Exterior" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Classic grand hotel exterior next to an amusement park, sunny day, vibrant atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNXskHi-dr9yeAczg1Pjs8ACClKDSkutXxpkzu631ZWm-EVIKVLoD3QaWhrf9QE0CU7oou-YZ-BtK6xQ4uTuAx-CzOTNyt5ydU1irlYQEpZSZotni8xPqgjFBprvycZqblWbRDK99FzcfCwaTCfJc6aQ6h5xQJuEKcIHUED9tLO9H1mBy6JGmIIsUy7TtJ8ylHyqLzeC3cRDjavKT1PTCcwaqncJPJj33qt3cmjTfrnyseFfbyxqqqAbJvI_R0OesilxvfSqZ2-qo"/>
+<div class="absolute top-4 right-4 bg-surface/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold font-headline text-primary shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">star</span> 4.7
+                    </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h2 class="text-xl font-headline font-bold text-primary">Lotte Hotel World</h2>
+<span class="text-sm font-semibold text-on-surface-variant">KRW 320,000</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-4 font-medium">Family-friendly resort right next to the action.</p>
+<div class="mt-auto flex items-center gap-2 text-secondary font-headline text-sm font-bold bg-surface-container-low w-fit px-3 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[16px]">directions_walk</span>
+                        10 mins walk to stadium
+                    </div>
+</div>
+</article>
+<!-- Card 4 (Glad) -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm relative group cursor-pointer flex flex-col">
+<div class="relative h-64 overflow-hidden">
+<img alt="GLAD Gangnam Exterior" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Boutique hotel entrance with minimalist design, dark brick facade, elegant lighting at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj-hr-UZyN-_l8ZjUEJcoeU0GPyIxTjgPe1XZWd4RBMYetg_9fkvMrP48YFWfU9FcgKyqoo6mZwN6G-PkteXS7RVHqagKgj6JAf6xQmEidz4vFuBzxxo9aG8Aw1J8u3WoiebAwKrpdSJ-fidQTeRsJTgHUdGsVqD6aDqktRVKvp0PApCjq60M_sZkPYqRKu0pVNNgPFDzLbcb_PwqA5gBlXI3bKf4d1ZqR1zdaG3_oqj1bChBvWjdXGGAqaZ8R-Bt6OHbb545Pf_g"/>
+<div class="absolute top-4 right-4 bg-surface/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold font-headline text-primary shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">star</span> 4.6
+                    </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h2 class="text-xl font-headline font-bold text-primary">GLAD Gangnam COEX</h2>
+<span class="text-sm font-semibold text-on-surface-variant">KRW 195,000</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-4 font-medium">Design-forward boutique hotel in the bustling tech district.</p>
+<div class="mt-auto flex items-center gap-2 text-secondary font-headline text-sm font-bold bg-surface-container-low w-fit px-3 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[16px]">directions_car</span>
+                        10 mins drive to stadium
+                    </div>
+</div>
+</article>
+</div>
+</main>
+</body></html>

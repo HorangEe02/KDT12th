@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Matches &amp; Predictions - Stadium Editorial</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#c9a900",
+                    "on-primary-fixed-variant": "#24467c",
+                    "surface-container": "#edeeef",
+                    "on-primary-fixed": "#001b3f",
+                    "error-container": "#ffdad6",
+                    "outline": "#747781",
+                    "surface-tint": "#3e5e95",
+                    "on-background": "#191c1d",
+                    "surface": "#f8f9fa",
+                    "on-tertiary-container": "#4c3f00",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed": "#ffe16d",
+                    "secondary-container": "#a0f399",
+                    "primary-fixed": "#d7e2ff",
+                    "on-secondary-fixed": "#002204",
+                    "primary-fixed-dim": "#abc7ff",
+                    "on-secondary-container": "#217128",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#191c1d",
+                    "tertiary": "#705d00",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#a3f69c",
+                    "background": "#f8f9fa",
+                    "surface-container-highest": "#e1e3e4",
+                    "primary": "#00193c",
+                    "on-surface-variant": "#43474f",
+                    "on-primary-container": "#7796d1",
+                    "secondary": "#1b6d24",
+                    "on-secondary-fixed-variant": "#005312",
+                    "surface-variant": "#e1e3e4",
+                    "inverse-surface": "#2e3132",
+                    "inverse-primary": "#abc7ff",
+                    "surface-bright": "#f8f9fa",
+                    "secondary-fixed-dim": "#88d982",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface-container-low": "#f3f4f5",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-high": "#e7e8e9",
+                    "surface-dim": "#d9dadb",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#e9c400",
+                    "primary-container": "#002d62",
+                    "on-tertiary-fixed-variant": "#544600",
+                    "outline-variant": "#c4c6d1",
+                    "on-tertiary-fixed": "#221b00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {},
+            "fontFamily": {
+                    "headline": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "body": [
+                            "Manrope"
+                    ],
+                    "label": [
+                            "Plus Jakarta Sans"
+                    ]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        /* Base typography overrides to ensure correct font family application */
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-headline, .font-label { font-family: 'Plus Jakarta Sans', sans-serif; }
+        
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        
+        /* Hide scrollbar for cleaner look in sidebars */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Custom gradient text utility */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased h-screen flex flex-col overflow-hidden">
+<!-- TopNavBar (From JSON) -->
+<nav class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md fixed top-0 w-full z-50 text-blue-900 dark:text-blue-100 font-plus-jakarta-sans tracking-tight flex justify-between items-center px-6 h-16 shadow-[0_4px_24px_rgba(25,28,29,0.04)]">
+<!-- Brand Logo -->
+<div class="text-xl font-bold tracking-tighter text-blue-950 dark:text-white font-headline">
+            Stadium Editorial
+        </div>
+<!-- Navigation Links (Web) -->
+<div class="hidden md:flex items-center gap-8 h-full">
+<!-- Active State Logic Applied to "Matches" -->
+<a class="h-full flex items-center text-blue-900 dark:text-blue-400 font-bold border-b-2 border-blue-900 dark:border-blue-400 pt-1 font-label hover:bg-slate-100/50 transition-colors scale-95 active:duration-150" href="#">Matches</a>
+<a class="h-full flex items-center text-slate-500 dark:text-slate-400 font-medium hover:text-blue-800 font-label hover:bg-slate-100/50 transition-colors scale-95 active:duration-150" href="#">Map</a>
+<a class="h-full flex items-center text-slate-500 dark:text-slate-400 font-medium hover:text-blue-800 font-label hover:bg-slate-100/50 transition-colors scale-95 active:duration-150" href="#">Eats</a>
+<a class="h-full flex items-center text-slate-500 dark:text-slate-400 font-medium hover:text-blue-800 font-label hover:bg-slate-100/50 transition-colors scale-95 active:duration-150" href="#">AI Concierge</a>
+<a class="h-full flex items-center text-slate-500 dark:text-slate-400 font-medium hover:text-blue-800 font-label hover:bg-slate-100/50 transition-colors scale-95 active:duration-150" href="#">Badges</a>
+</div>
+<!-- Trailing Icons -->
+<div class="flex items-center gap-4 text-primary">
+<button class="hover:bg-slate-100/50 p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">notifications</span>
+</button>
+<button class="hover:bg-slate-100/50 p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">account_circle</span>
+</button>
+</div>
+</nav>
+<!-- Main Application Area -->
+<div class="flex flex-1 pt-16 overflow-hidden h-full">
+<!-- SideNavBar (From JSON & Wireframe context) -->
+<aside class="bg-slate-50 dark:bg-slate-950 text-blue-900 dark:text-blue-400 font-manrope text-sm h-screen w-64 border-r-0 flex flex-col p-4 pt-8 gap-4 hidden lg:flex shadow-[4px_0_24px_rgba(25,28,29,0.02)] z-10 no-scrollbar overflow-y-auto pb-24">
+<div class="mb-6">
+<h2 class="text-lg font-bold text-blue-950 dark:text-white font-headline tracking-tight">Travel Filters</h2>
+<p class="text-slate-500 text-xs font-medium">Customize your trip</p>
+</div>
+<!-- Filters Section -->
+<div class="flex flex-col gap-6 flex-1">
+<!-- Support Team -->
+<div class="flex flex-col gap-2">
+<span class="font-headline font-bold text-primary text-xs uppercase tracking-widest">Support Team</span>
+<button class="flex items-center justify-between w-full bg-surface-container-lowest p-3 rounded-lg shadow-[0_2px_8px_rgba(25,28,29,0.04)] hover:translate-x-1 transition-transform tap-highlight-transparent text-left">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-xs">LG</div>
+<span class="font-bold text-on-surface">LG Twins</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-sm">expand_more</span>
+</button>
+</div>
+<!-- Dates (From JSON Tab labels mapping to content area) -->
+<div class="flex flex-col gap-2">
+<span class="font-headline font-bold text-primary text-xs uppercase tracking-widest flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span> Dates
+                    </span>
+<div class="bg-surface-container-lowest p-3 rounded-lg flex items-center justify-between shadow-[0_2px_8px_rgba(25,28,29,0.04)]">
+<span class="font-medium text-on-surface">4/17 - 4/20</span>
+</div>
+</div>
+<!-- Budget (From JSON Tab labels) -->
+<div class="flex flex-col gap-2">
+<span class="font-headline font-bold text-primary text-xs uppercase tracking-widest flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">payments</span> Budget
+                    </span>
+<div class="bg-surface-container-lowest p-4 rounded-lg flex flex-col gap-3 shadow-[0_2px_8px_rgba(25,28,29,0.04)]">
+<div class="flex justify-between items-center text-xs font-medium text-on-surface-variant">
+<span>0</span>
+<span class="font-bold text-primary">300k KRW</span>
+<span>1M+</span>
+</div>
+<div class="w-full h-1 bg-surface-container-high rounded-full relative">
+<div class="absolute left-0 top-0 h-full bg-primary rounded-full w-[30%]"></div>
+<div class="absolute left-[30%] top-1/2 -translate-y-1/2 w-4 h-4 bg-white border-2 border-primary rounded-full shadow-sm"></div>
+</div>
+</div>
+</div>
+<!-- People -->
+<div class="flex flex-col gap-2">
+<span class="font-headline font-bold text-primary text-xs uppercase tracking-widest">People</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 bg-secondary-fixed-dim text-on-secondary-fixed font-bold rounded-full text-xs cursor-pointer text-center">Solo</span>
+<span class="px-4 py-1.5 bg-surface-container-high text-on-surface-variant font-medium rounded-full text-xs hover:bg-surface-dim transition-colors cursor-pointer text-center">Couple</span>
+<span class="px-4 py-1.5 bg-surface-container-high text-on-surface-variant font-medium rounded-full text-xs hover:bg-surface-dim transition-colors cursor-pointer text-center">Group</span>
+</div>
+</div>
+<!-- Transport -->
+<div class="flex flex-col gap-2">
+<span class="font-headline font-bold text-primary text-xs uppercase tracking-widest">Transport</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 bg-secondary-fixed-dim text-on-secondary-fixed font-bold rounded-full text-xs cursor-pointer text-center">KTX</span>
+<span class="px-4 py-1.5 bg-surface-container-high text-on-surface-variant font-medium rounded-full text-xs hover:bg-surface-dim transition-colors cursor-pointer text-center">Bus</span>
+<span class="px-4 py-1.5 bg-surface-container-high text-on-surface-variant font-medium rounded-full text-xs hover:bg-surface-dim transition-colors cursor-pointer text-center">Car</span>
+</div>
+</div>
+</div>
+<!-- CTA -->
+<button class="mt-4 w-full bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-bold py-3 px-4 rounded-md shadow-[0_4px_12px_rgba(0,45,98,0.15)] hover:shadow-[0_6px_16px_rgba(0,45,98,0.2)] transition-shadow">
+                Apply Filters
+            </button>
+</aside>
+<!-- Canvas Area (Content) -->
+<main class="flex-1 bg-surface overflow-y-auto relative no-scrollbar">
+<!-- Hero Banner Background -->
+<div class="absolute top-0 left-0 w-full h-80 bg-surface-container-low overflow-hidden z-0">
+<!-- Abstract Stadium Shapes -->
+<div class="absolute top-[-50px] right-[-100px] w-96 h-96 bg-primary-fixed opacity-40 rounded-full blur-3xl"></div>
+<div class="absolute bottom-[-50px] left-[10%] w-64 h-64 bg-secondary-fixed opacity-20 rounded-full blur-3xl"></div>
+</div>
+<div class="relative z-10 max-w-5xl mx-auto px-6 py-10 pb-32">
+<!-- Page Header -->
+<header class="mb-10 flex flex-col gap-3">
+<div class="inline-flex items-center gap-2 bg-surface-container-lowest px-3 py-1 rounded-full shadow-[0_2px_8px_rgba(25,28,29,0.04)] self-start border border-surface-container-highest">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-headline font-bold text-xs uppercase tracking-wider text-on-surface-variant">Upcoming Series</span>
+</div>
+<h1 class="font-headline text-4xl lg:text-5xl font-extrabold text-primary tracking-tight leading-tight max-w-3xl">
+                        This Week's Away Game: <br/>
+<span class="text-on-surface">4/19(Sat) vs NC Dinos at Changwon</span>
+</h1>
+</header>
+<!-- Bento Grid Content Area -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Main Game Info Card (Spans 8 cols on desktop) -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-xl p-8 relative overflow-hidden shadow-[0_8px_32px_rgba(25,28,29,0.03)] border border-surface-container">
+<!-- Accent bar -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary-fixed"></div>
+<div class="flex flex-col h-full justify-between gap-8">
+<!-- Teams Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-6">
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-red-600 text-white flex items-center justify-center font-headline font-bold text-2xl shadow-sm z-10">LG</div>
+<span class="font-headline font-bold mt-2 text-on-surface">Twins</span>
+</div>
+<span class="font-headline font-black text-outline-variant text-xl italic">VS</span>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-blue-800 text-white flex items-center justify-center font-headline font-bold text-2xl shadow-sm z-10">NC</div>
+<span class="font-headline font-bold mt-2 text-on-surface">Dinos</span>
+</div>
+</div>
+<div class="text-right">
+<div class="font-headline font-bold text-lg text-primary">Sat, Apr 19</div>
+<div class="text-on-surface-variant font-medium text-sm">17:00 KST</div>
+</div>
+</div>
+<!-- Match Details Row -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 bg-surface rounded-lg">
+<!-- Location -->
+<div class="flex items-center gap-3">
+<div class="p-2 bg-primary-fixed rounded-full text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div>
+<div class="text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-0.5">Location</div>
+<div class="font-headline font-bold text-on-surface text-sm">Changwon NC Park</div>
+</div>
+</div>
+<!-- Pitcher -->
+<div class="flex items-center gap-3">
+<div class="p-2 bg-surface-container-high rounded-full text-on-surface">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">sports_baseball</span>
+</div>
+<div>
+<div class="text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-0.5">Starter (LG)</div>
+<div class="font-headline font-bold text-on-surface text-sm">Enns</div>
+</div>
+</div>
+<!-- Weather -->
+<div class="flex items-center gap-3">
+<div class="p-2 bg-tertiary-fixed rounded-full text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">sunny</span>
+</div>
+<div>
+<div class="text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-0.5">Weather</div>
+<div class="font-headline font-bold text-on-surface text-sm">Sunny, 22°C</div>
+</div>
+</div>
+</div>
+<!-- CTA Button inside card -->
+<div class="mt-2">
+<button class="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-bold text-base rounded-md shadow-[0_4px_16px_rgba(0,45,98,0.2)] hover:shadow-[0_8px_24px_rgba(0,45,98,0.3)] transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                                    Book Tickets
+                                    <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">confirmation_number</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Side Stats Column (Spans 4 cols on desktop) -->
+<div class="md:col-span-4 flex flex-col gap-6">
+<!-- Win Probability Card -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_8px_32px_rgba(25,28,29,0.03)] border border-surface-container flex-1 flex flex-col">
+<h3 class="font-headline font-bold text-on-surface mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">analytics</span>
+                                Win Probability
+                            </h3>
+<div class="flex-1 flex flex-col justify-center">
+<div class="flex justify-between items-end mb-2 px-1">
+<div class="flex flex-col">
+<span class="font-headline font-black text-3xl text-red-600 leading-none">46%</span>
+<span class="text-xs font-bold text-on-surface-variant mt-1 uppercase">LG Twins</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-headline font-black text-3xl text-blue-800 leading-none">54%</span>
+<span class="text-xs font-bold text-on-surface-variant mt-1 uppercase">NC Dinos</span>
+</div>
+</div>
+<!-- Custom Gauge/Bar -->
+<div class="h-4 w-full bg-surface-container-high rounded-full overflow-hidden flex relative shadow-inner">
+<div class="h-full bg-red-600 transition-all duration-1000" style="width: 46%;"></div>
+<div class="h-full bg-blue-800 transition-all duration-1000" style="width: 54%;"></div>
+<!-- Center marker -->
+<div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-white z-10"></div>
+</div>
+</div>
+</div>
+<!-- Bar Chart Card (Simplified UI representation) -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_8px_32px_rgba(25,28,29,0.03)] border border-surface-container flex-1">
+<h3 class="font-headline font-bold text-on-surface mb-4 text-sm leading-tight">
+                                Changwon Away Win Rate<br/>
+<span class="text-xs text-on-surface-variant font-medium">(Last 5 Years)</span>
+</h3>
+<div class="flex flex-col gap-3 mt-4">
+<!-- LG Bar -->
+<div>
+<div class="flex justify-between text-xs font-bold mb-1">
+<span class="text-on-surface">LG</span>
+<span class="text-primary">0.580</span>
+</div>
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-red-600 rounded-full" style="width: 80%;"></div>
+</div>
+</div>
+<!-- Other Team Bar (Contextual filler to show it's a chart) -->
+<div>
+<div class="flex justify-between text-xs font-medium mb-1">
+<span class="text-on-surface-variant">SSG</span>
+<span class="text-on-surface-variant">0.510</span>
+</div>
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-slate-400 rounded-full" style="width: 65%;"></div>
+</div>
+</div>
+<!-- Other Team Bar -->
+<div>
+<div class="flex justify-between text-xs font-medium mb-1">
+<span class="text-on-surface-variant">KIA</span>
+<span class="text-on-surface-variant">0.485</span>
+</div>
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-slate-400 rounded-full" style="width: 55%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Editorial/Curated Image Section (Decorative to break grid) -->
+<div class="mt-8 rounded-xl overflow-hidden relative h-64 shadow-[0_8px_32px_rgba(25,28,29,0.05)] border border-surface-container group">
+<img alt="Baseball stadium empty seats at golden hour" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="Modern baseball stadium empty seats glowing in warm golden hour sunlight, dynamic angle, high contrast editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdPhMuIWr7zN5RFmwp-AUfXrzuK66tdxdSypq70lmsB9CYlUtn8zDO1pQ3nI-5jaRLSBo6gBA-teIHEffFCCdkoxaS_gadEOK9kxB9VMO1Mia1y9_5HQcrisJmEzcEWCaxhZ5v27xpaKdmQTMZbIqY_a5FQfWNe_YIA6UD92BOSN8_m3kwTbmyDyvIAUsvzCkpi4jtO1oooxCZefBZlmD2Fpked8PpXRkS3Qu_eL1Ljh5hfxhl-SFeckCAOjJF4SbnOQ4_pO3qL7c"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+<div>
+<span class="px-2 py-1 bg-secondary text-white text-[10px] font-bold uppercase tracking-widest rounded-sm mb-2 inline-block">Destination Guide</span>
+<h3 class="font-headline font-bold text-white text-2xl">Explore Changwon</h3>
+<p class="text-primary-fixed-dim text-sm max-w-md mt-1">Discover local favorites around NC Park before the first pitch.</p>
+</div>
+<button class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-white/30 transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Away Game Companion</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed-dim": "#e9c400",
+                      "on-error-container": "#93000a",
+                      "surface-container": "#edeeef",
+                      "on-error": "#ffffff",
+                      "primary-fixed-dim": "#abc7ff",
+                      "on-tertiary-fixed-variant": "#544600",
+                      "surface-variant": "#e1e3e4",
+                      "tertiary-container": "#c9a900",
+                      "surface": "#f8f9fa",
+                      "on-secondary-fixed": "#002204",
+                      "primary-container": "#002d62",
+                      "surface-tint": "#3e5e95",
+                      "on-surface": "#191c1d",
+                      "on-primary-fixed": "#001b3f",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-low": "#f3f4f5",
+                      "secondary": "#1b6d24",
+                      "tertiary-fixed": "#ffe16d",
+                      "on-surface-variant": "#43474f",
+                      "error-container": "#ffdad6",
+                      "on-primary-container": "#7796d1",
+                      "on-background": "#191c1d",
+                      "secondary-container": "#a0f399",
+                      "primary-fixed": "#d7e2ff",
+                      "outline-variant": "#c4c6d1",
+                      "tertiary": "#705d00",
+                      "surface-container-high": "#e7e8e9",
+                      "on-tertiary-container": "#4c3f00",
+                      "on-secondary": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-fixed": "#221b00",
+                      "outline": "#747781",
+                      "surface-dim": "#d9dadb",
+                      "inverse-surface": "#2e3132",
+                      "on-primary-fixed-variant": "#24467c",
+                      "surface-container-highest": "#e1e3e4",
+                      "background": "#f8f9fa",
+                      "surface-bright": "#f8f9fa",
+                      "secondary-fixed": "#a3f69c",
+                      "on-primary": "#ffffff",
+                      "inverse-primary": "#abc7ff",
+                      "inverse-on-surface": "#f0f1f2",
+                      "on-secondary-container": "#217128",
+                      "error": "#ba1a1a",
+                      "secondary-fixed-dim": "#88d982",
+                      "on-secondary-fixed-variant": "#005312",
+                      "primary": "#00193c"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {},
+              "fontFamily": {
+                      "headline": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body": [
+                              "Manrope"
+                      ],
+                      "label": [
+                              "Plus Jakarta Sans"
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6, .font-headline {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Signature Gradient */
+        .bg-signature-gradient {
+            background-image: linear-gradient(135deg, #00193c 0%, #002d62 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface h-screen flex flex-col md:hidden overflow-hidden relative">
+<!-- Top App Bar - Fixed -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm opacity-90 flex justify-between items-center px-6 h-16 w-full text-[#00193c] dark:text-slate-100 font-['Plus_Jakarta_Sans'] font-bold tracking-tight">
+<button class="hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<span class="text-lg font-black tracking-tighter text-[#00193c] dark:text-white">STADIUM EDITORIAL</span>
+<button class="hover:opacity-80 transition-opacity active:scale-95 duration-200 w-8 h-8 rounded-full overflow-hidden bg-surface-variant flex items-center justify-center">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="close up of a smiling man with a beard and short dark hair against a light background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5XQml6PrAwFkHd_p4vL37W_86mBBDKonXz_J0USzF0VwKvs4eumnui9LQQlbyWNzS66NdcEHmSPBA8Oh-4oGncBSboZrYrlCd4iRPArBCSgV2TvE5eMhBvLPRgppRvdts4RjFLfWFo86_4EURps4pJ6eHOMlBexPxdPBllO3Oifh3tQdImlZtGciGf17rpYHqRJbtlRhOMOl0YorMAwFeZ_2DnEzJGZ6y1JnhWBPud43UWl4ib7UUT6Ou5tqabjpd9RxS3y8JERI"/>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 overflow-y-auto pt-16 pb-24 flex flex-col relative z-10">
+<!-- Hero Background Layer -->
+<div class="absolute inset-0 z-[-1]">
+<img alt="Stadium background" class="w-full h-[530px] object-cover opacity-20 mask-image:linear-gradient(to_bottom,black_40%,transparent_100%)" data-alt="wide angle shot of an empty baseball stadium at twilight with floodlights illuminating the green field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAj-k6nZacjVSLKYQjy026KWYFVPYQz0RPjizX5Fmf-tbnwYulwl8zRsnbIGOPA0_KuRO68UGnV3wnuaVn_DNuowffuvIcbBbUCyRK2BBFDgNl0P0D4y9TukiW6x5biRW41kUaUWnGR5ANchMGpfLeklphPYhNmrJ0Og_MZuehgZ-qHD4Tj1QIGf9Q5850AnBmrNhySD3kMKlLwflphKbpteU2IIdz3WjL-6q-97-4QcGgXPxrctNb1OeGDVFtIfBAdtvBg4HCloDY"/>
+<div class="absolute inset-0 bg-gradient-to-b from-surface/40 via-surface to-surface"></div>
+</div>
+<div class="px-6 pt-12 pb-8 flex-1 flex flex-col justify-center">
+<div class="text-center mb-10">
+<span class="font-headline font-bold text-xs tracking-[0.1em] text-secondary uppercase mb-3 block">Welcome to the Big Leagues</span>
+<h1 class="font-headline font-extrabold text-4xl tracking-tight text-primary leading-tight mb-4">
+                    Your Away Game<br/>Companion.
+                </h1>
+<p class="font-body text-on-surface-variant text-base px-4">
+                    Curated travel itineraries, premium stays, and local spots for the traveling fan.
+                </p>
+</div>
+<!-- Team Selection Bento -->
+<div class="bg-surface-container-low rounded-[2rem] p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden">
+<!-- Decorative Accent -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-fixed-dim/20 rounded-full blur-3xl -mr-10 -mt-10"></div>
+<h2 class="font-headline font-bold text-xl text-primary mb-6 flex items-center justify-between">
+                    Select Your Team
+                    <span class="material-symbols-outlined text-outline text-xl">sports_baseball</span>
+</h2>
+<div class="grid grid-cols-3 gap-4 justify-items-center">
+<!-- Team 1 -->
+<button class="group flex flex-col items-center gap-2">
+<div class="w-20 h-20 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center p-3 border-2 border-transparent transition-all group-hover:border-primary-container group-active:scale-95">
+<img alt="Team 1" class="w-full h-full object-cover rounded-full mix-blend-multiply" data-alt="red abstract geometric logo design isolated on white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6B5KqgJ-4_qyosmDH17vYwp80Z5W-E2_r-sf_ASGCs9aT1Jg_WZmoxfq28pO2XHtcWOACZ1XLMSiYmeK8bnQcWBccxH_nU37-_LQry2GquB52CiFhpKf-lx-PmB0MxxL-0fLb3z-GkcWsiDAWF0gCCgQcynFM7Ce9e4jgb1BvtVPueCo0uiqpR5CjAoVvqPz_Vppw4gQgbXDXF7JDGEa8AxbczX3lqUFLtK9XphKaeSyy2EZ5DcyMaDih22NPp3XHSP_FqdDgTzM"/>
+</div>
+<span class="font-headline font-bold text-xs text-on-surface">Twins</span>
+</button>
+<!-- Team 2 -->
+<button class="group flex flex-col items-center gap-2">
+<div class="w-20 h-20 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center p-3 border-2 border-transparent transition-all group-hover:border-primary-container group-active:scale-95">
+<img alt="Team 2" class="w-full h-full object-cover rounded-full mix-blend-multiply" data-alt="blue abstract swoosh logo design isolated on white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJVRugV7NcRg09DjBbjtzjBLvqqqcWpRIOasdIcXqa1GA2FJbEGCK61uXlGKpbEVUvCesd1WKFO1J6lFC56RhtDh5JmhVjgGX4Q7wH11X_d8gzxynqyuaEOei2pvDDc6pFUNrqpNt8jGY4w3E9mDb7KXSHYBtQVxqr_ZCAduL4THqSX_Cq7wI-Nq5RcF8yXtSqLqRqJBkf0MkYUM7SKhM6SHBARBEs59aKt7SwlXM7c1OMFPn16uqZ635HG7NK_AWYUq0VtOc6pQE"/>
+</div>
+<span class="font-headline font-bold text-xs text-on-surface">Lions</span>
+</button>
+<!-- Team 3 -->
+<button class="group flex flex-col items-center gap-2">
+<div class="w-20 h-20 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center p-3 border-2 border-transparent transition-all group-hover:border-primary-container group-active:scale-95">
+<img alt="Team 3" class="w-full h-full object-cover rounded-full mix-blend-multiply" data-alt="green and yellow abstract emblem logo design isolated on white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJS_DWXR9fUsmtrAKnbZWVEHN5cncLVE53JJZjgymT4jl663bj1B2-glD6pw99TeLeF58RY_uRBH6427Rt8-TUUXveLdyxGbmDI6xG3rvwiYsVxm8ek9jWfoF0q1fJR92SF6ODyO3pEVQKNZXtjNcTr6N4UabSwPUNxDsoIu7toNgpaquKCy1vFmTbXwrZgerMAlhvw93dZqQuzULKoFbN6iZDj7mVZq9IGRJdqZny8XFHPWCQvSOKBlLHRh7r9bRzgPl7wOIR6KY"/>
+</div>
+<span class="font-headline font-bold text-xs text-on-surface">Wyverns</span>
+</button>
+<!-- Team 4 -->
+<button class="group flex flex-col items-center gap-2">
+<div class="w-20 h-20 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center p-3 border-2 border-transparent transition-all group-hover:border-primary-container group-active:scale-95">
+<div class="w-full h-full bg-slate-200 rounded-full flex items-center justify-center">
+<span class="font-headline font-bold text-lg text-slate-500">B</span>
+</div>
+</div>
+<span class="font-headline font-bold text-xs text-on-surface">Bears</span>
+</button>
+<!-- Team 5 -->
+<button class="group flex flex-col items-center gap-2">
+<div class="w-20 h-20 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center p-3 border-2 border-transparent transition-all group-hover:border-primary-container group-active:scale-95">
+<div class="w-full h-full bg-red-100 rounded-full flex items-center justify-center text-red-700">
+<span class="material-symbols-outlined text-2xl">local_fire_department</span>
+</div>
+</div>
+<span class="font-headline font-bold text-xs text-on-surface">Eagles</span>
+</button>
+<!-- More Teams -->
+<button class="group flex flex-col items-center gap-2 justify-center">
+<div class="w-20 h-20 rounded-full bg-surface-variant flex items-center justify-center transition-all group-active:scale-95">
+<span class="material-symbols-outlined text-on-surface-variant text-2xl">add</span>
+</div>
+<span class="font-headline font-bold text-xs text-on-surface-variant">View All</span>
+</button>
+</div>
+</div>
+<!-- Primary Action -->
+<div class="mt-12 flex justify-center">
+<button class="bg-signature-gradient text-on-primary font-headline font-bold text-base px-10 py-4 rounded-xl w-full shadow-[0_8px_24px_rgba(0,25,60,0.15)] flex items-center justify-center gap-2 active:scale-[0.98] transition-transform">
+                    Start Planning
+                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Bottom Nav Bar - Hidden as this is a linear onboarding/selection screen (Suppression Rule applied) -->
+</body></html>
