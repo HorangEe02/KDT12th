@@ -233,7 +233,8 @@ export function JourneyPanel({
           icon="sports_baseball"
           iconTone="primary"
           title={stadium.stadium_name}
-          subtitle={`도착${gameTime ? ` · ${gameTime} 경기 시작` : ""}`}
+          subtitle={`도착${gameTime ? ` · ${gameTime} 경기 시작` : ""} · 탭하여 경기 변경`}
+          onClick={() => setGameOpen(true)}
         />
       </ol>
 
