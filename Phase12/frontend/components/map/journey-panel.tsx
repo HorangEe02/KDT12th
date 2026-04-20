@@ -2,19 +2,29 @@
 
 import { useMemo, useState, useTransition } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import type { POI, RouteResult, Stadium, Waypoint } from "@/lib/types";
+import type { Game, POI, RouteResult, Stadium, Waypoint } from "@/lib/types";
 import { NavAppPicker } from "./nav-app-picker";
+import { OriginPickerDialog } from "./origin-picker-dialog";
+import { GamePickerDialog } from "./game-picker-dialog";
 import { cn } from "@/lib/utils";
 import { MAX_WAYPOINTS, serializeWaypoints } from "@/lib/map/waypoints-url";
+import {
+  annotateWaypointDistances,
+  formatDistanceShort,
+  FAR_WAYPOINT_THRESHOLD_M,
+} from "@/lib/map/waypoint-distance";
 
 interface JourneyPanelProps {
   origin: [number, number];
   originLabel: string;
+  originKey: string;
   stadium: Stadium;
   waypoints: Waypoint[];
   route: RouteResult;
   pois: { food: POI[]; stay: POI[]; tour: POI[] };
   gameTime?: string;
+  games: Game[];
+  selectedGame: Game;
 }
 
 const SOURCE_META: Record<
@@ -45,11 +55,14 @@ function formatToll(krw: number | null): string {
 export function JourneyPanel({
   origin,
   originLabel,
+  originKey,
   stadium,
   waypoints,
   route,
   pois,
   gameTime,
+  games,
+  selectedGame,
 }: JourneyPanelProps) {
   const router = useRouter();
   const pathname = usePathname();
@@ -57,9 +70,17 @@ export function JourneyPanel({
   const [, startTransition] = useTransition();
   const [addOpen, setAddOpen] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
+  const [originOpen, setOriginOpen] = useState(false);
+  const [gameOpen, setGameOpen] = useState(false);
 
   const badge = SOURCE_META[route.source];
   const stopsCount = waypoints.length + 2;
+
+  const annotated = useMemo(
+    () => annotateWaypointDistances(waypoints, stadium),
+    [waypoints, stadium],
+  );
+  const farCount = annotated.filter((a) => a.isFar).length;
 
   function commitWaypoints(next: Waypoint[]) {
     const p = new URLSearchParams(searchParams.toString());
@@ -85,13 +106,45 @@ export function JourneyPanel({
     commitWaypoints([...waypoints, w]);
     setAddOpen(false);
   }
+  function clearFarWaypoints() {
+    commitWaypoints(annotated.filter((a) => !a.isFar).map((a) => a.waypoint));
+  }
+
+  const gameDate = new Date(`${selectedGame.date}T00:00:00+09:00`);
+  const gameWd = ["일", "월", "화", "수", "목", "금", "토"][gameDate.getDay()];
 
   return (
     <aside className="relative overflow-hidden rounded-[1.5rem] border border-se-outline-variant bg-white p-5 shadow-[0_8px_32px_rgba(0,25,60,0.08)]">
+      {/* Game card — clickable → GamePickerDialog */}
+      <button
+        type="button"
+        onClick={() => setGameOpen(true)}
+        className="mb-4 flex w-full items-center gap-3 rounded-xl border border-dashed border-se-outline-variant/60 bg-se-surface-container-lowest px-3 py-2.5 text-left transition-colors hover:border-se-primary hover:bg-white"
+      >
+        <div className="flex h-11 w-11 shrink-0 flex-col items-center justify-center rounded-lg bg-se-primary text-white">
+          <span className="font-display text-[9px] font-bold">{gameWd}</span>
+          <span className="font-display text-base font-extrabold leading-none">
+            {gameDate.getDate()}
+          </span>
+        </div>
+        <div className="min-w-0 flex-1">
+          <p className="truncate font-display text-sm font-bold text-se-primary">
+            {selectedGame.date} · vs {selectedGame.home_team}
+          </p>
+          <p className="truncate font-body text-[11px] text-se-on-surface-variant">
+            {selectedGame.stadium}
+            {gameTime ? ` · ${gameTime}` : ""} · 탭하여 변경
+          </p>
+        </div>
+        <span className="material-symbols-outlined text-[18px] text-se-outline">
+          edit
+        </span>
+      </button>
+
       {/* Header */}
-      <div className="mb-4 flex items-start justify-between">
+      <div className="mb-3 flex items-start justify-between">
         <div>
-          <h2 className="font-display text-lg font-extrabold tracking-tight text-se-primary">
+          <h2 className="font-display text-base font-extrabold tracking-tight text-se-primary">
             경기일 동선
           </h2>
           <p className="mt-0.5 font-body text-xs text-se-on-surface-variant">
@@ -109,22 +162,45 @@ export function JourneyPanel({
         </span>
       </div>
 
+      {/* 경유지 거리 경고 배너 (Decision 3 D) */}
+      {farCount > 0 ? (
+        <div className="mb-3 flex items-start gap-2 rounded-xl border border-amber-400/60 bg-amber-50 px-3 py-2">
+          <span className="material-symbols-outlined text-[18px] text-amber-700">
+            warning
+          </span>
+          <div className="min-w-0 flex-1">
+            <p className="font-display text-[11px] font-bold text-amber-900">
+              경유지 {farCount}개가 현재 구장과 멀어요 (≥ {formatDistanceShort(FAR_WAYPOINT_THRESHOLD_M)})
+            </p>
+            <button
+              type="button"
+              onClick={clearFarWaypoints}
+              className="mt-1 inline-flex items-center gap-1 rounded-full bg-amber-700 px-2.5 py-0.5 text-[10px] font-bold text-white hover:bg-amber-800"
+            >
+              먼 경유지 {farCount}개 삭제
+            </button>
+          </div>
+        </div>
+      ) : null}
+
       {/* Stops list */}
       <ol className="mb-4 flex flex-col gap-2.5">
         <StopRow
           icon="my_location"
           iconTone="muted"
           title={originLabel}
-          subtitle={`출발 · ${origin[0].toFixed(3)}, ${origin[1].toFixed(3)}`}
+          subtitle={`출발 · ${origin[0].toFixed(3)}, ${origin[1].toFixed(3)} · 탭하여 변경`}
+          onClick={() => setOriginOpen(true)}
         />
-        {waypoints.map((wp, i) => (
+        {annotated.map(({ waypoint: wp, distance_m, isFar }, i) => (
           <StopRow
             key={`${wp.lat},${wp.lng},${i}`}
             icon="place"
             iconTone="secondary"
             badge={`${i + 1}`}
+            far={isFar}
             title={wp.name ?? `경유지 ${i + 1}`}
-            subtitle={`경유 · ${wp.lat.toFixed(3)}, ${wp.lng.toFixed(3)}`}
+            subtitle={`경유 · 구장까지 ${formatDistanceShort(distance_m)}${isFar ? " · 멀어요" : ""}`}
             legInfo={
               route.legs?.[i]
                 ? `${formatDistance(route.legs[i].distance_m)}${
@@ -197,7 +273,7 @@ export function JourneyPanel({
         </p>
       ) : null}
 
-      {/* Add Dialog */}
+      {/* Dialogs (all z-[9999] to beat leaflet controls) */}
       {addOpen ? (
         <AddWaypointDialog
           pois={pois}
@@ -205,8 +281,6 @@ export function JourneyPanel({
           onPick={addWaypoint}
         />
       ) : null}
-
-      {/* Nav App Dialog */}
       {navOpen ? (
         <NavAppDialog
           origin={origin}
@@ -214,6 +288,21 @@ export function JourneyPanel({
           destinationName={stadium.stadium_name}
           waypoints={waypoints}
           onClose={() => setNavOpen(false)}
+        />
+      ) : null}
+      {originOpen ? (
+        <OriginPickerDialog
+          currentOrigin={originKey}
+          onClose={() => setOriginOpen(false)}
+        />
+      ) : null}
+      {gameOpen ? (
+        <GamePickerDialog
+          games={games}
+          selectedGameId={selectedGame.game_id}
+          currentStadiumShort={stadium.short_name}
+          waypoints={waypoints}
+          onClose={() => setGameOpen(false)}
         />
       ) : null}
     </aside>
@@ -228,27 +317,34 @@ function StopRow({
   icon,
   iconTone,
   badge,
+  far,
   title,
   subtitle,
   legInfo,
   actions,
+  onClick,
 }: {
   icon: string;
   iconTone: "primary" | "secondary" | "muted";
   badge?: string;
+  far?: boolean;
   title: string;
   subtitle: string;
   legInfo?: string;
   actions?: React.ReactNode;
+  onClick?: () => void;
 }) {
   const iconCls =
     iconTone === "primary"
       ? "bg-gradient-to-br from-se-primary to-se-primary-container text-white"
       : iconTone === "secondary"
-        ? "bg-se-secondary-fixed/40 text-se-secondary"
+        ? far
+          ? "bg-amber-100 text-amber-700 ring-2 ring-amber-400"
+          : "bg-se-secondary-fixed/40 text-se-secondary"
         : "bg-se-surface-container-low text-se-on-surface-variant";
-  return (
-    <li className="flex items-start gap-3">
+
+  const row = (
+    <div className="flex items-start gap-3">
       <div
         className={cn(
           "relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full",
@@ -266,16 +362,33 @@ function StopRow({
           {icon}
         </span>
         {badge ? (
-          <span className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-white font-display text-[9px] font-extrabold text-se-secondary ring-2 ring-se-secondary-fixed/40">
+          <span
+            className={cn(
+              "absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-white font-display text-[9px] font-extrabold ring-2",
+              far
+                ? "text-amber-700 ring-amber-400"
+                : "text-se-secondary ring-se-secondary-fixed/40",
+            )}
+          >
             {badge}
           </span>
         ) : null}
       </div>
       <div className="min-w-0 flex-1">
-        <p className="truncate font-display text-sm font-bold text-se-on-surface">
+        <p
+          className={cn(
+            "truncate font-display text-sm font-bold",
+            far ? "text-amber-900" : "text-se-on-surface",
+          )}
+        >
           {title}
         </p>
-        <p className="truncate font-body text-[11px] text-se-outline">
+        <p
+          className={cn(
+            "truncate font-body text-[11px]",
+            far ? "text-amber-700" : "text-se-outline",
+          )}
+        >
           {subtitle}
           {legInfo ? (
             <span className="ml-1 text-se-secondary">· {legInfo}</span>
@@ -285,8 +398,23 @@ function StopRow({
       {actions ? (
         <div className="flex shrink-0 items-center gap-1">{actions}</div>
       ) : null}
-    </li>
+    </div>
   );
+
+  if (onClick) {
+    return (
+      <li>
+        <button
+          type="button"
+          onClick={onClick}
+          className="w-full rounded-xl border border-dashed border-transparent p-0.5 text-left transition-colors hover:border-se-primary/60 hover:bg-se-surface-container-low/60"
+        >
+          {row}
+        </button>
+      </li>
+    );
+  }
+  return <li>{row}</li>;
 }
 
 function IconBtn({
@@ -358,7 +486,7 @@ function AddWaypointDialog({
 
   return (
     <div
-      className="fixed inset-0 z-[60] flex items-center justify-center bg-black/40 p-6"
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/55 p-6 backdrop-blur-sm"
       role="dialog"
       aria-modal
       aria-label="경유지 선택"
@@ -469,7 +597,7 @@ function NavAppDialog({
 }) {
   return (
     <div
-      className="fixed inset-0 z-[60] flex items-center justify-center bg-black/40 p-6"
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/55 p-6 backdrop-blur-sm"
       role="dialog"
       aria-modal
       aria-label="길 안내 앱 선택"

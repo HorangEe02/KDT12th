@@ -3,7 +3,6 @@ import { requestRoute } from "@/lib/api/route";
 import { getTeamPalette } from "@/lib/team-colors";
 import { resolveTeam } from "@/lib/data/resolve-team";
 import { MapShell } from "@/components/map/map-shell";
-import { MapControls } from "@/components/map/map-controls";
 import { FloatingTopBar } from "@/components/map/floating-top-bar";
 import { JourneySummaryCard } from "@/components/map/journey-summary-card";
 import { JourneyPanel } from "@/components/map/journey-panel";
@@ -152,40 +151,32 @@ export default async function MapPage({ searchParams }: MapPageProps) {
       />
       <WaypointPicker pois={{ food, stay, tour }} />
 
-      {/* === Desktop (md+) — 기존 layout === */}
+      {/* === Desktop (md+) — 간소화된 header + 2컬럼 ===
+          Decision 6 B: page h1 만 유지, 경기/출발/도착 세부는 JourneyPanel 이 담당. */}
       <section className="hidden space-y-4 md:block">
-        <header>
-          <h1 className="font-display text-2xl font-extrabold text-se-primary">
-            🗺️ 원정 동선 지도
-          </h1>
-          <p className="text-sm text-se-on-surface-variant">
-            {palette.nameKo} · {selectedGame.date} @{" "}
-            <strong>{stadium.stadium_name}</strong> · vs {selectedGame.home_team}
-          </p>
-        </header>
+        <h1 className="font-display text-2xl font-extrabold text-se-primary">
+          🗺️ 원정 동선 지도
+        </h1>
 
-        <MapControls
-          games={games}
-          selectedGameId={selectedGame.game_id}
-          origin={originKey}
-        />
-
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1fr_360px]">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1fr_380px]">
           <MapShell
             stadium={stadium}
             places={{ food, stay, tour }}
             route={route}
             waypoints={waypoints}
-            height={600}
+            height={680}
           />
           <JourneyPanel
             origin={origin}
             originLabel={originLabel}
+            originKey={originKey}
             stadium={stadium}
             waypoints={waypoints}
             route={route}
             pois={{ food, stay, tour }}
             gameTime={selectedGame.start_time || selectedGame.time || undefined}
+            games={games}
+            selectedGame={selectedGame}
           />
         </div>
 
