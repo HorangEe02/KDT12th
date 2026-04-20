@@ -14,6 +14,28 @@ import type { PartyType, TransportType } from "@/lib/types";
 export const SEASON_START = "2026-03-28";
 export const SEASON_END = "2026-09-30";
 
+/**
+ * 매 접속 시 today 기준 한 달 (KBO 시즌 범위 cap).
+ * - today 가 시즌 안 (3/28 ~ 9/30) 이면 today 부터 +30일
+ * - 시즌 끝 가까이면 SEASON_END 로 cap
+ * - 시즌 외 (예: 1월, 12월) 이면 SEASON_START 부터 +30일
+ */
+export function getDefaultDateRange(): { dateStart: string; dateEnd: string } {
+  const seasonStart = new Date(SEASON_START);
+  const seasonEnd = new Date(SEASON_END);
+  const now = new Date();
+
+  const start =
+    now >= seasonStart && now <= seasonEnd ? now : seasonStart;
+  const endCandidate = new Date(start.getTime() + 30 * 24 * 60 * 60 * 1000);
+  const end = endCandidate > seasonEnd ? seasonEnd : endCandidate;
+
+  return {
+    dateStart: start.toISOString().slice(0, 10),
+    dateEnd: end.toISOString().slice(0, 10),
+  };
+}
+
 export interface FiltersState {
   team: string;
   dateStart: string;
@@ -37,17 +59,11 @@ export interface FiltersActions {
   hydrateFromUrl: (params: URLSearchParams) => void;
 }
 
+const _defaultRange = getDefaultDateRange();
 const INITIAL: FiltersState = {
   team: "LG",
-  dateStart: SEASON_START,
-  dateEnd: new Date(
-    Math.min(
-      new Date(SEASON_START).getTime() + 3 * 24 * 60 * 60 * 1000,
-      new Date(SEASON_END).getTime(),
-    ),
-  )
-    .toISOString()
-    .slice(0, 10),
+  dateStart: _defaultRange.dateStart,
+  dateEnd: _defaultRange.dateEnd,
   budget: 30,
   party: "solo",
   transport: "train",
@@ -83,11 +99,10 @@ export const useFilters = create<FiltersState & FiltersActions>()(
     }),
     {
       name: "away-game-filters",
-      version: 1,
+      version: 2,  // dateStart/dateEnd 제외로 변경 → version bump 으로 구버전 캐시 무시
+      // 옵션 A: 날짜는 매 접속 시 today 기준 한 달로 reset (persist 에서 제외)
       partialize: (state) => ({
         team: state.team,
-        dateStart: state.dateStart,
-        dateEnd: state.dateEnd,
         budget: state.budget,
         party: state.party,
         transport: state.transport,

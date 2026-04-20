@@ -13,7 +13,7 @@ import {
   useMap,
 } from "react-leaflet";
 import L, { type LatLngBoundsExpression } from "leaflet";
-import type { POI, RouteResult, Stadium } from "@/lib/types";
+import type { POI, RouteResult, Stadium, Waypoint } from "@/lib/types";
 
 // Next.js 환경에서 leaflet 기본 마커 이미지 경로 수동 지정
 type LeafletDefaultIconProto = { _getIconUrl?: unknown };
@@ -64,6 +64,24 @@ function makeIcon(category: string): L.DivIcon {
   });
 }
 
+function makeWaypointIcon(n: number): L.DivIcon {
+  return L.divIcon({
+    className: "se-leaflet-wp-icon",
+    iconSize: [30, 30],
+    iconAnchor: [15, 15],
+    popupAnchor: [0, -14],
+    html: `<div style="
+      background:#1b6d24;
+      width:30px;height:30px;
+      border-radius:50%;
+      display:flex;align-items:center;justify-content:center;
+      box-shadow:0 2px 6px rgba(0,0,0,0.35);
+      border:3px solid #fff;
+      color:#fff;font-weight:800;font-family:system-ui;font-size:13px;
+    ">${n}</div>`,
+  });
+}
+
 interface FitBoundsProps {
   polyline?: Array<[number, number]>;
   center: [number, number];
@@ -86,14 +104,22 @@ interface LeafletMapProps {
   stadium: Stadium;
   places: { food: POI[]; stay: POI[]; tour: POI[] };
   route: RouteResult | null;
-  height?: number;
+  waypoints?: Waypoint[];
+  /**
+   * 지도 높이. 숫자 → px, 문자열 → CSS (e.g. "100%", "calc(100dvh - 4rem)").
+   * 모바일 풀스크린은 부모 컨테이너가 크기를 잡고 `"100%"` 를 넘기는 패턴을 권장.
+   */
+  height?: number | string;
+  fill?: boolean;
 }
 
 export function LeafletMap({
   stadium,
   places,
   route,
+  waypoints = [],
   height = 560,
+  fill = false,
 }: LeafletMapProps) {
   const center: [number, number] = [stadium.lat, stadium.lng];
   const routeColor =
@@ -113,11 +139,13 @@ export function LeafletMap({
     [places.food, places.stay, places.tour],
   );
 
+  const wrapperClass = fill
+    ? "h-full w-full overflow-hidden"
+    : "overflow-hidden rounded-2xl border border-se-outline-variant";
+  const wrapperStyle = fill ? undefined : { height };
+
   return (
-    <div
-      className="overflow-hidden rounded-2xl border border-se-outline-variant"
-      style={{ height }}
-    >
+    <div className={wrapperClass} style={wrapperStyle}>
       <MapContainer
         center={center}
         zoom={14}
@@ -231,6 +259,37 @@ export function LeafletMap({
             }}
           />
         ) : null}
+
+        {waypoints.map((wp, i) => (
+          <Marker
+            key={`wp-${i}-${wp.lat}-${wp.lng}`}
+            position={[wp.lat, wp.lng]}
+            icon={makeWaypointIcon(i + 1)}
+            title={wp.name ?? `경유지 ${i + 1}`}
+          >
+            <Popup>
+              <div style={{ minWidth: 160 }}>
+                <div
+                  style={{
+                    fontWeight: 800,
+                    color: "#1b6d24",
+                    fontSize: 13,
+                  }}
+                >
+                  경유지 {i + 1}
+                </div>
+                {wp.name ? (
+                  <div style={{ fontSize: 12, marginTop: 3 }}>{wp.name}</div>
+                ) : null}
+                <div
+                  style={{ fontSize: 11, marginTop: 2, color: "#6b7280" }}
+                >
+                  {wp.lat.toFixed(4)}, {wp.lng.toFixed(4)}
+                </div>
+              </div>
+            </Popup>
+          </Marker>
+        ))}
       </MapContainer>
     </div>
   );

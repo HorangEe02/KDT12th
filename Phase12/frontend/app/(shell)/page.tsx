@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Hero } from "@/components/hero";
 import { TeamSelector } from "@/components/team-selector";
 import type { Viewport } from "@/lib/types";
-import { TEAM_COLORS } from "@/lib/team-colors";
+import { resolveTeam } from "@/lib/data/resolve-team";
 
 interface PageProps {
   searchParams: Promise<{ team?: string; device?: string }>;
@@ -30,7 +30,7 @@ const NEXT_TABS = [
   {
     href: "/ai",
     icon: "smart_toy",
-    title: "AI 플래너",
+    title: "AI 챗봇",
     desc: "Gemini 기반 원정 코스 추천 챗봇 (도구 호출 + Multi-Agent)",
   },
   {
@@ -43,7 +43,7 @@ const NEXT_TABS = [
 
 export default async function Home({ searchParams }: PageProps) {
   const params = await searchParams;
-  const team = params.team && params.team in TEAM_COLORS ? params.team : "LG";
+  const team = await resolveTeam(params.team);
   const viewport: Viewport = params.device === "mobile" ? "mobile" : "web";
   const qs = new URLSearchParams(
     Object.entries(params).filter(([, v]) => typeof v === "string") as [
@@ -54,8 +54,9 @@ export default async function Home({ searchParams }: PageProps) {
 
   return (
     <div className={viewport === "mobile" ? "mx-auto max-w-[480px]" : ""}>
-      <Hero team={team} viewport={viewport} />
-      <TeamSelector selected={team} viewport={viewport} />
+      {/* Hero + TeamSelector: viewport prop 폐기 — 자동 반응형 (Tailwind sm:/md:/lg:) */}
+      <Hero team={team} />
+      <TeamSelector selected={team} />
 
       <section className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {NEXT_TABS.map((t) => (

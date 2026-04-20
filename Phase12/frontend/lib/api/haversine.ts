@@ -1,4 +1,4 @@
-import type { RouteResult } from "@/lib/types";
+import type { RouteLeg, RouteResult } from "@/lib/types";
 
 const EARTH_R = 6_371_000; // meters
 
@@ -18,14 +18,24 @@ export function haversineM(
   return EARTH_R * c;
 }
 
+/**
+ * 다구간 Haversine — 연속 직선 연결. duration 은 계산 안 함.
+ */
 export function haversineRoute(
-  origin: [number, number],
-  destination: [number, number],
+  points: Array<[number, number]>,
   ms: number = 0,
 ): RouteResult {
+  if (points.length < 2) throw new Error("need >= 2 points");
+  const legs: RouteLeg[] = [];
+  let total = 0;
+  for (let i = 0; i < points.length - 1; i++) {
+    const d = haversineM(points[i], points[i + 1]);
+    legs.push({ distance_m: d, duration_sec: null });
+    total += d;
+  }
   return {
-    polyline: [origin, destination],
-    distance_m: haversineM(origin, destination),
+    polyline: [...points],
+    distance_m: total,
     duration_sec: null,
     toll_fare_krw: null,
     source: "haversine",
@@ -34,5 +44,6 @@ export function haversineRoute(
       { provider: "haversine", status: "ok", ms, reason: "straight-line" },
     ],
     fetched_at: Date.now(),
+    legs,
   };
 }

@@ -2,6 +2,13 @@ import Link from "next/link";
 import type { Game, GameStatus } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
+/**
+ * 데스크톱 전용 경기 테이블 (7 컬럼, min-w 720px).
+ * 모바일용 대안: `MatchesMobileView` (upcoming hero + away-matrix card 그리드).
+ *
+ * 안전장치: 컴포넌트 루트에 `hidden md:block` 를 내장하여 호출자가 실수로
+ * 모바일 경로에 삽입해도 가로 스크롤 overflow 가 발생하지 않음.
+ */
 interface MatchListProps {
   games: Game[];
   /** 해당 팀 기준 원정/홈 관계를 추론하기 위해 전달 */
@@ -132,14 +139,14 @@ export function MatchList({
 }: MatchListProps) {
   if (games.length === 0) {
     return (
-      <div className="rounded-2xl border border-se-outline-variant bg-se-surface-container-low px-5 py-8 text-center text-sm text-se-on-surface-variant">
+      <div className="hidden rounded-2xl border border-se-outline-variant bg-se-surface-container-low px-5 py-8 text-center text-sm text-se-on-surface-variant md:block">
         선택한 기간에 원정 경기가 없습니다. 사이드바에서 기간을 넓혀보세요.
       </div>
     );
   }
 
   return (
-    <div className="overflow-x-auto rounded-2xl border border-se-outline-variant bg-se-surface-container-lowest">
+    <div className="hidden overflow-x-auto rounded-2xl border border-se-outline-variant bg-se-surface-container-lowest md:block">
       <table className="w-full min-w-[720px] text-sm">
         <thead className="bg-se-surface-container-low">
           <tr className="text-left font-display text-[0.68rem] uppercase tracking-[0.12em] text-se-on-surface-variant">

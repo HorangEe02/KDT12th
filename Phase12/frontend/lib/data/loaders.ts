@@ -6,7 +6,7 @@
 import "server-only";
 import fs from "node:fs/promises";
 import path from "node:path";
-import type { Game, POI, Stadium, TeamStat, Tip } from "@/lib/types";
+import type { Game, POI, PlayerStatsFile, Stadium, TeamStat, Tip } from "@/lib/types";
 
 const cache = new Map<string, unknown>();
 
@@ -23,6 +23,8 @@ export const loadSchedule = () => load<Game[]>("data/schedule.json");
 export const loadStadiums = () => load<Stadium[]>("data/stadiums.json");
 export const loadTeamStatsAll = () => load<TeamStat[]>("data/team-stats.json");
 export const loadTips = () => load<Tip[]>("data/tips.json");
+export const loadPlayerStats = () =>
+  load<PlayerStatsFile>("data/player-stats.json");
 
 export async function loadPOIsByStadium(stadiumShort: string): Promise<POI[]> {
   try {

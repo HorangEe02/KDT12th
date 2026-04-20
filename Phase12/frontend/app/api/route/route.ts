@@ -1,6 +1,6 @@
 /**
  * POST /api/route
- *   body: { origin: [lat, lng], destination: [lat, lng] }
+ *   body: { origin: [lat, lng], destination: [lat, lng], waypoints?: [{lat,lng,name?}] }
  *   200:  RouteResult
  * GET /api/route?originLat=..&originLng=..&destLat=..&destLng=..
  */
@@ -14,9 +14,15 @@ const Coord = z.tuple([
   z.number().min(-90).max(90),
   z.number().min(-180).max(180),
 ]);
+const WaypointSchema = z.object({
+  lat: z.number().min(-90).max(90),
+  lng: z.number().min(-180).max(180),
+  name: z.string().max(80).optional(),
+});
 const Body = z.object({
   origin: Coord,
   destination: Coord,
+  waypoints: z.array(WaypointSchema).max(5).optional(),
 });
 
 export async function POST(request: Request) {
@@ -29,7 +35,9 @@ export async function POST(request: Request) {
       { status: 400 },
     );
   }
-  const result = await requestRoute(parsed.origin, parsed.destination);
+  const result = await requestRoute(parsed.origin, parsed.destination, {
+    waypoints: parsed.waypoints,
+  });
   return NextResponse.json(result);
 }
 

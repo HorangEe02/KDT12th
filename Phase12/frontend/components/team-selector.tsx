@@ -10,20 +10,25 @@ import type { Viewport } from "@/lib/types";
 
 interface TeamSelectorProps {
   selected?: string;
+  /**
+   * @deprecated viewport 분기는 더 이상 사용하지 않습니다.
+   * 현재는 Tailwind responsive (grid-cols-3 → md:grid-cols-5) 로 자동 분기.
+   * 호환성을 위해 prop 자체는 받지만 무시.
+   */
   viewport?: Viewport;
 }
 
 /**
- * 팀 카드 그리드 — 웹 5×2 / 모바일 3열.
+ * 팀 카드 그리드 — 모바일 3열 / md+ 5×2.
  * 포팅 원본: src/ui/components/team_selector.py + assets/react/team_selector.html
+ *
+ * v2 (2026-04-19): viewport prop 폐기 + Tailwind 자동 반응형 (Hero와 동일 패턴)
+ *   - 모바일 (< md): grid-cols-3
+ *   - md (≥ 768px): grid-cols-5 (웹 5×2)
  *
  * Server Component. Next Link로 `?team=XX` 쿼리 동기화.
  */
-export function TeamSelector({
-  selected = "LG",
-  viewport = "web",
-}: TeamSelectorProps) {
-  const isMobile = viewport === "mobile";
+export function TeamSelector({ selected = "LG" }: TeamSelectorProps) {
   return (
     <section
       className={cn(
@@ -45,12 +50,7 @@ export function TeamSelector({
         </span>
       </header>
 
-      <div
-        className={cn(
-          "relative z-10 grid gap-3",
-          isMobile ? "grid-cols-3" : "grid-cols-5",
-        )}
-      >
+      <div className="relative z-10 grid grid-cols-3 gap-3 md:grid-cols-5">
         {TEAMS.map((code) => {
           const palette = getTeamPalette(code);
           const isSelected = code === selected;

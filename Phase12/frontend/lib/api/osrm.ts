@@ -6,7 +6,7 @@
  * 라이선스: 지도 하단에 "© OpenStreetMap contributors · Routing by OSRM" 표시 필요.
  */
 import "server-only";
-import type { RouteResult } from "@/lib/types";
+import type { RouteLeg, RouteResult } from "@/lib/types";
 
 const ENDPOINT = "https://router.project-osrm.org/route/v1/driving";
 const TIMEOUT_MS = 5000;
@@ -17,17 +17,22 @@ interface OSRMResponse {
     distance: number;
     duration: number;
     geometry: { type: "LineString"; coordinates: [number, number][] };
+    legs?: Array<{ distance: number; duration: number }>;
   }>;
   message?: string;
 }
 
+/**
+ * 다구간 OSRM 호출. points[0] = origin, points[N-1] = destination, 중간은 waypoints.
+ */
 export async function fetchOSRM(
-  origin: [number, number],
-  destination: [number, number],
+  points: Array<[number, number]>,
 ): Promise<RouteResult> {
+  if (points.length < 2) throw new Error("need >= 2 points");
   const startedAt = performance.now();
+  const path = points.map(([lat, lng]) => `${lng},${lat}`).join(";");
   const url =
-    `${ENDPOINT}/${origin[1]},${origin[0]};${destination[1]},${destination[0]}` +
+    `${ENDPOINT}/${path}` +
     `?overview=full&geometries=geojson&alternatives=false&steps=false`;
 
   const ctl = new AbortController();
@@ -50,6 +55,10 @@ export async function fetchOSRM(
     const polyline: Array<[number, number]> = r.geometry.coordinates.map(
       ([lon, lat]) => [lat, lon],
     );
+    const legs: RouteLeg[] | undefined = r.legs?.map((l) => ({
+      distance_m: l.distance,
+      duration_sec: l.duration,
+    }));
     const ms = Math.round(performance.now() - startedAt);
     return {
       polyline,
@@ -60,6 +69,7 @@ export async function fetchOSRM(
       fallback: true,
       attempts: [{ provider: "osrm", status: "ok", ms }],
       fetched_at: Date.now(),
+      legs,
     };
   } finally {
     clearTimeout(timer);

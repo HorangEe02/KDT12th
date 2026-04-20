@@ -1,27 +1,136 @@
 rules_version = '2';
 
+// ============================================================================
+// Firestore Security Rules — Phase 6 Session B
+// 스키마: docs/FIREBASE_DB_PLAN.md §3-4
+// ----------------------------------------------------------------------------
+// 보안 원칙:
+//   1. owner 자기 자원만 read/write (uid 매칭)
+//   2. admin (custom claim `admin == true`) 은 모든 user* 자원 read/list
+//   3. server-only 자원 (admin_audit, system_metrics, shared_plans write,
+//      user 프로필의 role/status 변경) 은 Admin SDK 만
+//   4. shared_plans 는 read=public (공유 링크용)
+//   5. default deny (정의되지 않은 모든 경로 차단)
+// ============================================================================
+
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // 공개 읽기 허용 컬렉션 (공유 계획은 누구나 불러오기)
+    // ------------------------- Helpers -------------------------
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+    function isAdmin() {
+      return isSignedIn() && request.auth.token.admin == true;
+    }
+    function isActive() {
+      // Custom claim disabled=true 면 차단 (관리자가 disable 처리)
+      return isSignedIn() && (request.auth.token.disabled != true);
+    }
+    function unchanged(field) {
+      return request.resource.data[field] == resource.data[field];
+    }
+
+    // ------------------------- users/{uid} -------------------------
+    match /users/{uid} {
+      allow get:    if isOwner(uid) || isAdmin();
+      allow list:   if isAdmin();
+
+      // 본인 가입 시 자기 도큐먼트 생성 — 단, role/status/email 검증
+      allow create: if isOwner(uid)
+                       && request.resource.data.role == "user"
+                       && request.resource.data.status == "active"
+                       && request.resource.data.email is string
+                       && request.resource.data.email.size() <= 254
+                       && request.resource.data.displayName is string
+                       && request.resource.data.displayName.size() <= 50;
+
+      // 본인 업데이트: role/status/email/createdAt 변경 불가
+      // admin 은 모두 가능 (Admin SDK 우회 권장이지만 client 도 허용)
+      allow update: if (isOwner(uid)
+                        && unchanged('role')
+                        && unchanged('status')
+                        && unchanged('email')
+                        && unchanged('createdAt'))
+                    || isAdmin();
+
+      allow delete: if isAdmin();
+    }
+
+    // ------------------------- user_visits/{uid} -------------------------
+    match /user_visits/{uid} {
+      allow read:  if isOwner(uid) || isAdmin();
+      allow write: if isOwner(uid) && isActive();
+    }
+
+    // ------------------------- user_prefs/{uid} -------------------------
+    match /user_prefs/{uid} {
+      allow read:  if isOwner(uid);
+      allow write: if isOwner(uid) && isActive();
+    }
+
+    // ------------------------- user_chats/{uid}/sessions/{sessionId}/... -------------------------
+    match /user_chats/{uid}/sessions/{sessionId} {
+      allow read, write: if isOwner(uid) && isActive();
+      match /messages/{messageId} {
+        allow read, write: if isOwner(uid) && isActive();
+      }
+    }
+
+    // ------------------------- user_plans/{uid}/items/{planId} -------------------------
+    match /user_plans/{uid}/items/{planId} {
+      // 본인은 항상 read · 다른 사용자는 public=true 인 경우만 read · admin 항상 read
+      allow get:    if isOwner(uid)
+                    || (resource.data.public == true)
+                    || isAdmin();
+      allow list:   if isOwner(uid) || isAdmin();
+      allow create, update: if isOwner(uid) && isActive();
+      allow delete: if isOwner(uid) || isAdmin();
+    }
+
+    // ------------------------- shared_plans/{planId} -------------------------
+    // 공유 링크 — read=public, create=서버 또는 본인 인증 사용자, update/delete=서버 only
     match /shared_plans/{planId} {
-      allow read: if true;
-      // 쓰기는 서비스 계정(서버)에서만 (Cloud Run)
-      allow create, update, delete: if false;
+      allow read:   if true;
+      allow create: if isSignedIn()
+                       && isActive()
+                       && request.resource.data.ownerUid == request.auth.uid;
+      allow update: if false;   // viewCount 증가 등은 Admin SDK
+      allow delete: if isAdmin()
+                    || (isSignedIn()
+                        && resource.data.ownerUid == request.auth.uid);
     }
 
-    // 방문 구장 기록: 읽기·쓰기 모두 서버(서비스 계정)에서만 처리
-    // 클라이언트는 Streamlit 경유로만 접근 → 규칙으로는 외부 차단
-    match /visited_stadiums/{userId} {
-      allow read, write: if false;
+    // ------------------------- admin_audit/{eventId} -------------------------
+    // 모든 변경/추가는 서버(Admin SDK) — client write 금지
+    match /admin_audit/{eventId} {
+      allow read:  if isAdmin();
+      allow write: if false;
     }
 
-    // 챗 세션 백업 — 서버 전용
-    match /chat_sessions/{sessionId} {
-      allow read, write: if false;
+    // ------------------------- system_metrics/{day} -------------------------
+    match /system_metrics/{day} {
+      allow read:  if isAdmin();
+      allow write: if false;
     }
 
-    // 그 외 전부 거부
+    // ------------------------- feedback/{feedbackId} -------------------------
+    // 비로그인 사용자도 피드백 작성 가능 (간단 필드 검증)
+    match /feedback/{feedbackId} {
+      allow create: if request.resource.data.content is string
+                       && request.resource.data.content.size() < 2000
+                       && request.resource.data.content.size() > 0;
+      allow read:   if isAdmin();
+      allow update, delete: if false;
+    }
+
+    // ============================================================================
+    // Default deny — 위에 정의되지 않은 모든 경로
+    // (구 visited_stadiums, chat_sessions 컬렉션도 포함 → 자동 차단)
+    // ============================================================================
     match /{document=**} {
       allow read, write: if false;
     }
