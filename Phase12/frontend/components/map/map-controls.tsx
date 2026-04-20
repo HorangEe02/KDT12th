@@ -130,7 +130,7 @@ export function MapControls({
           </span>
           <button
             type="button"
-            onClick={selectMyLocation}
+            onClick={() => selectMyLocation()}
             disabled={geoState === "loading"}
             className={cn(
               "inline-flex items-center gap-1 rounded-full border px-2.5 py-0.5 text-[0.65rem] font-bold transition-colors",
