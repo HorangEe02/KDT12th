@@ -1,9 +1,11 @@
 import { awayWinRateRanking, filterAwayGames } from "@/lib/data/loaders";
 import { predictWinRate } from "@/lib/predict";
-import { TEAM_COLORS, getTeamPalette } from "@/lib/team-colors";
+import { getTeamPalette } from "@/lib/team-colors";
+import { resolveTeam } from "@/lib/data/resolve-team";
 import { MatchList } from "@/components/matches/match-list";
 import { WinGauge } from "@/components/matches/win-gauge";
 import { WinRateBar } from "@/components/matches/win-rate-bar";
+import { MatchesMobileView } from "@/components/matches/matches-mobile-view";
 import { formatWinRate } from "@/lib/utils";
 
 interface MatchesPageProps {
@@ -20,7 +22,7 @@ export default async function MatchesPage({
   searchParams,
 }: MatchesPageProps) {
   const p = await searchParams;
-  const team = p.team && p.team in TEAM_COLORS ? p.team : "LG";
+  const team = await resolveTeam(p.team);
   const palette = getTeamPalette(team);
   const start = p.start ?? "2026-03-28";
   const end = p.end ?? "2026-09-30";
@@ -39,10 +41,24 @@ export default async function MatchesPage({
     ranking.find((r) => r.team === team)?.away_win_rate ?? undefined;
   const top = ranking[0];
 
+  const baseQuery = Object.fromEntries(
+    Object.entries(p).filter(([, v]) => typeof v === "string"),
+  ) as Record<string, string>;
+
   return (
     <div className="space-y-6">
-      {/* Header */}
-      <header className="flex flex-col gap-1">
+      {/* === Mobile (< md) — mockup 정밀 반영 === */}
+      <MatchesMobileView
+        team={team}
+        teamNameKo={palette.nameKo}
+        games={games}
+        selected={selected ?? null}
+        prediction={prediction}
+        baseQuery={baseQuery}
+      />
+
+      {/* === Desktop (md+) — 기존 데이터 풍부 layout === */}
+      <header className="hidden flex-col gap-1 md:flex">
         <h1 className="font-display text-2xl font-extrabold text-se-primary">
           ⚾ 원정 경기 & 승률 예측
         </h1>
@@ -53,7 +69,7 @@ export default async function MatchesPage({
       </header>
 
       {/* Metrics */}
-      <div className="grid grid-cols-3 gap-3">
+      <div className="hidden grid-cols-3 gap-3 md:grid">
         <Metric label="응원팀" value={team} />
         <Metric label="원정 경기" value={`${games.length}건`} />
         <Metric
@@ -65,7 +81,7 @@ export default async function MatchesPage({
 
       {/* Selected game + gauge */}
       {selected && prediction ? (
-        <section className="grid grid-cols-1 gap-4 md:grid-cols-5">
+        <section className="hidden grid-cols-1 gap-4 md:grid md:grid-cols-5">
           <div className="rounded-2xl border border-se-outline-variant bg-se-surface-container-lowest p-5 md:col-span-3">
             <h2 className="font-display text-lg font-extrabold text-se-primary">
               🆚 vs {selected.home_team} @ {selected.stadium}
@@ -133,7 +149,7 @@ export default async function MatchesPage({
       ) : null}
 
       {/* Match list */}
-      <section>
+      <section className="hidden md:block">
         <h3 className="mb-2 font-display text-sm font-extrabold uppercase tracking-[0.12em] text-se-on-surface-variant">
           📋 기간 내 원정 경기
         </h3>
@@ -141,14 +157,12 @@ export default async function MatchesPage({
           games={games}
           team={team}
           selectedGameId={selected?.game_id}
-          baseQuery={Object.fromEntries(
-            Object.entries(p).filter(([, v]) => typeof v === "string"),
-          ) as Record<string, string>}
+          baseQuery={baseQuery}
         />
       </section>
 
       {/* Ranking bar */}
-      <section>
+      <section className="hidden md:block">
         <h3 className="mb-2 font-display text-sm font-extrabold uppercase tracking-[0.12em] text-se-on-surface-variant">
           📊 구단별 최근 3년 원정 승률
         </h3>

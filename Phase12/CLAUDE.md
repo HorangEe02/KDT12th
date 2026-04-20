@@ -191,7 +191,7 @@ python3 scripts/export_to_json.py   # CSV → ../frontend/public/data/*.json
 
 ## 8. 현재 진행 Phase
 
-**Phase 6 (Next.js + Firebase App Hosting 마이그레이션 — 코드 완료)** — ✅ Session F 코드 완료 (2026-04-17) — 배포는 사용자 실행
+**Phase 6 (Next.js + Firebase App Hosting — 배포 완료 + 모바일 UX 정비)** — ✅ Live at https://my-web-app--mini12-310f5.asia-east1.hosted.app (2026-04-19) · 138/138 모바일 자동 스모크 PASS
 
 ### Phase 6 핸드오프 문서 (필독)
 - **전체 로드맵**: `docs/PHASE6_NEXTJS_MIGRATION.md` ⭐
@@ -360,9 +360,10 @@ firebase deploy --only firestore --project mini12-310f5           # 2분 (rules 
 상세 트러블슈팅·smoke test 명령: `docs/SESSION_F_DEPLOY_RUNBOOK.md`
 
 ### 배포 후 ToDo (사용자)
-- [ ] 배포 URL smoke test 6 routes + 4 API (runbook 6절)
-- [ ] `README.md` 의 URL 섹션을 실제 hosted URL 로 업데이트
-- [ ] 레거시 Streamlit Cloud Run 서비스 유지/삭제 결정
+- [x] 배포 URL smoke test 6 routes + 2 API (자동 · Playwright 138/138 PASS) (2026-04-19)
+- [x] `README.md` 의 URL 섹션을 실제 hosted URL 로 업데이트 (2026-04-19)
+- [ ] 실기기(아이폰/안드로이드) 노치·safe-area·키보드·BottomSheet 드래그 수동 확인
+- [x] 레거시 Streamlit Cloud Run 서비스 삭제 완료 (2026-04-19) — service + Artifact Registry 466MB + `gemini-api-key` secret 3종 전부 제거
 - [ ] 발표 녹화 (3분 데모 시나리오 `docs/DEMO_SCRIPT.md` 참조)
 
 ### 레거시 (유지 중)

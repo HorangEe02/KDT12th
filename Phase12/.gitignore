@@ -64,3 +64,12 @@ Thumbs.db
 .coverage
 htmlcov/
 scripts/node_modules/
+
+# Secret env files — any *.env
+*.env
+!.env.example
+
+# Personal/ad-hoc files (do not commit)
+KakaoTalk_Photo_*.jpeg
+Naver *.pdf
+QR_link.png

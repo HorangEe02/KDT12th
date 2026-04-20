@@ -85,6 +85,33 @@ export interface TeamStat {
   final_rank: number;
 }
 
+export interface PlayerStat {
+  name: string;
+  team: string;
+  position: "batter" | "pitcher";
+  games_played: number;
+  // 타자 전용
+  avg?: number;
+  hits?: number;
+  hr?: number;
+  rbi?: number;
+  sb?: number;
+  ops?: number;
+  // 투수 전용
+  era?: number;
+  wins?: number;
+  losses?: number;
+  so?: number;
+  whip?: number;
+  ip?: number;
+}
+
+export interface PlayerStatsFile {
+  season: number;
+  updated_at: string;
+  players: PlayerStat[];
+}
+
 /** public/data/poi/*.json 의 원본 스키마. */
 export interface POI {
   content_id: string;
@@ -142,6 +169,17 @@ export interface RouteAttempt {
   reason?: string;
 }
 
+export interface Waypoint {
+  lat: number;
+  lng: number;
+  name?: string;
+}
+
+export interface RouteLeg {
+  distance_m: number | null;
+  duration_sec: number | null;
+}
+
 export interface RouteResult {
   polyline: Array<[number, number]>; // [lat, lng] — Leaflet 친화
   distance_m: number | null;
@@ -151,6 +189,10 @@ export interface RouteResult {
   fallback: boolean; // source !== "kakao"
   attempts: RouteAttempt[];
   fetched_at: number;
+  /** 다구간 경유 시 legs — OSRM/Haversine 지원. Kakao 는 total 만. */
+  legs?: RouteLeg[];
+  /** 요청 당시 입력 경유지 echo. */
+  waypoints?: Waypoint[];
 }
 
 export interface Filters {

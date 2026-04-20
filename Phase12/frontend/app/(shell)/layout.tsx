@@ -1,6 +1,8 @@
 import { Suspense } from "react";
 import { TopNav } from "@/components/layout/top-nav";
 import { FilterSidebar } from "@/components/sidebar/filter-sidebar";
+import { MobileFilterSheet } from "@/components/sidebar/mobile-filter-sheet";
+import { MobileBottomNav } from "@/components/nav/mobile-bottom-nav";
 
 export default function ShellLayout({
   children,
@@ -16,10 +18,16 @@ export default function ShellLayout({
         <Suspense fallback={null}>
           <FilterSidebar />
         </Suspense>
-        <main className="min-w-0 flex-1 px-4 py-6 md:px-8 md:py-8">
+        <main className="min-w-0 flex-1 px-4 py-6 pb-28 md:px-8 md:py-8 md:pb-8">
           {children}
         </main>
       </div>
+      <Suspense fallback={null}>
+        <MobileFilterSheet />
+      </Suspense>
+      <Suspense fallback={null}>
+        <MobileBottomNav />
+      </Suspense>
     </>
   );
 }

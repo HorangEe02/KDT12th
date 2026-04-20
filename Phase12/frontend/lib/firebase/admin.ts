@@ -9,6 +9,7 @@ import "server-only";
 import fs from "node:fs";
 import path from "node:path";
 import { cert, getApps, initializeApp, applicationDefault, type App } from "firebase-admin/app";
+import { getAuth, type Auth } from "firebase-admin/auth";
 import { getFirestore, type Firestore } from "firebase-admin/firestore";
 import { getStorage, type Storage } from "firebase-admin/storage";
 
@@ -50,7 +51,7 @@ function initAdminApp(): App {
     return initializeApp({
       credential: applicationDefault(),
       projectId,
-      storageBucket: `${projectId}.appspot.com`,
+      storageBucket: `${projectId}.firebasestorage.app`,
     });
   }
 
@@ -64,7 +65,7 @@ function initAdminApp(): App {
       return initializeApp({
         credential: cert(serviceAccount),
         projectId,
-        storageBucket: `${projectId}.appspot.com`,
+        storageBucket: `${projectId}.firebasestorage.app`,
       });
     } catch {
       // fall through to ADC (will likely fail in local but catch at call-site)
@@ -74,7 +75,7 @@ function initAdminApp(): App {
   return initializeApp({
     credential: applicationDefault(),
     projectId,
-    storageBucket: `${projectId}.appspot.com`,
+    storageBucket: `${projectId}.firebasestorage.app`,
   });
 }
 
@@ -85,6 +86,15 @@ export function getAdminApp(): App {
 
 export function getAdminDb(): Firestore {
   return getFirestore(getAdminApp());
+}
+
+/** server-session 등에서 쓰는 별칭 — getAdminDb 와 동일 */
+export function getAdminFirestore(): Firestore {
+  return getFirestore(getAdminApp());
+}
+
+export function getAdminAuth(): Auth {
+  return getAuth(getAdminApp());
 }
 
 export function getAdminStorage(): Storage {

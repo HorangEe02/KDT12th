@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Stadium Editorial - Mobile Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#ffe16d",
+                        "surface-container": "#edeeef",
+                        "surface-container-low": "#f3f4f5",
+                        "secondary-fixed-dim": "#88d982",
+                        "tertiary-container": "#c9a900",
+                        "surface-container-highest": "#e1e3e4",
+                        "primary-fixed": "#d7e2ff",
+                        "on-surface": "#191c1d",
+                        "primary-container": "#002d62",
+                        "on-primary-container": "#7796d1",
+                        "tertiary": "#705d00",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-tertiary-fixed": "#221b00",
+                        "on-tertiary-fixed-variant": "#544600",
+                        "surface-dim": "#d9dadb",
+                        "on-surface-variant": "#43474f",
+                        "secondary-container": "#a0f399",
+                        "on-tertiary-container": "#4c3f00",
+                        "outline": "#747781",
+                        "background": "#f8f9fa",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#e9c400",
+                        "outline-variant": "#c4c6d1",
+                        "on-secondary-container": "#217128",
+                        "on-primary-fixed": "#001b3f",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#2e3132",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "primary": "#00193c",
+                        "inverse-primary": "#abc7ff",
+                        "primary-fixed-dim": "#abc7ff",
+                        "on-background": "#191c1d",
+                        "secondary": "#1b6d24",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e1e3e4",
+                        "on-secondary-fixed": "#002204",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#24467c",
+                        "surface-bright": "#f8f9fa",
+                        "surface-tint": "#3e5e95",
+                        "secondary-fixed": "#a3f69c",
+                        "on-secondary-fixed-variant": "#005312",
+                        "surface": "#f8f9fa"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "body": [
+                            "Manrope"
+                        ],
+                        "label": [
+                            "Plus Jakarta Sans"
+                        ]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body antialiased pb-24 md:pb-0">
+<!-- TopAppBar (Web & Mobile, adjusted for mobile preference but present structurally) -->
+<header class="sticky top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-none bg-slate-100 dark:bg-slate-800 hidden md:flex flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="text-blue-900 dark:text-blue-300 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors active:scale-95 duration-200 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-xl font-black text-blue-900 dark:text-blue-50 uppercase tracking-widest font-plus-jakarta-sans font-bold tracking-tight">The Stadium Editorial</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-500 dark:text-slate-400 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors active:scale-95 duration-200 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="text-slate-500 dark:text-slate-400 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors active:scale-95 duration-200 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-variant overflow-hidden">
+<img alt="Admin User Profile" class="w-full h-full object-cover" data-alt="Close up portrait of a young professional wearing glasses in soft natural lighting against a neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWvGIUMhQDA_91mPWVUvhtNV2jk-kb6-k1IcVeX9fEwmBn2CKovex5803Fe7ILsvRNvyKv-RTkzl5iYwcKsB5szVbkNAZayPigHVrg-dTqrpf2krWqgu--_W5OSLNfu4IbkNl6iaHiptmD_FvjXtooPk5WjrnNeSwK08C2ukUycXPdD8vSLk5A5agzDkrr50ahmke5Ak5F2vqb8i1GjgShTf1IHP2Yc_WWNE0OhGjGrUKJc4sn1WE3QRxO2F-eoFWzEmK6F3IkcE8"/>
+</div>
+</div>
+</header>
+<!-- Mobile Header -->
+<header class="md:hidden sticky top-0 w-full z-40 bg-surface/80 backdrop-blur-xl px-4 py-4 flex justify-between items-center bg-slate-100 dark:bg-slate-800 shadow-none">
+<h1 class="font-headline font-extrabold text-xl text-primary tracking-tight">Dashboard</h1>
+<div class="w-8 h-8 rounded-full bg-surface-variant overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.06)]">
+<img alt="Admin User Profile" class="w-full h-full object-cover" data-alt="Close up portrait of a young professional wearing glasses in soft natural lighting against a neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdHRQYn8q0MlsqFgomq-d_JYX7L1Y8qVgYMQcx3s3tFE_OZ1mj1V4ZUA-ZRrN_O3vCWUt8SC0ZK0BTYCT9kF6It6W0_a84C1hRv-7iTDnQ_afwGPE7tjTZpY34PXT1CFIt_S-4UpYqG5hNWyJQRijo6jIm99FIAECygLBEmxRwNz8_CzruH9lKHVIanm_xgLHlclCxphiywWirM_7_Og2BjGQgF_OE7wv15_8-FCg-q6KDhUOGfEONJKYdmrGfMCVs1ip-y5k90X0"/>
+</div>
+</header>
+<main class="px-4 py-6 space-y-8 max-w-7xl mx-auto">
+<!-- Welcome Banner -->
+<section class="rounded-xl bg-surface-container-lowest p-6 relative overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.03)] border-l-4 border-secondary-fixed">
+<div class="relative z-10">
+<p class="font-label text-sm uppercase tracking-wider text-on-surface-variant font-bold mb-1">Overview</p>
+<h2 class="font-headline text-2xl font-bold text-primary mb-2">Good morning, Curator.</h2>
+<p class="font-body text-base text-on-surface-variant max-w-md">The season is in full swing. Here is a snapshot of current engagements.</p>
+</div>
+<!-- Decorative gradient blur -->
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-primary-fixed opacity-50 blur-3xl rounded-full pointer-events-none"></div>
+</section>
+<!-- Key Metrics (Bento Grid Style) -->
+<section class="grid grid-cols-2 gap-4">
+<!-- Metric 1 -->
+<div class="col-span-2 sm:col-span-1 rounded-xl bg-gradient-to-br from-primary to-primary-container p-5 relative overflow-hidden shadow-[0_8px_32px_rgba(0,25,60,0.15)] text-on-primary">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 rounded-lg bg-surface/10 backdrop-blur-md">
+<span class="material-symbols-outlined text-on-primary">group</span>
+</div>
+<span class="font-label text-xs font-bold bg-secondary/20 text-secondary-fixed-dim px-2 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> 12%
+                    </span>
+</div>
+<p class="font-body text-sm opacity-80 mb-1">Total Users</p>
+<p class="font-headline text-3xl font-bold">24,592</p>
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-surface-bright opacity-5 blur-xl rounded-full pointer-events-none"></div>
+</div>
+<!-- Metric 2 -->
+<div class="rounded-xl bg-surface-container-lowest p-5 relative overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.03)] border-l-4 border-secondary-fixed">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 rounded-lg bg-surface-container-low text-primary">
+<span class="material-symbols-outlined">flight_takeoff</span>
+</div>
+</div>
+<p class="font-body text-sm text-on-surface-variant mb-1">Active Trips</p>
+<p class="font-headline text-2xl font-bold text-on-surface">1,204</p>
+</div>
+<!-- Metric 3 -->
+<div class="rounded-xl bg-surface-container-lowest p-5 relative overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.03)]">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 rounded-lg bg-surface-container-low text-primary">
+<span class="material-symbols-outlined">payments</span>
+</div>
+</div>
+<p class="font-body text-sm text-on-surface-variant mb-1">MRR</p>
+<p class="font-headline text-2xl font-bold text-on-surface">$84.2k</p>
+</div>
+</section>
+<!-- Chart Section (Simplified visual representation for HTML/CSS) -->
+<section class="rounded-xl bg-surface-container-lowest p-5 shadow-[0_4px_24px_rgba(0,0,0,0.03)]">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline text-lg font-bold text-on-surface">Engagement Growth</h3>
+<button class="text-primary hover:bg-surface-container-low p-1.5 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-xl">more_horiz</span>
+</button>
+</div>
+<!-- Abstract Chart Representation -->
+<div class="relative h-48 w-full mt-4">
+<!-- Grid Lines -->
+<div class="absolute inset-0 flex flex-col justify-between">
+<div class="w-full h-px bg-outline-variant opacity-20"></div>
+<div class="w-full h-px bg-outline-variant opacity-20"></div>
+<div class="w-full h-px bg-outline-variant opacity-20"></div>
+<div class="w-full h-px bg-outline-variant opacity-20"></div>
+</div>
+<!-- Bars (Asymmetric design) -->
+<div class="absolute inset-x-0 bottom-0 flex justify-between items-end px-2 h-full gap-2">
+<div class="w-full bg-surface-container-highest rounded-t-sm h-[30%] relative group">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Mon</div>
+</div>
+<div class="w-full bg-primary/40 rounded-t-sm h-[45%] relative group">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Tue</div>
+</div>
+<div class="w-full bg-surface-container-highest rounded-t-sm h-[25%] relative group"></div>
+<div class="w-full bg-primary/60 rounded-t-sm h-[60%] relative group"></div>
+<div class="w-full bg-surface-container-highest rounded-t-sm h-[40%] relative group"></div>
+<div class="w-full bg-primary/80 rounded-t-sm h-[75%] relative group"></div>
+<div class="w-full bg-gradient-to-t from-primary to-primary-container rounded-t-sm h-[90%] relative group">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Sun</div>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center mt-3 text-xs font-label text-on-surface-variant font-medium px-2">
+<span>M</span>
+<span>T</span>
+<span>W</span>
+<span>T</span>
+<span>F</span>
+<span>S</span>
+<span>S</span>
+</div>
+</section>
+<!-- Live Feed List -->
+<section class="bg-surface-container-low rounded-xl p-2">
+<div class="px-4 pt-4 pb-2 flex justify-between items-center">
+<h3 class="font-headline text-lg font-bold text-on-surface">Live Feed</h3>
+<span class="font-label text-xs uppercase tracking-wider text-secondary flex items-center gap-1 font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span> Live
+                </span>
+</div>
+<div class="flex flex-col gap-2 mt-2">
+<!-- Feed Item 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-lg flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">confirmation_number</span>
+</div>
+<div class="flex-1">
+<p class="font-body text-sm text-on-surface"><span class="font-semibold">Alex M.</span> booked VIP tickets for LG Twins vs. Doosan Bears.</p>
+<p class="font-body text-xs text-on-surface-variant mt-1">2 mins ago</p>
+</div>
+</div>
+<!-- Feed Item 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-lg flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">hotel</span>
+</div>
+<div class="flex-1">
+<p class="font-body text-sm text-on-surface"><span class="font-semibold">Sarah K.</span> confirmed itinerary at Shilla Hotel.</p>
+<p class="font-body text-xs text-on-surface-variant mt-1">15 mins ago</p>
+</div>
+</div>
+<!-- Feed Item 3 -->
+<div class="bg-surface-container-lowest p-4 rounded-lg flex items-start gap-4 opacity-75">
+<div class="w-10 h-10 rounded-full bg-surface-variant text-on-surface-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+</div>
+<div class="flex-1">
+<p class="font-body text-sm text-on-surface">New user registration: <span class="font-semibold">J. Park</span>.</p>
+<p class="font-body text-xs text-on-surface-variant mt-1">1 hour ago</p>
+</div>
+</div>
+</div>
+<button class="w-full py-3 mt-2 text-center font-label text-sm font-bold text-primary hover:bg-surface-container-highest transition-colors rounded-lg">
+                View All Activity
+            </button>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-3xl bg-slate-50/90 dark:bg-slate-950/90 backdrop-blur-lg bg-slate-200/20 dark:bg-slate-800/20 shadow-[0_-4px_24px_rgba(0,0,0,0.06)] flex justify-around items-center px-2 pb-6 pt-3 text-[10px] font-manrope font-semibold uppercase tracking-tighter">
+<!-- Dashboard (Active) -->
+<a class="flex flex-col items-center justify-center bg-green-100 dark:bg-green-900/30 text-green-900 dark:text-green-100 rounded-full px-5 py-2 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span>Dashboard</span>
+</a>
+<!-- Bookings (Inactive) -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-700 dark:hover:text-blue-200 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined mb-1">explore</span>
+<span>Bookings</span>
+</a>
+<!-- Analytics (Inactive) -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-700 dark:hover:text-blue-200 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined mb-1">leaderboard</span>
+<span>Analytics</span>
+</a>
+<!-- Settings (Inactive) -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-700 dark:hover:text-blue-200 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined mb-1">admin_panel_settings</span>
+<span>Settings</span>
+</a>
+</nav>
+</body></html>

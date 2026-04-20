@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login - The Stadium Editorial</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800;900&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary": "#ffffff",
+                      "on-primary-container": "#7796d1",
+                      "on-primary-fixed-variant": "#24467c",
+                      "inverse-primary": "#abc7ff",
+                      "secondary-fixed": "#a3f69c",
+                      "on-tertiary-container": "#4c3f00",
+                      "outline": "#747781",
+                      "on-secondary-fixed": "#002204",
+                      "surface-variant": "#e1e3e4",
+                      "on-tertiary-fixed-variant": "#544600",
+                      "tertiary": "#705d00",
+                      "secondary-fixed-dim": "#88d982",
+                      "primary": "#00193c",
+                      "surface-container-low": "#f3f4f5",
+                      "surface-container-high": "#e7e8e9",
+                      "on-primary": "#ffffff",
+                      "surface-dim": "#d9dadb",
+                      "primary-container": "#002d62",
+                      "surface-container-highest": "#e1e3e4",
+                      "on-tertiary-fixed": "#221b00",
+                      "on-surface-variant": "#43474f",
+                      "inverse-surface": "#2e3132",
+                      "surface": "#f8f9fa",
+                      "primary-fixed-dim": "#abc7ff",
+                      "primary-fixed": "#d7e2ff",
+                      "error-container": "#ffdad6",
+                      "on-background": "#191c1d",
+                      "secondary": "#1b6d24",
+                      "on-secondary-container": "#217128",
+                      "secondary-container": "#a0f399",
+                      "on-secondary-fixed-variant": "#005312",
+                      "tertiary-fixed": "#ffe16d",
+                      "on-surface": "#191c1d",
+                      "inverse-on-surface": "#f0f1f2",
+                      "surface-tint": "#3e5e95",
+                      "on-error": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed": "#001b3f",
+                      "background": "#f8f9fa",
+                      "surface-bright": "#f8f9fa",
+                      "on-tertiary": "#ffffff",
+                      "surface-container": "#edeeef",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-container": "#c9a900",
+                      "tertiary-fixed-dim": "#e9c400",
+                      "outline-variant": "#c4c6d1",
+                      "on-error-container": "#93000a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {},
+              "fontFamily": {
+                      "headline": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body": [
+                              "Manrope"
+                      ],
+                      "label": [
+                              "Plus Jakarta Sans"
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen flex items-center justify-center relative overflow-hidden">
+<!-- Background Image Layer -->
+<div class="absolute inset-0 z-0">
+<img alt="Stadium background" class="w-full h-full object-cover object-center opacity-40" data-alt="Wide angle shot of a pristine baseball stadium under stadium lights at dusk, dramatic shadows, premium editorial photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG2R-lap7_HK0NarNNdVXRug2w8CnysOTDUn2kdV7qNLCtOHBbZKX0WM9snMJWQKlZhLIcrLoM-JsVIJRtFNw_sjXma6PJSKXhdtzszbw3eYAFjDN4XNi5wjt--zTLxQxeelfu5qQ2c7cGcVlkKtt6t0G-Rq72DsXS_0cwTFTn1-lMltBfJ7PCjdkjx2-yVyf4tdP8KoxYkI915d7Nvy-VMDaO3e3va0MxtqJolUHDDMeZVY6ih_h07YxJNeBA2zncfYiKlCl5bFw"/>
+<div class="absolute inset-0 bg-gradient-to-br from-primary/90 to-primary-container/80 backdrop-blur-sm mix-blend-multiply"></div>
+</div>
+<!-- Main Container -->
+<main class="relative z-10 w-full max-w-5xl p-6 md:p-12 flex flex-col md:flex-row items-center gap-12">
+<!-- Brand/Hero Section -->
+<div class="flex-1 text-on-primary flex flex-col justify-center gap-6 hidden md:flex">
+<h1 class="font-headline text-5xl md:text-7xl font-black tracking-tighter leading-tight drop-shadow-2xl">
+                The <br/> Stadium <br/> Editorial
+            </h1>
+<p class="font-body text-lg md:text-xl text-primary-fixed-dim max-w-md font-medium leading-relaxed">
+                Curating your ultimate away game experience. High-end itineraries, seamless ticketing, and unparalleled stadium insights.
+            </p>
+</div>
+<!-- Login Form Container -->
+<div class="w-full max-w-md bg-surface-container-lowest/95 backdrop-blur-xl rounded-[2rem] p-8 md:p-10 shadow-[0_24px_48px_-12px_rgba(0,25,60,0.5)] border border-surface-variant/30">
+<!-- Mobile Brand Title -->
+<div class="md:hidden mb-8 text-center">
+<h1 class="font-headline text-3xl font-black tracking-tighter text-primary">The Stadium Editorial</h1>
+</div>
+<div class="mb-8 text-center">
+<h2 class="font-headline text-2xl font-bold text-primary mb-2">Welcome Back</h2>
+<p class="font-body text-sm text-on-surface-variant">Sign in to curate your next away trip.</p>
+</div>
+<form class="space-y-5">
+<!-- Email Field -->
+<div>
+<label class="block font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2 ml-1" for="email">Email</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline-variant text-[20px]">mail</span>
+<input class="w-full bg-surface-container-low border-none rounded-xl py-3.5 pl-12 pr-4 text-on-surface font-body text-sm focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all" id="email" placeholder="name@example.com" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div>
+<label class="block font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2 ml-1" for="password">Password</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline-variant text-[20px]">lock</span>
+<input class="w-full bg-surface-container-low border-none rounded-xl py-3.5 pl-12 pr-4 text-on-surface font-body text-sm focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all" id="password" placeholder="••••••••" type="password"/>
+</div>
+<div class="flex justify-end mt-2">
+<a class="font-body text-xs font-semibold text-primary hover:text-secondary transition-colors" href="#">Forgot Password?</a>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-bold text-sm py-4 rounded-xl shadow-[0_8px_16px_-4px_rgba(0,25,60,0.3)] hover:shadow-[0_12px_24px_-4px_rgba(0,25,60,0.4)] hover:-translate-y-0.5 transition-all duration-300" type="submit">
+                    Sign In
+                </button>
+</form>
+<div class="mt-8">
+<div class="relative flex items-center mb-6">
+<div class="flex-grow border-t border-surface-variant/50"></div>
+<span class="flex-shrink-0 mx-4 font-body text-xs text-outline font-medium uppercase tracking-wider">Or continue with</span>
+<div class="flex-grow border-t border-surface-variant/50"></div>
+</div>
+<!-- Social Buttons -->
+<div class="space-y-3">
+<button class="w-full flex items-center justify-center gap-3 bg-[#FEE500] hover:bg-[#E5CE00] text-[#000000] font-body font-semibold text-sm py-3.5 rounded-xl transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">chat</span>
+                        Continue with Kakao
+                    </button>
+<button class="w-full flex items-center justify-center gap-3 bg-surface hover:bg-surface-container-low text-on-surface font-body font-semibold text-sm py-3.5 rounded-xl border border-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+                        Continue with Google
+                    </button>
+</div>
+</div>
+<div class="mt-8 text-center">
+<p class="font-body text-sm text-on-surface-variant">
+                    Don't have an account? 
+                    <a class="font-headline font-bold text-primary hover:text-secondary transition-colors ml-1" href="#">Sign Up</a>
+</p>
+</div>
+</div>
+</main>
+</body></html>

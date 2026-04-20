@@ -21,7 +21,7 @@ const firebaseConfig = {
     process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID ?? "mini12-310f5",
   storageBucket:
     process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET ??
-    "mini12-310f5.appspot.com",
+    "mini12-310f5.firebasestorage.app",
   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };

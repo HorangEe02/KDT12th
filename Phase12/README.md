@@ -8,7 +8,7 @@ KBO 10개 구단, 전국 8개 도시, 연간 720경기 — 원정 응원러를 �
 
 ## 🚀 Phase 6 — Live (Next.js 16 + Firebase App Hosting)
 
-**배포 완료** (2026-04-17) — 전 세션 smoke test 통과 ✅
+**배포 완료** (2026-04-19) — 모바일 UX 정비 8 이슈 + 실기기 시뮬 138/138 통과 ✅
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -32,18 +32,19 @@ KBO 10개 구단, 전국 8개 도시, 연간 720경기 — 원정 응원러를 �
 | 서비스 | URL | 상태 |
 |---|---|---|
 | **Next.js (Phase 6 · 현재)** | https://my-web-app--mini12-310f5.asia-east1.hosted.app | ✅ Live |
-| 레거시 Streamlit (Phase 5a · 참고용) | https://away-game-companion-262552815882.asia-northeast3.run.app | 🟡 Legacy |
+| ~~레거시 Streamlit (Phase 5a)~~ | ~~away-game-companion.asia-northeast3.run.app~~ | 🗑️ 2026-04-19 삭제 (Cloud Run · Artifact Registry · gemini-api-key) |
 
-### ✅ 배포 smoke test 결과 (2026-04-17)
+### ✅ 배포 smoke test 결과 (2026-04-19)
 
 | 엔드포인트 | 응답 | 확인 사항 |
 |---|---|---|
 | 6 페이지 (`/`, `/matches`, `/map`, `/places`, `/ai`, `/badges`) | 200 OK | SSR 렌더 · Hero · Sidebar 정상 |
-| `GET /api/predict?team=LG&opponent=KT` | `{"prob":0,"source":"logreg"}` | Python 모델 계수 TS 포팅 일치 |
-| `POST /api/route` 잠실→수원 | `source: "osrm"`, 33.5km, 537 polyline pts | Kakao 401 → OSRM 자동 폴백 |
-| `POST /api/chat` (Gemini) | Tool `predict_win_rate` 호출 + 텍스트 스트리밍 | "LG가 KT를 상대로 승리할 확률은 0%입니다." |
+| `GET /api/predict?team=LG&opponent=KT` | `{"prob":0.9848,"source":"logreg"}` | Python 모델 계수 TS 포팅 일치 |
+| `GET /api/route` (3-tier orchestrator) | `source: "haversine"`, fallback 정상 | Kakao 권한 없음 · OSRM 폴백 확인 |
+| `POST /api/chat` (Gemini) | Tool `predict_win_rate` 호출 + 텍스트 스트리밍 | "LG vs KT 승률" 자동 계산 답변 |
 | `POST /api/chat` (🎬 demoMode) | Mock 시나리오 "광주 가족 원정" 즉시 스트리밍 | LLM 호출 없이 사전 녹화 응답 |
 | `/logos/LG.svg`, `/data/schedule.json` | 5.6KB · 133KB | 정적 에셋 서빙 |
+| **모바일 자동 테스트** (Playwright · iPhone SE/14 Pro · iPad) | **138/138 PASS** | 6 라우트 × 3 뷰포트 × 8 체크 (overflow·viewport meta·BottomNav·safe-area·LoadMoreButton) |
 
 ### 🗺️ 배포 설정
 
@@ -54,7 +55,7 @@ KBO 10개 구단, 전국 8개 도시, 연간 720경기 — 원정 응원러를 �
 | Primary Region | `asia-east1` (Taiwan) |
 | GitHub Source | [HorangEe02/KNU_KDT_12th](https://github.com/HorangEe02/KNU_KDT_12th) · main branch |
 | Root Directory | `/Phase12/frontend` |
-| Secrets (Secret Manager) | `GEMINI_API_KEY` · `KAKAO_REST_API_KEY` · `WEATHER_API_KEY_ENCODED` · `TOUR_API_KEY_ENCODED` |
+| Secrets (Secret Manager) | `GEMINI_API_KEY` · `KAKAO_REST_API_KEY` · `WEATHER_API_KEY_ENCODED` · `TOUR_API_KEY_ENCODED` · `NEXT_PUBLIC_FIREBASE_API_KEY` · `NEXT_PUBLIC_FIREBASE_APP_ID` · `NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID` |
 | Runtime | Node.js 22 · Next.js 16.2.4 · React 19.2.4 |
 | Auto rollout | 사용 설정됨 (main 브랜치 push 시 자동 재배포) |
 
@@ -65,6 +66,7 @@ KBO 10개 구단, 전국 8개 도시, 연간 720경기 — 원정 응원러를 �
 - **/ai**: Gemini 2.5 Flash Lite 스트리밍 챗봇 + 6 tool calling + Multi-Agent + 🎬 Mock 시연
 - **/badges**: Stadium Tour 10 구장 체크 + Firestore 이중화 (graceful localStorage fallback)
 - **공유**: URL 직렬화 primary + Firestore 단축 링크 optional
+- **모바일 최적화** (2026-04-19): viewport meta · safe-area-inset · 44px 터치 타깃 · BottomSheet snap 동적화 · POI 페이지네이션 · iPad 반응형 사이드바 · AI 전용 모바일 뷰
 
 **핵심 설계 문서** (모두 `docs/` 하위):
 - `docs/PHASE6_NEXTJS_MIGRATION.md` — 6 세션 마이그레이션 로드맵

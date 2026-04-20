@@ -13,6 +13,9 @@ import {
 import { predictWinRate } from "@/lib/predict";
 import { requestRoute } from "@/lib/api/route";
 import { getForecast } from "@/lib/api/weather";
+import { getTeamRankings } from "@/lib/api/rankings";
+import { getPlayerStats } from "@/lib/api/player-stats";
+import { getLiveScore } from "@/lib/api/live-score";
 import { searchTips } from "@/lib/ai/rag";
 import { ORIGIN_PRESETS } from "@/lib/map/origins";
 
@@ -45,7 +48,8 @@ async function stadiumByShort(short: string) {
 export const searchGame = tool({
   description:
     "특정 팀의 원정 경기를 날짜 범위로 검색합니다. 2026 시즌 실제 KBO 데이터 (종료 경기는 score/status/pitchers 포함). " +
-    "'다음 원정', '이번 주말 경기', '최근 경기 결과', 'KIA 지난주 경기' 같은 질문 시 호출.",
+    "'다음 원정', '이번 주말 경기', '최근 경기 결과', 'KIA 지난주 경기' 같은 질문 시 호출. " +
+    "status 파라미터로 과거/미래/전체 필터 가능: 'scheduled'=예정 경기만, 'finished'=종료 경기만 (결과 조회용), 'all'=모두 (기본).",
   inputSchema: z.object({
     team: z
       .string()
@@ -57,8 +61,15 @@ export const searchGame = tool({
       .string()
       .optional()
       .describe("YYYY-MM-DD. 생략 시 start+7일"),
+    status: z
+      .enum(["scheduled", "finished", "all"])
+      .optional()
+      .describe(
+        "경기 상태 필터 — scheduled: 예정 경기만 (앞으로 원정 일정 질문), " +
+          "finished: 종료 경기만 (최근 결과·지난 경기 질문), all: 모두. 기본 all.",
+      ),
   }),
-  execute: async ({ team, startDate, endDate }) => {
+  execute: async ({ team, startDate, endDate, status = "all" }) => {
     const today = new Date().toISOString().slice(0, 10);
     const start = startDate ?? today;
     const end =
@@ -66,7 +77,13 @@ export const searchGame = tool({
       new Date(new Date(start).getTime() + 7 * 24 * 3600 * 1000)
         .toISOString()
         .slice(0, 10);
-    const games = await filterAwayGames(team, start, end);
+    const allGames = await filterAwayGames(team, start, end);
+    const games =
+      status === "scheduled"
+        ? allGames.filter((g) => (g.status ?? "SCHEDULED") === "SCHEDULED")
+        : status === "finished"
+          ? allGames.filter((g) => g.status === "FINISHED")
+          : allGames;
     const recent = games.slice(0, 8).map((g) => ({
       game_id: g.game_id,
       date: g.date,
@@ -104,10 +121,23 @@ export const searchGame = tool({
       else if (my < opp) summary.losses++;
       else summary.draws++;
     }
+    // 0건일 때: AI 가 그대로 전달할 수 있도록 명시적 안내 메시지 포함.
+    // (단순 빈 배열보다 자연어 힌트가 있으면 LLM 답변이 일관됨.)
+    const statusWord =
+      status === "scheduled"
+        ? "예정된 원정 경기"
+        : status === "finished"
+          ? "종료된 원정 경기"
+          : "원정 경기";
+    const message =
+      games.length === 0
+        ? `${team} 팀의 ${start} ~ ${end} 기간 ${statusWord}(이)가 없습니다.`
+        : undefined;
     return {
       count: games.length,
       summary,
       games: recent,
+      message,
     };
   },
 });
@@ -225,6 +255,93 @@ export const searchKnowledge = tool({
   },
 });
 
+export const getTeamRankingTool = tool({
+  description:
+    "현재 KBO 시즌 팀 순위 조회. '지금 순위', '1위 팀 누구', '우리 팀 몇 위', " +
+    "'LG 순위' 같은 질문 시 호출. team 생략 시 10팀 전체 순위, 지정 시 해당 팀만 반환. " +
+    "반환 데이터는 최신 시즌(year) 기준 최종 순위·승패·승률·홈/원정 승률 포함.",
+  inputSchema: z.object({
+    team: z
+      .string()
+      .optional()
+      .describe(
+        "특정 팀만 조회 시 약칭 (LG, KT, SSG, 두산, KIA, NC, 삼성, 롯데, 한화, 키움). 생략 시 전체 10팀.",
+      ),
+  }),
+  execute: async ({ team }) => {
+    const result = await getTeamRankings(team);
+    return {
+      season: result.season,
+      source: result.source,
+      count: result.rankings.length,
+      rankings: result.rankings,
+      note: result.note,
+    };
+  },
+});
+
+export const getPlayerStatsTool = tool({
+  description:
+    "KBO 선수 시즌 스탯 조회. '이정후 타율', '김도영 홈런', '삼성 타자 순위', " +
+    "'LG 선발 투수 방어율' 같은 질문 시 호출. " +
+    "필터: team(약칭 또는 한국명), name(이름 부분 일치), position(batter/pitcher). " +
+    "타자는 avg/hits/hr/rbi/sb/ops, 투수는 era/wins/losses/so/whip/ip 반환. " +
+    "2026 시즌 기준 샘플 데이터 (10팀 × 5명 = 50인).",
+  inputSchema: z.object({
+    team: z
+      .string()
+      .optional()
+      .describe("팀 약칭(LG, 삼성 등) 또는 한국명. 생략 시 전체 팀."),
+    name: z
+      .string()
+      .optional()
+      .describe("선수 이름 부분 일치 검색 (예: '이정후', '김도영')."),
+    position: z
+      .enum(["batter", "pitcher"])
+      .optional()
+      .describe("포지션 필터 — batter: 타자, pitcher: 투수."),
+  }),
+  execute: async ({ team, name, position }) => {
+    const result = await getPlayerStats({ team, name, position });
+    return {
+      season: result.season,
+      count: result.count,
+      players: result.players,
+      note: result.note,
+    };
+  },
+});
+
+export const getLiveScoreTool = tool({
+  description:
+    "오늘(또는 지정 날짜) 전 KBO 경기 스코어보드 조회. " +
+    "'오늘 경기 어떻게 됐어?', '지금 삼성 경기 점수?', '어제 KBO 결과' 같은 질문 시 호출. " +
+    "반환: 날짜별 전 경기 + 상태(SCHEDULED/IN_PROGRESS/FINISHED) + 스코어 + 현재 이닝. " +
+    "search_game 은 팀 기준 원정 경기만, 이 도구는 리그 전체 일일 현황이 핵심.",
+  inputSchema: z.object({
+    date: z
+      .string()
+      .optional()
+      .describe("YYYY-MM-DD 형식. 생략 시 오늘."),
+    team: z
+      .string()
+      .optional()
+      .describe(
+        "특정 팀 참여 경기만 (home/away 양쪽 모두). 약칭·한국명 모두 허용.",
+      ),
+  }),
+  execute: async ({ date, team }) => {
+    const result = await getLiveScore({ date, team });
+    return {
+      date: result.date,
+      count: result.count,
+      summary: result.summary,
+      games: result.games,
+      note: result.note,
+    };
+  },
+});
+
 /** 모든 도구를 한 번에 주입하기 위한 번들. */
 export const ALL_TOOLS = {
   search_game: searchGame,
@@ -233,4 +350,7 @@ export const ALL_TOOLS = {
   find_places: findPlaces,
   get_route: getRoute,
   search_knowledge: searchKnowledge,
+  get_team_ranking: getTeamRankingTool,
+  get_player_stats: getPlayerStatsTool,
+  get_live_score: getLiveScoreTool,
 } as const;

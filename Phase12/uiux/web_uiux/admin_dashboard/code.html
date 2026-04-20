@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Stadium Editorial - Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#7796d1",
+                        "on-primary-fixed-variant": "#24467c",
+                        "inverse-primary": "#abc7ff",
+                        "secondary-fixed": "#a3f69c",
+                        "on-tertiary-container": "#4c3f00",
+                        "outline": "#747781",
+                        "on-secondary-fixed": "#002204",
+                        "surface-variant": "#e1e3e4",
+                        "on-tertiary-fixed-variant": "#544600",
+                        "tertiary": "#705d00",
+                        "secondary-fixed-dim": "#88d982",
+                        "primary": "#00193c",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#d9dadb",
+                        "primary-container": "#002d62",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-tertiary-fixed": "#221b00",
+                        "on-surface-variant": "#43474f",
+                        "inverse-surface": "#2e3132",
+                        "surface": "#f8f9fa",
+                        "primary-fixed-dim": "#abc7ff",
+                        "primary-fixed": "#d7e2ff",
+                        "error-container": "#ffdad6",
+                        "on-background": "#191c1d",
+                        "secondary": "#1b6d24",
+                        "on-secondary-container": "#217128",
+                        "secondary-container": "#a0f399",
+                        "on-secondary-fixed-variant": "#005312",
+                        "tertiary-fixed": "#ffe16d",
+                        "on-surface": "#191c1d",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-tint": "#3e5e95",
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#001b3f",
+                        "background": "#f8f9fa",
+                        "surface-bright": "#f8f9fa",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#edeeef",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#c9a900",
+                        "tertiary-fixed-dim": "#e9c400",
+                        "outline-variant": "#c4c6d1",
+                        "on-error-container": "#93000a"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #f8f9fa; color: #191c1d; }
+        h1, h2, h3, h4, h5, h6, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .material-symbols-outlined.fill { font-variation-settings: 'FILL' 1; }
+        
+        /* Custom Scrollbar for a cleaner look */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #c4c6d1; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #747781; }
+    </style>
+</head>
+<body class="flex min-h-screen bg-surface overflow-x-hidden">
+<!-- TopAppBar (Mobile Only - Replaced by SideNav on Desktop) -->
+<header class="md:hidden bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-md text-[#00193c] dark:text-blue-200 font-['Plus_Jakarta_Sans'] font-bold tracking-tight docked full-width top-0 z-50 flex justify-between items-center w-full px-6 py-4 shadow-sm dark:shadow-none fixed">
+<div class="text-xl font-black text-[#00193c] dark:text-white tracking-tighter">The Stadium Editorial</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined hover:text-[#1b6d24] transition-colors active:scale-95 cursor-pointer">notifications</span>
+<span class="material-symbols-outlined hover:text-[#1b6d24] transition-colors active:scale-95 cursor-pointer">account_circle</span>
+</div>
+</header>
+<!-- SideNavBar (Desktop) -->
+<aside class="bg-slate-100 dark:bg-slate-950 text-[#00193c] dark:text-blue-400 font-['Manrope'] text-sm font-semibold h-screen w-64 fixed left-0 top-0 hidden md:flex flex-col gap-4 p-6 border-r border-transparent z-40 bg-surface-container-low">
+<div class="mb-8">
+<div class="text-lg font-bold text-[#00193c] dark:text-white font-headline tracking-tight mb-6">The Stadium Editorial</div>
+<div class="flex items-center gap-3 p-3 bg-surface-container-lowest rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.02)]">
+<div class="w-10 h-10 rounded-full bg-primary-fixed-dim flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined">admin_panel_settings</span>
+</div>
+<div>
+<div class="text-sm font-bold text-on-surface">Admin Portal</div>
+<div class="text-xs text-on-surface-variant font-medium">System Oversight</div>
+</div>
+</div>
+</div>
+<nav class="flex flex-col gap-2 flex-grow">
+<!-- Active Tab: Dashboard -->
+<a class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-900 text-[#00193c] dark:text-blue-400 rounded-lg shadow-sm font-headline font-bold" href="#">
+<span class="material-symbols-outlined fill">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:translate-x-1 transition-transform cursor-pointer rounded-lg font-medium" href="#">
+<span class="material-symbols-outlined">group</span>
+<span>User Management</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:translate-x-1 transition-transform cursor-pointer rounded-lg font-medium" href="#">
+<span class="material-symbols-outlined">stadium</span>
+<span>Stadium Stats</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:translate-x-1 transition-transform cursor-pointer rounded-lg font-medium" href="#">
+<span class="material-symbols-outlined">smart_toy</span>
+<span>AI Analytics</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 border-t-0 relative before:absolute before:top-0 before:left-4 before:right-4 before:h-px before:bg-outline-variant/15">
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl py-3 px-4 font-headline font-bold flex items-center justify-center gap-2 hover:shadow-[0_4px_20px_rgba(0,25,60,0.15)] transition-all active:scale-95">
+<span class="material-symbols-outlined text-[20px]">description</span>
+<span>Generate Report</span>
+</button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 pt-20 md:pt-0 p-6 lg:p-10 min-h-screen bg-surface flex flex-col gap-8">
+<!-- Header -->
+<header class="flex flex-col md:flex-row md:items-end justify-between gap-4 hidden md:flex mb-2">
+<div>
+<h1 class="font-headline text-3xl font-extrabold text-on-surface tracking-tight">Overview</h1>
+<p class="text-on-surface-variant font-medium mt-1">Platform performance metrics and live activity.</p>
+</div>
+<div class="flex gap-3">
+<button class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors shadow-[0_2px_10px_rgba(0,0,0,0.02)] relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-secondary rounded-full"></span>
+</button>
+</div>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Summary Card 1: Total Users (Hero Card) -->
+<div class="col-span-1 md:col-span-2 lg:col-span-2 bg-surface-container-lowest rounded-[1.5rem] p-6 lg:p-8 flex flex-col justify-between relative overflow-hidden group">
+<!-- Subtle background decorative element -->
+<div class="absolute -right-10 -top-10 w-48 h-48 bg-primary-fixed/30 rounded-full blur-3xl group-hover:bg-primary-fixed/50 transition-colors duration-500"></div>
+<div class="relative z-10 flex justify-between items-start mb-8">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-[20px]">group</span>
+<h2 class="font-headline font-bold text-on-surface-variant text-sm uppercase tracking-wider">Total Users</h2>
+</div>
+<div class="font-headline text-5xl font-black text-on-surface tracking-tighter">142,890</div>
+</div>
+<div class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full flex items-center gap-1 font-bold text-sm">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+                        +12.5%
+                    </div>
+</div>
+<div class="relative z-10 mt-auto">
+<div class="h-16 flex items-end gap-1 opacity-80">
+<!-- Simulated miniature bar chart -->
+<div class="w-full bg-primary-fixed rounded-t-sm h-[30%]"></div>
+<div class="w-full bg-primary-fixed rounded-t-sm h-[45%]"></div>
+<div class="w-full bg-primary-fixed rounded-t-sm h-[40%]"></div>
+<div class="w-full bg-primary-fixed rounded-t-sm h-[60%]"></div>
+<div class="w-full bg-primary-fixed rounded-t-sm h-[55%]"></div>
+<div class="w-full bg-primary-fixed rounded-t-sm h-[75%]"></div>
+<div class="w-full bg-primary rounded-t-sm h-[90%]"></div>
+</div>
+</div>
+</div>
+<!-- Summary Card 2: Active Trips -->
+<div class="bg-surface-container-lowest rounded-[1.5rem] p-6 flex flex-col justify-between relative border-l-4 border-secondary-fixed">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">flight_takeoff</span>
+<h2 class="font-headline font-bold text-on-surface-variant text-sm uppercase tracking-wider">Active Trips</h2>
+</div>
+<div class="font-headline text-4xl font-extrabold text-on-surface tracking-tight">8,432</div>
+</div>
+<div class="mt-6 flex items-center gap-2 text-sm text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-[18px] text-primary">stadium</span>
+<span>Across 5 stadiums</span>
+</div>
+</div>
+<!-- Summary Card 3: Revenue -->
+<div class="bg-surface-container-lowest rounded-[1.5rem] p-6 flex flex-col justify-between relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-surface-container-lowest to-surface-container-low opacity-50"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">payments</span>
+<h2 class="font-headline font-bold text-on-surface-variant text-sm uppercase tracking-wider">MRR</h2>
+</div>
+<div class="font-headline text-4xl font-extrabold text-on-surface tracking-tight">$1.2M</div>
+</div>
+<div class="relative z-10 mt-6 flex items-center justify-between">
+<div class="text-sm text-on-surface-variant font-medium">This month</div>
+<div class="bg-surface-container p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined text-[18px]">account_balance_wallet</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Section: Chart & Table -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Main Chart Area -->
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-[1.5rem] p-6 lg:p-8 flex flex-col shadow-[0_4px_24px_rgba(0,0,0,0.02)]">
+<div class="flex justify-between items-center mb-8">
+<div>
+<h3 class="font-headline text-xl font-bold text-on-surface">User Engagement Growth</h3>
+<p class="text-sm text-on-surface-variant font-medium">Daily active users over last 30 days</p>
+</div>
+<div class="flex gap-2">
+<button class="px-3 py-1 bg-surface-container rounded-full text-xs font-bold text-on-surface">30D</button>
+<button class="px-3 py-1 bg-transparent hover:bg-surface-container rounded-full text-xs font-bold text-on-surface-variant transition-colors">90D</button>
+</div>
+</div>
+<!-- Abstract Data Visualization Area (Replacing actual chart library) -->
+<div class="flex-1 min-h-[250px] relative w-full flex items-end pb-6 pt-10">
+<!-- Grid Lines -->
+<div class="absolute inset-0 flex flex-col justify-between pt-10 pb-6 pointer-events-none opacity-20">
+<div class="border-b border-outline-variant w-full"></div>
+<div class="border-b border-outline-variant w-full"></div>
+<div class="border-b border-outline-variant w-full"></div>
+<div class="border-b border-outline-variant w-full"></div>
+</div>
+<!-- Simulated Area Chart -->
+<div class="relative w-full h-full flex items-end gap-[2%] px-2">
+<!-- Bars -->
+<div class="w-full bg-primary-fixed/60 rounded-t-md h-[20%] hover:bg-primary transition-colors cursor-pointer relative group">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">12k</div>
+</div>
+<div class="w-full bg-primary-fixed/60 rounded-t-md h-[25%] hover:bg-primary transition-colors cursor-pointer"></div>
+<div class="w-full bg-primary-fixed/60 rounded-t-md h-[22%] hover:bg-primary transition-colors cursor-pointer"></div>
+<div class="w-full bg-primary-fixed/60 rounded-t-md h-[35%] hover:bg-primary transition-colors cursor-pointer"></div>
+<div class="w-full bg-primary-fixed/60 rounded-t-md h-[30%] hover:bg-primary transition-colors cursor-pointer"></div>
+<div class="w-full bg-primary-fixed/60 rounded-t-md h-[45%] hover:bg-primary transition-colors cursor-pointer"></div>
+<div class="w-full bg-primary-fixed/60 rounded-t-md h-[55%] hover:bg-primary transition-colors cursor-pointer relative group">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">35k</div>
+</div>
+<div class="w-full bg-primary-fixed/60 rounded-t-md h-[50%] hover:bg-primary transition-colors cursor-pointer"></div>
+<div class="w-full bg-primary-fixed/60 rounded-t-md h-[65%] hover:bg-primary transition-colors cursor-pointer"></div>
+<div class="w-full bg-primary-fixed/60 rounded-t-md h-[60%] hover:bg-primary transition-colors cursor-pointer"></div>
+<div class="w-full bg-primary-fixed/60 rounded-t-md h-[80%] hover:bg-primary transition-colors cursor-pointer"></div>
+<div class="w-full bg-primary rounded-t-md h-[95%] shadow-[0_0_15px_rgba(0,25,60,0.3)] relative group cursor-pointer">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface text-xs py-1 px-2 rounded opacity-100 font-bold z-10">68k</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Activity Table / List -->
+<div class="bg-surface-container-lowest rounded-[1.5rem] p-6 lg:p-8 flex flex-col shadow-[0_4px_24px_rgba(0,0,0,0.02)]">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline text-xl font-bold text-on-surface">Live Feed</h3>
+<button class="text-primary hover:text-primary-container text-sm font-bold flex items-center">
+                        View All <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+<!-- No-Divider List -->
+<div class="flex flex-col gap-4">
+<!-- Activity Item -->
+<div class="flex items-center gap-4 bg-surface-container-low p-3 rounded-xl hover:bg-surface-container transition-colors cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed-dim/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">confirmation_number</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold text-on-surface truncate">Tickets Booked: Lions vs Twins</p>
+<p class="text-xs text-on-surface-variant font-medium">2 mins ago • Jamsil Stadium</p>
+</div>
+</div>
+<!-- Activity Item -->
+<div class="flex items-center gap-4 bg-surface-container-low p-3 rounded-xl hover:bg-surface-container transition-colors cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-primary-fixed-dim/50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold text-on-surface truncate">New User Registration</p>
+<p class="text-xs text-on-surface-variant font-medium">15 mins ago • Seoul, KR</p>
+</div>
+</div>
+<!-- Activity Item -->
+<div class="flex items-center gap-4 bg-surface-container-low p-3 rounded-xl hover:bg-surface-container transition-colors cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed/40 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">smart_toy</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold text-on-surface truncate">Concierge Itinerary Generated</p>
+<p class="text-xs text-on-surface-variant font-medium">1 hr ago • 3-day trip</p>
+</div>
+</div>
+<!-- Activity Item -->
+<div class="flex items-center gap-4 bg-surface-container-low p-3 rounded-xl hover:bg-surface-container transition-colors cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed-dim/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">star</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold text-on-surface truncate">VIP Upgrade Processed</p>
+<p class="text-xs text-on-surface-variant font-medium">2 hrs ago • Suwon Stadium</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) - Suppressed as per instructions for Admin Dashboard context, but included structure if strictly needed by JSON parsing, though logical suppression applies. Since this is an admin dashboard top-level, we'll render it for mobile structure but side nav is primary. -->
+<nav class="fixed bottom-0 w-full rounded-t-[2rem] z-50 md:hidden bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl flex justify-around items-center px-4 pt-3 pb-8 shadow-[0_-4px_24px_0_rgba(0,0,0,0.06)] font-['Manrope'] text-[10px] uppercase tracking-widest font-bold text-[#00193c] dark:text-blue-300">
+<a class="flex flex-col items-center justify-center bg-[#00193c] dark:bg-blue-600 text-white rounded-full w-12 h-12 mb-2 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined fill">dashboard</span>
+<span class="sr-only">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-[#1b6d24] active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">group</span>
+<span>Users</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-[#1b6d24] active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">stadium</span>
+<span>Stats</span>
+</a>
+</nav>
+</body></html>

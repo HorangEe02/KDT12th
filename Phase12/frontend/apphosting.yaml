@@ -28,7 +28,7 @@ env:
       - RUNTIME
 
   - variable: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
-    value: mini12-310f5.appspot.com
+    value: mini12-310f5.firebasestorage.app
     availability:
       - BUILD
       - RUNTIME
@@ -45,13 +45,18 @@ env:
     availability:
       - RUNTIME
 
+  # 2026-04-20: Gemini 3.1 Flash Lite (preview) 재전환
+  # 이유: 2.5 Flash Lite의 무료 티어 RPD 20회가 너무 작아 일일 한도 초과 빈번.
+  # 3.1 Flash Lite Preview는 RPD 500회로 25배 여유.
+  # 안전망: Pre-flight fallback (app/api/chat/route.ts 의 selectWorkingModel) 이
+  # primary 모델명에 "preview" 포함 시 자동으로 fallback 모델로 전환.
   - variable: GEMINI_CHAT_MODEL
-    value: gemini-2.5-flash-lite
+    value: gemini-3.1-flash-lite-preview
     availability:
       - RUNTIME
 
   - variable: GEMINI_FALLBACK_MODEL
-    value: gemini-flash-lite-latest
+    value: gemini-flash-latest
     availability:
       - RUNTIME
 
@@ -80,16 +85,27 @@ env:
   # Kakao 모빌리티 키 미등록 → 길찾기는 OSRM(OSM) 폴백으로 동작
   # Firebase Web SDK 키 미등록 → Badges/Share 는 localStorage / URL 쿼리로 동작
   #
-  # 활성화하려면 아래 주석 해제 + 해당 시크릿 등록:
+  # === Firebase Web SDK (Auth + Firestore + Storage) ===
+  - variable: NEXT_PUBLIC_FIREBASE_API_KEY
+    secret: NEXT_PUBLIC_FIREBASE_API_KEY
+    availability: [BUILD, RUNTIME]
+  - variable: NEXT_PUBLIC_FIREBASE_APP_ID
+    secret: NEXT_PUBLIC_FIREBASE_APP_ID
+    availability: [BUILD, RUNTIME]
+  - variable: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+    secret: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+    availability: [BUILD, RUNTIME]
+
+  # === 세션 쿠키 설정 (서버) ===
+  - variable: SESSION_COOKIE_NAME
+    value: __session
+    availability: [RUNTIME]
+  - variable: SESSION_COOKIE_DAYS
+    value: "5"
+    availability: [RUNTIME]
+
+  # === 선택 시크릿 (비활성화됨) ===
+  # Kakao 모빌리티 키 미등록 → 길찾기는 OSRM(OSM) 폴백으로 동작
   # - variable: KAKAO_MOBILITY_API_KEY
   #   secret: KAKAO_MOBILITY_API_KEY
   #   availability: [RUNTIME]
-  # - variable: NEXT_PUBLIC_FIREBASE_API_KEY
-  #   secret: NEXT_PUBLIC_FIREBASE_API_KEY
-  #   availability: [BUILD, RUNTIME]
-  # - variable: NEXT_PUBLIC_FIREBASE_APP_ID
-  #   secret: NEXT_PUBLIC_FIREBASE_APP_ID
-  #   availability: [BUILD, RUNTIME]
-  # - variable: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
-  #   secret: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
-  #   availability: [BUILD, RUNTIME]

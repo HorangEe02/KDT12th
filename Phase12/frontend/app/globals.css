@@ -31,6 +31,14 @@
 
   --radius-se-card: 14px;
   --radius-se-hero: 24px;
+
+  /* Brand auxiliaries (auth pages) */
+  --color-se-brand-kakao: #fee500;
+  --color-se-brand-kakao-hover: #e5ce00;
+
+  /* Primary fixed family — admin / login hero */
+  --color-se-primary-fixed: #d7e2ff;
+  --color-se-primary-fixed-dim: #abc7ff;
 }
 
 :root {
@@ -41,6 +49,10 @@ body {
   background: var(--color-se-surface);
   color: var(--color-se-on-surface);
   font-family: var(--font-body);
+  /* 한국어 wrap 정책: 단어/공백 단위로만 줄바꿈 (글자별 깨짐 방지) */
+  word-break: keep-all;
+  /* 긴 단어가 컨테이너를 넘으면 단어 내 자르기 (fallback) */
+  overflow-wrap: break-word;
 }
 
 h1,
@@ -53,6 +65,13 @@ h6 {
   font-weight: 800;
   letter-spacing: -0.02em;
   color: var(--color-se-primary);
+  /* 헤딩 행 분배 균형 (Chrome 114+, Safari 17.5+, Firefox 121+ 지원, 미지원은 무시) */
+  text-wrap: balance;
+}
+
+p {
+  /* 본문 마지막 줄에 외톨이 단어 방지 (짝 메서드) */
+  text-wrap: pretty;
 }
 
 /* -------- Material Symbols Outlined -------- */
@@ -91,4 +110,19 @@ h6 {
 *:focus-visible {
   outline: 2px solid var(--color-se-primary);
   outline-offset: 2px;
+}
+
+/* -------- Auth: mobile bottom slide-up -------- */
+@keyframes se-slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.se-slide-up {
+  animation: se-slide-up 0.5s ease-out;
 }

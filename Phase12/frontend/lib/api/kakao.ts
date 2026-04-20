@@ -36,19 +36,33 @@ export function isKakaoEnabled(): boolean {
   return Boolean(resolveKey());
 }
 
+/**
+ * 다구간 Kakao 모빌리티. points[0] = origin, points[N-1] = destination,
+ * 중간 포인트는 Kakao `waypoints` 파라미터 (lng,lat | ...) 로 전달. 최대 30개.
+ */
 export async function fetchKakaoRoute(
-  origin: [number, number],
-  destination: [number, number],
+  points: Array<[number, number]>,
 ): Promise<RouteResult> {
+  if (points.length < 2) throw new Error("need >= 2 points");
   const startedAt = performance.now();
   const key = resolveKey();
   if (!key) throw new Error("no-key");
+
+  const origin = points[0];
+  const destination = points[points.length - 1];
+  const mids = points.slice(1, -1);
 
   const params = new URLSearchParams({
     origin: `${origin[1]},${origin[0]}`,
     destination: `${destination[1]},${destination[0]}`,
     priority: "RECOMMEND",
   });
+  if (mids.length > 0) {
+    params.set(
+      "waypoints",
+      mids.map(([lat, lng]) => `${lng},${lat}`).join("|"),
+    );
+  }
   const url = `${ENDPOINT}?${params.toString()}`;
 
   const ctl = new AbortController();
@@ -67,7 +81,7 @@ export async function fetchKakaoRoute(
     }
     const data = (await resp.json()) as KakaoResponse;
     const route = data.routes?.[0];
-    if (!route || route.result_code !== undefined && route.result_code !== 0) {
+    if (!route || (route.result_code !== undefined && route.result_code !== 0)) {
       throw new Error(`kakao result_code=${route?.result_code}`);
     }
 

@@ -1,5 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Manrope, Noto_Sans_KR } from "next/font/google";
+import { Toaster } from "sonner";
+import { AuthProvider } from "@/components/auth/auth-provider";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -29,6 +31,20 @@ export const metadata: Metadata = {
     "KBO 10개 구단 원정 응원러를 위한 AI 여행 플래너 — 경기·교통·맛집·숙소·관광을 한 번에.",
 };
 
+/**
+ * 모바일 뷰포트 설정 (Next.js 16 `viewport` export).
+ *   - viewportFit: "cover"  → iPhone notch / Dynamic Island / home indicator 영역까지 확장
+ *   - themeColor: SE 프라이머리 다크네이비 (#00193c) → iOS Safari 주소창/Android 상태바 색상
+ *   - maximumScale 미설정 → 사용자 핀치 줌 허용 (접근성)
+ *   - initialScale 1, width device-width → 기본값 명시
+ */
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#00193c",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -45,7 +61,8 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-se-surface text-se-on-surface">
-        {children}
+        <AuthProvider>{children}</AuthProvider>
+        <Toaster position="top-center" richColors closeButton />
       </body>
     </html>
   );

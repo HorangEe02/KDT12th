@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useBadges } from "@/lib/store/badges";
-import { loadVisited, saveVisited } from "@/lib/firebase/visited";
+import { loadUserVisits, saveUserVisits } from "@/lib/firebase/user-visits";
+import { useAuthUser } from "@/lib/store/auth";
 import { getTeamPalette, getTeamLogoPath } from "@/lib/team-colors";
 import type { Stadium } from "@/lib/types";
 import { cn } from "@/lib/utils";
@@ -13,18 +14,28 @@ interface StadiumTourProps {
 }
 
 function firstTeam(homeTeam: string): string {
-  // "LG,두산" → "LG"
   return homeTeam.split(",")[0].replace("(보조)", "").trim();
 }
 
 export function StadiumTour({ stadiums }: StadiumTourProps) {
-  const { visited, uid, syncStatus, toggle, setVisited, setSyncStatus } =
+  const { visited, uid: anonUid, syncStatus, toggle, setVisited, setSyncStatus } =
     useBadges();
+  const authUser = useAuthUser();
   const hasFirebase = Boolean(process.env.NEXT_PUBLIC_FIREBASE_API_KEY);
+  const lastSavedSig = useRef<string>("");
 
-  // 최초 마운트: Firestore → merge with local
+  // 로그인 사용자만 Firestore (user_visits/{uid}). 익명 사용자는 localStorage only.
+  // 이유: Firestore Rules 가 익명 (request.auth=null) 차단 + 개인정보 보호.
+  const useAuthedCollection = Boolean(authUser?.uid);
+  const effectiveUid = authUser?.uid ?? null;
+
+  // 최초 마운트: Firestore → merge with local (인증 사용자만)
   useEffect(() => {
-    if (!uid) return;
+    if (!effectiveUid) {
+      // 익명: 로컬만 사용
+      if (anonUid) setSyncStatus("local-only");
+      return;
+    }
     if (!hasFirebase) {
       setSyncStatus("local-only");
       return;
@@ -32,7 +43,7 @@ export function StadiumTour({ stadiums }: StadiumTourProps) {
     let cancelled = false;
     (async () => {
       setSyncStatus("syncing");
-      const remote = await loadVisited(uid);
+      const remote = (await loadUserVisits(effectiveUid))?.visited ?? null;
       if (cancelled) return;
       if (remote === null) {
         setSyncStatus("error");
@@ -41,17 +52,22 @@ export function StadiumTour({ stadiums }: StadiumTourProps) {
       const merged = [...new Set([...visited, ...remote])];
       if (merged.length !== visited.length) setVisited(merged);
       setSyncStatus("synced");
+      lastSavedSig.current = [...merged].sort().join(",");
     })();
     return () => {
       cancelled = true;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [uid, hasFirebase]);
+  }, [effectiveUid, hasFirebase]);
 
-  // visited 변경 시 Firestore 동기화 (fire-and-forget)
+  // 인증 사용자: visited 변경 시 즉시 backup write (use-firestore-sync 도 debounce 처리하지만
+  // 즉각성을 위해 1차 fire-and-forget)
   useEffect(() => {
-    if (!uid || !hasFirebase) return;
-    saveVisited(uid, visited);
+    if (!effectiveUid || !hasFirebase) return;
+    const sig = [...visited].sort().join(",");
+    if (sig === lastSavedSig.current) return;
+    lastSavedSig.current = sig;
+    void saveUserVisits(effectiveUid, visited);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [visited.join(",")]);
 
@@ -77,7 +93,11 @@ export function StadiumTour({ stadiums }: StadiumTourProps) {
               / {total}
             </span>
           </div>
-          <SyncBadge status={syncStatus} hasFirebase={hasFirebase} />
+          <SyncBadge
+            status={syncStatus}
+            hasFirebase={hasFirebase}
+            authed={useAuthedCollection}
+          />
         </div>
       </header>
 
@@ -146,9 +166,11 @@ export function StadiumTour({ stadiums }: StadiumTourProps) {
 function SyncBadge({
   status,
   hasFirebase,
+  authed,
 }: {
   status: string;
   hasFirebase: boolean;
+  authed: boolean;
 }) {
   if (!hasFirebase) {
     return (
@@ -159,22 +181,18 @@ function SyncBadge({
   }
   const meta: Record<string, { label: string; tone: string }> = {
     idle: { label: "—", tone: "bg-se-surface-container-low text-se-outline" },
-    syncing: {
-      label: "⏳ 동기화 중",
-      tone: "bg-amber-100 text-amber-900",
-    },
+    syncing: { label: "⏳ 동기화 중", tone: "bg-amber-100 text-amber-900" },
     synced: {
-      label: "☁️ 클라우드 동기화됨",
-      tone: "bg-emerald-100 text-emerald-900",
+      label: authed ? "👤 내 계정 동기화됨" : "☁️ 익명 동기화됨",
+      tone: authed
+        ? "bg-emerald-100 text-emerald-900"
+        : "bg-blue-100 text-blue-900",
     },
     "local-only": {
       label: "🏠 로컬 저장",
       tone: "bg-se-surface-container-low text-se-on-surface-variant",
     },
-    error: {
-      label: "⚠️ 동기화 실패",
-      tone: "bg-red-100 text-red-900",
-    },
+    error: { label: "⚠️ 동기화 실패", tone: "bg-red-100 text-red-900" },
   };
   const m = meta[status] ?? meta.idle;
   return (

@@ -10,7 +10,13 @@
  *   - else                       → 일반 system prompt + 6 tools streamText
  */
 import "server-only";
-import { convertToModelMessages, streamText, stepCountIs, type UIMessage } from "ai";
+import {
+  convertToModelMessages,
+  generateText,
+  streamText,
+  stepCountIs,
+  type UIMessage,
+} from "ai";
 import { createGoogleGenerativeAI } from "@ai-sdk/google";
 import { ALL_TOOLS } from "@/lib/ai/tools";
 
@@ -18,6 +24,47 @@ const google = createGoogleGenerativeAI({
   apiKey:
     process.env.GEMINI_API_KEY ?? process.env.GOOGLE_GENERATIVE_AI_API_KEY ?? "",
 });
+
+/**
+ * Pre-flight 가용성 체크 — primary 모델이 preview 등 불안정 track 일 때만 실행.
+ *
+ * 동작:
+ *   1. primary 에 1토큰 ping → 3초 timeout
+ *   2. 성공 → primary 사용
+ *   3. 실패 (429 high demand · timeout · 503 등) → fallback 모델로 자동 전환
+ *
+ * 비용:
+ *   - primary 가 GA 모델 (이름에 "preview" 없음) 이면 **skip** (오버헤드 0)
+ *   - preview 모델일 때만 매 요청 ~500ms 추가 (대신 전체 스트리밍 실패 방지)
+ *
+ * 향후 개선:
+ *   - 모듈 스코프 캐시 (최근 60초 내 preview 상태 기억) → 반복 ping 최소화
+ *   - Firestore 에 "last_fallback_at" 기록 → Cloud Run 인스턴스 간 공유
+ */
+async function selectWorkingModel(
+  primary: string,
+  fallback: string,
+): Promise<{ model: string; switched: boolean; reason?: string }> {
+  if (primary === fallback) return { model: primary, switched: false };
+  if (!primary.toLowerCase().includes("preview")) {
+    return { model: primary, switched: false };
+  }
+  try {
+    await generateText({
+      model: google(primary),
+      prompt: "ping",
+      maxRetries: 0,
+      abortSignal: AbortSignal.timeout(3000),
+    });
+    return { model: primary, switched: false };
+  } catch (err) {
+    const reason = err instanceof Error ? err.message : "unknown";
+    console.warn(
+      `[chat] pre-flight failed on primary=${primary}, fallback=${fallback}: ${reason}`,
+    );
+    return { model: fallback, switched: true, reason };
+  }
+}
 import { buildSystemPrompt } from "@/lib/ai/prompts";
 import { buildMultiAgentSystemPrompt } from "@/lib/ai/agents";
 import { pickMock } from "@/lib/ai/mock";
@@ -102,17 +149,63 @@ export async function POST(request: Request) {
     ? buildMultiAgentSystemPrompt(filters)
     : buildSystemPrompt(filters);
 
+  const primaryModel =
+    process.env.GEMINI_CHAT_MODEL ?? "gemini-2.5-flash-lite";
+  const fallbackModel =
+    process.env.GEMINI_FALLBACK_MODEL ?? "gemini-flash-lite-latest";
+  const { model: selectedModel, switched } = await selectWorkingModel(
+    primaryModel,
+    fallbackModel,
+  );
+  if (switched) {
+    console.log(
+      `[chat] 🔄 auto-fallback: ${primaryModel} → ${selectedModel}`,
+    );
+  }
+
   const modelMessages = await convertToModelMessages(messages);
   const result = streamText({
-    model: google(
-      process.env.GEMINI_CHAT_MODEL ?? "gemini-2.5-flash-lite",
-    ),
+    model: google(selectedModel),
     system,
     messages: modelMessages,
     tools: ALL_TOOLS,
     stopWhen: stepCountIs(5),
     temperature: multiAgent ? 0.55 : 0.7,
+    // maxRetries 를 1 로 낮춰 preview 스로틀링 시 지연 누적 방지 (기본 2 → 최대 45s 대기).
+    // 실패 시 pre-flight 가 이미 fallback 으로 전환했기 때문에 추가 재시도 불필요.
+    maxRetries: 1,
   });
 
-  return result.toUIMessageStreamResponse();
+  return result.toUIMessageStreamResponse({
+    onError: (err) => {
+      const raw = err instanceof Error ? err.message : String(err);
+      console.error("[chat] stream error:", raw);
+
+      // "Please retry in X.Ys" 형태가 있으면 대기 시간 파싱
+      const retryMatch = raw.match(/retry in ([\d.]+)s/i);
+      const retrySec = retryMatch ? Math.ceil(parseFloat(retryMatch[1])) : null;
+
+      // 무료 티어 quota 초과 (일당·분당)
+      if (raw.includes("exceeded your current quota") || raw.includes("free_tier_requests")) {
+        const wait = retrySec ? `약 ${retrySec}초` : "잠시";
+        return `⏱️ AI 호출 한도 초과 — ${wait} 후 다시 시도해 주세요.\n\n💡 Multi-Agent 모드를 끄면 한 질문당 호출 수가 줄어 한도 여유가 생깁니다.`;
+      }
+      // Preview 모델 일시 스로틀링
+      if (raw.includes("high demand") || raw.includes("temporarily")) {
+        return "⚠️ 현재 AI 모델이 일시적으로 혼잡합니다. 잠시 후 다시 시도해 주세요.";
+      }
+      // 429 일반
+      if (raw.includes("429")) {
+        const wait = retrySec ? `약 ${retrySec}초` : "잠시";
+        return `⚠️ 호출 빈도 제한에 걸렸습니다. ${wait} 후 다시 시도해 주세요.`;
+      }
+      // Timeout / abort
+      if (raw.includes("timeout") || raw.includes("abort")) {
+        return "⚠️ 응답 시간 초과. 질문을 다시 입력해 주세요.";
+      }
+      // 일반 — 원본에 "오류:" 이미 포함돼 있으면 중복 prefix 제거
+      const clean = raw.replace(/^오류[:：]\s*/i, "").trim();
+      return `오류: ${clean}`;
+    },
+  });
 }

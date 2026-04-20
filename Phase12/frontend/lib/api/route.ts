@@ -1,5 +1,5 @@
 /**
- * 길찾기 Orchestrator — 3-tier fallback.
+ * 길찾기 Orchestrator — 3-tier fallback, 다구간(waypoints) 지원.
  * 상세 설계: docs/OSM_FALLBACK_PLAN.md
  *
  *   Tier 1: Kakao 모빌리티 (키 있을 때만)
@@ -7,33 +7,39 @@
  *   Tier 3: Haversine 직선 (항상 성공)
  */
 import "server-only";
-import type { RouteAttempt, RouteResult } from "@/lib/types";
+import type { RouteAttempt, RouteResult, Waypoint } from "@/lib/types";
 import { fetchKakaoRoute, isKakaoEnabled } from "@/lib/api/kakao";
 import { fetchOSRM } from "@/lib/api/osrm";
 import { haversineRoute } from "@/lib/api/haversine";
 
 const cache = new Map<string, RouteResult>();
 
-function cacheKey(
-  origin: [number, number],
-  destination: [number, number],
-): string {
+function cacheKey(points: Array<[number, number]>): string {
   const round = (n: number) => n.toFixed(5);
-  return [
-    round(origin[0]),
-    round(origin[1]),
-    round(destination[0]),
-    round(destination[1]),
-  ].join(":");
+  return points.map(([la, ln]) => `${round(la)},${round(ln)}`).join("|");
+}
+
+export interface RequestRouteOpts {
+  bypassCache?: boolean;
+  waypoints?: Waypoint[];
 }
 
 export async function requestRoute(
   origin: [number, number],
   destination: [number, number],
-  opts: { bypassCache?: boolean } = {},
+  opts: RequestRouteOpts = {},
 ): Promise<RouteResult> {
-  const key = cacheKey(origin, destination);
-  if (!opts.bypassCache && cache.has(key)) return cache.get(key)!;
+  const waypoints = opts.waypoints ?? [];
+  const points: Array<[number, number]> = [
+    origin,
+    ...waypoints.map((w) => [w.lat, w.lng] as [number, number]),
+    destination,
+  ];
+  const key = cacheKey(points);
+  if (!opts.bypassCache && cache.has(key)) {
+    const cached = cache.get(key)!;
+    return { ...cached, waypoints };
+  }
 
   const attempts: RouteAttempt[] = [];
 
@@ -41,8 +47,12 @@ export async function requestRoute(
   if (isKakaoEnabled()) {
     const t0 = performance.now();
     try {
-      const out = await fetchKakaoRoute(origin, destination);
-      const result = { ...out, attempts: [...attempts, ...out.attempts] };
+      const out = await fetchKakaoRoute(points);
+      const result: RouteResult = {
+        ...out,
+        attempts: [...attempts, ...out.attempts],
+        waypoints,
+      };
       cache.set(key, result);
       return result;
     } catch (err) {
@@ -65,8 +75,12 @@ export async function requestRoute(
   // Tier 2 — OSRM
   const t1 = performance.now();
   try {
-    const out = await fetchOSRM(origin, destination);
-    const result = { ...out, attempts: [...attempts, ...out.attempts] };
+    const out = await fetchOSRM(points);
+    const result: RouteResult = {
+      ...out,
+      attempts: [...attempts, ...out.attempts],
+      waypoints,
+    };
     cache.set(key, result);
     return result;
   } catch (err) {
@@ -80,12 +94,12 @@ export async function requestRoute(
 
   // Tier 3 — Haversine
   const t2 = performance.now();
-  const h = haversineRoute(
-    origin,
-    destination,
-    Math.round(performance.now() - t2),
-  );
-  const result = { ...h, attempts: [...attempts, ...h.attempts] };
+  const h = haversineRoute(points, Math.round(performance.now() - t2));
+  const result: RouteResult = {
+    ...h,
+    attempts: [...attempts, ...h.attempts],
+    waypoints,
+  };
   cache.set(key, result);
   return result;
 }
