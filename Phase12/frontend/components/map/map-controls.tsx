@@ -52,14 +52,16 @@ export function MapControls({
     pushParams({ origin: key, lat: null, lng: null });
   }
 
-  function selectMyLocation() {
+  function selectMyLocation(highAccuracy = false) {
     if (typeof navigator === "undefined" || !navigator.geolocation) {
       setGeoState("unsupported");
       setGeoHint("이 브라우저는 위치 정보를 지원하지 않습니다.");
       return;
     }
     setGeoState("loading");
-    setGeoHint("위치 확인 중...");
+    setGeoHint(
+      highAccuracy ? "정밀 측위 재시도 중... (최대 20초)" : "위치 확인 중...",
+    );
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         const lat = pos.coords.latitude;
@@ -77,13 +79,23 @@ export function MapControls({
       },
       (err) => {
         setGeoState("denied");
-        setGeoHint(
+        // W3C Geolocation API 에러 코드별 상세 안내 + 실제 code 노출 (디버그)
+        const base =
           err.code === 1
-            ? "위치 권한이 차단되어 있습니다. 브라우저 설정에서 허용해 주세요."
-            : "위치를 가져오지 못했습니다.",
-        );
+            ? "위치 권한이 차단됨 — macOS 시스템 설정 → 개인정보 보호 및 보안 → 위치 서비스 또는 브라우저 주소창 🔒 → 위치 '허용' 으로 변경"
+            : err.code === 2
+              ? "위치 공급자 응답 없음 — Wi-Fi/GPS 비활성, VPN 연결, 또는 기업 네트워크 차단 가능. 시스템 위치 서비스 ON 후 재시도"
+              : err.code === 3
+                ? "측위 시간 초과 — 아래 '정밀 재시도' 버튼으로 GPS 기반 재시도 (더 느리지만 성공률↑)"
+                : "알 수 없는 오류";
+        const detail = err.message ? ` · ${err.message}` : "";
+        setGeoHint(`[code ${err.code}] ${base}${detail}`);
       },
-      { enableHighAccuracy: false, timeout: 6000, maximumAge: 60_000 },
+      {
+        enableHighAccuracy: highAccuracy,
+        timeout: highAccuracy ? 20_000 : 15_000,
+        maximumAge: 60_000,
+      },
     );
   }
 
@@ -197,19 +209,30 @@ export function MapControls({
         </div>
 
         {geoHint ? (
-          <p
-            className={cn(
-              "mt-1.5 text-[0.7rem] font-medium",
-              geoState === "ok"
-                ? "text-se-secondary"
-                : geoState === "denied" || geoState === "unsupported"
-                  ? "text-red-600"
-                  : "text-se-on-surface-variant",
-            )}
-            role="status"
-          >
-            {geoHint}
-          </p>
+          <div className="mt-1.5">
+            <p
+              className={cn(
+                "text-[0.7rem] font-medium leading-snug",
+                geoState === "ok"
+                  ? "text-se-secondary"
+                  : geoState === "denied" || geoState === "unsupported"
+                    ? "text-red-600"
+                    : "text-se-on-surface-variant",
+              )}
+              role="status"
+            >
+              {geoHint}
+            </p>
+            {geoState === "denied" ? (
+              <button
+                type="button"
+                onClick={() => selectMyLocation(/* highAccuracy */ true)}
+                className="mt-1 inline-flex items-center gap-1 rounded-full border border-se-primary bg-white px-2.5 py-0.5 text-[0.65rem] font-bold text-se-primary hover:bg-se-primary/5"
+              >
+                🛰️ 정밀 재시도 (GPS)
+              </button>
+            ) : null}
+          </div>
         ) : null}
       </div>
     </div>
