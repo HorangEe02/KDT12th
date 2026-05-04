@@ -1,0 +1,71 @@
+<!--
+  Label Studio XML config — A2 ABSA (Aspect-Based Sentiment Analysis)
+  ===================================================================
+  Import this file in Label Studio Project Settings → Labeling Interface.
+
+  Task layout:
+    - 리뷰 텍스트가 상단에 표시됩니다
+    - 5 aspect × 3 sentiment = 15개 라디오 옵션
+    - 각 aspect별로 positive/neutral/negative 하나씩 선택 (복수 aspect 동시 라벨링 가능)
+    - 리뷰에 언급되지 않은 aspect는 비워둡니다
+
+  Export format: JSON
+  After export, run:
+      python -m nlp_research.labeling.convert_labelstudio absa \
+          --input export.json --output data/labeled/absa/v1.jsonl
+-->
+<View style="display: flex; gap: 16px;">
+  <View style="flex: 1;">
+    <Header value="리뷰 텍스트"/>
+    <Text name="text" value="$text"/>
+  </View>
+
+  <View style="flex: 1; max-width: 420px;">
+    <Header value="속성별 감성 (미언급 속성은 비워두세요)"/>
+
+    <View style="margin-bottom: 16px;">
+      <Header size="5" value="맛 (taste)"/>
+      <Choices name="taste" toName="text" choice="single">
+        <Choice value="positive" hotkey="1"/>
+        <Choice value="neutral"  hotkey="2"/>
+        <Choice value="negative" hotkey="3"/>
+      </Choices>
+    </View>
+
+    <View style="margin-bottom: 16px;">
+      <Header size="5" value="가격 (price)"/>
+      <Choices name="price" toName="text" choice="single">
+        <Choice value="positive" hotkey="q"/>
+        <Choice value="neutral"  hotkey="w"/>
+        <Choice value="negative" hotkey="e"/>
+      </Choices>
+    </View>
+
+    <View style="margin-bottom: 16px;">
+      <Header size="5" value="서비스 (service)"/>
+      <Choices name="service" toName="text" choice="single">
+        <Choice value="positive" hotkey="a"/>
+        <Choice value="neutral"  hotkey="s"/>
+        <Choice value="negative" hotkey="d"/>
+      </Choices>
+    </View>
+
+    <View style="margin-bottom: 16px;">
+      <Header size="5" value="청결 (hygiene)"/>
+      <Choices name="hygiene" toName="text" choice="single">
+        <Choice value="positive" hotkey="z"/>
+        <Choice value="neutral"  hotkey="x"/>
+        <Choice value="negative" hotkey="c"/>
+      </Choices>
+    </View>
+
+    <View style="margin-bottom: 16px;">
+      <Header size="5" value="분위기 (ambience)"/>
+      <Choices name="ambience" toName="text" choice="single">
+        <Choice value="positive"/>
+        <Choice value="neutral"/>
+        <Choice value="negative"/>
+      </Choices>
+    </View>
+  </View>
+</View>

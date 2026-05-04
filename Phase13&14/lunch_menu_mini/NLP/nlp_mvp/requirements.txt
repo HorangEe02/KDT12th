@@ -1,0 +1,44 @@
+# ===========================================
+# Phase11 NLP MVP (시나리오 3) — 의존성
+# ===========================================
+# Python 3.10+ 권장
+# 설치: pip install -r requirements.txt
+
+# --- Core NLP ---
+transformers==4.44.0
+torch
+sentence-transformers==3.0.1
+
+# --- RAG / Vector DB ---
+chromadb==0.5.0
+ollama==0.3.0
+
+# --- LLM providers (Phase 14) ---
+# Google Gemini API — used by GeminiClient (shared/llm/gemini.py)
+google-generativeai>=0.8.0,<0.9.0
+
+# --- Web / API ---
+fastapi==0.112.0
+uvicorn==0.30.0
+streamlit==1.37.0
+slowapi==0.1.9
+
+# --- DB / ORM ---
+sqlalchemy==2.0.32
+
+# --- Data / Utils ---
+pandas==2.2.2
+numpy<2.0  # chromadb/hnswlib still use np.float_ which is removed in NumPy 2.0
+requests==2.32.3
+beautifulsoup4==4.12.3
+python-Levenshtein==0.25.1
+pydantic==2.8.2
+python-dotenv==1.0.1
+
+# --- Dev / Test ---
+pytest>=7.4
+pytest-cov>=4.1
+jupyter
+notebook
+matplotlib
+seaborn

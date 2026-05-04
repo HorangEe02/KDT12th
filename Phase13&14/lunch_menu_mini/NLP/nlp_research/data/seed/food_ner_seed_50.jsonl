@@ -1,0 +1,50 @@
+{"tokens": ["매운", "김치", "찌개", "에", "들어간", "돼지고기", "가", "부드러워요"], "tags": ["B-FLAVOR", "B-DISH", "I-DISH", "O", "O", "B-INGREDIENT", "O", "B-TEXTURE"]}
+{"tokens": ["바삭한", "돈까스", "와", "달콤한", "소스가", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O", "B-FLAVOR", "O", "O"]}
+{"tokens": ["쫄깃한", "냉면", "면발이", "정말", "맛있어요"], "tags": ["B-TEXTURE", "B-DISH", "O", "O", "O"]}
+{"tokens": ["구운", "삼겹살", "에", "마늘", "을", "곁들였다"], "tags": ["B-COOKING", "B-DISH", "O", "B-INGREDIENT", "O", "O"]}
+{"tokens": ["땅콩", "이", "들어간", "팟타이", "는", "주문", "전", "확인", "필요"], "tags": ["B-ALLERGEN", "O", "O", "B-DISH", "O", "O", "O", "O", "O"]}
+{"tokens": ["새우", "튀김", "이", "겉바속촉", "이라", "맛있어요"], "tags": ["B-ALLERGEN", "B-DISH", "O", "O", "O", "O"]}
+{"tokens": ["우유", "가", "들어간", "크림", "파스타"], "tags": ["B-ALLERGEN", "O", "O", "O", "B-DISH"]}
+{"tokens": ["계란", "말이", "와", "비빔밥"], "tags": ["B-ALLERGEN", "B-DISH", "O", "B-DISH"]}
+{"tokens": ["담백한", "닭", "가슴살", "샐러드"], "tags": ["B-FLAVOR", "B-INGREDIENT", "I-INGREDIENT", "B-DISH"]}
+{"tokens": ["부드러운", "치즈", "케이크"], "tags": ["B-TEXTURE", "B-INGREDIENT", "B-DISH"]}
+{"tokens": ["얼큰한", "라면", "한그릇"], "tags": ["B-FLAVOR", "B-DISH", "O"]}
+{"tokens": ["촉촉한", "삶은", "계란"], "tags": ["B-TEXTURE", "B-COOKING", "B-ALLERGEN"]}
+{"tokens": ["고소한", "참기름", "냄새가", "좋아요"], "tags": ["B-FLAVOR", "B-INGREDIENT", "O", "O"]}
+{"tokens": ["볶은", "양파", "와", "소고기"], "tags": ["B-COOKING", "B-INGREDIENT", "O", "B-INGREDIENT"]}
+{"tokens": ["김치", "볶음밥", "에", "치즈", "추가"], "tags": ["B-DISH", "I-DISH", "O", "B-INGREDIENT", "O"]}
+{"tokens": ["콩나물", "국밥", "이", "시원해요"], "tags": ["B-INGREDIENT", "B-DISH", "O", "O"]}
+{"tokens": ["짠", "된장찌개"], "tags": ["B-FLAVOR", "B-DISH"]}
+{"tokens": ["바삭하게", "튀긴", "치킨"], "tags": ["B-TEXTURE", "B-COOKING", "B-DISH"]}
+{"tokens": ["소금구이", "삼겹살", "최고"], "tags": ["B-DISH", "I-DISH", "O"]}
+{"tokens": ["매콤한", "낙지", "볶음"], "tags": ["B-FLAVOR", "B-DISH", "I-DISH"]}
+{"tokens": ["부드러운", "두부", "조림"], "tags": ["B-TEXTURE", "B-INGREDIENT", "B-COOKING"]}
+{"tokens": ["메밀", "면", "을", "사용", "한", "냉면"], "tags": ["B-ALLERGEN", "O", "O", "O", "O", "B-DISH"]}
+{"tokens": ["새콤달콤한", "탕수육"], "tags": ["B-FLAVOR", "B-DISH"]}
+{"tokens": ["담백", "한", "샐러드", "와", "닭가슴살"], "tags": ["B-FLAVOR", "O", "B-DISH", "O", "B-INGREDIENT"]}
+{"tokens": ["뜨거운", "된장찌개", "와", "공기밥"], "tags": ["O", "B-DISH", "O", "O"]}
+{"tokens": ["고소한", "참치", "마요", "주먹밥"], "tags": ["B-FLAVOR", "B-INGREDIENT", "O", "B-DISH"]}
+{"tokens": ["돼지", "갈비", "구이"], "tags": ["B-INGREDIENT", "I-INGREDIENT", "B-COOKING"]}
+{"tokens": ["밀가루", "가", "들어간", "수제비"], "tags": ["B-ALLERGEN", "O", "O", "B-DISH"]}
+{"tokens": ["바삭한", "튀김", "옷"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["조개", "가", "들어간", "해물탕"], "tags": ["B-ALLERGEN", "O", "O", "B-DISH"]}
+{"tokens": ["고기", "가", "쫄깃한", "갈비탕"], "tags": ["B-INGREDIENT", "O", "B-TEXTURE", "B-DISH"]}
+{"tokens": ["볶음밥", "위에", "계란", "후라이"], "tags": ["B-DISH", "O", "B-ALLERGEN", "O"]}
+{"tokens": ["삶은", "달걀", "두", "개"], "tags": ["B-COOKING", "B-ALLERGEN", "O", "O"]}
+{"tokens": ["찐", "만두", "와", "군만두"], "tags": ["B-COOKING", "B-DISH", "O", "B-DISH"]}
+{"tokens": ["양념", "치킨", "이", "달콤해요"], "tags": ["O", "B-DISH", "O", "B-FLAVOR"]}
+{"tokens": ["바삭바삭한", "감자튀김"], "tags": ["B-TEXTURE", "B-DISH"]}
+{"tokens": ["우유", "라떼", "한잔"], "tags": ["B-ALLERGEN", "O", "O"]}
+{"tokens": ["매운", "낙지", "볶음", "에", "양파", "추가"], "tags": ["B-FLAVOR", "B-DISH", "I-DISH", "O", "B-INGREDIENT", "O"]}
+{"tokens": ["짭조름한", "된장찌개", "와", "쌀밥"], "tags": ["B-FLAVOR", "B-DISH", "O", "B-INGREDIENT"]}
+{"tokens": ["부드러운", "수란", "올라간", "비빔밥"], "tags": ["B-TEXTURE", "B-DISH", "O", "B-DISH"]}
+{"tokens": ["복숭아", "주스", "한잔"], "tags": ["B-ALLERGEN", "O", "O"]}
+{"tokens": ["고등어", "구이", "정식"], "tags": ["B-ALLERGEN", "B-COOKING", "O"]}
+{"tokens": ["담백", "한", "닭", "곰탕"], "tags": ["B-FLAVOR", "O", "B-INGREDIENT", "B-DISH"]}
+{"tokens": ["촉촉한", "찐", "감자"], "tags": ["B-TEXTURE", "B-COOKING", "B-INGREDIENT"]}
+{"tokens": ["볶은", "김치", "와", "라면"], "tags": ["B-COOKING", "B-INGREDIENT", "O", "B-DISH"]}
+{"tokens": ["쫄깃쫄깃한", "수제비"], "tags": ["B-TEXTURE", "B-DISH"]}
+{"tokens": ["고소한", "들기름", "비빔국수"], "tags": ["B-FLAVOR", "B-INGREDIENT", "B-DISH"]}
+{"tokens": ["매콤한", "떡볶이", "와", "어묵"], "tags": ["B-FLAVOR", "B-DISH", "O", "B-INGREDIENT"]}
+{"tokens": ["부드러운", "팬케이크", "위", "버터"], "tags": ["B-TEXTURE", "B-DISH", "O", "B-INGREDIENT"]}
+{"tokens": ["삶은", "두부", "에", "양념간장"], "tags": ["B-COOKING", "B-INGREDIENT", "O", "O"]}

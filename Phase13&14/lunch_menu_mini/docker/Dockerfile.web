@@ -1,0 +1,71 @@
+# =============================================================================
+# Mini — Next.js 16 dashboard (port 3000)
+# =============================================================================
+# Multi-stage: deps → build → runtime
+# Runtime image ~180MB thanks to output: "standalone".
+#
+# Build context: Mini/
+# docker build -f docker/Dockerfile.web -t mini/dashboard-web .
+#
+# NEXT_PUBLIC_* variables are baked at build time so they must be passed as
+# build-args. docker-compose.yml does this via `build.args`.
+# =============================================================================
+
+# ── deps ──────────────────────────────────────────────────────────────────────
+FROM node:20-alpine AS deps
+
+WORKDIR /app
+COPY dashboard-web/package.json dashboard-web/package-lock.json* ./
+# React 19 + react-leaflet 5.x peer deps 관대하게 처리
+# (npm ci 대신 install — lock 파일 mismatch 허용)
+RUN npm install --legacy-peer-deps
+
+
+# ── build ─────────────────────────────────────────────────────────────────────
+FROM node:20-alpine AS builder
+
+ARG NEXT_PUBLIC_LUNCH_API=http://localhost:8000/api
+ARG NEXT_PUBLIC_NLP_API=http://localhost:8001
+ARG NEXT_PUBLIC_DEFAULT_USER_ID=1
+ARG NEXT_PUBLIC_KAKAO_MAP_KEY=
+
+ENV NEXT_PUBLIC_LUNCH_API=$NEXT_PUBLIC_LUNCH_API \
+    NEXT_PUBLIC_NLP_API=$NEXT_PUBLIC_NLP_API \
+    NEXT_PUBLIC_DEFAULT_USER_ID=$NEXT_PUBLIC_DEFAULT_USER_ID \
+    NEXT_PUBLIC_KAKAO_MAP_KEY=$NEXT_PUBLIC_KAKAO_MAP_KEY \
+    NEXT_TELEMETRY_DISABLED=1
+
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY dashboard-web/ .
+
+RUN npm run build
+
+
+# ── runtime ───────────────────────────────────────────────────────────────────
+FROM node:20-alpine AS runtime
+
+ENV NODE_ENV=production \
+    NEXT_TELEMETRY_DISABLED=1 \
+    PORT=3000 \
+    HOSTNAME=0.0.0.0
+
+RUN apk add --no-cache curl \
+    && addgroup -g 1001 -S nodejs \
+    && adduser -S nextjs -u 1001
+
+WORKDIR /app
+
+# Next.js standalone output: copies only the files server.js needs
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY --from=builder --chown=nextjs:nodejs /app/public ./public
+
+USER nextjs
+
+EXPOSE 3000
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
+    CMD curl -fsS http://127.0.0.1:3000 || exit 1
+
+CMD ["node", "server.js"]

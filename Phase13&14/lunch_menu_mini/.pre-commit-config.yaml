@@ -1,0 +1,57 @@
+# =============================================================================
+# Mini pre-commit hooks
+# =============================================================================
+# 설치:
+#   pip install pre-commit detect-secrets
+#   cd Mini
+#   detect-secrets scan > .secrets.baseline   # 최초 1회 (이미 생성되어 있음)
+#   pre-commit install
+#
+# 수동 전체 스캔:
+#   pre-commit run --all-files
+# =============================================================================
+
+repos:
+  # -- Secret scanning (API key 유출 방지) --
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.5.0
+    hooks:
+      - id: detect-secrets
+        args:
+          - '--baseline'
+          - '.secrets.baseline'
+        exclude: |
+          (?x)^(
+            \.env\.example|
+            .*\.lock$|
+            .*\.ipynb$|
+            NLP/.*\.md$|
+            ChatBOT/.*\.md$|
+            GUIDE/.*\.md$
+          )$
+
+  # -- 일반적인 실수 차단 --
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-added-large-files
+        args: ['--maxkb=2048']
+      - id: check-merge-conflict
+      - id: check-yaml
+        exclude: ^docker-compose.*\.yml$  # compose의 !reset 등 커스텀 태그 허용
+      - id: check-json
+      - id: end-of-file-fixer
+        exclude: '\.ipynb$'
+      - id: trailing-whitespace
+        exclude: '\.(md|ipynb)$'
+      - id: detect-private-key
+      - id: no-commit-to-branch
+        args: ['--branch', 'main', '--branch', 'master']
+
+  # -- Python 포맷 (optional, 가볍게) --
+  # 필요시 주석 해제
+  # - repo: https://github.com/astral-sh/ruff-pre-commit
+  #   rev: v0.6.9
+  #   hooks:
+  #     - id: ruff
+  #       args: [--fix]

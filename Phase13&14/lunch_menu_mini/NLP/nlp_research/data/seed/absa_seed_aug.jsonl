@@ -1,0 +1,100 @@
+{"text": "그저 그래요이지만 분위기 별로.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "negative"}]}
+{"text": "맛은 평범해요. 그런데 시끄럽고 복잡.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "negative"}]}
+{"text": "보통이에요. 그런데 분위기는 보통.", "aspects": [{"aspect": "price", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "neutral"}]}
+{"text": "인테리어 멋져요. 아쉬운 점은 지저분해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}]}
+{"text": "바가지예요이지만 벌레가 보여요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}]}
+{"text": "실망했어요. 데이트 장소로 좋아요. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}]}
+{"text": "응대는 보통. 아쉬운 점은 맛없어요.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "negative"}]}
+{"text": "그저 그래요. 응대는 보통. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "service", "sentiment": "neutral"}]}
+{"text": "맛이 별로이지만 가격 착해요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}]}
+{"text": "특별한 건 없어요이지만 벌레가 보여요.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "hygiene", "sentiment": "negative"}]}
+{"text": "보통이에요. 그런데 응대는 보통.", "aspects": [{"aspect": "price", "sentiment": "neutral"}, {"aspect": "service", "sentiment": "neutral"}]}
+{"text": "인테리어 멋져요, 부담스러워요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}]}
+{"text": "합리적이에요. 그런데 서비스 훌륭.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}]}
+{"text": "응대가 좋아요. 무난해요. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "neutral"}]}
+{"text": "위생 철저이지만 인테리어 낡았어요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}]}
+{"text": "평범한 인테리어, 특별한 건 없어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "ambience", "sentiment": "neutral"}, {"aspect": "service", "sentiment": "neutral"}]}
+{"text": "가격은 적당. 그런데 시끄럽고 복잡.", "aspects": [{"aspect": "price", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "negative"}]}
+{"text": "가격은 적당. 아쉬운 점은 답답해요.", "aspects": [{"aspect": "price", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "negative"}]}
+{"text": "위생은 무난. 아쉬운 점은 시끄럽고 복잡.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "negative"}]}
+{"text": "평범한 인테리어. 그런데 기분 나빴어요.", "aspects": [{"aspect": "ambience", "sentiment": "neutral"}, {"aspect": "service", "sentiment": "negative"}]}
+{"text": "부담 없어요. 위생은 무난. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "neutral"}]}
+{"text": "분위기는 보통. 아쉬운 점은 싱겁고 밍밍.", "aspects": [{"aspect": "ambience", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "negative"}]}
+{"text": "특별한 건 없어요. 그런데 평범한 수준.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "price", "sentiment": "neutral"}]}
+{"text": "맛이 별로이지만 분위기 별로.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}]}
+{"text": "분위기 좋아요, 그저 그래요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "neutral"}]}
+{"text": "보통이에요. 깔끔해요. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "neutral"}, {"aspect": "hygiene", "sentiment": "positive"}]}
+{"text": "그럭저럭 깨끗이지만 평범한 수준.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}, {"aspect": "price", "sentiment": "neutral"}]}
+{"text": "응대는 보통. 그런데 위생 엉망.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "hygiene", "sentiment": "negative"}]}
+{"text": "훌륭해요. 아쉬운 점은 응대는 보통.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "neutral"}]}
+{"text": "그저 그래요. 그런데 분위기는 보통.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "neutral"}]}
+{"text": "일품이에요이지만 특별한 건 없어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "neutral"}]}
+{"text": "평범한 수준. 아쉬운 점은 분위기는 보통.", "aspects": [{"aspect": "price", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "neutral"}]}
+{"text": "정돈되어 있어요. 그런데 인테리어 멋져요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}]}
+{"text": "지저분해요. 그런데 분위기는 보통.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "neutral"}]}
+{"text": "위생 철저이지만 배려가 느껴져요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}]}
+{"text": "바닥이 끈적. 정말 저렴해요. 다시 올지 고민.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}]}
+{"text": "맛은 평범해요. 그런데 깨끗해요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "hygiene", "sentiment": "positive"}]}
+{"text": "바가지예요, 답답해요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}]}
+{"text": "실망했어요, 가격 착해요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}]}
+{"text": "특별한 건 없어요. 아쉬운 점은 위생은 무난.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "hygiene", "sentiment": "neutral"}]}
+{"text": "부담 없어요. 아쉬운 점은 친절했어요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}]}
+{"text": "배려가 느껴져요, 그저 그래요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "neutral"}]}
+{"text": "정말 맛있어요. 아쉬운 점은 아늑해요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}]}
+{"text": "위생은 무난. 아쉬운 점은 환상적이에요.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "positive"}]}
+{"text": "특별하진 않아요. 아쉬운 점은 그럭저럭 깨끗.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "hygiene", "sentiment": "neutral"}]}
+{"text": "정말 저렴해요, 응대가 차가워요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}]}
+{"text": "깔끔해요, 배려가 느껴져요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}]}
+{"text": "특별하진 않아요. 아쉬운 점은 아늑해요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "positive"}]}
+{"text": "응대가 좋아요. 맛없어요. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}]}
+{"text": "분위기는 보통. 아쉬운 점은 특별한 건 없어요.", "aspects": [{"aspect": "ambience", "sentiment": "neutral"}, {"aspect": "service", "sentiment": "neutral"}]}
+{"text": "먹다 말았어요. 그런데 정말 저렴해요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}]}
+{"text": "응대는 보통. 인테리어 멋져요. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "positive"}]}
+{"text": "답답해요. 그런데 청결합니다.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}]}
+{"text": "싱겁고 밍밍. 조용하고 편안. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}]}
+{"text": "분위기는 보통. 그런데 위생 철저.", "aspects": [{"aspect": "ambience", "sentiment": "neutral"}, {"aspect": "hygiene", "sentiment": "positive"}]}
+{"text": "분위기 별로. 아쉬운 점은 무난해요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "neutral"}]}
+{"text": "가격이 아쉬워요. 그런데 싱겁고 밍밍.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}]}
+{"text": "부담스러워요, 그저 그래요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "neutral"}]}
+{"text": "정말 저렴해요. 그런데 자리 좁아요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}]}
+{"text": "바닥이 끈적. 그런데 가성비 최고.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}]}
+{"text": "청결합니다. 바가지예요. 다시 올지 고민.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}]}
+{"text": "평범한 수준, 일품이에요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "positive"}]}
+{"text": "맛없어요. 아쉬운 점은 특별한 건 없어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "neutral"}]}
+{"text": "실망했어요. 아쉬운 점은 분위기 좋아요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}]}
+{"text": "맛없어요. 위생은 무난. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "neutral"}]}
+{"text": "지저분해요, 부담 없어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}]}
+{"text": "자리 좁아요. 그런데 부담스러워요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}]}
+{"text": "특별한 건 없어요. 아쉬운 점은 맛없어요.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "negative"}]}
+{"text": "응대는 보통. 아쉬운 점은 위생 엉망.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "hygiene", "sentiment": "negative"}]}
+{"text": "그럭저럭 깨끗이지만 평범한 인테리어.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "neutral"}]}
+{"text": "답답해요이지만 먹다 말았어요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}]}
+{"text": "분위기 별로, 서비스 엉망. 종합적으로 괜찮아요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}]}
+{"text": "그럭저럭 깨끗. 가성비 최고. 다시 올지 고민.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}, {"aspect": "price", "sentiment": "positive"}]}
+{"text": "가성비 최고이지만 친절했어요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}]}
+{"text": "평범한 수준, 깔끔해요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "neutral"}, {"aspect": "hygiene", "sentiment": "positive"}]}
+{"text": "바가지예요이지만 지저분해요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}]}
+{"text": "감탄했어요. 아쉬운 점은 깨끗해요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}]}
+{"text": "조용하고 편안이지만 부담스러워요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}]}
+{"text": "답답해요. 아쉬운 점은 특별한 건 없어요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "service", "sentiment": "neutral"}]}
+{"text": "가격이 아쉬워요이지만 청결 상태 최악.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}]}
+{"text": "벌레가 보여요. 그런데 바가지예요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}]}
+{"text": "무성의해요. 그런데 분위기는 보통.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "neutral"}]}
+{"text": "가격은 적당이지만 정돈되어 있어요.", "aspects": [{"aspect": "price", "sentiment": "neutral"}, {"aspect": "hygiene", "sentiment": "positive"}]}
+{"text": "위생은 무난, 무성의해요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}, {"aspect": "service", "sentiment": "negative"}]}
+{"text": "그럭저럭 깨끗. 그런데 평범한 인테리어.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "neutral"}]}
+{"text": "먹다 말았어요, 서비스 엉망. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}]}
+{"text": "답답해요. 가격 착해요. 다시 올지 고민.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}]}
+{"text": "싱겁고 밍밍, 그럭저럭 깨끗. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "neutral"}]}
+{"text": "너무 비싸요. 아쉬운 점은 맛은 평범해요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "neutral"}]}
+{"text": "벌레가 보여요. 그런데 가격 착해요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}]}
+{"text": "기분 나빴어요. 가격이 아쉬워요. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}]}
+{"text": "깔끔해요. 그런데 불친절했어요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}]}
+{"text": "응대는 보통. 그런데 정말 저렴해요.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "price", "sentiment": "positive"}]}
+{"text": "가격은 적당이지만 감탄했어요.", "aspects": [{"aspect": "price", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "positive"}]}
+{"text": "실망했어요. 가격은 적당. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "neutral"}]}
+{"text": "데이트 장소로 좋아요. 그런데 맛이 별로.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}]}
+{"text": "불친절했어요이지만 위생은 무난.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "neutral"}]}
+{"text": "맛은 평범해요. 그런데 특별한 건 없어요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "service", "sentiment": "neutral"}]}
+{"text": "평범한 인테리어. 그런데 지저분해요.", "aspects": [{"aspect": "ambience", "sentiment": "neutral"}, {"aspect": "hygiene", "sentiment": "negative"}]}
+{"text": "정돈되어 있어요. 분위기 별로. 다시 올지 고민.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}]}

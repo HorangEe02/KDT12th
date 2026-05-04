@@ -1,0 +1,67 @@
+# =============================================================================
+# .dockerignore — keep build contexts small & reproducible
+# =============================================================================
+# Applies to ALL docker build commands from the Phase11 root.
+
+# ── Editors / OS ──
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# ── Git ──
+.git
+.gitignore
+.gitattributes
+
+# ── Python virtualenvs ──
+**/venv/
+**/.venv/
+**/env/
+**/__pycache__/
+**/*.pyc
+**/.pytest_cache/
+**/.ruff_cache/
+**/*.egg-info/
+
+# ── Node ──
+**/node_modules/
+**/.next/
+**/out/
+**/dist/
+**/coverage/
+
+# ── Logs / DB / cache ──
+**/logs/
+**/*.log
+lunch-optimizer/database/phase11.db
+lunch-optimizer/database/phase11.db-journal
+NLP/nlp_mvp/rag_chatbot/chroma_store/
+NLP/nlp_research/checkpoints/
+NLP/nlp_research/report/benchmarks/
+NLP/nlp_research/wandb/
+dashboard-web/.env.local
+
+# ── Env files (use build-args / compose env instead) ──
+.env
+.env.local
+.env.*.local
+
+# ── Legacy / docs / sample ──
+legacy/
+sample_html/
+api/
+GUIDE/
+ChatBOT/
+README.md
+0README.md
+ROLE_SEPARATION_DECISION.md
+*.md
+!NLP/nlp_mvp/rag_chatbot/prompt_templates.py
+
+# ── Notebooks ──
+**/notebooks/
+**/*.ipynb
+
+# ── Docker build artefacts themselves ──
+docker-compose.override.yml

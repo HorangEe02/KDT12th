@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Restaurant Discovery | The Digital Epicurean</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "surface-container-low": "#eef4ff",
+                    "on-secondary-fixed-variant": "#005236",
+                    "surface-bright": "#f8f9ff",
+                    "on-secondary-fixed": "#002113",
+                    "on-primary-fixed": "#001a42",
+                    "on-error": "#ffffff",
+                    "primary": "#0058be",
+                    "secondary-container": "#6cf8bb",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#121c28",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "on-primary-fixed-variant": "#004395",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#d1dbec",
+                    "outline-variant": "#c2c6d6",
+                    "background": "#f8f9ff",
+                    "primary-fixed": "#d8e2ff",
+                    "surface-tint": "#005ac2",
+                    "tertiary-fixed": "#ffddb8",
+                    "surface": "#f8f9ff",
+                    "tertiary": "#825100",
+                    "surface-container-high": "#dfe9fa",
+                    "on-surface-variant": "#424754",
+                    "on-primary-container": "#fefcff",
+                    "surface-container": "#e5eeff",
+                    "on-tertiary-fixed": "#2a1700",
+                    "surface-variant": "#d9e3f4",
+                    "inverse-primary": "#adc6ff",
+                    "on-tertiary-container": "#fffbff",
+                    "secondary-fixed-dim": "#4edea3",
+                    "surface-container-highest": "#d9e3f4",
+                    "inverse-on-surface": "#eaf1ff",
+                    "outline": "#727785",
+                    "secondary-fixed": "#6ffbbe",
+                    "on-error-container": "#93000a",
+                    "tertiary-container": "#a36700",
+                    "secondary": "#006c49",
+                    "inverse-surface": "#27313e",
+                    "primary-fixed-dim": "#adc6ff",
+                    "on-surface": "#121c28",
+                    "on-secondary-container": "#00714d",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#2170e4",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .radar-grid {
+            stroke: #c2c6d6;
+            stroke-width: 0.5;
+            fill: none;
+        }
+        .radar-area {
+            fill: #006c49;
+            fill-opacity: 0.1;
+            stroke: #006c49;
+            stroke-width: 2;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #f8f9ff;
+            color: #121c28;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-700 dark:text-blue-400">location_on</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-lg text-slate-900 dark:text-slate-100">New York, NY</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border-2 border-primary/20">
+<img alt="User profile" data-alt="close-up portrait of a professional woman with a friendly expression in a soft-lit studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn69rVOmz4PGyJiAI4yII1eShRWAomfTgujSgRgX1OkIvJ2Xi59t_SuxwXlVM7A2qm_h4i4SEPPxbcLBzSyeAYHgimCHlBt70PWdYYN9cfxonact7O0vVJ40RPa_Ma2-4aXXJbkOK3Yi3l-XdNnHIes0mdS7FGhoDVfFclKrsTdWrT6zCbt6IjYiW6JBSqs6k5m4l-LGegdviLmf1DGdVHKF9bJnl-W_UXWyZc_yG9MpVxs0iDmXCqy2jdzhst4o94eIQzLrCC83vt"/>
+</div>
+</div>
+</header>
+<main class="mt-20 px-6 space-y-10">
+<!-- Hero Section -->
+<section class="space-y-2">
+<h1 class="text-3xl font-extrabold tracking-tight text-on-surface leading-tight">Explore curated<br/><span class="text-primary">gastronomy.</span></h1>
+<p class="text-on-surface-variant text-sm font-medium">Precision dining for the modern professional.</p>
+</section>
+<!-- Top Recommendations (Horizontal Scroll) -->
+<section class="space-y-4">
+<div class="flex justify-between items-end">
+<h2 class="text-xl font-bold tracking-tight">Top Recommendations</h2>
+<span class="text-primary text-xs font-bold uppercase tracking-widest cursor-pointer">View All</span>
+</div>
+<div class="flex overflow-x-auto pb-4 gap-6 no-scrollbar snap-x snap-mandatory -mx-6 px-6">
+<!-- Card 1 -->
+<div class="min-w-[280px] snap-start bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm transition-transform hover:scale-[1.02]">
+<div class="relative h-48">
+<img alt="Gourmet cocktail" class="w-full h-full object-cover" data-alt="dramatic close-up of a sophisticated craft cocktail with orange peel garnish on a dark wooden table in a moody upscale bar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdFfYSBdiIZnbehlVm6oOhux8zfoDty-_FOlFbqJWq6beeGpfwEk0A4E0pWZe80UudUzFlDRQwTskupDmdO5eRiMwBwfBwUfBAPTtLUuELQKOE5eUWtGgFMjhHIr825Bf2H9LQb5S9i7xByqDwU87YdVcqxhSW2XywrQspZEPX25bVw_FOJuxf5BGZzvOaqOy_jNE6PTTyesUpL4UwLeUySJUoBJ0rdOzaJWdmnlaB9jX7sYbF3LLlIBHEjk4vCbzH7km8TCoCxsCK"/>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-on-surface">4.9</span>
+</div>
+</div>
+<div class="p-4 space-y-1">
+<h3 class="font-bold text-lg">Luminary Lounge</h3>
+<p class="text-on-surface-variant text-xs font-medium uppercase tracking-wide">Modern Fusion • $$$</p>
+<div class="flex gap-2 pt-2">
+<span class="px-2 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold rounded-lg uppercase">High Protein</span>
+<span class="px-2 py-1 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold rounded-lg uppercase">Quiet Room</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[280px] snap-start bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm transition-transform hover:scale-[1.02]">
+<div class="relative h-48">
+<img alt="Luxury interior" class="w-full h-full object-cover" data-alt="airy high-end minimalist restaurant interior with large windows soft natural light and lush green hanging plants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi6IXXCXlbnZfvjnFSgsj9KbIHgL38wG3YRa5BsfT5Kp5HtI3Ro3WHJWsIZfeHo0mdfG5neM--jbhv5rK1CI0nMpQRwCfpUv_65ojn7o-GKBGSsv4cxOWzkKkF9z0Ia184QGV01SOgWndf35QKN0LtTwxg6LAFlqHPP7TgGjycCSYHBFb8GGiff1RI19IL460aycupgDwq2D_nKb37BIHWO-qFmk5qj59hasP47xCYMxhYVA7J4eyau-sAuIrClottOIVw9Byv3P3E"/>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-on-surface">4.7</span>
+</div>
+</div>
+<div class="p-4 space-y-1">
+<h3 class="font-bold text-lg">The Greenhouse</h3>
+<p class="text-on-surface-variant text-xs font-medium uppercase tracking-wide">Farm-to-Table • $$</p>
+<div class="flex gap-2 pt-2">
+<span class="px-2 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold rounded-lg uppercase">Organic</span>
+<span class="px-2 py-1 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold rounded-lg uppercase">Outdoor</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Optimization Analysis (Radar Chart) -->
+<section class="bg-surface-container-low rounded-xl p-6 space-y-6">
+<div class="space-y-1">
+<h2 class="text-xl font-bold tracking-tight">Curation Logic</h2>
+<p class="text-on-surface-variant text-xs font-medium">How we optimized your lunch selection</p>
+</div>
+<div class="flex items-center justify-center py-4">
+<svg class="w-48 h-48 overflow-visible" viewbox="0 0 200 200">
+<!-- Background Circles -->
+<circle class="radar-grid" cx="100" cy="100" r="80"></circle>
+<circle class="radar-grid" cx="100" cy="100" r="60"></circle>
+<circle class="radar-grid" cx="100" cy="100" r="40"></circle>
+<circle class="radar-grid" cx="100" cy="100" r="20"></circle>
+<!-- Axis -->
+<line class="radar-grid" x1="100" x2="100" y1="20" y2="180"></line>
+<line class="radar-grid" x1="20" x2="180" y1="100" y2="100"></line>
+<!-- Radar Polygon -->
+<polygon class="radar-area" points="100,40 160,80 140,140 60,140 40,80"></polygon>
+<!-- Labels -->
+<text class="fill-on-surface-variant font-bold text-[8px] uppercase tracking-tighter" text-anchor="middle" x="100" y="10">Nutrition</text>
+<text class="fill-on-surface-variant font-bold text-[8px] uppercase tracking-tighter" text-anchor="middle" x="195" y="105">Budget</text>
+<text class="fill-on-surface-variant font-bold text-[8px] uppercase tracking-tighter" text-anchor="middle" x="140" y="195">Vibe</text>
+<text class="fill-on-surface-variant font-bold text-[8px] uppercase tracking-tighter" text-anchor="middle" x="60" y="195">Efficiency</text>
+<text class="fill-on-surface-variant font-bold text-[8px] uppercase tracking-tighter" text-anchor="middle" x="5" y="105">Taste</text>
+</svg>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest p-3 rounded-lg border border-outline-variant/10">
+<p class="text-[10px] font-bold uppercase text-on-surface-variant">Optimal Score</p>
+<p class="text-xl font-bold text-primary tracking-tighter">94%</p>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-lg border border-outline-variant/10">
+<p class="text-[10px] font-bold uppercase text-on-surface-variant">Team Match</p>
+<p class="text-xl font-bold text-secondary tracking-tighter">High</p>
+</div>
+</div>
+</section>
+<!-- Recently Visited (Asymmetric Bento) -->
+<section class="space-y-4">
+<h2 class="text-xl font-bold tracking-tight">Recently Visited</h2>
+<div class="grid grid-cols-2 gap-4">
+<!-- Large Item -->
+<div class="col-span-2 relative h-40 bg-surface-container rounded-xl overflow-hidden group">
+<img alt="Plated dish" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="elegant overhead shot of a colorful artisan salad with roasted vegetables and microgreens on a white ceramic plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPq8R19BLCn-WRY7aTBDVjBE8pW7b1ZiqOhNDnVkIR5mN91fdRpDuMKrpT31xoZnxqlJW0gzYUiimMrwzS0iNgrMaXDeKLD-8YOgUM5j6Gxuc-Z7YSwjH4msz694s72diQElisT2TQ7eqrPPgmTIdnMgsTrXrb8xYg_3JKqaq0whx6q-xYsPVj22RQESskXAsgE9Xe7zqBT87vtrzXIGUGRzMfChGGsivzz4rgPCCdjL32OGtcEYVq1aMNW8tYAmHrLtmJvQYDTcJo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-4 left-4 text-white">
+<p class="text-[10px] font-bold uppercase tracking-widest opacity-80">Last Tuesday</p>
+<h4 class="text-lg font-bold">Verdant Bistro</h4>
+</div>
+<div class="absolute top-4 right-4 h-10 w-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</div>
+</div>
+<!-- Smaller Items -->
+<div class="bg-surface-container-lowest p-4 rounded-xl flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-tertiary">bakery_dining</span>
+<span class="text-[10px] font-bold text-on-surface-variant">3d ago</span>
+</div>
+<div>
+<h4 class="font-bold text-sm">Rise &amp; Shine</h4>
+<p class="text-[10px] text-on-surface-variant">Artisan Bakery</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary">coffee</span>
+<span class="text-[10px] font-bold text-on-surface-variant">1w ago</span>
+</div>
+<div>
+<h4 class="font-bold text-sm">Roast Mastery</h4>
+<p class="text-[10px] text-on-surface-variant">Specialty Coffee</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md rounded-t-3xl shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+<!-- Discovery (Active) -->
+<a class="flex flex-col items-center justify-center text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 rounded-2xl px-4 py-2 scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="font-['Manrope'] text-[11px] font-semibold tracking-wide uppercase mt-1">Discovery</span>
+</a>
+<!-- Weather -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-2 scale-95 active:scale-90 transition-transform hover:text-blue-600 dark:hover:text-blue-300" href="#">
+<span class="material-symbols-outlined">cloud</span>
+<span class="font-['Manrope'] text-[11px] font-semibold tracking-wide uppercase mt-1">Weather</span>
+</a>
+<!-- Nutrition -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-2 scale-95 active:scale-90 transition-transform hover:text-blue-600 dark:hover:text-blue-300" href="#">
+<span class="material-symbols-outlined">nutrition</span>
+<span class="font-['Manrope'] text-[11px] font-semibold tracking-wide uppercase mt-1">Nutrition</span>
+</a>
+<!-- Voting -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-2 scale-95 active:scale-90 transition-transform hover:text-blue-600 dark:hover:text-blue-300" href="#">
+<span class="material-symbols-outlined">how_to_vote</span>
+<span class="font-['Manrope'] text-[11px] font-semibold tracking-wide uppercase mt-1">Voting</span>
+</a>
+</nav>
+</body></html>

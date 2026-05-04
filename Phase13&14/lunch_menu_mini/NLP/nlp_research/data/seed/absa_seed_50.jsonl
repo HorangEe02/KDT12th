@@ -1,0 +1,50 @@
+{"text": "김치찌개 맛은 훌륭한데, 가격이 비싸고 직원이 불친절했어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}]}
+{"text": "맛은 평범한데 분위기가 정말 좋았어요. 가격도 합리적.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}]}
+{"text": "위생 상태가 엉망이고 테이블도 끈적거려요. 두번 다시 안 갈 듯.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}]}
+{"text": "불고기가 정말 부드럽고 맛있었습니다. 양도 푸짐해요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}]}
+{"text": "가성비 최고. 만원으로 배부르게 먹었네요.", "aspects": [{"aspect": "price", "sentiment": "positive"}]}
+{"text": "직원분이 너무 친절하셔서 기분 좋게 식사했어요.", "aspects": [{"aspect": "service", "sentiment": "positive"}]}
+{"text": "음식은 맛있지만 너무 비싸서 자주 오긴 힘들 것 같아요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}]}
+{"text": "테이블과 바닥이 깨끗하고 화장실도 청결했어요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}]}
+{"text": "가게 분위기는 아늑한데 서비스가 너무 느려서 답답했어요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}]}
+{"text": "파스타는 평범하고 가격은 좀 비쌌어요. 재방문 글쎄요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "price", "sentiment": "negative"}]}
+{"text": "냉면 육수가 시원하고 면발이 쫄깃해서 좋았습니다.", "aspects": [{"aspect": "taste", "sentiment": "positive"}]}
+{"text": "주문하고 40분을 기다렸네요. 서비스 개선 필요.", "aspects": [{"aspect": "service", "sentiment": "negative"}]}
+{"text": "인테리어가 모던하고 깔끔해서 데이트 장소로 추천.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}]}
+{"text": "가격은 조금 있지만 재료 신선하고 셰프도 친절해요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}]}
+{"text": "된장찌개가 조미료 맛이 너무 강했어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}]}
+{"text": "샐러드바 종류가 다양하고 가격 대비 만족.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}]}
+{"text": "매장이 좁고 옆 테이블 소리가 너무 커서 불편했어요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}]}
+{"text": "회는 신선했는데 밥이 너무 질었어요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}]}
+{"text": "화장실 청소 상태가 좋지 않았습니다.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}]}
+{"text": "직원이 메뉴를 잘 설명해주고 추천까지 해주셨어요.", "aspects": [{"aspect": "service", "sentiment": "positive"}]}
+{"text": "평범한 한정식. 특별히 기억에 남는 건 없네요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}]}
+{"text": "가격이 저렴해서 부담 없이 점심 먹기 좋아요.", "aspects": [{"aspect": "price", "sentiment": "positive"}]}
+{"text": "돼지갈비가 정말 맛있는데 매장이 좀 허름해요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}]}
+{"text": "주차장이 넓고 직원이 안내까지 해주셔서 편했어요.", "aspects": [{"aspect": "service", "sentiment": "positive"}]}
+{"text": "피자가 기름지고 치즈가 너무 짰어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}]}
+{"text": "조용하고 차분한 분위기에서 조용히 대화 나누기 좋아요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}]}
+{"text": "가격도 합리적이고 청결도 좋은 편입니다.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}]}
+{"text": "김밥이 평범하고 단무지가 눅눅했어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}]}
+{"text": "대기 없이 바로 들어갔고 음식도 빨리 나왔어요.", "aspects": [{"aspect": "service", "sentiment": "positive"}]}
+{"text": "카레가 짜고 가격도 생각보다 비쌉니다.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}]}
+{"text": "인테리어가 노후화됐지만 음식 맛은 여전히 훌륭해요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}]}
+{"text": "계산이 느려서 손님이 많을 땐 한참 기다려야 해요.", "aspects": [{"aspect": "service", "sentiment": "negative"}]}
+{"text": "육회가 신선하고 양념이 과하지 않아서 좋았어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}]}
+{"text": "가성비는 괜찮은데 서비스는 평범해요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "neutral"}]}
+{"text": "바닥이 미끄럽고 위생 상태가 아쉬웠어요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}]}
+{"text": "창가 자리가 전망 좋고 음식도 맛있어요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}]}
+{"text": "인심 좋은 사장님 덕분에 서비스 잘 받고 나왔습니다.", "aspects": [{"aspect": "service", "sentiment": "positive"}]}
+{"text": "만두는 보통인데 국수는 맛있었어요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}]}
+{"text": "점심 특선 5천원대라 완전 합리적.", "aspects": [{"aspect": "price", "sentiment": "positive"}]}
+{"text": "식당 공기가 텁텁하고 냄새가 배었어요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}]}
+{"text": "비빔밥 고명이 풍성하고 고추장이 맛있어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}]}
+{"text": "음식 맛은 좋으나 가격 대비 양이 적어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}]}
+{"text": "직원이 무뚝뚝하긴 한데 주문은 정확했어요.", "aspects": [{"aspect": "service", "sentiment": "neutral"}]}
+{"text": "청결 잘 되어 있고 위생 걱정 없이 먹었습니다.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}]}
+{"text": "초밥 종류가 많지만 하나하나 평범한 느낌.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}]}
+{"text": "인테리어는 세련됐는데 가격이 생각보다 비쌉니다.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}]}
+{"text": "반찬이 맛있고 계속 리필해주셔서 감동이었어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}]}
+{"text": "국물이 미지근하게 나와서 실망스러웠어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}]}
+{"text": "가격이 좀 있지만 재료의 질이 확실히 좋아요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}]}
+{"text": "깔끔한 오픈 주방이라 위생도 안심되고 요리 보는 재미도 있어요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}]}

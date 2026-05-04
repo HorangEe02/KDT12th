@@ -1,0 +1,21 @@
+# A2 ABSA training config
+model_name: beomi/KcELECTRA-base-v2022
+batch_size: 16
+learning_rate: 2.0e-5
+epochs: 5
+warmup_ratio: 0.1
+weight_decay: 0.01
+max_length: 128
+dropout: 0.3
+aspects:
+  - taste
+  - price
+  - service
+  - hygiene
+  - ambience
+sentiments:
+  - positive
+  - neutral
+  - negative
+early_stopping_patience: 2
+metric_for_best_model: macro_f1

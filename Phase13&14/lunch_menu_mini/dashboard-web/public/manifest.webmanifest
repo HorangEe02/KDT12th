@@ -1,0 +1,71 @@
+{
+  "name": "오늘 뭐 먹지",
+  "short_name": "오늘뭐먹",
+  "description": "직장인 점심 결정 도우미 — 날씨 · 영양 · 팀 선호 + 위치 기반 추천",
+  "start_url": "/",
+  "scope": "/",
+  "id": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "background_color": "#fdfaf6",
+  "theme_color": "#e8593c",
+  "lang": "ko-KR",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/logo/mini1314-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo/mini1314-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/logo/mini1314-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo/mini1314-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/logo/mini1314-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["food", "lifestyle", "productivity"],
+  "shortcuts": [
+    {
+      "name": "음식점 탐색",
+      "short_name": "Discovery",
+      "description": "현재 위치 기반 식당 추천",
+      "url": "/discover",
+      "icons": [{ "src": "/logo/mini1314-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "AI 상담",
+      "short_name": "Concierge",
+      "description": "AI 메뉴 추천 챗봇",
+      "url": "/concierge",
+      "icons": [{ "src": "/logo/mini1314-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "영양 리포트",
+      "short_name": "Nutrition",
+      "description": "주간 영양 균형",
+      "url": "/nutrition",
+      "icons": [{ "src": "/logo/mini1314-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

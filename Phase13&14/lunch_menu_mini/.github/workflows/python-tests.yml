@@ -1,0 +1,149 @@
+# =============================================================================
+# Mini — Python test matrix
+# =============================================================================
+# Runs pytest for both nlp_mvp (Phase 5) and nlp_research (Phase 6) plus the
+# lunch-optimizer smoke import. Heavy ML deps (torch, transformers, sbert)
+# are not installed — tests that need them are guarded with
+# `@pytest.mark.requires_torch / requires_transformers / requires_sbert`
+# and auto-skip via the nlp_research/conftest.py.
+# =============================================================================
+name: python-tests
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "lunch-optimizer/**"
+      - "NLP/**"
+      - ".github/workflows/python-tests.yml"
+  pull_request:
+    paths:
+      - "lunch-optimizer/**"
+      - "NLP/**"
+      - ".github/workflows/python-tests.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: python-tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ─────────────────────────────────────────────────────────────────────────
+  nlp-research:
+    name: NLP research (A2 / B2 / E1 + benchmark)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ runner.os }}-py${{ matrix.python-version }}-research-${{ hashFiles('NLP/nlp_research/requirements.txt') }}
+          restore-keys: |
+            pip-${{ runner.os }}-py${{ matrix.python-version }}-research-
+
+      - name: Install minimal deps (no torch, no transformers)
+        run: |
+          python -m pip install --upgrade pip
+          # Only install what the smoke tests actually need. torch/transformers
+          # are auto-skipped by the conftest guards.
+          pip install pyyaml python-dotenv pytest
+
+      - name: Run smoke tests (no heavy ML deps)
+        run: |
+          cd NLP
+          PYTHONPATH=. pytest nlp_research/tests/ -v --tb=short
+
+      - name: Run benchmark dry-run
+        run: |
+          cd NLP
+          PYTHONPATH=. python -m nlp_research.evaluation.benchmark \
+            --module all --smoke --output-dir /tmp/bench
+
+      - name: Upload benchmark artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-summary-py${{ matrix.python-version }}
+          path: /tmp/bench/
+          retention-days: 14
+
+  # ─────────────────────────────────────────────────────────────────────────
+  nlp-mvp-syntax:
+    name: NLP MVP syntax + imports
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Syntax check all Python modules
+        run: |
+          python -c "
+          import ast, os, sys
+          errors = 0
+          files = []
+          for root, _, fnames in os.walk('NLP/nlp_mvp'):
+              if '__pycache__' in root:
+                  continue
+              for f in fnames:
+                  if f.endswith('.py'):
+                      files.append(os.path.join(root, f))
+          for f in sorted(files):
+              try:
+                  ast.parse(open(f).read(), filename=f)
+              except SyntaxError as e:
+                  print(f'ERR {f}: {e}')
+                  errors += 1
+          print(f'parsed {len(files)} files, {errors} errors')
+          sys.exit(0 if errors == 0 else 1)
+          "
+
+  # ─────────────────────────────────────────────────────────────────────────
+  lunch-optimizer-syntax:
+    name: lunch-optimizer syntax
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Syntax check
+        run: |
+          python -c "
+          import ast, os, sys
+          errors = 0
+          for root, _, fnames in os.walk('lunch-optimizer'):
+              if any(skip in root for skip in ['venv', '__pycache__', '.pytest_cache']):
+                  continue
+              for f in fnames:
+                  if f.endswith('.py'):
+                      path = os.path.join(root, f)
+                      try:
+                          ast.parse(open(path).read(), filename=path)
+                      except SyntaxError as e:
+                          print(f'ERR {path}: {e}')
+                          errors += 1
+          sys.exit(0 if errors == 0 else 1)
+          "

@@ -1,0 +1,106 @@
+# =============================================================================
+# Mini — Dependabot configuration
+# =============================================================================
+# Weekly security + minor version updates for all 3 sub-projects.
+# =============================================================================
+version: 2
+updates:
+  # ── Python: lunch-optimizer ──
+  - package-ecosystem: "pip"
+    directory: "/lunch-optimizer"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(lunch)"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "python"
+      - "lunch-optimizer"
+    groups:
+      python-minor:
+        update-types: ["minor", "patch"]
+
+  # ── Python: NLP MVP (Phase 5) ──
+  - package-ecosystem: "pip"
+    directory: "/NLP/nlp_mvp"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(nlp-mvp)"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "python"
+      - "nlp"
+    groups:
+      python-minor:
+        update-types: ["minor", "patch"]
+
+  # ── Python: NLP research (Phase 6) ──
+  - package-ecosystem: "pip"
+    directory: "/NLP/nlp_research"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(nlp-research)"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "python"
+      - "nlp-research"
+    groups:
+      python-minor:
+        update-types: ["minor", "patch"]
+
+  # ── npm: dashboard-web ──
+  - package-ecosystem: "npm"
+    directory: "/dashboard-web"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(web)"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "javascript"
+      - "dashboard-web"
+    groups:
+      web-minor:
+        update-types: ["minor", "patch"]
+      web-dev:
+        dependency-type: "development"
+
+  # ── GitHub Actions ──
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: "chore(ci)"
+    labels:
+      - "dependencies"
+      - "ci"
+
+  # ── Docker base images ──
+  - package-ecosystem: "docker"
+    directory: "/docker"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: "chore(docker)"
+    labels:
+      - "dependencies"
+      - "docker"

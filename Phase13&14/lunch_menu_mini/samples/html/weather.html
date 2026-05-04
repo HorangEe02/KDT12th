@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#27313e",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "on-primary-fixed-variant": "#004395",
+                        "on-surface-variant": "#424754",
+                        "on-secondary-fixed-variant": "#005236",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#005ac2",
+                        "secondary-container": "#6cf8bb",
+                        "outline-variant": "#c2c6d6",
+                        "primary-fixed": "#d8e2ff",
+                        "on-secondary-fixed": "#002113",
+                        "surface-variant": "#d9e3f4",
+                        "on-background": "#121c28",
+                        "on-primary-fixed": "#001a42",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface": "#f8f9ff",
+                        "primary-container": "#2170e4",
+                        "surface-dim": "#d1dbec",
+                        "on-tertiary-container": "#fffbff",
+                        "tertiary": "#825100",
+                        "background": "#f8f9ff",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "on-primary-container": "#fefcff",
+                        "inverse-primary": "#adc6ff",
+                        "surface-container": "#e5eeff",
+                        "surface-container-highest": "#d9e3f4",
+                        "outline": "#727785",
+                        "surface-bright": "#f8f9ff",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#6ffbbe",
+                        "on-surface": "#121c28",
+                        "surface-container-low": "#eef4ff",
+                        "primary-fixed-dim": "#adc6ff",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#006c49",
+                        "primary": "#0058be",
+                        "surface-container-high": "#dfe9fa",
+                        "secondary-fixed-dim": "#4edea3",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#ffddb8",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#2a1700",
+                        "tertiary-container": "#a36700",
+                        "on-secondary-container": "#00714d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface">
+<!-- Sidebar Navigation -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-slate-50 dark:bg-slate-950 flex flex-col p-4 gap-2 z-50">
+<div class="mb-8 px-4">
+<h1 class="text-lg font-black text-blue-700 dark:text-blue-400 font-headline">Culinary Concierge</h1>
+<p class="text-xs tracking-widest uppercase text-slate-500 font-label">The Digital Epicurean</p>
+</div>
+<nav class="flex flex-col gap-2 flex-grow">
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide">Discovery</span>
+</a>
+<a class="flex items-center gap-3 bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 rounded-xl px-4 py-3 shadow-sm scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">cloudy_snowing</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide">Weather</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">bar_chart_4_bars</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide">Nutrition</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">thumbs_up_down</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide">Team Voting</span>
+</a>
+</nav>
+<div class="flex flex-col gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-800">
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide">Settings</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide">Support</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="bg-white/70 dark:bg-slate-900/70 backdrop-blur-md text-xl font-bold text-slate-900 dark:text-white docked full-width top-0 sticky z-40 shadow-sm dark:shadow-none flex justify-between items-center w-full px-8 py-4">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 text-slate-500 font-['Plus_Jakarta_Sans'] text-sm font-semibold">
+<span class="material-symbols-outlined text-blue-600">location_on</span>
+<span>Gangnam-gu, Seoul</span>
+</div>
+<div class="flex items-center gap-2 text-slate-500 font-['Plus_Jakarta_Sans'] text-sm font-semibold">
+<span class="material-symbols-outlined text-blue-600">calendar_today</span>
+<span>Nov 21, 12:45 PM</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:text-blue-500 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:text-blue-500 transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<img alt="User profile" class="w-10 h-10 rounded-full border-2 border-primary-fixed" data-alt="professional headshot of a smiling man with clean background soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtKYIEvtRdUs1n0i2iFku5ikzPEkI_4BnZ-dSa2ttJHhkgbBz4ayrKv9pGDUEiZYQ0LP33YLnwhjG5omEeDcezqovBS3K_AbI0ht6j0taOhozZpB0rNewcFAUbh5q_4jn0LO-KsM3k-OsYTKwVmYT7mtYe1nTdoRt7yzsln73Ne3Q3qMJGC22LFmohvW_9ZNPb9hrO0ukM6AM3yo9VgvmI8tCyXKR_z4c-wE4tiWD4itw8L45C0_dhmSctdeEOyYwZUGTd_OVRLREH"/>
+</div>
+</header>
+<div class="p-12 max-w-7xl mx-auto space-y-12">
+<!-- Weather Summary Section (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Main Weather Card -->
+<div class="md:col-span-2 bg-gradient-to-br from-primary to-primary-container rounded-[2rem] p-8 text-on-primary flex flex-col justify-between overflow-hidden relative">
+<div class="relative z-10">
+<div class="flex justify-between items-start">
+<div>
+<h2 class="text-5xl font-headline font-extrabold tracking-tight">24°C</h2>
+<p class="text-xl opacity-90 font-medium">Partly Sunny</p>
+</div>
+<span class="material-symbols-outlined text-7xl opacity-50" style="font-variation-settings: 'FILL' 1;">wb_sunny</span>
+</div>
+<div class="mt-8 flex gap-8">
+<div class="flex flex-col">
+<span class="text-xs uppercase tracking-widest opacity-70 font-label">Precipitation</span>
+<span class="text-lg font-bold">10%</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs uppercase tracking-widest opacity-70 font-label">Air Quality</span>
+<span class="text-lg font-bold">PM10 Good</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs uppercase tracking-widest opacity-70 font-label">Humidity</span>
+<span class="text-lg font-bold">42%</span>
+</div>
+</div>
+</div>
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+</div>
+<!-- Weather Tip Card -->
+<div class="bg-tertiary-container rounded-[2rem] p-8 text-on-tertiary-container flex flex-col justify-center gap-4 border border-outline-variant/10">
+<div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-white">lightbulb</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-xl mb-2">Weather Tip</h3>
+<p class="text-on-tertiary-container/90 leading-relaxed">It's a clear day! Perfect for a short walk to a restaurant within 300m.</p>
+</div>
+</div>
+</section>
+<!-- Menu Suitability Analysis -->
+<section class="space-y-6">
+<div class="flex justify-between items-end">
+<h3 class="text-2xl font-headline font-extrabold text-on-surface">Menu Suitability</h3>
+<p class="text-sm text-outline font-medium">Based on current humidity &amp; temp</p>
+</div>
+<div class="bg-surface-container-low rounded-[2rem] p-10 space-y-8">
+<div class="space-y-6">
+<!-- Chart Item -->
+<div class="space-y-2">
+<div class="flex justify-between items-center text-sm font-bold uppercase tracking-wider text-on-surface-variant">
+<span>Cold Noodles</span>
+<span>95%</span>
+</div>
+<div class="h-3 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[95%] rounded-full shadow-[0_0_12px_rgba(0,108,73,0.3)]"></div>
+</div>
+</div>
+<!-- Chart Item -->
+<div class="space-y-2">
+<div class="flex justify-between items-center text-sm font-bold uppercase tracking-wider text-on-surface-variant">
+<span>Sushi</span>
+<span>90%</span>
+</div>
+<div class="h-3 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[90%] rounded-full shadow-[0_0_12px_rgba(0,108,73,0.3)]"></div>
+</div>
+</div>
+<!-- Chart Item -->
+<div class="space-y-2">
+<div class="flex justify-between items-center text-sm font-bold uppercase tracking-wider text-on-surface-variant">
+<span>Warm Salad Bowls</span>
+<span>65%</span>
+</div>
+<div class="h-3 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[65%] rounded-full opacity-80"></div>
+</div>
+</div>
+<!-- Chart Item -->
+<div class="space-y-2">
+<div class="flex justify-between items-center text-sm font-bold uppercase tracking-wider text-on-surface-variant">
+<span>Hearty Soup</span>
+<span>40%</span>
+</div>
+<div class="h-3 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-container w-[40%] rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TOP 5 Weather-Friendly Recommendations -->
+<section class="space-y-6">
+<div class="flex justify-between items-center">
+<h3 class="text-2xl font-headline font-extrabold text-on-surface">Top 5 Weather Match</h3>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:underline">
+                        Explore all <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="space-y-4">
+<!-- Recommended Item 1 -->
+<div class="group flex items-center gap-6 p-4 rounded-[1.5rem] bg-surface-container-lowest hover:bg-surface-bright transition-all cursor-pointer">
+<div class="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
+<img alt="Cold Soba" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="refreshing bowl of cold japanese soba noodles with ice cubes and green onions on a dark ceramic bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKY7k4LGhjkEkhd0JP3HFP3ELQi3-0RY8hg6VEfmayCLFBoaeiNFrIoe3Q926L_bTy3M_kl7hXWB3yakid70r7sidUli9b5cB6PRfmTNVbmWROxgq_F6t5HnuQa9idDIGkFXQ8yzeh4WNecPm--gAzR6PQNVd9zIC3uaCY7Ii8Ac6K_ir5sDBF_cakEzRuHUsZKKyGiRh7aJUtNjagTT4oF_clBCScC5aVGS5sBk166tZmsK3uLnpndNoJbtfzERheRUbr6kCm80KQ"/>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-black uppercase tracking-tighter px-2 py-0.5 rounded-full">Match 98%</span>
+<h4 class="font-headline font-bold text-lg text-on-surface">Myeongdong Cold Buckwheat</h4>
+</div>
+<p class="text-sm text-outline line-clamp-1">Authentic Pyongyang style cold noodles with clear beef broth.</p>
+<div class="flex items-center gap-4 mt-2 text-xs font-semibold text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">directions_walk</span> 180m</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-tertiary">star</span> 4.8 (210)</span>
+</div>
+</div>
+<div class="pr-4">
+<button class="w-12 h-12 rounded-full border-2 border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Recommended Item 2 -->
+<div class="group flex items-center gap-6 p-4 rounded-[1.5rem] bg-surface-container-lowest hover:bg-surface-bright transition-all cursor-pointer">
+<div class="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
+<img alt="Sushi Set" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="elegant platter of fresh nigiri sushi with salmon and tuna on a stone board soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIQ4w1DSK27WPXXGw9JsiOet88bvVWv_8IFpG1BPaQ9XVv_Cn8VX8mPQul85yp-a4xdayqbGsN_yPwZ-4XxNl9Qi4PodihlcNz9VZahHgItryo-wvh_s0VKoKQNYHnF94g_fuKJ7TIb1sVCY77-co1jwz65W7WNfxK5VNHDtjpl4Y1AgBAd7POC2t1zP2tT506av3Wp-q1owoHyZ5oyx36bw4AM-p5VHwgT_uODyf58MRnpQizdB8h-vJcYo_2rrqmw58Nc_YN1rK6"/>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-black uppercase tracking-tighter px-2 py-0.5 rounded-full">Match 92%</span>
+<h4 class="font-headline font-bold text-lg text-on-surface">Sushi Masa Premium</h4>
+</div>
+<p class="text-sm text-outline line-clamp-1">Hand-pressed seasonal omakase selection.</p>
+<div class="flex items-center gap-4 mt-2 text-xs font-semibold text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">directions_walk</span> 310m</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-tertiary">star</span> 4.9 (540)</span>
+</div>
+</div>
+<div class="pr-4">
+<button class="w-12 h-12 rounded-full border-2 border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Recommended Item 3 -->
+<div class="group flex items-center gap-6 p-4 rounded-[1.5rem] bg-surface-container-lowest hover:bg-surface-bright transition-all cursor-pointer">
+<div class="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
+<img alt="Salad" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="vibrant mediterranean salad bowl with hummus avocado and fresh greens top down view professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUimSLv0CGsRQx7QO6cFj7VeOvAL7SczLCiPC27Qzny0kdt3m53LtOnZqnEVtpuj8Q_VBM8mSvYRAq9rg8CvufJLaR2N4BXsw-SO1QIdN1AmGjKXnSM1LBrn-afcc-omLkCnr3P5NJPywKFBzFnvsmLgmMtjJ3KAgtUWLGs8B-o0c3WkV3Ca_IQzyM-_j4G6SatxSSEUhync1vVBtvwUTeNxM_PwrN3B8o7A8p86_um9uP6avf7b1Chy_S087NGqbMXqd2AgZ9iw9u"/>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-primary-fixed text-on-primary-fixed text-[10px] font-black uppercase tracking-tighter px-2 py-0.5 rounded-full">Match 85%</span>
+<h4 class="font-headline font-bold text-lg text-on-surface">The Green Garden</h4>
+</div>
+<p class="text-sm text-outline line-clamp-1">Organic farm-to-table salads with citrus vinaigrette.</p>
+<div class="flex items-center gap-4 mt-2 text-xs font-semibold text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">directions_walk</span> 120m</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-tertiary">star</span> 4.6 (128)</span>
+</div>
+</div>
+<div class="pr-4">
+<button class="w-12 h-12 rounded-full border-2 border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Recommended Item 4 -->
+<div class="group flex items-center gap-6 p-4 rounded-[1.5rem] bg-surface-container-lowest hover:bg-surface-bright transition-all cursor-pointer opacity-80">
+<div class="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
+<img alt="Pasta" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="plate of fresh pasta with bright lemon zest and herbs minimal aesthetic high key lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX3C84iSxm7ZQwAj2p_WO_knzWJ_gfEXVnjHnyOlIjlZTYsFyG7z4p3go167kPqgATJeLPg33m7A1UzBektHU8OxJTvGt_kGoL3yppiWtOZ2j3wMJwX-Fog1UucUHSGjJxI6_DNIyUpOFCOdjApRwKylCt6ryEzM0QCbdBwlefP8YWJo5UmF-0CPkEeAM95LnXkSgyA3v_smNOFJaA90Kf-35aSbPHkhNEPj6dHFvR2qxLEhwwaj2T9KvZvFh0X3aD0dl197UcFRdJ"/>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-primary-fixed text-on-primary-fixed text-[10px] font-black uppercase tracking-tighter px-2 py-0.5 rounded-full">Match 78%</span>
+<h4 class="font-headline font-bold text-lg text-on-surface">Al Dente Terrace</h4>
+</div>
+<p class="text-sm text-outline line-clamp-1">Light seafood pasta with breezy terrace seating.</p>
+<div class="flex items-center gap-4 mt-2 text-xs font-semibold text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">directions_walk</span> 450m</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-tertiary">star</span> 4.7 (302)</span>
+</div>
+</div>
+<div class="pr-4">
+<button class="w-12 h-12 rounded-full border-2 border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Recommended Item 5 -->
+<div class="group flex items-center gap-6 p-4 rounded-[1.5rem] bg-surface-container-lowest hover:bg-surface-bright transition-all cursor-pointer opacity-70">
+<div class="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0 text-center flex items-center justify-center bg-slate-100">
+<span class="material-symbols-outlined text-slate-300 text-4xl">restaurant</span>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-outline-variant text-on-surface-variant text-[10px] font-black uppercase tracking-tighter px-2 py-0.5 rounded-full">Match 62%</span>
+<h4 class="font-headline font-bold text-lg text-on-surface">K-Tapas &amp; Beer</h4>
+</div>
+<p class="text-sm text-outline line-clamp-1">Small plates perfect for a light outdoor snack.</p>
+<div class="flex items-center gap-4 mt-2 text-xs font-semibold text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">directions_walk</span> 250m</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-tertiary">star</span> 4.5 (88)</span>
+</div>
+</div>
+<div class="pr-4">
+<button class="w-12 h-12 rounded-full border-2 border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</body></html>
