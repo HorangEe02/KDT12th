@@ -1,0 +1,50 @@
+# =============================================================================
+# Mini — lunch-optimizer FastAPI (port 8000)
+# =============================================================================
+# Build context: Mini/ (repo root)
+# Image: ~250MB (python:3.11-slim base)
+#
+# docker build -f docker/Dockerfile.lunch -t mini/lunch-optimizer .
+# =============================================================================
+
+FROM python:3.11-slim AS runtime
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    TZ=Asia/Seoul
+
+# Minimal system deps (SQLite is bundled with Python, but libssl/tzdata help)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates \
+    tzdata \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Install deps first for layer caching
+COPY lunch-optimizer/requirements.txt /app/requirements.txt
+RUN pip install --upgrade pip \
+    && pip install -r /app/requirements.txt
+
+# Copy source (.dockerignore excludes venv/logs/tests)
+COPY lunch-optimizer/ /app/
+
+# Writable data/log directories (mounted as volumes in compose)
+RUN mkdir -p /app/database /app/logs
+
+# #6 Non-root user — principle of least privilege
+RUN groupadd --system --gid 1001 appgroup \
+    && useradd --system --uid 1001 --gid appgroup --home-dir /app --shell /usr/sbin/nologin appuser \
+    && chown -R appuser:appgroup /app
+USER appuser
+
+EXPOSE 8000
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
+    CMD curl -fsS http://127.0.0.1:8000/api/health || exit 1
+
+# uvicorn runs from /app; api.main:app is the entrypoint
+CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000"]

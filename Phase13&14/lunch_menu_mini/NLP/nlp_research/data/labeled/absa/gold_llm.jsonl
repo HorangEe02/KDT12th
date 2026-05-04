@@ -1,0 +1,49 @@
+{"text": "가격 대비 양도 많고 정말 만족스럽네요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "가격 대비 품질이 떨어져요.", "aspects": [{"aspect": "price", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "가격만 비싸고 맛은 형편없어요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "가격은 적당하고 맛도 그럭저럭이네요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "gold_llm"}
+{"text": "가성비 최고네요. 재방문 의사 100%.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "고기 질이 정말 좋네요. 부드럽고 맛있어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "국물이 깊고 진해서 정말 좋아요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "기본은 하는 집이네요.", "aspects": [{"aspect": "service", "sentiment": "neutral"}], "source": "gold_llm"}
+{"text": "다시는 안 갈 거예요. 정말 실망.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "대기 시간이 조금 있었지만 그런대로 먹을 만했어요.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "gold_llm"}
+{"text": "디저트까지 완벽한 식사였어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "맛이 너무 자극적이에요. 조미료 맛만 나요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "매운맛이 일품이에요. 속이 뻥 뚫립니다.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "매장이 깨끗하고 직원분들이 친절해요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "매장이 좁고 답답해요. 재방문 안 할래요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "반찬까지 하나하나 맛있어요. 대단합니다.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "반찬이 모자라서 추가 요청했는데 안 줘요.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "밥이 찰지고 반찬도 깔끔해요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "분위기가 좋고 음식도 훌륭해요. 데이트 장소로 추천!", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "사장님이 불친절해서 기분 상했어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "사장님이 정말 친절하시고 음식도 맛있어요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "사진과 실제가 너무 달라요. 실망.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "서비스가 빠르고 친절해요. 음식 맛도 일품입니다.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "소음이 너무 심해서 대화가 안 돼요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "양이 너무 적어서 배고파서 나왔어요.", "aspects": [{"aspect": "price", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "예약을 했는데도 한참 기다렸어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "위생 상태가 의심스러워요. 비추천.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "위치는 좋은데 음식은 보통이에요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}], "source": "gold_llm"}
+{"text": "음식이 너무 짜고 서비스도 최악이었어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "음식이 덜 익어서 나왔어요. 위험해요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "음식이 식어서 나왔어요. 맛도 별로.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "음식이 정말 맛있고 사장님도 친절해요. 다음에도 올게요!", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "재료가 신선하지 않아요. 비린 맛이 나요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "재료가 신선해서 좋았습니다. 분위기도 좋아요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "점심 메뉴로 먹기에 무난해요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}], "source": "gold_llm"}
+{"text": "정말 오랜만에 맛있는 한 끼를 먹었네요. 감사합니다.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "정성이 느껴지는 한 끼였습니다. 감동입니다.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "주문한지 40분 지나도 음식이 안 나와요.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "주차가 너무 어려워요. 편의성이 떨어집니다.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "직원들이 바빠서 부를 수가 없었어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "청결하고 맛있어요. 가족들과 함께 가기 좋아요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "최고의 맛집! 주변 사람들에게 추천하고 싶어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "크게 맛있지도 나쁘지도 않아요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}], "source": "gold_llm"}
+{"text": "평균적인 한식당입니다.", "aspects": [{"aspect": "ambience", "sentiment": "neutral"}], "source": "gold_llm"}
+{"text": "평범한 맛이에요. 특별하진 않지만 무난합니다.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}], "source": "gold_llm"}
+{"text": "혼밥하기 편한 분위기에요. 음식도 맛있고.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "혼자 먹기엔 괜찮은 정도의 맛이에요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}], "source": "gold_llm"}
+{"text": "화장실이 너무 더러웠어요. 기본이 안 됐네요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "회식 장소로 딱 좋아요. 다들 만족했어요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "gold_llm"}

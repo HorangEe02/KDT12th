@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#27313e",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "on-primary-fixed-variant": "#004395",
+                    "on-surface-variant": "#424754",
+                    "on-secondary-fixed-variant": "#005236",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#005ac2",
+                    "secondary-container": "#6cf8bb",
+                    "outline-variant": "#c2c6d6",
+                    "primary-fixed": "#d8e2ff",
+                    "on-secondary-fixed": "#002113",
+                    "surface-variant": "#d9e3f4",
+                    "on-background": "#121c28",
+                    "on-primary-fixed": "#001a42",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface": "#f8f9ff",
+                    "primary-container": "#2170e4",
+                    "surface-dim": "#d1dbec",
+                    "on-tertiary-container": "#fffbff",
+                    "tertiary": "#825100",
+                    "background": "#f8f9ff",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "on-primary-container": "#fefcff",
+                    "inverse-primary": "#adc6ff",
+                    "surface-container": "#e5eeff",
+                    "surface-container-highest": "#d9e3f4",
+                    "outline": "#727785",
+                    "surface-bright": "#f8f9ff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#6ffbbe",
+                    "on-surface": "#121c28",
+                    "surface-container-low": "#eef4ff",
+                    "primary-fixed-dim": "#adc6ff",
+                    "on-tertiary": "#ffffff",
+                    "secondary": "#006c49",
+                    "primary": "#0058be",
+                    "surface-container-high": "#dfe9fa",
+                    "secondary-fixed-dim": "#4edea3",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed": "#ffddb8",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#2a1700",
+                    "tertiary-container": "#a36700",
+                    "on-secondary-container": "#00714d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen">
+<!-- TopNavBar (Shared Component) -->
+<header class="bg-white/70 dark:bg-slate-900/70 backdrop-blur-md text-xl font-bold text-slate-900 dark:text-white docked full-width top-0 sticky z-40 shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-6 py-3">
+<div class="flex items-center gap-6">
+<span class="text-xl font-bold text-slate-900 dark:text-white">Lunch Optimizer</span>
+<div class="hidden md:flex items-center gap-4 text-sm font-['Plus_Jakarta_Sans'] font-semibold">
+<div class="flex items-center gap-2 text-blue-600 dark:text-blue-400 border-b-2 border-blue-600">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span>Gangnam-gu, Seoul</span>
+</div>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>Nov 21, 12:45 PM</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:text-blue-500 transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:text-blue-500 transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<img alt="User profile" class="w-8 h-8 rounded-full border border-outline-variant/30" data-alt="Close-up portrait of a professional woman with a friendly expression in a modern office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhWEErbAJTUuStYnauYnzmYRNso9Uxn5lHk45GIu11XW29ejKf8nRbn0kOO7c4T8Ckq0P9-5qNBD0a1XGN4hxFNtB7scMV5RHGVNWPRxABu1--OVKDEwJwgiQP-ebmZWIHql5FO26t9keDlEwqVml0_ARjWWfgNJ8T_ZphrqaylyX4jbv8E-uaZPfvSzqiTwnes6o3lQdeBGzMluSZO1LMZocSQ99B-XUqH830KtXp6tjAsrNA_dnf6GLO2geVnxoqOEuRoThVbHnQ"/>
+</div>
+</div>
+</header>
+<div class="flex">
+<!-- SideNavBar (Shared Component) -->
+<aside class="hidden md:flex bg-slate-50 dark:bg-slate-950 h-screen w-64 fixed left-0 top-0 flex-col p-4 gap-2 z-50">
+<div class="mb-8 px-4 pt-4">
+<div class="flex items-center gap-3 mb-1">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-xl" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+</div>
+<span class="text-lg font-black text-blue-700 dark:text-blue-400">Culinary Concierge</span>
+</div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-slate-400 font-bold">The Digital Epicurean</p>
+</div>
+<nav class="flex flex-col gap-1 flex-1">
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide">Discovery</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="cloudy_snowing">cloudy_snowing</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide">Weather</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="bar_chart_4_bars">bar_chart_4_bars</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide">Nutrition</span>
+</a>
+<!-- Active Tab: Team Voting -->
+<a class="flex items-center gap-3 bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 rounded-xl px-4 py-3 shadow-sm transition-all scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="thumbs_up_down" style="font-variation-settings: 'FILL' 1;">thumbs_up_down</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide font-bold">Team Voting</span>
+</a>
+</nav>
+<div class="mt-auto flex flex-col gap-1 border-t border-slate-200 dark:border-slate-800 pt-4">
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-blue-50 rounded-xl" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-sm">Settings</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-blue-50 rounded-xl" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+<span class="text-sm">Support</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 p-6 md:p-12 space-y-12 max-w-7xl mx-auto">
+<!-- Hero Header Section -->
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="text-tertiary font-bold tracking-[0.2em] text-[10px] uppercase block mb-2">Live Collaboration</span>
+<h1 class="text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight mb-2">Democracy for Lunch</h1>
+<p class="text-on-surface-variant max-w-lg">Your team is currently deciding between these three curated choices. Cast your vote to reach a consensus before the weather shifts.</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-6 py-3 bg-surface-container-high text-on-surface font-semibold rounded-2xl hover:bg-surface-dim transition-all active:scale-95">
+<span class="material-symbols-outlined">shuffle</span>
+                        Random Mix
+                    </button>
+<button class="flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-primary to-primary-container text-white font-bold rounded-2xl shadow-lg shadow-primary/20 active:scale-95 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Lock Selection
+                    </button>
+</div>
+</section>
+<!-- Consensus Banner (Conditional) -->
+<div class="bg-secondary/10 border border-secondary/20 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">celebration</span>
+</div>
+<div>
+<h3 class="font-bold text-secondary text-lg">Consensus Reached!</h3>
+<p class="text-on-secondary-container text-sm">80% of the team is craving Sushi. Confirming today's lunch venue...</p>
+</div>
+</div>
+<button class="px-6 py-2 bg-secondary text-white font-bold rounded-xl hover:bg-on-secondary-container transition-colors">
+                    Confirm Today's Lunch
+                </button>
+</div>
+<!-- Bento Voting Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Candidate 1: Sushi -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col h-full">
+<div class="relative h-48">
+<img alt="Premium Sushi Platter" class="w-full h-full object-cover" data-alt="Exquisite arrangement of fresh nigiri sushi on a dark ceramic plate with minimalist garnishes and soft overhead lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnmsqVEp2pt_CZst2brXd98XlvWAmDxg3S_VKdj2SjpWi35pfGxvRHUGK2PK0HmqXcLBDmA43GoiiwuBt7zyqszAh2l410SNddQyZSU7xRsqUiZxQ0A_HmxAKRWv2ZTGR02YDLLwQgIlqvJJM6V4iVTv-B5mFuWfIcJLlWw4W2p38tTKubQt3dXGjURQfknQyPYt0fneY1IgeGL0f69V46NeFUjE1aMOXlfi49ezbg7Tf6rPdYoP413vXk8wvyTNSuUU3FBY5MH7ev"/>
+<div class="absolute top-4 left-4">
+<span class="bg-tertiary-container text-on-tertiary-fixed font-bold text-[10px] px-3 py-1 rounded-full uppercase tracking-wider">Premium Seafood</span>
+</div>
+</div>
+<div class="p-6 space-y-6 flex-1 flex flex-col">
+<div>
+<h3 class="text-2xl font-bold mb-1">Mizuho Sushi</h3>
+<div class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.8 (120+ reviews)</span>
+<span>•</span>
+<span>0.4 mi</span>
+</div>
+</div>
+<!-- Real-time Vote Chart -->
+<div class="space-y-2">
+<div class="flex justify-between items-end">
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-tighter">Current Votes</span>
+<span class="text-2xl font-black text-primary">12</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all" style="width: 75%;"></div>
+</div>
+</div>
+<!-- Avatars -->
+<div class="flex -space-x-3 overflow-hidden">
+<img alt="Team member" class="inline-block h-8 w-8 rounded-full ring-4 ring-white" data-alt="Portrait of a young professional man with glasses smiling softly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNrkNoZM7zQgcPrnS-vK9iuaaJUVO9BbcmnkPri1vOkabefqIxSaxtATarFDXrzdhyR3lH_OCihykysgENeopQZHhfO_Faj5DumWjQIORsxCTRgUguf4mm4HM6Zf_9oYWjLqPBUq32O_HpRkyS3AOVEmyeHrGP6OynhvUCSzHD8hKkA8BaG_4F_w67lYt1kVjkETY17sz5kcFyHVJnnC7PbypVbzZrrRTmtJzoZF7d5JCA-whjIZSY58G00vJnBJCRzansz4u1JBYf"/>
+<img alt="Team member" class="inline-block h-8 w-8 rounded-full ring-4 ring-white" data-alt="Close-up portrait of a woman with curly hair and a business-casual outfit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC09uVnQDyNFjcLBHwn-TQ9hRJmz0dNQLoKYxw9pBJKywF1zZAe6307N3lFs5Y2cW2DqNxAgYzVBRN54tFUukvL56Z0hf2F4f6F2dTqiWXwksGD1n2OjW8ZluMSljxHT4kOOStThhME9ILGHbdky-Ern-Lwjm6oVvl8LcfwDqApYvmQypFrTz_CKZubpo9cSnyTRUXF_QeJw20Xe2pFkLIea08s63dADfGJqc4ffjQiOIZ3J8Vsf1u71OVzO1ri8ALHIGNK13c_vNT3"/>
+<img alt="Team member" class="inline-block h-8 w-8 rounded-full ring-4 ring-white" data-alt="Portrait of a male professional in a crisp white shirt against a neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgTuXvsOvbNXF5iczVGiBh7d6c6m4HDhGE0Q8YX9G1td-Z6Rfsg_p6sR6AuzsguUGTuW1b7IXH4JVAxUTPxHY8r5_dfMfry5De72PFs5zhCcHCw4Jmj79fb4MvZP-REGJxxcvJPUSv94cu_iWmR6Deb7qmhw22yPmxLmbYy9eHNnpB-BlGpqip0un0LbZ2m4fw9wnPmZFidhXTd5REznNxTN0cSkVjPtu4ijuzy2cHX98GPSjXhWt0ms4V3RMpe1u9mAtu3L0pHq1w"/>
+<div class="flex items-center justify-center h-8 w-8 rounded-full ring-4 ring-white bg-surface-container-high text-[10px] font-bold text-on-surface-variant">+9</div>
+</div>
+<button class="w-full py-4 mt-auto border-2 border-primary text-primary font-bold rounded-2xl hover:bg-primary hover:text-white transition-all active:scale-95 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">thumb_up</span>
+                            Vote for Sushi
+                        </button>
+</div>
+</div>
+<!-- Candidate 2: Italian -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col h-full">
+<div class="relative h-48">
+<img alt="Handmade Pasta" class="w-full h-full object-cover" data-alt="Twirled fresh pasta with bright tomato sauce and fresh basil leaf on a rustic white plate, warm sunset lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0DNlWnw7U3wFKKquFwAF6RodKGPsM-qEfz1muqGiL0d8gDSelJgoekNTia4Ix-r7npG7WZFt4kD_BF9tcjEOCmxS13Z4DzwDPGaH7BohMCZXYGVToF5eLJU9PEHDKnt0jD_j9A8GURKssL3OdET-qw1uL2yZ7kFlQytGWswBgooQQRYT2hlOYZIw6MCE-s979rldWqPCAmpzhGSMiWgaBThn9CVZ57TL3MPOarcGStaJCA0Rj_xVFNIxCyM6s6EW5wYzdq1QjaZeV"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary-fixed text-on-primary-fixed font-bold text-[10px] px-3 py-1 rounded-full uppercase tracking-wider">Handmade Pasta</span>
+</div>
+</div>
+<div class="p-6 space-y-6 flex-1 flex flex-col">
+<div>
+<h3 class="text-2xl font-bold mb-1">Bella Cucina</h3>
+<div class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.5 (85 reviews)</span>
+<span>•</span>
+<span>0.8 mi</span>
+</div>
+</div>
+<!-- Real-time Vote Chart -->
+<div class="space-y-2">
+<div class="flex justify-between items-end">
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-tighter">Current Votes</span>
+<span class="text-2xl font-black text-on-surface-variant">3</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary/40 rounded-full transition-all" style="width: 20%;"></div>
+</div>
+</div>
+<!-- Avatars -->
+<div class="flex -space-x-3 overflow-hidden">
+<img alt="Team member" class="inline-block h-8 w-8 rounded-full ring-4 ring-white" data-alt="Portrait of a female architect with short hair in a bright studio environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxbaSGzSodNYYnRoLkaKtSi15No4tUcXNU_Q09bzt40oSLBMXp0dTQIbhvcu4Nhnuu2hcrSD63tWsaZrYchxmWVHhoL3DaziH8M_s51fOrQQ2V-sM1k_QUr6xf4W4-uxO5z3MuQxh7feSvBzc6MLDwWMWTsG847v-BwYzIRTONT8lRkg5Q75AoF2LcEnvf0ft2fmHo5GVb0Wa5JZ79dxnwJqknigqkAOH5NKH6etianlvIiwIBOrckyaDYgvf9SOWmoCHcBcGoTLnn"/>
+<img alt="Team member" class="inline-block h-8 w-8 rounded-full ring-4 ring-white" data-alt="Close-up of an elderly man with a kind smile and warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD26wwoA46uOykyWPLQ-F7wOuNaXakQTmOvZub-SJOW1jiyJvielD2kAS_s432nkQWnqOGK8iHWvY469YaMf_iER9YpDFOdYijsH5iDytGveDCablFHooKRYcyvfDsH_noqPBtVvIF4E2ve_B9O8-q3s0400VEcLZNC2Zq11yyfb69pfE8nuyJO3tqsROilWGipDqWCDwIcmhYqkMsO1iUKM6VoV1Lbr2s5hmTz11LU3lMF42jQ3IZr-RYbXnSrpRO60JJVFqyW0ejy"/>
+<img alt="Team member" class="inline-block h-8 w-8 rounded-full ring-4 ring-white" data-alt="Young man with a modern hairstyle smiling at the camera, clean indoor background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuCdlPvvxDOkr87yLIk5FIA0K7nW_E97Dp7VcWDDaZOxz2yZToZXwGwSi6xsZpTQI6_haCdzBqAUiT5wLej7HGD51s4qOa8QWDOycNXRn3wGgt_ncTt5nNr6wN9l3yT4-GqwnVSOZYxrC0iRFgpmi4Zcf5RF5XigC_ugUqpMZdCJPItaUgp0WwwQ-gbLxh5TakvP6cN5M3syPPHuk8JoYrt_Y61_0RhmvaFpXMtHJ9RmLF2Jaq66JAhB24xgH_GbfbLzu4KoplCXJK"/>
+</div>
+<button class="w-full py-4 mt-auto border-2 border-outline text-on-surface-variant font-bold rounded-2xl hover:border-primary hover:text-primary transition-all active:scale-95 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">thumb_up</span>
+                            Vote for Italian
+                        </button>
+</div>
+</div>
+<!-- Candidate 3: Korean -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col h-full">
+<div class="relative h-48">
+<img alt="Korean Bibimbap" class="w-full h-full object-cover opacity-90" data-alt="Colorful Korean bibimbap bowl with assorted vegetables, egg yolk, and spicy gochujang sauce on a wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgntlhCP9VfTLsK5Xk30nRmrP_lIAw8A62_KPtp08BYhN5JyddZm1amwIMrY0Yg_iwmoEZI3xyK1kb1UvcKfpS5HJs_YtCC-FvYZ5af2E9CS4E1OGxEqPS3gHzgy7WVtUCa9z05Nmvm_tSU4aUfdcelosjQjilIM3c0kMHcUkzhJt7Aq8DfVV7NN4x93PjVrrT6_xbKA3SY_jVxqgWBZzKcYxIzA_r9lwWxODB_jGko8lPP23beE1pIrqWOMqRw6S_XafRaoZk3Cie"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary-container text-on-secondary-container font-bold text-[10px] px-3 py-1 rounded-full uppercase tracking-wider">Traditional Korean</span>
+</div>
+</div>
+<div class="p-6 space-y-6 flex-1 flex flex-col">
+<div>
+<h3 class="text-2xl font-bold mb-1">Seoul Garden</h3>
+<div class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.7 (210 reviews)</span>
+<span>•</span>
+<span>0.2 mi</span>
+</div>
+</div>
+<!-- Real-time Vote Chart -->
+<div class="space-y-2">
+<div class="flex justify-between items-end">
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-tighter">Current Votes</span>
+<span class="text-2xl font-black text-on-surface-variant">1</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary/20 rounded-full transition-all" style="width: 8%;"></div>
+</div>
+</div>
+<!-- Avatars -->
+<div class="flex -space-x-3 overflow-hidden">
+<img alt="Team member" class="inline-block h-8 w-8 rounded-full ring-4 ring-white" data-alt="Portrait of a young tech professional with a beard and confident look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA00WiCeQmA1_QLPIffSP49JYVa6ONx3bwEZghXJDQRwW3BJFN75PxrUwwu-AwQLDYFtXAnwZ9YTE19Zh_DBCrbjj1QDMPYaKdwill4jN66-epCySEV-Ah5-kYs3VZjBje9iTB-WpEZlZP73_beWQTw1fbe2g6jdnOmB-1MXlc2kf120ffJbkR4GzsNV8ISdUmSwenvtg59rw44iM8iCUoKkN3E6yhP_yyzwD3UX9-2RwD15dDTj_cmrG04MjQxSkGRG7I0IiMpzbP4"/>
+</div>
+<button class="w-full py-4 mt-auto border-2 border-outline text-on-surface-variant font-bold rounded-2xl hover:border-primary hover:text-primary transition-all active:scale-95 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">thumb_up</span>
+                            Vote for Korean
+                        </button>
+</div>
+</div>
+</div>
+<!-- Recent History Section -->
+<section class="space-y-8">
+<div class="flex items-center justify-between border-b border-outline-variant pb-4">
+<h2 class="text-2xl font-bold tracking-tight">Recent Vote History</h2>
+<a class="text-primary font-bold text-sm hover:underline" href="#">View All Decisions</a>
+</div>
+<div class="space-y-4">
+<!-- History Item 1 -->
+<div class="flex items-center justify-between p-6 bg-surface-container-low rounded-2xl group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-xl overflow-hidden shadow-sm">
+<img alt="Restaurant thumbnail" class="w-full h-full object-cover" data-alt="Small thumbnail of a cozy high-end restaurant interior with dim lighting and warm wood furniture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1FkHt5VRo7c6bpiOETYDVj875hHhkRyCQigwVZJvHiB52hl_tst7_mVbYZ2p9h2JbRQjZo4TSPh_p2D205kHb3vem_ukKvl3YM4HDEwXr0Hz82HWNafrMct2gp32hx6ot6yOBLZ1d5MFJz2FIivYxtA3IrXqhKwQel1AzNY4pUZ_BLlJbPxxtvoP1-3ZQcXip6OE8JgaARNn6iY_KGU_FVTOm6haHxx2kv2Qr5eSp_Uphv79wNDkfi96KIIlUrJXjb1NPm8ACT197"/>
+</div>
+<div>
+<h4 class="font-bold text-lg">The Grill Station</h4>
+<p class="text-sm text-on-surface-variant">Nov 20 • Unanimous Consensus (16/16)</p>
+</div>
+</div>
+<div class="flex items-center gap-8">
+<div class="hidden md:flex flex-col items-end">
+<span class="text-xs uppercase font-bold text-slate-400 tracking-wider">Avg. Rating</span>
+<span class="font-headline font-bold text-secondary">94% Satisfied</span>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</div>
+<!-- History Item 2 -->
+<div class="flex items-center justify-between p-6 bg-surface-container-low rounded-2xl group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-xl overflow-hidden shadow-sm">
+<img alt="Restaurant thumbnail" class="w-full h-full object-cover" data-alt="Overhead view of a gourmet pizza with bubbling cheese and fresh basil" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL3oKcpSLvoQ9j19W1viCb2cf_FGDDmFHHBkgUBVo6UbrEF6lGiPC0Q-X4KbUgDgziT-sP8IL6Mf5UDpL0yV6Can2umTOtFY0VQAvxhVAp9EniFgsOcudjq_Z966IWQ7WVlobW_ST_HG7-RDGapXJJdurameIToQ6kx_5CjnaeuCTKq9oIGI0qncAu-Hr8fES2LUqgz2yzTE_do48c-9iBBWQ3-stkSg2FCCjqCvhQtUOmSprYD2dSACPpafsLaHWjtGRQqDpV14yw"/>
+</div>
+<div>
+<h4 class="font-bold text-lg">Luigi's Pizza Art</h4>
+<p class="text-sm text-on-surface-variant">Nov 19 • Close Vote (9 vs 7)</p>
+</div>
+</div>
+<div class="flex items-center gap-8">
+<div class="hidden md:flex flex-col items-end">
+<span class="text-xs uppercase font-bold text-slate-400 tracking-wider">Avg. Rating</span>
+<span class="font-headline font-bold text-secondary">82% Satisfied</span>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</div>
+<!-- History Item 3 -->
+<div class="flex items-center justify-between p-6 bg-surface-container-low rounded-2xl group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-xl overflow-hidden shadow-sm">
+<img alt="Restaurant thumbnail" class="w-full h-full object-cover" data-alt="Fluffy pancakes with maple syrup and fresh blueberries in a bright morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8rvi51U1zi85P64tJ8IvfQZNODDMZ0XYPBTzH8gUVV25ouS6MuLETT1YHttJJ0rbU20JbZlIwXftlsWuw1T03n6e6QGJ-Ma_efVDlum6B4VTtkrWdTtbIyAcbQjfVAhFc2bp5kw4M7lorTcJu29fVdElr5GbvCDPLCwrJJ76pf34uC8HrzYFqJWvnftDTdijaHhqPiBtgZ2lXThuW5OYXM-W7Vbxzf_I-I1COTDVWVkd1MifFjOlPQ1tNeObT9dP84mzRoVrClUM5"/>
+</div>
+<div>
+<h4 class="font-bold text-lg">Pancake House</h4>
+<p class="text-sm text-on-surface-variant">Nov 18 • Team Choice</p>
+</div>
+</div>
+<div class="flex items-center gap-8">
+<div class="hidden md:flex flex-col items-end">
+<span class="text-xs uppercase font-bold text-slate-400 tracking-wider">Avg. Rating</span>
+<span class="font-headline font-bold text-secondary">88% Satisfied</span>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+</body></html>

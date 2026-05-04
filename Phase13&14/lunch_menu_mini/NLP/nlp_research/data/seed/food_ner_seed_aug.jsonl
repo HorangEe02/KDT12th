@@ -1,0 +1,100 @@
+{"tokens": ["부드러운", "돼지고기", "이", "들어간", "설렁탕"], "tags": ["B-TEXTURE", "B-INGREDIENT", "O", "O", "B-DISH"]}
+{"tokens": ["튀긴", "불고기", "에", "닭고기", "을", "곁들였다"], "tags": ["B-COOKING", "B-DISH", "O", "B-INGREDIENT", "O", "O"]}
+{"tokens": ["부드러운", "계란", "이", "들어간", "된장찌개"], "tags": ["B-TEXTURE", "B-INGREDIENT", "O", "O", "B-DISH"]}
+{"tokens": ["얼큰한", "김치찌개", "에", "돼지고기", "가", "가득"], "tags": ["B-FLAVOR", "B-DISH", "O", "B-INGREDIENT", "O", "O"]}
+{"tokens": ["달콤한", "불고기", "정말", "맛있어요"], "tags": ["B-FLAVOR", "B-DISH", "O", "O"]}
+{"tokens": ["고소한", "김치찌개", "에", "계란", "가", "가득"], "tags": ["B-FLAVOR", "B-DISH", "O", "B-INGREDIENT", "O", "O"]}
+{"tokens": ["아삭한", "돈까스", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["촉촉한", "라면", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["구운", "비빔밥", "에", "마늘", "을", "곁들였다"], "tags": ["B-COOKING", "B-DISH", "O", "B-INGREDIENT", "O", "O"]}
+{"tokens": ["볶은", "비빔밥", "에", "두부", "을", "곁들였다"], "tags": ["B-COOKING", "B-DISH", "O", "B-INGREDIENT", "O", "O"]}
+{"tokens": ["볶은", "소고기", "와", "매운", "돈까스"], "tags": ["B-COOKING", "B-INGREDIENT", "O", "B-FLAVOR", "B-DISH"]}
+{"tokens": ["짭짤한", "냉면", "정말", "맛있어요"], "tags": ["B-FLAVOR", "B-DISH", "O", "O"]}
+{"tokens": ["짭짤한", "김치찌개", "에", "파", "가", "가득"], "tags": ["B-FLAVOR", "B-DISH", "O", "B-INGREDIENT", "O", "O"]}
+{"tokens": ["매운", "돈까스", "에", "소고기", "가", "가득"], "tags": ["B-FLAVOR", "B-DISH", "O", "B-INGREDIENT", "O", "O"]}
+{"tokens": ["짭짤한", "제육볶음", "에", "당면", "가", "가득"], "tags": ["B-FLAVOR", "B-DISH", "O", "B-INGREDIENT", "O", "O"]}
+{"tokens": ["볶은", "당면", "와", "달콤한", "설렁탕"], "tags": ["B-COOKING", "B-INGREDIENT", "O", "B-FLAVOR", "B-DISH"]}
+{"tokens": ["매운", "제육볶음", "정말", "맛있어요"], "tags": ["B-FLAVOR", "B-DISH", "O", "O"]}
+{"tokens": ["쫄깃한", "된장찌개", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["튀긴", "소고기", "와", "얼큰한", "삼겹살"], "tags": ["B-COOKING", "B-INGREDIENT", "O", "B-FLAVOR", "B-DISH"]}
+{"tokens": ["견과류", "이", "들어간", "냉면", "는", "주의"], "tags": ["B-ALLERGEN", "O", "O", "B-DISH", "O", "O"]}
+{"tokens": ["쫄깃한", "냉면", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["쫄깃한", "설렁탕", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["부드러운", "당면", "이", "들어간", "제육볶음"], "tags": ["B-TEXTURE", "B-INGREDIENT", "O", "O", "B-DISH"]}
+{"tokens": ["아삭한", "설렁탕", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["바삭한", "김밥", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["우유", "이", "들어간", "제육볶음", "는", "주의"], "tags": ["B-ALLERGEN", "O", "O", "B-DISH", "O", "O"]}
+{"tokens": ["아삭한", "두부", "이", "들어간", "제육볶음"], "tags": ["B-TEXTURE", "B-INGREDIENT", "O", "O", "B-DISH"]}
+{"tokens": ["구운", "불고기", "에", "돼지고기", "을", "곁들였다"], "tags": ["B-COOKING", "B-DISH", "O", "B-INGREDIENT", "O", "O"]}
+{"tokens": ["볶은", "마늘", "와", "짭짤한", "된장찌개"], "tags": ["B-COOKING", "B-INGREDIENT", "O", "B-FLAVOR", "B-DISH"]}
+{"tokens": ["아삭한", "설렁탕", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["튀긴", "제육볶음", "에", "파", "을", "곁들였다"], "tags": ["B-COOKING", "B-DISH", "O", "B-INGREDIENT", "O", "O"]}
+{"tokens": ["견과류", "이", "들어간", "김밥", "는", "주의"], "tags": ["B-ALLERGEN", "O", "O", "B-DISH", "O", "O"]}
+{"tokens": ["쫄깃한", "비빔밥", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["아삭한", "떡볶이", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["찐", "돈까스", "에", "당면", "을", "곁들였다"], "tags": ["B-COOKING", "B-DISH", "O", "B-INGREDIENT", "O", "O"]}
+{"tokens": ["우유", "이", "들어간", "불고기", "는", "주의"], "tags": ["B-ALLERGEN", "O", "O", "B-DISH", "O", "O"]}
+{"tokens": ["아삭한", "김밥", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["매운", "된장찌개", "정말", "맛있어요"], "tags": ["B-FLAVOR", "B-DISH", "O", "O"]}
+{"tokens": ["바삭한", "제육볶음", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["밀가루", "이", "들어간", "된장찌개", "는", "주의"], "tags": ["B-ALLERGEN", "O", "O", "B-DISH", "O", "O"]}
+{"tokens": ["계란", "이", "들어간", "라면", "는", "주의"], "tags": ["B-ALLERGEN", "O", "O", "B-DISH", "O", "O"]}
+{"tokens": ["밀가루", "이", "들어간", "삼겹살", "는", "주의"], "tags": ["B-ALLERGEN", "O", "O", "B-DISH", "O", "O"]}
+{"tokens": ["매운", "제육볶음", "에", "소고기", "가", "가득"], "tags": ["B-FLAVOR", "B-DISH", "O", "B-INGREDIENT", "O", "O"]}
+{"tokens": ["아삭한", "버섯", "이", "들어간", "제육볶음"], "tags": ["B-TEXTURE", "B-INGREDIENT", "O", "O", "B-DISH"]}
+{"tokens": ["구운", "삼겹살", "에", "마늘", "을", "곁들였다"], "tags": ["B-COOKING", "B-DISH", "O", "B-INGREDIENT", "O", "O"]}
+{"tokens": ["촉촉한", "김치찌개", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["쫄깃한", "계란", "이", "들어간", "비빔밥"], "tags": ["B-TEXTURE", "B-INGREDIENT", "O", "O", "B-DISH"]}
+{"tokens": ["매운", "제육볶음", "에", "버섯", "가", "가득"], "tags": ["B-FLAVOR", "B-DISH", "O", "B-INGREDIENT", "O", "O"]}
+{"tokens": ["찐", "당면", "와", "달콤한", "비빔밥"], "tags": ["B-COOKING", "B-INGREDIENT", "O", "B-FLAVOR", "B-DISH"]}
+{"tokens": ["튀긴", "떡볶이", "에", "계란", "을", "곁들였다"], "tags": ["B-COOKING", "B-DISH", "O", "B-INGREDIENT", "O", "O"]}
+{"tokens": ["고소한", "냉면", "정말", "맛있어요"], "tags": ["B-FLAVOR", "B-DISH", "O", "O"]}
+{"tokens": ["땅콩", "이", "들어간", "된장찌개", "는", "주의"], "tags": ["B-ALLERGEN", "O", "O", "B-DISH", "O", "O"]}
+{"tokens": ["볶은", "불고기", "에", "돼지고기", "을", "곁들였다"], "tags": ["B-COOKING", "B-DISH", "O", "B-INGREDIENT", "O", "O"]}
+{"tokens": ["아삭한", "된장찌개", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["새콤한", "김밥", "정말", "맛있어요"], "tags": ["B-FLAVOR", "B-DISH", "O", "O"]}
+{"tokens": ["구운", "계란", "와", "달콤한", "비빔밥"], "tags": ["B-COOKING", "B-INGREDIENT", "O", "B-FLAVOR", "B-DISH"]}
+{"tokens": ["촉촉한", "계란", "이", "들어간", "비빔밥"], "tags": ["B-TEXTURE", "B-INGREDIENT", "O", "O", "B-DISH"]}
+{"tokens": ["찐", "라면", "에", "마늘", "을", "곁들였다"], "tags": ["B-COOKING", "B-DISH", "O", "B-INGREDIENT", "O", "O"]}
+{"tokens": ["아삭한", "설렁탕", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["바삭한", "버섯", "이", "들어간", "돈까스"], "tags": ["B-TEXTURE", "B-INGREDIENT", "O", "O", "B-DISH"]}
+{"tokens": ["쫄깃한", "파", "이", "들어간", "떡볶이"], "tags": ["B-TEXTURE", "B-INGREDIENT", "O", "O", "B-DISH"]}
+{"tokens": ["땅콩", "이", "들어간", "불고기", "는", "주의"], "tags": ["B-ALLERGEN", "O", "O", "B-DISH", "O", "O"]}
+{"tokens": ["부드러운", "냉면", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["고소한", "떡볶이", "정말", "맛있어요"], "tags": ["B-FLAVOR", "B-DISH", "O", "O"]}
+{"tokens": ["아삭한", "불고기", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["매운", "설렁탕", "정말", "맛있어요"], "tags": ["B-FLAVOR", "B-DISH", "O", "O"]}
+{"tokens": ["부드러운", "두부", "이", "들어간", "된장찌개"], "tags": ["B-TEXTURE", "B-INGREDIENT", "O", "O", "B-DISH"]}
+{"tokens": ["짭짤한", "된장찌개", "정말", "맛있어요"], "tags": ["B-FLAVOR", "B-DISH", "O", "O"]}
+{"tokens": ["달콤한", "삼겹살", "에", "파", "가", "가득"], "tags": ["B-FLAVOR", "B-DISH", "O", "B-INGREDIENT", "O", "O"]}
+{"tokens": ["아삭한", "비빔밥", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["아삭한", "당면", "이", "들어간", "김밥"], "tags": ["B-TEXTURE", "B-INGREDIENT", "O", "O", "B-DISH"]}
+{"tokens": ["촉촉한", "돈까스", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["부드러운", "된장찌개", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["촉촉한", "양파", "이", "들어간", "돈까스"], "tags": ["B-TEXTURE", "B-INGREDIENT", "O", "O", "B-DISH"]}
+{"tokens": ["계란", "이", "들어간", "설렁탕", "는", "주의"], "tags": ["B-ALLERGEN", "O", "O", "B-DISH", "O", "O"]}
+{"tokens": ["새콤한", "제육볶음", "정말", "맛있어요"], "tags": ["B-FLAVOR", "B-DISH", "O", "O"]}
+{"tokens": ["부드러운", "돼지고기", "이", "들어간", "돈까스"], "tags": ["B-TEXTURE", "B-INGREDIENT", "O", "O", "B-DISH"]}
+{"tokens": ["쫄깃한", "소고기", "이", "들어간", "불고기"], "tags": ["B-TEXTURE", "B-INGREDIENT", "O", "O", "B-DISH"]}
+{"tokens": ["바삭한", "떡볶이", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["새우", "이", "들어간", "돈까스", "는", "주의"], "tags": ["B-ALLERGEN", "O", "O", "B-DISH", "O", "O"]}
+{"tokens": ["쫄깃한", "김밥", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["부드러운", "김밥", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["찐", "소고기", "와", "매운", "제육볶음"], "tags": ["B-COOKING", "B-INGREDIENT", "O", "B-FLAVOR", "B-DISH"]}
+{"tokens": ["매운", "된장찌개", "에", "두부", "가", "가득"], "tags": ["B-FLAVOR", "B-DISH", "O", "B-INGREDIENT", "O", "O"]}
+{"tokens": ["촉촉한", "김밥", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["새우", "이", "들어간", "돈까스", "는", "주의"], "tags": ["B-ALLERGEN", "O", "O", "B-DISH", "O", "O"]}
+{"tokens": ["달콤한", "돈까스", "정말", "맛있어요"], "tags": ["B-FLAVOR", "B-DISH", "O", "O"]}
+{"tokens": ["얼큰한", "삼겹살", "정말", "맛있어요"], "tags": ["B-FLAVOR", "B-DISH", "O", "O"]}
+{"tokens": ["삶은", "버섯", "와", "얼큰한", "설렁탕"], "tags": ["B-COOKING", "B-INGREDIENT", "O", "B-FLAVOR", "B-DISH"]}
+{"tokens": ["아삭한", "파", "이", "들어간", "비빔밥"], "tags": ["B-TEXTURE", "B-INGREDIENT", "O", "O", "B-DISH"]}
+{"tokens": ["쫄깃한", "불고기", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["고소한", "설렁탕", "정말", "맛있어요"], "tags": ["B-FLAVOR", "B-DISH", "O", "O"]}
+{"tokens": ["매운", "설렁탕", "에", "양파", "가", "가득"], "tags": ["B-FLAVOR", "B-DISH", "O", "B-INGREDIENT", "O", "O"]}
+{"tokens": ["매운", "라면", "정말", "맛있어요"], "tags": ["B-FLAVOR", "B-DISH", "O", "O"]}
+{"tokens": ["밀가루", "이", "들어간", "떡볶이", "는", "주의"], "tags": ["B-ALLERGEN", "O", "O", "B-DISH", "O", "O"]}
+{"tokens": ["부드러운", "떡볶이", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}
+{"tokens": ["달콤한", "된장찌개", "정말", "맛있어요"], "tags": ["B-FLAVOR", "B-DISH", "O", "O"]}
+{"tokens": ["매운", "제육볶음", "에", "두부", "가", "가득"], "tags": ["B-FLAVOR", "B-DISH", "O", "B-INGREDIENT", "O", "O"]}
+{"tokens": ["땅콩", "이", "들어간", "라면", "는", "주의"], "tags": ["B-ALLERGEN", "O", "O", "B-DISH", "O", "O"]}
+{"tokens": ["아삭한", "라면", "최고"], "tags": ["B-TEXTURE", "B-DISH", "O"]}

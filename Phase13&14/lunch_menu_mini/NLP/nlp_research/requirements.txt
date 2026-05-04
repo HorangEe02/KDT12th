@@ -1,0 +1,32 @@
+# Phase 6 NLP Research — dependencies
+#
+# Install guide
+# -------------
+# Minimal (tests + scaffolding only, no training):
+#     pip install pyyaml numpy pandas python-dotenv
+#
+# Full (allows train.py / inference.py):
+#     pip install -r requirements.txt
+#
+# Optional add-ons (commented out — install manually when needed):
+#     pip install pytorch-crf          # B2 Food NER with CRF head
+#     pip install faiss-cpu            # E1 Embedding CF hardware-accelerated search
+#     pip install wandb                # W&B experiment logging
+
+# --- Core (always) ---
+pyyaml>=6.0
+numpy>=1.24,<2.0  # chromadb compatibility
+pandas>=2.0
+python-dotenv>=1.0
+
+# --- Model runtime (train + inference) ---
+torch>=2.0
+transformers>=4.36
+datasets>=2.15
+sentence-transformers>=2.2
+seqeval>=1.2.2
+
+# --- Optional (uncomment to enable) ---
+# pytorch-crf>=0.7.2
+# faiss-cpu>=1.7.4
+# wandb>=0.16

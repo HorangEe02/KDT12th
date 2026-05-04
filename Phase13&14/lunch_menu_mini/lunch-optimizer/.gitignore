@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+venv/
+.venv/
+env/
+*.egg-info/
+
+# 환경 변수 (상위 경로 .env 도 보호)
+.env
+.env.local
+
+# DB
+*.db
+*.sqlite
+*.sqlite3
+database/*.db
+
+# 로그
+logs/*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# 테스트 / 커버리지
+.pytest_cache/
+.coverage
+htmlcov/
+
+# macOS
+.DS_Store

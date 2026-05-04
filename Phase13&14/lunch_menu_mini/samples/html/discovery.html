@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lunch Optimizer - Discovery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#27313e",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "on-primary-fixed-variant": "#004395",
+                    "on-surface-variant": "#424754",
+                    "on-secondary-fixed-variant": "#005236",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#005ac2",
+                    "secondary-container": "#6cf8bb",
+                    "outline-variant": "#c2c6d6",
+                    "primary-fixed": "#d8e2ff",
+                    "on-secondary-fixed": "#002113",
+                    "surface-variant": "#d9e3f4",
+                    "on-background": "#121c28",
+                    "on-primary-fixed": "#001a42",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface": "#f8f9ff",
+                    "primary-container": "#2170e4",
+                    "surface-dim": "#d1dbec",
+                    "on-tertiary-container": "#fffbff",
+                    "tertiary": "#825100",
+                    "background": "#f8f9ff",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "on-primary-container": "#fefcff",
+                    "inverse-primary": "#adc6ff",
+                    "surface-container": "#e5eeff",
+                    "surface-container-highest": "#d9e3f4",
+                    "outline": "#727785",
+                    "surface-bright": "#f8f9ff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#6ffbbe",
+                    "on-surface": "#121c28",
+                    "surface-container-low": "#eef4ff",
+                    "primary-fixed-dim": "#adc6ff",
+                    "on-tertiary": "#ffffff",
+                    "secondary": "#006c49",
+                    "primary": "#0058be",
+                    "surface-container-high": "#dfe9fa",
+                    "secondary-fixed-dim": "#4edea3",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed": "#ffddb8",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#2a1700",
+                    "tertiary-container": "#a36700",
+                    "on-secondary-container": "#00714d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .radar-grid {
+            clip-path: polygon(50% 0%, 100% 38%, 81% 100%, 19% 100%, 0% 38%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- Sidebar (SideNavBar Anchor) -->
+<aside class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 bg-slate-50 dark:bg-slate-950 p-4 gap-2 z-50">
+<div class="mb-8 px-4 py-2">
+<h1 class="text-lg font-black text-blue-700 dark:text-blue-400 font-headline">Culinary Concierge</h1>
+<p class="text-xs font-label tracking-wide text-slate-500 uppercase">The Digital Epicurean</p>
+</div>
+<nav class="flex flex-col gap-2 flex-grow">
+<!-- Active Tab: Discovery -->
+<a class="flex items-center gap-3 bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 rounded-xl px-4 py-3 shadow-sm font-label font-semibold" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+                Discovery
+            </a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl transition-colors font-label" href="#">
+<span class="material-symbols-outlined" data-icon="cloudy_snowing">cloudy_snowing</span>
+                Weather
+            </a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl transition-colors font-label" href="#">
+<span class="material-symbols-outlined" data-icon="bar_chart_4_bars">bar_chart_4_bars</span>
+                Nutrition
+            </a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl transition-colors font-label" href="#">
+<span class="material-symbols-outlined" data-icon="thumbs_up_down">thumbs_up_down</span>
+                Team Voting
+            </a>
+</nav>
+<div class="mt-auto border-t border-slate-200 dark:border-slate-800 pt-4 flex flex-col gap-2">
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-2 hover:bg-blue-50 rounded-xl font-label text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Settings
+            </a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-2 hover:bg-blue-50 rounded-xl font-label text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+                Support
+            </a>
+</div>
+</aside>
+<!-- Main Content Wrapper -->
+<main class="md:ml-64 min-h-screen flex flex-col">
+<!-- Top Navigation (TopNavBar Anchor) -->
+<header class="bg-white/70 dark:bg-slate-900/70 backdrop-blur-md sticky top-0 z-40 w-full px-6 py-3 flex justify-between items-center shadow-sm">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded-full">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="location_on">location_on</span>
+<span class="font-headline font-semibold text-sm text-slate-900">Gangnam-gu, Seoul</span>
+</div>
+<div class="hidden lg:flex items-center gap-2 text-slate-500">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span>
+<span class="text-sm font-label">Nov 21, 12:45 PM</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-slate-200">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="close-up portrait of a professional woman with a friendly smile in a modern office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr5t4vbU31POappdmakyry7B451S_cuvL6xFEjRKMpivBPTOeIY1U70AZ4K3n45P_3WzcTPQ55pEoORKVzTfj0BOiYNsqv48LI3Geb52Lk7yd24oTAZNzLUaCPyWjk6sTfAjYnka5Vcgoxe5kks8vZOq7E4b-4dGfFlxdVibEHnRFN_gxsy7QMxb_b7wKsIVhVp9hhX_WcLvOILhXFUYlTru0ZRJyTu_vPeENc8CJXKB3X7Hxx8hfBxzdZXzvIUXik0Zjyc6lSdwP4"/>
+</div>
+</div>
+</header>
+<!-- Discovery Canvas -->
+<div class="p-8 flex flex-col lg:flex-row gap-8">
+<!-- Central Feed Section -->
+<section class="flex-grow space-y-8">
+<header class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h2 class="text-3xl font-headline font-extrabold text-on-surface">Top Recommendations</h2>
+<p class="text-on-surface-variant">Optimized for your team's current cravings &amp; weather.</p>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-2 overflow-x-auto pb-2">
+<button class="px-5 py-2 bg-primary text-on-primary rounded-full text-sm font-semibold whitespace-nowrap">All</button>
+<button class="px-5 py-2 bg-surface-container-high text-on-surface hover:bg-surface-bright transition-colors rounded-full text-sm font-semibold whitespace-nowrap">Korean</button>
+<button class="px-5 py-2 bg-surface-container-high text-on-surface hover:bg-surface-bright transition-colors rounded-full text-sm font-semibold whitespace-nowrap">Japanese</button>
+<button class="px-5 py-2 bg-surface-container-high text-on-surface hover:bg-surface-bright transition-colors rounded-full text-sm font-semibold whitespace-nowrap">Western</button>
+<button class="px-5 py-2 bg-surface-container-high text-on-surface hover:bg-surface-bright transition-colors rounded-full text-sm font-semibold whitespace-nowrap">Asian</button>
+</div>
+</header>
+<!-- Restaurant Grid/List -->
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+<!-- Card 1: Active/Featured -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl flex gap-5 border-2 border-primary ring-4 ring-primary/5 shadow-lg group cursor-pointer">
+<div class="w-32 h-32 rounded-xl overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="vibrant bowl of authentic bibimbap with colorful vegetables and a perfectly fried egg in a modern korean restaurant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDPpEis5tKh9kLKVv7mtOaEFjSldTm1sIa1i2fTw7p0HhddndJzmnQA2nMw4mKBC6awc0IkeSkIJ2n9McJefTOy8dhhYVdLPaftWcDVMGBOAx4PdHvNt2xINRxo72Ai9NVC_wSQ-GKYprSBdpOi8StMqeYSvSGy3JFXARcN-KZzNrNfkRsKGOYALDvCp3R_viqgJ0TqmDplTl0PKV-2CqkbBNhJXR4hDc6xT2jcrGlMI179I86KIj7z-NejKORDDpI4UB-8rdfyzx-"/>
+</div>
+<div class="flex-grow flex flex-col justify-between py-1">
+<div>
+<div class="flex justify-between items-start">
+<span class="text-[0.65rem] font-bold tracking-widest text-tertiary-container uppercase px-2 py-0.5 bg-tertiary-fixed rounded">Korean • Modern</span>
+<div class="flex items-center gap-1 text-secondary font-bold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm">4.9</span>
+</div>
+</div>
+<h3 class="text-xl font-headline font-bold text-on-surface mt-1">Myeongdong Grill</h3>
+<div class="flex items-center gap-4 mt-2 text-xs text-on-surface-variant font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs" data-icon="near_me">near_me</span> 0.4km</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs" data-icon="payments">payments</span> $$</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-4">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full border-2 border-white bg-slate-200"><img data-alt="minimalist user avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVSyK10i0sJlaklEBPWZZkaSF85K4LSRrHhHQeq3WGfVBAieycGSGJBZVXPlH9D-ghtc44bwtTbC0NMPyRTgspcEmZipwBhbSPw2Tg6Q2pNQE9BUg9pBcXiM4E54LvZBJrmnmoYJ0PcB8-2fQYAMMKaQd6d_mBPwcxgVNy2viwjXl6JarwfK0TW7uwsBWbY3x4sqBTcT7rqFAgxoTW03vBKKhVuECnOKTfsJI1HQfy7qDjFISb7K3E90AodW7i5t2ZqEmHgm-s0r1H"/></div>
+<div class="w-6 h-6 rounded-full border-2 border-white bg-slate-200"><img data-alt="minimalist user avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXSwm9Jt2KCeV4xQYujFLLZohL2OweeNVX1hJl4LxL5NQxB6T377HaAokcwOlaGAoLYLPbIgRncNjihHbri0dG6EwR5OyQsuisOfxvC2PeKBLcy_l8MjFi1bLfeOixsYQ_MZQttHEgQpLZsnzNS5Oq6qSZrUos3nUqT7K0rudsKI_4wHvZadNpV8fLWWnQlLylEChByIeYLT1ylOOGBdaHeaogvQeTuS0JAFdnr00y06FspTumrCGrkE1MEZR6TSz2c7TCt1CYJ-_G"/></div>
+<div class="w-6 h-6 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center text-[8px] font-bold text-slate-500">+8</div>
+</div>
+<div class="bg-primary/10 text-primary px-3 py-1 rounded-lg">
+<span class="text-lg font-headline font-extrabold italic">98</span>
+<span class="text-[10px] font-bold uppercase ml-0.5">Score</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl flex gap-5 shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
+<div class="w-32 h-32 rounded-xl overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="delicate assorted sushi platter on a minimalist dark stone plate with soft ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmJ3Uxqk3icVHcN0Z0HGxr9H3Uyq_0Xl8C4-eLMESlFNxWQ3cagPZbhHiKJYsOTxIioBb7ZE5H2PJlmW2VzmBlvdVFtMsfCzYLJHByyCADaZnjf-WXn119WBc1MZMqzneTZH7OhIVKGym3EdO2-zmnsHTTkya5LWQZmC9SpSPXE_hBs5d7bQAyyca3o5hUernQW1zv9x6a5y9VmOX1JiUge36D5KgbRKT6n71l6Z7zClMRrGcU5lI7PY1c2rNn1aVo51giEdwbFi6r"/>
+</div>
+<div class="flex-grow flex flex-col justify-between py-1">
+<div>
+<div class="flex justify-between items-start">
+<span class="text-[0.65rem] font-bold tracking-widest text-slate-500 uppercase px-2 py-0.5 bg-slate-100 rounded">Japanese • Sushi</span>
+<div class="flex items-center gap-1 text-slate-400 font-bold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm">4.7</span>
+</div>
+</div>
+<h3 class="text-xl font-headline font-bold text-on-surface mt-1">Sora Omakase</h3>
+<div class="flex items-center gap-4 mt-2 text-xs text-on-surface-variant font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs" data-icon="near_me">near_me</span> 0.8km</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs" data-icon="payments">payments</span> $$$</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-4">
+<div class="flex -space-x-2 opacity-50">
+<div class="w-6 h-6 rounded-full border-2 border-white bg-slate-200"><img data-alt="minimalist user avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtBlCePo9lH88RIjlihomeKmsHFAwB2xmuV9KdLwFcD_pgJwedUfQoiD_RA1FmK9IqtX3GkT0Zgom-yLhtvjZD096G36fj4FxKUETAe0Sm2vPFm8c52j4_YyI6bFi26kMrA9VrOkAvUXqYxNNyAQ5coezC_O0j9kFI7SlDSIPcKNKh1AYSN2stiHfIWfOJ_KMMrI7UUyBE3lk6LOKSMYGtQP5eA-ukffmBd8v3A0sGquz62CjQzxz_ysD9geJS1SZ6hB841MBU0utj"/></div>
+<div class="w-6 h-6 rounded-full border-2 border-white bg-slate-200"><img data-alt="minimalist user avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSB4TNDLN6_xOAko0I3PNpWcsYNWP4k9Wewpwpqcp8dk-XZsAz2dnHmPIiViTJcCuoD29hE1udNucys6FnamXPWVTzpSy8K9VE-9X4iLP4EOp4qlRb17E5O3Mfh6me_FnjNqSqw8mtGgnvop-PYTSQdsPj_LrVsjWmMCZSl-KxVaEncMd_QGY8omBcnGHdCYb3p5_2JLmMXz3QdALa6OsYJ-qD5Jg0Lze-s-vpOriywfD6dr3HdRzP4dh1i7Opl7HrTcJsCnNTq1Wl"/></div>
+</div>
+<div class="bg-slate-100 text-slate-500 px-3 py-1 rounded-lg">
+<span class="text-lg font-headline font-extrabold italic">84</span>
+<span class="text-[10px] font-bold uppercase ml-0.5">Score</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl flex gap-5 shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
+<div class="w-32 h-32 rounded-xl overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="healthy vibrant salad bowl with grilled chicken, avocado, and fresh greens in a bright sunlit cafe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGC9OkNOnN6bO-105Hjum3W8yGxvRXcyNE3lbvdCyQkGQ0I17RWSiEumSE2CN5bsM90ZsbBKN8JU8yZeDWqkFUlQXaWiy5I66S3abD_G5tqFUI8T4SzRnXJ99AixLoTCEL5RJujb6sB7G9OwKM6NS6p0xvyDyh35wjluWGscXLOwIsYTV7tssahckNXPiC7St-cQhG8XtZpK8TwmuuK318UYpesu70WEql1UnxRts17UN3PykDHe9z4wp1Cl2vlhqx8OaGl-Bw3bgQ"/>
+</div>
+<div class="flex-grow flex flex-col justify-between py-1">
+<div>
+<div class="flex justify-between items-start">
+<span class="text-[0.65rem] font-bold tracking-widest text-secondary-container bg-secondary px-2 py-0.5 rounded uppercase">Western • Healthy</span>
+<div class="flex items-center gap-1 text-slate-400 font-bold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm">4.5</span>
+</div>
+</div>
+<h3 class="text-xl font-headline font-bold text-on-surface mt-1">The Green House</h3>
+<div class="flex items-center gap-4 mt-2 text-xs text-on-surface-variant font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs" data-icon="near_me">near_me</span> 1.2km</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs" data-icon="payments">payments</span> $</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-4">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full border-2 border-white bg-slate-200"><img data-alt="minimalist user avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIbrf7e6GvX5zC6CLCvflkhltmn0es67FzW8TZLL4NcfZNS0C5u3OCOhYP84B2wEPpb1504RiSs-Bo2IlBhp8_NqFXv5bLl-ZbBbaGr0y3m0bSnnkDug3lg4VWUe7vHXtFGqrHHOquZ4wTUgh4XADpR1Msyyhu7SxtsMEDtv1XwEXnTNQFXWatBXjagkZ_DVphp8MUPnRuEE2d06gzaoawCHwVAbjfL8_I_BdWDUqjtR9aaCGV9MA955Gks2zgPQlNyGCFhJ5MqfX1"/></div>
+</div>
+<div class="bg-slate-100 text-slate-500 px-3 py-1 rounded-lg">
+<span class="text-lg font-headline font-extrabold italic">79</span>
+<span class="text-[10px] font-bold uppercase ml-0.5">Score</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recently Visited Section -->
+<div class="pt-4 border-t border-slate-200">
+<h4 class="text-sm font-label font-bold text-slate-500 uppercase tracking-widest mb-4">Recently Visited</h4>
+<div class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
+<div class="flex-shrink-0 w-48 bg-surface-container-low p-3 rounded-xl flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-slate-300 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="cozy interior of an italian bistro with warm incandescent lighting and rustic wooden tables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbSgOKscG3hO28dCp1brCsuUIP8ZK-ttyM1xGHfi0XiOEGnqfk2DFCZaRq4R6hjNk3jl4yO2k5LK2P5A9-BbqGcIKRld9gxKncQus-bDOGQg6XC05tdFUTc6-eUBEjfWkI2ULLehky1tqBt0WUW7zXJ7oYK5uMEBkiQ6HrvTgmDy0qrgjBqjs_XcsLq5i6ycGZHYYuxSKoTcXbZUPiEe1v0uQ92tEwOtklMShOyMaQhOrXeCItGRpxXlrVaPDpWWcW25zx59ycuYsj"/>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface truncate w-28">Pasta Street</p>
+<p class="text-[10px] text-slate-500">2 days ago</p>
+</div>
+</div>
+<div class="flex-shrink-0 w-48 bg-surface-container-low p-3 rounded-xl flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-slate-300 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="busy professional kitchen with chefs preparing gourmet dishes under bright white lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSlivHhpoaNpX-dioW41LTMMJ_RiN9O2gdtL0v9PTXyECt5jylpybDwws0TkV1PPfduPJMfP8zGlZXcdBpbAnEbOnwlHnIqDPBgMw8V3HCnXQ2hlFVPv9joabDB35yiV5ZNGTbo-hRUmhpoCUc0pA5dWAHOh8DIxr5Cz9Gy5UDbmLWdoDv4V0NVBdrjxPJpxq4Y693-C-YgSbcfwOGOZXb2YfxENrj7nTUbQwdVjNE_tW_r9NS7--Eo1dkMyvN4QLexhVYMQUB4YQZ"/>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface truncate w-28">Wagyu King</p>
+<p class="text-[10px] text-slate-500">Last week</p>
+</div>
+</div>
+<div class="flex-shrink-0 w-48 bg-surface-container-low p-3 rounded-xl flex items-center gap-3 opacity-60">
+<div class="w-10 h-10 rounded-lg bg-slate-300 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="overhead shot of a gourmet pepperoni pizza with fresh basil and oozing cheese" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP4GWWxf7yri7q8ZogZU8C_zxjqjYFAWCcZj7RgD26atJG2mLoFRNJxbCPWndXFYgplPg07IxOrrpIxFjlJixFzvbEiUYA_bKvRDMupD57mdOW_JOfnkddDRzvHqTbDOuz8TyzCS5vkiSiC6JBS3D7UikrS8PKEX0dyaRk1kdHWZ6VNChwb6gLCEtbK97vN1jzxxUbIieczjwFWMLNeckPvK6CR_oC2p5wm_c_I93WZsy7_JojPnHsUHK14lXfFQGhPFTBRP4ZGT53"/>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface truncate w-28">Pizza Hub</p>
+<p class="text-[10px] text-slate-500">2 weeks ago</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Detail Panel -->
+<aside class="w-full lg:w-[400px] flex-shrink-0">
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm sticky top-24 border border-outline-variant/10">
+<div class="relative h-48 w-full rounded-xl overflow-hidden mb-6">
+<img class="w-full h-full object-cover" data-alt="close-up of traditional korean stone pot bibimbap with steam rising and fresh colorful ingredients" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_U8N8wgFBNOpOeOWm_zQV-1lZJvG73EqVuKWQSSMBaGb8-HQ5K4wlvTdD5tnpd8mmjI6gV8mryd__6R1qfedlwkmRk7Bbn6NGQ4EsXsNvoSGj13Yna9QpTTOWjcZQPh-7Nqxrqe7k2riYmxGbCfzde3UQ9EfzITJeubRsKj0CTPiFcCQ0tiQav9Mdbxgll464qp0kT3wQ2GFmP2R0Zlxu51_i7lAuj1IyNpmunZSud3l4uBG8b2I2LK9MxsMwNZif9pnnZV4Oh08g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<h2 class="text-2xl font-headline font-extrabold text-white">Myeongdong Grill</h2>
+<p class="text-white/80 text-sm">Traditional Korean Cuisine</p>
+</div>
+</div>
+<div class="space-y-6">
+<div>
+<h4 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Optimization Analysis</h4>
+<!-- Custom Radar Chart Visualization -->
+<div class="relative w-full aspect-square flex items-center justify-center p-8 bg-surface-container-low rounded-2xl">
+<!-- Radar Background Grids -->
+<div class="absolute w-4/5 h-4/5 border border-slate-200 radar-grid opacity-50"></div>
+<div class="absolute w-3/5 h-3/5 border border-slate-200 radar-grid opacity-50"></div>
+<div class="absolute w-2/5 h-2/5 border border-slate-200 radar-grid opacity-50"></div>
+<div class="absolute w-1/5 h-1/5 border border-slate-200 radar-grid opacity-50"></div>
+<!-- Radar Data Shape -->
+<div class="absolute w-[85%] h-[85%] bg-secondary/10 border-2 border-secondary radar-grid" style="clip-path: polygon(50% 5%, 95% 30%, 85% 90%, 25% 85%, 15% 45%);"></div>
+<!-- Labels -->
+<span class="absolute top-2 text-[10px] font-bold text-slate-600 uppercase">Weather</span>
+<span class="absolute right-0 top-[35%] text-[10px] font-bold text-slate-600 uppercase">Rating</span>
+<span class="absolute right-6 bottom-2 text-[10px] font-bold text-slate-600 uppercase">Price</span>
+<span class="absolute left-6 bottom-2 text-[10px] font-bold text-slate-600 uppercase">Nutrition</span>
+<span class="absolute left-0 top-[35%] text-[10px] font-bold text-slate-600 uppercase">Distance</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-tertiary-fixed rounded-xl">
+<p class="text-[10px] font-bold text-on-tertiary-fixed-variant uppercase">Best Match</p>
+<p class="text-lg font-headline font-black text-on-tertiary-fixed">Spicy Soup</p>
+<p class="text-[10px] text-on-tertiary-fixed-variant opacity-70 mt-1">Perfect for 5°C cloudy weather</p>
+</div>
+<div class="p-4 bg-secondary-fixed rounded-xl">
+<p class="text-[10px] font-bold text-on-secondary-fixed-variant uppercase">Team Sentiment</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-lg text-secondary" style="font-variation-settings: 'FILL' 1;">thumb_up</span>
+<p class="text-lg font-headline font-black text-on-secondary-fixed">High</p>
+</div>
+</div>
+</div>
+<button class="w-full py-4 bg-primary rounded-xl text-on-primary font-headline font-bold text-lg hover:scale-[1.02] active:scale-95 transition-transform shadow-lg shadow-primary/20">
+                            Book Table for Team
+                        </button>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Contextual FAB (Only for main screens) -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-90 transition-transform z-50">
+<span class="material-symbols-outlined text-2xl" data-icon="add">add</span>
+</button>
+</body></html>

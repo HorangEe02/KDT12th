@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#f8f9ff",
+                    "surface-tint": "#005ac2",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "on-tertiary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#e5eeff",
+                    "primary-fixed": "#d8e2ff",
+                    "on-surface": "#121c28",
+                    "on-surface-variant": "#424754",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#adc6ff",
+                    "surface-container-low": "#eef4ff",
+                    "on-secondary-fixed": "#002113",
+                    "on-secondary-fixed-variant": "#005236",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#adc6ff",
+                    "on-tertiary-container": "#fffbff",
+                    "on-background": "#121c28",
+                    "secondary-container": "#6cf8bb",
+                    "inverse-on-surface": "#eaf1ff",
+                    "background": "#f8f9ff",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#2170e4",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#d9e3f4",
+                    "secondary-fixed-dim": "#4edea3",
+                    "surface-container-highest": "#d9e3f4",
+                    "surface-container-high": "#dfe9fa",
+                    "on-primary-container": "#fefcff",
+                    "tertiary-container": "#a36700",
+                    "surface-dim": "#d1dbec",
+                    "outline": "#727785",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#004395",
+                    "on-secondary-container": "#00714d",
+                    "secondary-fixed": "#6ffbbe",
+                    "tertiary": "#825100",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "on-tertiary-fixed": "#2a1700",
+                    "tertiary-fixed": "#ffddb8",
+                    "outline-variant": "#c2c6d6",
+                    "secondary": "#006c49",
+                    "primary": "#0058be",
+                    "inverse-surface": "#27313e",
+                    "surface": "#f8f9ff",
+                    "on-primary-fixed": "#001a42"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.5rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface flex min-h-screen overflow-hidden">
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col h-screen w-64 border-r border-slate-200/30 dark:border-slate-800/30 bg-slate-50 dark:bg-slate-950 font-['Manrope'] text-sm font-semibold tracking-wide shrink-0">
+<div class="p-6 space-y-6 flex flex-col h-full">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+</div>
+<div>
+<h1 class="text-xl font-extrabold font-['Plus_Jakarta_Sans'] text-blue-700 dark:text-blue-500 tracking-tighter leading-tight">Culinary Logic</h1>
+<p class="text-[10px] text-slate-500 font-medium uppercase tracking-[0.1em]">Precision Hospitality</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-xl transition-all duration-200 ease-out" href="#">
+<span class="material-symbols-outlined mr-3">explore</span>
+<span>Discovery</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-xl transition-all duration-200 ease-out" href="#">
+<span class="material-symbols-outlined mr-3">cloud</span>
+<span>Weather</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-xl transition-all duration-200 ease-out" href="#">
+<span class="material-symbols-outlined mr-3">restaurant</span>
+<span>Nutrition</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-xl transition-all duration-200 ease-out" href="#">
+<span class="material-symbols-outlined mr-3">how_to_vote</span>
+<span>Team Voting</span>
+</a>
+<a class="flex items-center px-4 py-3 text-blue-700 dark:text-blue-400 bg-white dark:bg-slate-900 shadow-sm rounded-xl transition-all duration-200 ease-out translate-x-1" href="#">
+<span class="material-symbols-outlined mr-3">psychology</span>
+<span>NLP Insights</span>
+</a>
+</nav>
+<div class="pt-6 border-t border-slate-200/50 dark:border-slate-800/50 space-y-2">
+<button class="w-full bg-primary text-white py-3 px-4 rounded-xl font-bold flex items-center justify-center space-x-2 active:scale-95 duration-150 ease-in-out">
+<span class="material-symbols-outlined text-sm">edit_note</span>
+<span>Analyze Text</span>
+</button>
+<a class="flex items-center px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-xl transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3">help_outline</span>
+<span>Help</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-xl transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3 text-error">logout</span>
+<span>Sign Out</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col overflow-hidden">
+<!-- TopNavBar -->
+<header class="bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl flex justify-between items-center px-8 py-3 w-full border-b border-slate-200/20 dark:border-slate-700/20 sticky top-0 z-50">
+<div class="flex items-center space-x-8">
+<div class="hidden lg:flex items-center space-x-6">
+<div class="flex items-center text-slate-500 dark:text-slate-400 font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight">
+<span class="material-symbols-outlined text-sm mr-1">location_on</span>
+<span>London, UK</span>
+</div>
+<div class="flex items-center text-slate-500 dark:text-slate-400 font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight">
+<span class="material-symbols-outlined text-sm mr-1">schedule</span>
+<span>12:45 PM</span>
+</div>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button class="p-2 text-slate-500 dark:text-slate-400 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-lg transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-slate-500 dark:text-slate-400 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-lg transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="h-8 w-[1px] bg-slate-200/30 dark:bg-slate-700/30 mx-2"></div>
+<img alt="User profile" class="w-9 h-9 rounded-full object-cover border-2 border-primary/20" data-alt="Close-up portrait of a professional male chef in a white uniform smiling against a blurred kitchen background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyMnq5yHmmh4yHQxpeaMH_Ey2mPWDDmnHz4_gI8hJKxFjGb3WdSAkWrugyjeT0u9ZqYtCTGJhBpD8GovCHOk2Wesbagmyji9wWf7CboJtId6Fkc724jGA6f6MqEFxxnyHg0w9GG_pzVVXtcEhZqVc3pRP6s7TRCC3NxpXxrejyjMHyQ9hy1LTDR7ZhHeBxpdXv_MJtddk7wpiDsT0QdFUT3wjXBHAdWPXydENLcII4ZYyx1QAN5bS4RoJTtYLu9ejor_iC_6xkXmzb"/>
+</div>
+</header>
+<!-- Canvas -->
+<main class="flex-1 overflow-y-auto p-8 space-y-12">
+<!-- Page Header -->
+<section class="flex flex-col md:flex-row justify-between items-end gap-6">
+<div>
+<span class="text-primary font-bold text-xs uppercase tracking-widest mb-2 block">Linguistic Intelligence</span>
+<h2 class="text-4xl font-extrabold text-on-surface tracking-tighter">NLP Insights Dashboard</h2>
+</div>
+<div class="flex gap-3">
+<button class="px-6 py-2.5 bg-surface-container-high text-on-surface font-semibold rounded-xl hover:bg-surface-dim transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">file_download</span>
+<span>Export Data</span>
+</button>
+</div>
+</section>
+<!-- Bento Grid Main -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- 1. Sentiment Analysis Overview -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-8 flex flex-col">
+<div class="flex justify-between items-start mb-10">
+<div>
+<h3 class="text-xl font-bold text-on-surface">Sentiment Analysis Overview</h3>
+<p class="text-on-surface-variant text-sm mt-1">Real-time aggregate from 2,450+ guest reviews</p>
+</div>
+<div class="flex items-center gap-2 bg-secondary/10 px-3 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+<span class="text-secondary font-bold text-xs">+14.2% Neutral conversion</span>
+</div>
+</div>
+<div class="flex-1 space-y-8">
+<!-- Positive Bar -->
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-bold uppercase tracking-wider text-secondary">
+<span>Positive</span>
+<span>78%</span>
+</div>
+<div class="w-full h-10 bg-surface-container rounded-lg overflow-hidden flex">
+<div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed-dim" style="width: 78%"></div>
+</div>
+</div>
+<!-- Neutral Bar -->
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-bold uppercase tracking-wider text-primary">
+<span>Neutral</span>
+<span>15%</span>
+</div>
+<div class="w-full h-10 bg-surface-container rounded-lg overflow-hidden flex">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container" style="width: 15%"></div>
+</div>
+</div>
+<!-- Negative Bar -->
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-bold uppercase tracking-wider text-tertiary">
+<span>Negative</span>
+<span>7%</span>
+</div>
+<div class="w-full h-10 bg-surface-container rounded-lg overflow-hidden flex">
+<div class="h-full bg-tertiary-container" style="width: 7%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. Interactive RAG Chatbot Preview -->
+<div class="lg:col-span-5 bg-primary text-on-primary rounded-xl overflow-hidden flex flex-col relative group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary to-blue-800 opacity-90"></div>
+<div class="relative p-8 flex flex-col h-full z-10">
+<div class="flex items-center gap-3 mb-8">
+<div class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<h3 class="text-xl font-bold">RAG Concierge</h3>
+</div>
+<div class="space-y-6 flex-1">
+<!-- User Message -->
+<div class="bg-white/10 backdrop-blur-xl border border-white/10 p-4 rounded-2xl self-end max-w-[90%]">
+<p class="text-sm font-medium leading-relaxed">"요즘 피곤한데 비타민 많은 메뉴 추천해줘"</p>
+</div>
+<!-- Bot Response -->
+<div class="space-y-3">
+<div class="flex items-center gap-2">
+<span class="text-[10px] uppercase font-bold tracking-widest opacity-60">AI Assistant</span>
+</div>
+<div class="bg-white text-on-surface p-5 rounded-2xl shadow-xl">
+<p class="text-sm leading-relaxed mb-4">피로 회복에는 **비타민 B와 C**가 풍부한 **'지중해식 케일 연어 샐러드'**를 추천드립니다. 연어의 오메가-3와 케일의 항산화 성분이 활력을 되찾는 데 도움을 줍니다.</p>
+<div class="flex gap-2">
+<span class="px-2 py-1 bg-surface-container text-[10px] font-bold rounded">REF: NUTR-ID-829</span>
+<span class="px-2 py-1 bg-surface-container text-[10px] font-bold rounded">VOTED: 92%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-white/10 flex items-center gap-3">
+<div class="flex-1 bg-white/10 rounded-full px-4 py-2 text-sm opacity-80">Message RAG Assistant...</div>
+<button class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary active:scale-90 transition-transform">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 2. Menu Normalization Pipeline -->
+<section class="bg-surface-container-low rounded-xl p-10">
+<div class="mb-12">
+<h3 class="text-2xl font-bold tracking-tight">Menu Normalization Pipeline</h3>
+<p class="text-on-surface-variant">Converting diverse regional menu strings into high-precision nutrition tokens</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-4 items-center">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/10">
+<span class="text-[10px] font-bold text-primary block mb-3 uppercase tracking-tighter">Input</span>
+<div class="p-3 bg-surface-container rounded-lg italic text-sm text-on-surface-variant">"Spicy Kimchi Slaw 8oz"</div>
+</div>
+<div class="flex justify-center">
+<span class="material-symbols-outlined text-outline-variant">trending_flat</span>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/10 relative">
+<span class="text-[10px] font-bold text-primary block mb-3 uppercase tracking-tighter">NLP Parse</span>
+<div class="space-y-1">
+<div class="text-[11px] flex justify-between"><span class="opacity-60">Entity:</span> <span class="font-bold">Kimchi</span></div>
+<div class="text-[11px] flex justify-between"><span class="opacity-60">Mod:</span> <span class="font-bold">Spicy</span></div>
+<div class="text-[11px] flex justify-between"><span class="opacity-60">Qty:</span> <span class="font-bold">226g</span></div>
+</div>
+</div>
+<div class="flex justify-center">
+<span class="material-symbols-outlined text-outline-variant">trending_flat</span>
+</div>
+<!-- Step 3 -->
+<div class="bg-primary text-on-primary p-6 rounded-xl shadow-lg transform scale-105">
+<span class="text-[10px] font-bold block mb-3 uppercase tracking-tighter opacity-80">Output ID</span>
+<div class="flex items-center gap-3">
+<span class="text-xl font-extrabold tracking-widest">SID_9281_V2</span>
+<span class="material-symbols-outlined text-secondary-fixed">verified</span>
+</div>
+<div class="mt-2 text-[10px] opacity-70">Nutrition Match: 99.4%</div>
+</div>
+</div>
+</section>
+<!-- 3. AI NLP Roadmap Timeline -->
+<section class="space-y-8">
+<div class="flex items-center gap-4">
+<div class="h-[1px] flex-1 bg-outline-variant/30"></div>
+<h3 class="text-xl font-extrabold tracking-tighter px-4">AI NLP STRATEGIC ROADMAP</h3>
+<div class="h-[1px] flex-1 bg-outline-variant/30"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Phase 5 -->
+<div class="relative pl-8 border-l-4 border-primary pb-8">
+<div class="absolute -left-[14px] top-0 w-6 h-6 bg-primary rounded-full border-4 border-background flex items-center justify-center">
+<div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-center mb-6">
+<span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full">CURRENT PHASE</span>
+<span class="text-on-surface-variant text-sm font-bold">Q3 2024</span>
+</div>
+<h4 class="text-2xl font-extrabold mb-4">Phase 5: MVP Rollout</h4>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span class="text-sm text-on-surface-variant">Deployment of Base RAG Chatbot for enterprise lunch scheduling.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span class="text-sm text-on-surface-variant">Regional dialect mapping for Korean/Japanese fusion menus.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary/30 text-sm">radio_button_unchecked</span>
+<span class="text-sm text-on-surface-variant">Live A/B Testing: Sentiment-aware menu sorting.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Phase 6 -->
+<div class="relative pl-8 border-l-4 border-outline-variant pb-8">
+<div class="absolute -left-[14px] top-0 w-6 h-6 bg-outline-variant rounded-full border-4 border-background flex items-center justify-center">
+</div>
+<div class="bg-white/50 backdrop-blur-sm border border-outline-variant/20 p-8 rounded-xl opacity-80">
+<div class="flex justify-between items-center mb-6">
+<span class="px-3 py-1 bg-outline-variant/20 text-on-surface-variant text-[10px] font-bold rounded-full">UPCOMING</span>
+<span class="text-on-surface-variant text-sm font-bold">Q1 2025</span>
+</div>
+<h4 class="text-2xl font-extrabold mb-4">Phase 6: Research &amp; Personalization</h4>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-outline-variant text-sm">science</span>
+<span class="text-sm text-on-surface-variant">Bio-feedback NLP integration (wearable data synthesis).</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-outline-variant text-sm">science</span>
+<span class="text-sm text-on-surface-variant">Multi-modal analysis: Image-to-Sentiment conversion.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- FAB Suppression Rule Applied: No FAB on Insights/Detail Screen -->
+</body></html>

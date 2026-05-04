@@ -1,0 +1,18 @@
+node_modules/
+.next/
+out/
+.env.local
+.env*.local
+.env.production
+*.log
+.DS_Store
+next-env.d.ts
+
+# Firebase Hosting
+.firebaserc
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+
+# Backups
+*.bak

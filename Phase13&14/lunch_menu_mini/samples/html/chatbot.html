@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Culinary Concierge - Lunch Optimizer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #f8f9ff;
+        }
+        .font-plus-jakarta-sans {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary": "#825100",
+                      "surface-bright": "#f8f9ff",
+                      "on-primary-fixed-variant": "#004395",
+                      "on-background": "#121c28",
+                      "surface-dim": "#d1dbec",
+                      "on-surface": "#121c28",
+                      "error": "#ba1a1a",
+                      "primary-fixed": "#d8e2ff",
+                      "on-tertiary-fixed": "#2a1700",
+                      "surface-tint": "#005ac2",
+                      "primary-fixed-dim": "#adc6ff",
+                      "tertiary-fixed-dim": "#ffb95f",
+                      "on-primary-fixed": "#001a42",
+                      "on-primary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-primary-container": "#fefcff",
+                      "on-error-container": "#93000a",
+                      "on-secondary-container": "#00714d",
+                      "surface-container-highest": "#d9e3f4",
+                      "secondary": "#006c49",
+                      "background": "#f8f9ff",
+                      "secondary-fixed": "#6ffbbe",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-high": "#dfe9fa",
+                      "outline": "#727785",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "inverse-primary": "#adc6ff",
+                      "tertiary-fixed": "#ffddb8",
+                      "tertiary-container": "#a36700",
+                      "primary-container": "#2170e4",
+                      "on-tertiary-fixed-variant": "#653e00",
+                      "on-error": "#ffffff",
+                      "surface-container": "#e5eeff",
+                      "on-tertiary-container": "#fffbff",
+                      "surface-container-low": "#eef4ff",
+                      "on-secondary-fixed": "#002113",
+                      "surface-variant": "#d9e3f4",
+                      "secondary-container": "#6cf8bb",
+                      "inverse-on-surface": "#eaf1ff",
+                      "on-surface-variant": "#424754",
+                      "outline-variant": "#c2c6d6",
+                      "secondary-fixed-dim": "#4edea3",
+                      "primary": "#0058be",
+                      "on-secondary-fixed-variant": "#005236",
+                      "inverse-surface": "#27313e",
+                      "surface": "#f8f9ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Plus Jakarta Sans"],
+                      "body": ["Manrope"],
+                      "label": ["Manrope"]
+              }
+            },
+          }
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background overflow-hidden h-screen flex">
+<!-- SideNavBar -->
+<aside class="hidden md:flex fixed left-0 top-0 h-full w-64 bg-slate-50 flex-col p-4 z-50">
+<div class="mb-10 px-2">
+<h1 class="text-lg font-extrabold text-blue-900 leading-tight">The Epicurean</h1>
+<p class="text-xs text-slate-500 font-medium">Precision Hospitality</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 bg-white text-blue-700 font-bold rounded-xl shadow-sm transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="chat_bubble">chat_bubble</span>
+<span class="font-manrope text-sm">Concierge</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="explore">explore</span>
+<span class="font-manrope text-sm">Discovery</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="history">history</span>
+<span class="font-manrope text-sm">History</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="settings">settings</span>
+<span class="font-manrope text-sm">Preferences</span>
+</a>
+</nav>
+<div class="pt-4 mt-4 space-y-2">
+<button class="w-full py-3 px-4 bg-primary text-white font-bold rounded-xl active:scale-95 duration-150 shadow-lg shadow-primary/20">
+                Book Team Lunch
+            </button>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:text-error rounded-xl transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="logout">logout</span>
+<span class="font-manrope text-sm">Sign Out</span>
+</a>
+</div>
+</aside>
+<!-- Main Workspace -->
+<main class="flex-1 flex flex-col md:ml-64 h-full relative">
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 left-0 md:left-64 h-16 glass-panel flex justify-between items-center px-6 z-40">
+<div class="flex items-center gap-4">
+<span class="text-xl font-bold tracking-tight text-blue-800 font-headline">Culinary Concierge</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden sm:flex gap-4">
+<span class="material-symbols-outlined text-slate-500 hover:text-primary transition-colors cursor-pointer" data-icon="location_on">location_on</span>
+<span class="material-symbols-outlined text-slate-500 hover:text-primary transition-colors cursor-pointer" data-icon="schedule">schedule</span>
+<span class="material-symbols-outlined text-slate-500 hover:text-primary transition-colors cursor-pointer" data-icon="notifications">notifications</span>
+</div>
+<img alt="User profile" class="w-10 h-10 rounded-full border-2 border-white shadow-sm" data-alt="Professional headshot of a person with friendly expression and modern business attire, high key lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvkofN2wNQ5pehzEFkpdzaULlG2IFVoCA9z6mix0li96He8Ack4zeHLQ9gR4oe-Ovq4ky3TWTWP3i8Nb9BOC1GClyRVZxGC7DrnHta_aZCZkKDv-dAJRZxSFVvPA2oUkh8r4xpFjyBvuQeYJDsEOGb-mferOx9vL_zkHw5QgLtOOHgkjyiZ1bdMSODNwIhGAR1c2F53_4hPpQM296UE0q91NR2ca3DZ9S27jEmtceVAMerMOt1kNw3LZMGjUJsbKTLuSiXkXzgoJWV"/>
+</div>
+</header>
+<!-- Content Area -->
+<section class="flex-1 overflow-y-auto pt-24 pb-48 px-4 md:px-12 flex flex-col gap-10">
+<!-- User Message -->
+<div class="flex justify-end items-start gap-4">
+<div class="max-w-[80%] md:max-w-md bg-white p-6 rounded-3xl rounded-tr-none shadow-sm border border-slate-100">
+<p class="text-on-background font-medium text-lg">오늘 뭐 먹을까?</p>
+</div>
+<div class="w-10 h-10 bg-primary-fixed rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="person">person</span>
+</div>
+</div>
+<!-- AI Message & Recommendations -->
+<div class="flex justify-start items-start gap-4">
+<div class="w-10 h-10 bg-primary-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="restaurant_menu">restaurant_menu</span>
+</div>
+<div class="flex-1 max-w-4xl space-y-6">
+<div class="glass-panel p-6 rounded-3xl rounded-tl-none border border-white shadow-sm">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-tertiary text-lg" data-icon="cloud">cloud</span>
+<span class="text-sm font-semibold text-tertiary-container">흐림, 12°C</span>
+</div>
+<p class="text-on-background text-lg font-medium leading-relaxed">
+                            오늘은 기온 12°C에 흐린 날씨예요. 이번 주 단백질이 좀 부족했네요! <span class="text-primary font-bold">추천 메뉴입니다.</span>
+</p>
+</div>
+<!-- Bento-ish Grid Recommendation Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-slate-100 flex flex-col">
+<div class="h-32 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Traditional Korean noodle soup with rich broth, meat garnish, and fresh vegetables in a rustic ceramic bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJTLH4xCbkpIB8RorfjAPAliHCQSZqxUVd1NY3_nMTKQOwVdZ7xPu3K-F9bRA5PW6Gpm1F88VZF5hfA7cIXJ41Y9kmZcvQrOSsGIgeldZDF193c9FpWwoNDvVI_EUt5lCHqlFDocz6L1UxPNHC8jQS8Zy6QoQvIKi_QFK3yPxAxe7WuuXQWD-QfH_ZGyEilAygtP0oYJZC51XCDyOQmUXDyHmhEkLMET8YA5Ims8NTRG53UKrLyWwspVyF8p4nB5OLQR3lsu6irr3n"/>
+<div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+                                    Score: 82
+                                </div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="text-xl font-bold font-headline mb-2">명동칼국수</h3>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] uppercase tracking-wider font-bold rounded-full">따뜻한 국물</span>
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] uppercase tracking-wider font-bold rounded-full">고단백</span>
+</div>
+<p class="text-sm text-slate-500 mb-6 flex-1 italic">"따뜻한 국물 + 고단백"</p>
+<button class="w-full py-3 px-4 bg-surface-container-high hover:bg-primary hover:text-white text-on-surface font-bold rounded-2xl transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="thumb_up">thumb_up</span>
+                                    Vote
+                                </button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-slate-100 flex flex-col">
+<div class="h-32 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Fresh subway sandwich with colorful vegetables, deli meats, and crispy bread on a minimal light background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlW5cwTKgLRKxSaQvPojy3nBdcXTIfWSJsOvAcqPxr88lZZ6T8wXFaG_qgJULj5R5BCnQ9DNJe9hbXlItNOyIGk32rMVr67LPZwlXQ1KTYOv0D3i6ah2W79PupWM2gx_PThE_hHWnwb0Im3XLvKLMPi0BD8ixQbrFFoPj4anMqpQlqDRsM59v698rzs1eO2orj9ckZ6KRPGvxBSiDxJ4G6DY4P81yEPL_q31-kTOozvrX4eck64azytRO1H1MRU9s08Q62ASQ00U8N"/>
+<div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+                                    Score: 78
+                                </div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="text-xl font-bold font-headline mb-2">서브웨이</h3>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] uppercase tracking-wider font-bold rounded-full">가까운</span>
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] uppercase tracking-wider font-bold rounded-full">고단백</span>
+</div>
+<p class="text-sm text-slate-500 mb-6 flex-1 italic">"가까운 고단백 구성"</p>
+<button class="w-full py-3 px-4 bg-surface-container-high hover:bg-primary hover:text-white text-on-surface font-bold rounded-2xl transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="thumb_up">thumb_up</span>
+                                    Vote
+                                </button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-slate-100 flex flex-col">
+<div class="h-32 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Premium bento box with grilled protein, rice, and healthy side dishes, elegant studio food photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsW-gbis0hlkKRnjnVFNcD5g7zl_GAne2Zcj4hPJql5ScZhisRZF51jSvlzdhIJKjsk6_aGQGVR54p2YAaWRNIFRjfFUWkqFYqmsppSjJBFJ198rIv1Meb0tZPpz2flg9F4DV-VhCiyL2ZEHKvCngwaZZCUsaGCTD8wF1bdU5conmcEVPhb4xhwa1P6ijmRTWjNrA7FuJFpyYxeslyPzuPrfCsiNcfkoZKrTG5TyUtI2AVEQE3zWV89pz7WrW3vtkV3i2KVcZRuyEG"/>
+<div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+                                    Score: 75
+                                </div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="text-xl font-bold font-headline mb-2">한솥도시락</h3>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] uppercase tracking-wider font-bold rounded-full">인기 1위</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-[10px] uppercase tracking-wider font-bold rounded-full">팀 추천</span>
+</div>
+<p class="text-sm text-slate-500 mb-6 flex-1 italic">"팀 내 인기 1위 메뉴"</p>
+<button class="w-full py-3 px-4 bg-surface-container-high hover:bg-primary hover:text-white text-on-surface font-bold rounded-2xl transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="thumb_up">thumb_up</span>
+                                    Vote
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Chat Input Fixed Bottom -->
+<div class="absolute bottom-0 left-0 right-0 p-6 glass-panel border-t border-white/20">
+<div class="max-w-4xl mx-auto space-y-4">
+<!-- Quick Actions -->
+<div class="flex flex-wrap gap-2 justify-center">
+<button class="px-6 py-2 bg-white/50 border border-slate-200 hover:border-primary text-primary font-bold text-sm rounded-full transition-all flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-lg" data-icon="search">search</span>
+                        추천받기
+                    </button>
+<button class="px-6 py-2 bg-white/50 border border-slate-200 hover:border-primary text-primary font-bold text-sm rounded-full transition-all flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-lg" data-icon="how_to_vote">how_to_vote</span>
+                        투표현황
+                    </button>
+<button class="px-6 py-2 bg-white/50 border border-slate-200 hover:border-primary text-primary font-bold text-sm rounded-full transition-all flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-lg" data-icon="analytics">analytics</span>
+                        영양리포트
+                    </button>
+</div>
+<!-- Main Input Field -->
+<div class="relative bg-white rounded-2xl border border-slate-200 shadow-xl shadow-blue-900/5 p-2 flex items-center gap-2">
+<button class="p-2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+</button>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-on-surface font-medium px-2" placeholder="메뉴 추천을 받아보세요..." type="text"/>
+<button class="bg-primary text-white p-3 rounded-xl hover:shadow-lg hover:shadow-primary/30 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</body></html>
