@@ -2,8 +2,9 @@
 
 > **경북대학교 K-Digital Training 12기** (고용노동부 주관)
 >
-> AI 빅데이터 전문가 양성 과정에서 수행한 **11개 Phase 미니 프로젝트** 모음입니다.
-> Python 기초부터 통계 분석, 데이터 시각화, 웹 크롤링, 머신러닝, 딥러닝, 컴퓨터 비전, 자연어 처리까지
+> AI 빅데이터 전문가 양성 과정에서 수행한 **13개 Phase 미니 프로젝트** 모음입니다.
+> Python 기초부터 통계 분석, 데이터 시각화, 웹 크롤링, 머신러닝, 딥러닝, 컴퓨터 비전, 자연어 처리,
+> Next.js 풀스택 웹 서비스, FastAPI + LLM + RAG 기반 AI 대시보드까지
 > 전 파이프라인을 실전 프로젝트로 경험하며 데이터 분석 역량을 체계적으로 쌓았습니다.
 
 <br>
@@ -33,6 +34,8 @@
 | **[Phase 9](#phase-9--opencv--ml-결함-자동-검수-시스템)** | OpenCV & ML 하이브리드 부품 결함 자동 검수 | 2026.03 | 컴퓨터 비전 | OpenCV, PyTorch, Autoencoder, Streamlit | 팀장 |
 | **[Phase 10](#phase-10--ai-스마트-팩토리-품질관리-시스템)** | AI 기반 스마트 팩토리 품질관리 시스템 | 2026.04 | 딥러닝 | CNN, U-Net, YOLOv8, BERT, Streamlit | 팀 |
 | **[Phase 11](#phase-11--헬창지피티-nlp-피트니스-코칭-서비스)** | 헬창지피티 — NLP 기반 피트니스 코칭 서비스 | 2026.04 | 자연어 처리 | Ollama LLM, EXAONE, NER, 감성분석, React | 팀 |
+| **[Phase 12](#phase-12--원정-응원-플래너-away-game-companion)** | 원정 응원 플래너 (KBO Away Game Companion) | 2026.04 | 풀스택 웹 / Cloud | Next.js 16, Firebase App Hosting, Gemini 2.5, React-Leaflet, Firestore | 팀 |
+| **[Phase 13 & 14](#phase-13--14--직장인-점심-추천-대시보드-lunch_menu_mini)** | 직장인 점심 추천 대시보드 (오늘 뭐 먹지) | 2026.04 ~ 2026.05 | 풀스택 AI 서비스 | FastAPI ×2, Next.js 16, Ollama/Gemini, KcELECTRA, RAG, Tool Calling, Docker, Cloudflare Tunnel | 팀 |
 
 ---
 
@@ -206,6 +209,44 @@
 
 ---
 
+### Phase 12 — 원정 응원 플래너 (Away Game Companion)
+
+> **기간**: 2026.04 | **과목**: 풀스택 웹 / Cloud 배포
+
+| 항목 | 내용 |
+|------|------|
+| **주제** | KBO 10개 구단 · 전국 8개 도시 · 연간 720경기 — 원정 응원러를 위한 올인원 플래너 |
+| **핵심 기능** | 6 페이지 (matches/map/places/ai/badges/share) + Gemini Tool Calling + 3-tier 길찾기 폴백 (Kakao → OSRM → Haversine) + Stadium Tour 10구장 체크 |
+| **핵심 기술** | Next.js 16 (App Router · SSR · UIMessageStream) · React 19.2 · Tailwind v4 · Zustand · React-Leaflet · Cloud Firestore |
+| **AI 통합** | Gemini 2.5 Flash Lite 스트리밍 챗봇 + 6 tool calling + Multi-Agent + 🎬 demoMode (Mock 시나리오) |
+| **배포** | Firebase App Hosting (Cloud Run · `asia-east1`) · GitHub auto-rollout · Secret Manager 7종 · 모바일 자동 테스트 138/138 PASS |
+| **데이터** | scikit-learn 승률 모델 → TS 이식 · 정적 JSON (schedule · stadiums · POI) · KMA 단기예보 · TourAPI |
+| **모바일 최적화** | viewport meta · safe-area-inset · 44px 터치 타깃 · BottomSheet snap 동적화 · iPad 반응형 사이드바 |
+| **성과** | 6 페이지 라이브 배포 · 138 모바일 자동 테스트 PASS · Streamlit → Next.js 마이그레이션 완주 |
+
+📂 [Phase12 폴더](./Phase12) · 🌐 [Live Demo](https://my-web-app--mini12-310f5.asia-east1.hosted.app)
+
+---
+
+### Phase 13 & 14 — 직장인 점심 추천 대시보드 (lunch_menu_mini)
+
+> **기간**: 2026.04 ~ 2026.05 | **주제**: "오늘 뭐 먹지?"를 데이터로 해결
+
+| 항목 | 내용 |
+|------|------|
+| **주제** | 날씨 · 영양 · 팀 선호도 · 음식점 정보 4축을 통합 분석하여 매일 점심 의사결정을 자동화하는 풀스택 AI 대시보드 |
+| **백엔드** | `lunch-optimizer` (FastAPI · 음식점/날씨/영양/투표/사용자 32 엔드포인트 · 17,402개 음식점 SQLite) + `nlp-api` (FastAPI · NLP MVP 5모듈 + Research v2 + Tool Calling 18 엔드포인트) |
+| **NLP 모듈** | KcELECTRA 감성 분석 · 메뉴 정규화 · RAG 챗봇 (ChromaDB) · NLG 주간 리포트 · ABSA(Aspect-Based Sentiment) · Food NER · Multi-turn Tool Calling |
+| **프런트엔드** | Next.js 16 PWA (7 페이지: Dashboard / Discovery / Weather / Nutrition / Concierge / Vote / Insights) · TanStack Query · Kakao Maps · BottomNav 모바일 최적화 |
+| **인프라** | Docker Compose 5-서비스 (lunch-api · nlp-api · web · ollama · caddy) · Caddy HTTPS internal CA · Cloudflare quick tunnel + Firebase Hosting 데모 자동화 (`scripts/deploy_demo.sh`) |
+| **LLM 토글** | 호스트 Ollama (qwen2.5:7b) ↔ Google Gemini 2.5 Pro 런타임 토글 · Settings 패널 UI 제어 |
+| **운영** | 외장 SSD → 내장 SSD 마이그레이션 · Quick tunnel 만료 자동 갱신 절차 · Phase 13 인증/RBAC · Phase 14 자연어 영양 입력 |
+| **특징** | 데이터 파이프라인 + ML/NLP + 풀스택 + 인프라 + 데모 배포까지 K-Digital Training 12기 전 과정 통합 적용 |
+
+📂 [Phase13&14 폴더](./Phase13%2614)
+
+---
+
 ## 🛠️ 기술 스택 성장 로드맵
 
 ```
@@ -230,6 +271,10 @@ Phase 9  ─── 컴퓨터 비전 (OpenCV, PyTorch, ResNet-18, Autoencoder, St
 Phase 10 ─── 딥러닝 (CNN, U-Net, YOLOv8, BERT, HuggingFace Transformers)
     │
 Phase 11 ─── 자연어 처리 (Ollama LLM, EXAONE, NER, 감성분석, React)
+    │
+Phase 12 ─── 풀스택 웹 / Cloud (Next.js 16, Firebase App Hosting, Gemini Tool Calling, React-Leaflet)
+    │
+Phase 13&14 ─── 통합 AI 서비스 (FastAPI ×2, NLP MVP+Research v2, RAG, Tool Calling, Docker, Cloudflare Tunnel)
 ```
 
 ---
@@ -249,7 +294,9 @@ Phase 11 ─── 자연어 처리 (Ollama LLM, EXAONE, NER, 감성분석, Reac
 | Phase 9 | 162개 | 47.2KB | 12개 노트북, Streamlit 8탭, 5개 보고서 |
 | Phase 10 | 150개 | 34.5KB | 4개 소주제 DL 모델, Streamlit 대시보드 |
 | Phase 11 | 149개 | 18.3KB | NLP 파이프라인, React 프론트엔드, 기능설명서 |
-| **합계** | **1,996개** | — | **11개 Phase 프로젝트 완성** |
+| Phase 12 | 443개 | 28.2KB | Next.js 16 풀스택, Firebase App Hosting 라이브 배포, Gemini Tool Calling, React-Leaflet 지도 |
+| Phase 13&14 | 457개 | 36.2KB | FastAPI ×2, Next.js PWA, NLP MVP+Research v2, RAG 챗봇, Docker Compose 5-서비스, 데모 배포 자동화 |
+| **합계** | **2,896개** | — | **13개 Phase 프로젝트 완성** |
 
 ---
 
