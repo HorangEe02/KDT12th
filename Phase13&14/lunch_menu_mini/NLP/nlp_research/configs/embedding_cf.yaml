@@ -1,0 +1,10 @@
+# E1 Embedding CF config
+embedder: jhgan/ko-sroberta-multitask
+embedding_dim: 768
+top_k_users: 20
+top_n_menus: 5
+min_satisfaction: 4.0
+exclude_visited: true
+# auto: use faiss-cpu if installed, else NumpyBruteForceIndex
+use_faiss: auto
+max_profile_entries: 30

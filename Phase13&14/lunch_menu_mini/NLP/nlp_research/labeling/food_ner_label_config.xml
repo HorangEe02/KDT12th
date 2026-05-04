@@ -1,0 +1,34 @@
+<!--
+  Label Studio XML config — B2 Food NER (Named Entity Recognition)
+  =================================================================
+  Import in Label Studio Project Settings → Labeling Interface.
+
+  Task:
+    - 음식 리뷰/메뉴명 텍스트에 6개 entity type을 BIO 태깅
+    - 범위 선택 후 단축키(1~6) 또는 라벨 클릭으로 태깅
+    - 중첩 금지 (한 토큰에 하나의 태그만)
+
+  Entity types + 핫키:
+    1 DISH        요리명   예: 김치찌개, 비빔밥
+    2 INGREDIENT  재료     예: 돼지고기, 양파
+    3 FLAVOR      맛 표현  예: 매운, 달콤한
+    4 TEXTURE     식감     예: 바삭한, 쫄깃한
+    5 COOKING     조리법   예: 구운, 튀긴
+    6 ALLERGEN    알레르겐  예: 땅콩, 새우, 우유
+
+  Export format: JSON
+  After export:
+      python -m nlp_research.labeling.convert_labelstudio food_ner \
+          --input export.json --output data/labeled/food_ner/v1.jsonl
+-->
+<View>
+  <Labels name="ner" toName="text">
+    <Label value="DISH"       background="#e8593c" hotkey="1"/>
+    <Label value="INGREDIENT" background="#3b8bd4" hotkey="2"/>
+    <Label value="FLAVOR"     background="#ba7517" hotkey="3"/>
+    <Label value="TEXTURE"    background="#1d9e75" hotkey="4"/>
+    <Label value="COOKING"    background="#7a5cbf" hotkey="5"/>
+    <Label value="ALLERGEN"   background="#d63030" hotkey="6"/>
+  </Labels>
+  <Text name="text" value="$text"/>
+</View>

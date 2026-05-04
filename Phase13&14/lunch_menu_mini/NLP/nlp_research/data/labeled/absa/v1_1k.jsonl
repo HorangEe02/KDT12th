@@ -1,0 +1,1000 @@
+{"text": "서비스 훌륭이지만 가격이 아쉬워요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "응대가 좋아요.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "바닥이 끈적.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "분위기 좋아요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "재료가 신선해서 좋았습니다. 분위기도 좋아요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "깔끔해요이지만 직원분이 상냥해요. 환상적이에요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "부담스러워요. 그런데 바닥이 끈적. 서비스 엉망.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "직원분이 상냥해요. 위생 철저. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "친절했어요. 바닥이 끈적. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "응대가 좋아요.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "평범한 수준.", "aspects": [{"aspect": "price", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "환상적이에요이지만 깨끗해요. 친절했어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "직원분이 상냥해요, 답답해요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "깔끔해요. 그런데 답답해요. 불친절했어요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "그럭저럭 깨끗. 자리 좁아요. 다시 올지 고민.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "정말 저렴해요이지만 맛없어요. 분위기 좋아요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "자리 좁아요. 그런데 지저분해요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "깨끗해요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정말 맛있어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정돈되어 있어요. 부담 없어요. 다시 올지 고민.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "일품이에요이지만 가격이 아쉬워요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "청결합니다.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "실망했어요. 그런데 데이트 장소로 좋아요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "싱겁고 밍밍, 바닥이 끈적. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "감탄했어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "먹다 말았어요, 부담스러워요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "무성의해요.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "인테리어 멋져요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "응대가 차가워요.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "데이트 장소로 좋아요. 아쉬운 점은 배려가 느껴져요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "맛은 평범해요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "인테리어 멋져요이지만 양에 비해 비싸. 벌레가 보여요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "특별하진 않아요. 바가지예요. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "응대가 좋아요.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "부담스러워요이지만 응대는 보통.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "service", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "싱겁고 밍밍이지만 가성비 최고. 불친절했어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "보통이에요.", "aspects": [{"aspect": "price", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "서비스 훌륭.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "실망했어요. 그런데 인테리어 낡았어요. 위생 엉망.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "답답해요. 아쉬운 점은 먹다 말았어요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "평범한 수준. 응대는 보통. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "neutral"}, {"aspect": "service", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "배려가 느껴져요, 분위기 별로. 종합적으로 괜찮아요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "응대가 좋아요. 먹다 말았어요. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "분위기 좋아요, 일품이에요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "맛없어요, 부담 없어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "응대는 보통. 아쉬운 점은 자리 좁아요. 보통이에요.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "negative"}, {"aspect": "price", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "기분 나빴어요. 그런데 정돈되어 있어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "데이트 장소로 좋아요이지만 불친절했어요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "정말 맛있어요. 아쉬운 점은 데이트 장소로 좋아요. 합리적이에요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "가격 착해요이지만 감탄했어요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "실망했어요. 가성비 최고. 다시 올지 고민. 벌레가 보여요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "너무 비싸요.", "aspects": [{"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "분위기가 좋고 음식도 훌륭해요. 데이트 장소로 추천!", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "가성비 최고.", "aspects": [{"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "부담 없어요, 배려가 느껴져요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "깨끗해요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정말 저렴해요. 직원분이 상냥해요. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "자리 좁아요, 서비스 엉망. 종합적으로 괜찮아요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "청결합니다이지만 무성의해요. 맛이 별로.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "응대가 좋아요.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "가격 착해요, 배려가 느껴져요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "서비스 훌륭.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "깨끗해요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "합리적이에요.", "aspects": [{"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정말 맛있어요. 그런데 부담 없어요. 지저분해요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "정돈되어 있어요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "깔끔해요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "반찬이 모자라서 추가 요청했는데 안 줘요.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "합리적이에요. 친절했어요. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "가격 대비 품질이 떨어져요.", "aspects": [{"aspect": "price", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "주차가 너무 어려워요. 편의성이 떨어집니다.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "감탄했어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "너무 비싸요, 인테리어 멋져요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "데이트 장소로 좋아요. 그런데 가격이 아쉬워요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "맛이 별로이지만 기분 나빴어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "아늑해요. 그런데 정말 저렴해요. 깔끔해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정돈되어 있어요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "아늑해요. 가격 착해요. 다시 올지 고민.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "데이트 장소로 좋아요. 응대는 보통. 다시 올지 고민.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "친절했어요. 그런데 너무 비싸요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "그저 그래요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "친절했어요. 그런데 맛이 별로.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "맛이 별로.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "시끄럽고 복잡. 싱겁고 밍밍. 다시 올지 고민.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "인테리어 낡았어요, 바가지예요. 종합적으로 괜찮아요. 맛이 별로.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "가격이 아쉬워요. 아쉬운 점은 답답해요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "인테리어 멋져요. 그런데 정말 저렴해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "실망했어요. 자리 좁아요. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "서비스 훌륭.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "양이 너무 적어서 배고파서 나왔어요.", "aspects": [{"aspect": "price", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "배려가 느껴져요. 그런데 합리적이에요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "그저 그래요. 응대는 보통. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "service", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "부담 없어요. 아쉬운 점은 청결 상태 최악.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "맛이 별로. 그런데 정말 저렴해요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "점심 메뉴로 먹기에 무난해요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}], "source": "gold_llm"}
+{"text": "분위기 좋아요. 부담스러워요. 다시 올지 고민. 깔끔해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "훌륭해요. 위생 엉망. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "그럭저럭 깨끗.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "불친절했어요이지만 가격 착해요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "자리 좁아요. 아쉬운 점은 가격이 아쉬워요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "기분 나빴어요. 그런데 맛없어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "훌륭해요. 기분 나빴어요. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "정말 맛있어요. 그런데 가격 착해요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "벌레가 보여요, 정말 저렴해요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "인테리어 낡았어요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "인테리어 낡았어요. 아쉬운 점은 실망했어요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "위생은 무난. 아쉬운 점은 분위기는 보통. 특별하진 않아요.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "부담스러워요. 아쉬운 점은 위생 철저.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "서비스 엉망. 그런데 가격 착해요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정말 맛있어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "가격은 적당. 그럭저럭 깨끗. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "neutral"}, {"aspect": "hygiene", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "환상적이에요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "가격이 아쉬워요. 먹다 말았어요. 다시 올지 고민. 응대가 차가워요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "음식이 너무 짜고 서비스도 최악이었어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "시끄럽고 복잡. 감탄했어요. 다시 올지 고민.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "답답해요, 부담스러워요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "위생은 무난. 특별하진 않아요. 다시 올지 고민.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "시끄럽고 복잡, 위생 엉망. 종합적으로 괜찮아요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "답답해요. 부담스러워요. 다시 올지 고민.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "너무 비싸요. 아쉬운 점은 일품이에요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "맛이 별로, 청결 상태 최악. 종합적으로 괜찮아요. 부담스러워요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "부담 없어요이지만 기분 나빴어요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "바닥이 끈적.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "너무 비싸요. 깨끗해요. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "양에 비해 비싸. 아쉬운 점은 정말 맛있어요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "특별한 건 없어요.", "aspects": [{"aspect": "service", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "환상적이에요. 서비스 훌륭. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "분위기 좋아요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "응대가 차가워요. 그런데 바가지예요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "정말 저렴해요. 그런데 청결 상태 최악.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "아늑해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "지저분해요. 그런데 시끄럽고 복잡.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "응대는 보통, 분위기는 보통. 종합적으로 괜찮아요. 무난해요.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "위생 엉망.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "깔끔해요. 아쉬운 점은 바가지예요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "가격 착해요.", "aspects": [{"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정말 저렴해요, 위생 철저. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "가격 착해요이지만 청결 상태 최악.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "바가지예요이지만 서비스 엉망.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "불친절했어요. 그런데 지저분해요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "정돈되어 있어요이지만 합리적이에요. 아늑해요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "위생은 무난.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "답답해요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "위생 엉망. 부담 없어요. 다시 올지 고민. 무난해요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "너무 비싸요. 아쉬운 점은 응대가 차가워요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "바닥이 끈적. 아쉬운 점은 실망했어요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "훌륭해요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "부담 없어요.", "aspects": [{"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "무난해요. 아쉬운 점은 분위기는 보통.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "훌륭해요. 그런데 응대가 좋아요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "조용하고 편안.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "맛없어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "자리 좁아요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "특별한 건 없어요. 아쉬운 점은 맛은 평범해요.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "아늑해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "직원분이 상냥해요. 아쉬운 점은 싱겁고 밍밍.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "양에 비해 비싸.", "aspects": [{"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "가성비 최고. 그런데 서비스 엉망.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "먹다 말았어요, 인테리어 낡았어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "싱겁고 밍밍. 아쉬운 점은 양에 비해 비싸.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "위생 철저. 합리적이에요. 다시 올지 고민.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "위생 철저. 가성비 최고. 다시 올지 고민. 친절했어요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "직원분이 상냥해요. 바가지예요. 다시 올지 고민. 위생 철저.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "맛없어요. 서비스 훌륭. 다시 올지 고민. 가격은 적당.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "positive"}, {"aspect": "price", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "정말 저렴해요이지만 기분 나빴어요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "가성비 최고이지만 직원분이 상냥해요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "서비스 엉망.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "감탄했어요, 기분 나빴어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "환상적이에요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "먹다 말았어요. 분위기 별로. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "특별한 건 없어요이지만 양에 비해 비싸.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "일품이에요, 가성비 최고. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "깨끗해요. 실망했어요. 다시 올지 고민.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "인테리어 멋져요이지만 먹다 말았어요. 직원분이 상냥해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정돈되어 있어요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "먹다 말았어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "보통이에요.", "aspects": [{"aspect": "price", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "싱겁고 밍밍. 아쉬운 점은 정말 저렴해요. 분위기 별로.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "먹다 말았어요. 응대가 좋아요. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "인테리어 낡았어요이지만 바닥이 끈적.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "환상적이에요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "자리 좁아요이지만 훌륭해요. 청결 상태 최악.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "불친절했어요, 아늑해요. 종합적으로 괜찮아요. 합리적이에요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "양에 비해 비싸이지만 분위기 별로. 실망했어요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "지저분해요. 그런데 맛이 별로.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "부담스러워요이지만 데이트 장소로 좋아요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "응대가 좋아요. 그런데 청결합니다.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "평범한 인테리어. 그런데 평범한 수준. 그저 그래요.", "aspects": [{"aspect": "ambience", "sentiment": "neutral"}, {"aspect": "price", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "양에 비해 비싸. 싱겁고 밍밍. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "바닥이 끈적.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "가격 착해요. 그런데 시끄럽고 복잡.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "위생 상태가 의심스러워요. 비추천.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "기분 나빴어요. 그런데 정말 맛있어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "부담스러워요.", "aspects": [{"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "바닥이 끈적.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "직원분이 상냥해요이지만 인테리어 낡았어요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "답답해요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "환상적이에요, 정말 저렴해요. 종합적으로 괜찮아요. 데이트 장소로 좋아요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "합리적이에요이지만 맛이 별로.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "서비스 엉망. 맛없어요. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "바닥이 끈적.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "보통이에요. 아쉬운 점은 분위기는 보통.", "aspects": [{"aspect": "price", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "환상적이에요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "직원분이 상냥해요. 아쉬운 점은 청결 상태 최악. 가격 착해요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "감탄했어요, 부담 없어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "훌륭해요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "응대가 차가워요. 아쉬운 점은 분위기 별로. 청결 상태 최악.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "맛없어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "합리적이에요. 위생 철저. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "먹다 말았어요. 서비스 엉망. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "위생 엉망. 아쉬운 점은 서비스 엉망.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "훌륭해요이지만 양에 비해 비싸. 위생은 무난.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "응대가 좋아요.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "무성의해요. 아쉬운 점은 바닥이 끈적.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "불친절했어요, 가격이 아쉬워요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "환상적이에요, 가성비 최고. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "보통이에요. 특별한 건 없어요. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "neutral"}, {"aspect": "service", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "훌륭해요. 아쉬운 점은 서비스 훌륭.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "일품이에요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "먹다 말았어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "특별한 건 없어요. 아쉬운 점은 무난해요.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "일품이에요. 아쉬운 점은 합리적이에요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "가격이 아쉬워요. 아쉬운 점은 환상적이에요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "음식이 덜 익어서 나왔어요. 위험해요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "그럭저럭 깨끗.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "양에 비해 비싸. 응대가 차가워요. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "위생 철저.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "벌레가 보여요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "가격이 아쉬워요, 싱겁고 밍밍. 종합적으로 괜찮아요. 무성의해요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "맛이 별로.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "고기 질이 정말 좋네요. 부드럽고 맛있어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "조용하고 편안. 그런데 직원분이 상냥해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "인테리어 멋져요이지만 바가지예요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "자리 좁아요. 아쉬운 점은 훌륭해요. 무성의해요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "응대가 좋아요이지만 분위기 좋아요. 부담 없어요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "환상적이에요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "데이트 장소로 좋아요. 아쉬운 점은 훌륭해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "응대가 차가워요, 인테리어 낡았어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "직원분이 상냥해요이지만 분위기 좋아요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "밥이 찰지고 반찬도 깔끔해요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "위생 엉망, 맛없어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "분위기 좋아요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "위생 엉망.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "청결 상태 최악. 그런데 훌륭해요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "청결 상태 최악.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "벌레가 보여요, 분위기 좋아요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "가성비 최고네요. 재방문 의사 100%.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "가격이 아쉬워요. 아쉬운 점은 일품이에요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "사장님이 정말 친절하시고 음식도 맛있어요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "싱겁고 밍밍. 깨끗해요. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "깔끔해요, 실망했어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "시끄럽고 복잡, 청결합니다. 종합적으로 괜찮아요. 무성의해요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "보통이에요.", "aspects": [{"aspect": "price", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "그럭저럭 깨끗, 분위기는 보통. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "일품이에요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "위생 엉망이지만 실망했어요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "실망했어요. 그런데 분위기 별로.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "싱겁고 밍밍, 기분 나빴어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "부담 없어요. 그런데 정돈되어 있어요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "위생 엉망. 부담 없어요. 다시 올지 고민.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "배려가 느껴져요이지만 정말 저렴해요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "서비스 훌륭. 그런데 가성비 최고.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "분위기 좋아요이지만 지저분해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "아늑해요, 일품이에요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "평범한 수준.", "aspects": [{"aspect": "price", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "특별한 건 없어요.", "aspects": [{"aspect": "service", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "청결 상태 최악이지만 인테리어 낡았어요. 싱겁고 밍밍.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "맛은 평범해요이지만 청결합니다.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "감탄했어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "아늑해요. 아쉬운 점은 너무 비싸요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "불친절했어요. 바닥이 끈적. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "감탄했어요. 아쉬운 점은 양에 비해 비싸. 배려가 느껴져요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "매장이 깨끗하고 직원분들이 친절해요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "감탄했어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정말 저렴해요. 아쉬운 점은 배려가 느껴져요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "실망했어요. 그런데 깨끗해요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "맛이 별로.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "정말 맛있어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "답답해요. 아쉬운 점은 배려가 느껴져요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "특별한 건 없어요. 그런데 양에 비해 비싸.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "위생은 무난.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "특별한 건 없어요이지만 맛없어요. 평범한 인테리어.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "특별하진 않아요, 가격은 적당. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "price", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "가성비 최고.", "aspects": [{"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "너무 비싸요. 그런데 감탄했어요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "특별하진 않아요. 그런데 답답해요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "정돈되어 있어요, 인테리어 멋져요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "가성비 최고. 그런데 지저분해요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "바가지예요, 분위기 좋아요. 종합적으로 괜찮아요. 무성의해요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "분위기 좋아요이지만 환상적이에요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "기분 나빴어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "조용하고 편안. 친절했어요. 다시 올지 고민.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "부담 없어요. 맛은 평범해요. 다시 올지 고민. 서비스 훌륭.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "neutral"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정돈되어 있어요. 합리적이에요. 다시 올지 고민.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "시끄럽고 복잡. 아쉬운 점은 깨끗해요. 가격 착해요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "위생 엉망, 감탄했어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "디저트까지 완벽한 식사였어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "맛없어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "깨끗해요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "맛이 별로, 응대는 보통. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "음식이 정말 맛있고 사장님도 친절해요. 다음에도 올게요!", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "분위기는 보통, 정말 저렴해요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "ambience", "sentiment": "neutral"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "조용하고 편안. 아쉬운 점은 실망했어요. 응대가 좋아요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "위생은 무난. 무난해요. 다시 올지 고민.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "부담스러워요. 아쉬운 점은 정말 맛있어요. 기분 나빴어요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "일품이에요, 응대가 좋아요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "감탄했어요. 아쉬운 점은 바닥이 끈적.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "분위기 좋아요. 가격 착해요. 다시 올지 고민.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "위생 엉망. 맛없어요. 다시 올지 고민. 서비스 엉망.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "정돈되어 있어요. 아쉬운 점은 부담스러워요. 먹다 말았어요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "맛이 별로. 그런데 서비스 엉망.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "답답해요. 아쉬운 점은 싱겁고 밍밍.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "맛이 별로.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "환상적이에요, 아늑해요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "최고의 맛집! 주변 사람들에게 추천하고 싶어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "무성의해요, 너무 비싸요. 종합적으로 괜찮아요. 벌레가 보여요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "배려가 느껴져요.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "응대가 좋아요. 가격 착해요. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "인테리어 멋져요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "인테리어 멋져요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "응대는 보통, 특별하진 않아요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "분위기 좋아요이지만 가성비 최고.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "위생 철저. 그런데 가성비 최고.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정돈되어 있어요. 그런데 가성비 최고.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "응대가 좋아요. 그런데 깨끗해요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "싱겁고 밍밍. 가격 착해요. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정말 저렴해요, 서비스 훌륭. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "부담스러워요. 친절했어요. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "직원분이 상냥해요이지만 환상적이에요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "훌륭해요. 그런데 부담 없어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "맛이 별로. 아쉬운 점은 응대가 좋아요. 위생 철저.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "바가지예요. 그런데 정말 맛있어요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "응대가 좋아요.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "분위기 좋아요. 아쉬운 점은 기분 나빴어요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "시끄럽고 복잡.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "환상적이에요. 그런데 가성비 최고. 정돈되어 있어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "부담스러워요이지만 감탄했어요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "부담 없어요, 위생 엉망. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "그저 그래요. 그럭저럭 깨끗. 다시 올지 고민. 보통이에요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "hygiene", "sentiment": "neutral"}, {"aspect": "price", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "청결합니다이지만 친절했어요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "기분 나빴어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "실망했어요. 아쉬운 점은 합리적이에요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "시끄럽고 복잡.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "훌륭해요. 서비스 훌륭. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "위생은 무난. 그런데 배려가 느껴져요.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "깔끔해요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "아늑해요. 청결합니다. 다시 올지 고민. 훌륭해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "배려가 느껴져요.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "조용하고 편안.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "배려가 느껴져요이지만 바가지예요. 맛없어요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "청결 상태 최악, 양에 비해 비싸. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "정말 맛있어요. 아쉬운 점은 응대는 보통.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "양에 비해 비싸. 인테리어 멋져요. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "일품이에요이지만 분위기 별로.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "너무 비싸요. 아쉬운 점은 인테리어 낡았어요. 싱겁고 밍밍.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "일품이에요. 너무 비싸요. 다시 올지 고민. 인테리어 멋져요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "바가지예요. 불친절했어요. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "벌레가 보여요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "기분 나빴어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "훌륭해요. 아쉬운 점은 분위기 좋아요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "맛이 별로. 그런데 바닥이 끈적.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "조용하고 편안. 무성의해요. 다시 올지 고민.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "가성비 최고. 아쉬운 점은 무성의해요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "불친절했어요. 아쉬운 점은 정말 맛있어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "싱겁고 밍밍이지만 가격이 아쉬워요. 기분 나빴어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "분위기는 보통이지만 응대는 보통.", "aspects": [{"aspect": "ambience", "sentiment": "neutral"}, {"aspect": "service", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "훌륭해요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "청결 상태 최악.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "직원분이 상냥해요.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "무난해요, 인테리어 낡았어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "가격이 아쉬워요. 그런데 청결합니다. 기분 나빴어요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "깔끔해요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "합리적이에요. 그런데 불친절했어요. 맛없어요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "분위기는 보통.", "aspects": [{"aspect": "ambience", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "주문한지 40분 지나도 음식이 안 나와요.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "일품이에요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "깔끔해요. 그런데 데이트 장소로 좋아요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "답답해요. 그런데 일품이에요. 응대는 보통.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "소음이 너무 심해서 대화가 안 돼요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "그럭저럭 깨끗, 응대는 보통. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}, {"aspect": "service", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "부담스러워요. 아쉬운 점은 벌레가 보여요. 답답해요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "기분 나빴어요. 맛없어요. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "보통이에요. 그런데 그럭저럭 깨끗.", "aspects": [{"aspect": "price", "sentiment": "neutral"}, {"aspect": "hygiene", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "아늑해요, 실망했어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "가성비 최고, 일품이에요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "조용하고 편안. 정말 저렴해요. 다시 올지 고민.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "친절했어요.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "화장실이 너무 더러웠어요. 기본이 안 됐네요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "부담 없어요.", "aspects": [{"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "서비스 훌륭.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "감탄했어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "맛없어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "맛이 별로, 너무 비싸요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "보통이에요, 특별한 건 없어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "neutral"}, {"aspect": "service", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "평균적인 한식당입니다.", "aspects": [{"aspect": "ambience", "sentiment": "neutral"}], "source": "gold_llm"}
+{"text": "데이트 장소로 좋아요. 아쉬운 점은 친절했어요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "싱겁고 밍밍. 그런데 조용하고 편안. 응대는 보통.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "분위기는 보통.", "aspects": [{"aspect": "ambience", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "바가지예요. 아쉬운 점은 맛없어요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "서비스 엉망. 아쉬운 점은 아늑해요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "지저분해요. 아쉬운 점은 인테리어 낡았어요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "부담스러워요.", "aspects": [{"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "청결 상태 최악.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "답답해요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "배려가 느껴져요. 가성비 최고. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "응대가 차가워요. 그런데 양에 비해 비싸.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "깨끗해요. 그런데 데이트 장소로 좋아요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "가성비 최고.", "aspects": [{"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "감탄했어요. 아쉬운 점은 배려가 느껴져요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "부담 없어요, 답답해요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "맛은 평범해요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "그럭저럭 깨끗. 가격은 적당. 다시 올지 고민. 맛은 평범해요.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}, {"aspect": "price", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "바가지예요. 아쉬운 점은 응대가 차가워요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "기분 나빴어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "먹다 말았어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "합리적이에요. 아쉬운 점은 맛이 별로. 분위기 별로.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "싱겁고 밍밍, 인테리어 낡았어요. 종합적으로 괜찮아요. 바가지예요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "답답해요, 청결합니다. 종합적으로 괜찮아요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "시끄럽고 복잡, 부담 없어요. 종합적으로 괜찮아요. 위생 엉망.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "기분 나빴어요이지만 양에 비해 비싸.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "먹다 말았어요. 아쉬운 점은 지저분해요. 답답해요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "가격이 아쉬워요, 청결합니다. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "친절했어요.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "깔끔해요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "아늑해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "가성비 최고. 아쉬운 점은 인테리어 멋져요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "그저 그래요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "인테리어 낡았어요이지만 맛없어요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "환상적이에요, 응대가 차가워요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "양에 비해 비싸. 그런데 맛없어요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "정돈되어 있어요이지만 불친절했어요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "서비스 엉망.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "인테리어 낡았어요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "바가지예요. 무성의해요. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "합리적이에요, 조용하고 편안. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "싱겁고 밍밍. 아쉬운 점은 부담스러워요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "먹다 말았어요이지만 응대가 차가워요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "일품이에요. 그런데 바닥이 끈적. 평범한 수준.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "price", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "조용하고 편안, 환상적이에요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "데이트 장소로 좋아요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정말 맛있어요. 그런데 가격 착해요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "부담 없어요. 아쉬운 점은 응대가 좋아요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "깔끔해요. 서비스 엉망. 다시 올지 고민.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "위생 철저.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "불친절했어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "기분 나빴어요. 아쉬운 점은 훌륭해요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "답답해요. 아쉬운 점은 무성의해요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "아늑해요. 그런데 맛없어요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "정돈되어 있어요. 분위기 좋아요. 다시 올지 고민.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "훌륭해요. 깨끗해요. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "데이트 장소로 좋아요. 불친절했어요. 다시 올지 고민.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "응대가 차가워요. 아쉬운 점은 벌레가 보여요. 맛이 별로.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "부담 없어요. 그런데 자리 좁아요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "맛없어요. 그런데 위생 철저.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정말 저렴해요. 아늑해요. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "분위기는 보통. 아쉬운 점은 맛은 평범해요.", "aspects": [{"aspect": "ambience", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "깔끔해요, 가격 착해요. 종합적으로 괜찮아요. 평범한 인테리어.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "기분 나빴어요. 그런데 바가지예요. 벌레가 보여요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "일품이에요. 직원분이 상냥해요. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "맛없어요. 서비스 엉망. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "부담 없어요, 청결 상태 최악. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "서비스가 빠르고 친절해요. 음식 맛도 일품입니다.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "정말 저렴해요. 아쉬운 점은 서비스 훌륭.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "분위기 좋아요. 정말 저렴해요. 다시 올지 고민.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "데이트 장소로 좋아요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정말 맛있어요. 그런데 서비스 엉망.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "인테리어 낡았어요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "바가지예요이지만 응대가 차가워요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "친절했어요, 가격이 아쉬워요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "벌레가 보여요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "깔끔해요. 아쉬운 점은 일품이에요. 정말 저렴해요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "실망했어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "청결합니다. 바가지예요. 다시 올지 고민.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "평범한 인테리어.", "aspects": [{"aspect": "ambience", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "분위기는 보통, 그저 그래요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "ambience", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "평범한 수준. 아쉬운 점은 지저분해요.", "aspects": [{"aspect": "price", "sentiment": "neutral"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "실망했어요. 평범한 인테리어. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "맛없어요. 아쉬운 점은 청결 상태 최악.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "가성비 최고. 그런데 위생 엉망. 서비스 엉망.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "불친절했어요, 시끄럽고 복잡. 종합적으로 괜찮아요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "배려가 느껴져요이지만 가격 착해요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "응대가 차가워요. 그런데 깨끗해요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "답답해요. 아쉬운 점은 맛이 별로.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "서비스 엉망.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "그럭저럭 깨끗이지만 맛은 평범해요.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "매장이 좁고 답답해요. 재방문 안 할래요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "너무 비싸요. 아쉬운 점은 깔끔해요. 조용하고 편안.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "감탄했어요. 아쉬운 점은 부담 없어요. 응대가 좋아요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정말 맛있어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "가성비 최고이지만 훌륭해요. 위생 엉망.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "답답해요이지만 맛없어요. 청결 상태 최악.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "양에 비해 비싸. 그런데 응대가 차가워요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "자리 좁아요. 아쉬운 점은 실망했어요. 지저분해요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "기분 나빴어요. 아쉬운 점은 감탄했어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "위생 엉망.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "보통이에요. 평범한 인테리어. 다시 올지 고민. 무난해요.", "aspects": [{"aspect": "price", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "싱겁고 밍밍.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "정말 저렴해요. 그런데 데이트 장소로 좋아요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정말 오랜만에 맛있는 한 끼를 먹었네요. 감사합니다.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "직원분이 상냥해요이지만 너무 비싸요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "응대는 보통. 아쉬운 점은 위생은 무난. 무난해요.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "hygiene", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "맛이 별로.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "위생 엉망. 싱겁고 밍밍. 다시 올지 고민.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "맛이 별로.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "직원분이 상냥해요. 아쉬운 점은 환상적이에요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "매운맛이 일품이에요. 속이 뻥 뚫립니다.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "응대가 차가워요. 그런데 맛없어요. 양에 비해 비싸.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "벌레가 보여요, 먹다 말았어요. 종합적으로 괜찮아요. 서비스 엉망.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "위생 엉망. 그런데 실망했어요. 불친절했어요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "직원분이 상냥해요.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "맛없어요. 부담스러워요. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "훌륭해요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "아늑해요이지만 맛없어요. 벌레가 보여요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "위생 엉망, 정말 맛있어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "인테리어 멋져요. 그런데 응대가 좋아요. 환상적이에요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "맛이 별로.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "정말 저렴해요, 시끄럽고 복잡. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "직원들이 바빠서 부를 수가 없었어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "실망했어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "응대가 좋아요.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "인테리어 멋져요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "데이트 장소로 좋아요이지만 응대가 차가워요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "자리 좁아요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "깔끔해요이지만 부담 없어요. 환상적이에요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "가성비 최고.", "aspects": [{"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "그저 그래요. 그런데 친절했어요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "그럭저럭 깨끗. 평범한 인테리어. 다시 올지 고민.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "위생 철저. 그런데 싱겁고 밍밍.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "배려가 느껴져요. 그런데 인테리어 멋져요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "훌륭해요. 그런데 바닥이 끈적.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "합리적이에요, 특별한 건 없어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "정돈되어 있어요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "위생 철저.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "깨끗해요, 부담 없어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "서비스 훌륭, 위생은 무난. 종합적으로 괜찮아요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "깨끗해요, 환상적이에요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "바닥이 끈적.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "부담스러워요. 위생 엉망. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "데이트 장소로 좋아요. 정돈되어 있어요. 다시 올지 고민.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "인테리어 낡았어요, 가격이 아쉬워요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "인테리어 멋져요, 기분 나빴어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "크게 맛있지도 나쁘지도 않아요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}], "source": "gold_llm"}
+{"text": "시끄럽고 복잡.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "양에 비해 비싸. 그런데 바닥이 끈적. 감탄했어요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "친절했어요이지만 조용하고 편안.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "청결합니다. 그런데 싱겁고 밍밍. 직원분이 상냥해요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정성이 느껴지는 한 끼였습니다. 감동입니다.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "배려가 느껴져요이지만 아늑해요. 정말 저렴해요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "불친절했어요. 그런데 부담스러워요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "부담 없어요.", "aspects": [{"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "서비스 엉망.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "무성의해요. 정돈되어 있어요. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "일품이에요. 답답해요. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "배려가 느껴져요이지만 훌륭해요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "직원분이 상냥해요. 위생 엉망. 다시 올지 고민. 답답해요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "맛이 별로. 조용하고 편안. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "특별한 건 없어요이지만 양에 비해 비싸. 답답해요.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "price", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "깔끔해요. 아쉬운 점은 친절했어요. 분위기 좋아요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "혼밥하기 편한 분위기에요. 음식도 맛있고.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "데이트 장소로 좋아요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "인테리어 멋져요이지만 배려가 느껴져요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "서비스 엉망. 그런데 바가지예요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "지저분해요. 일품이에요. 다시 올지 고민.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "인테리어 멋져요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "지저분해요이지만 서비스 엉망.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "보통이에요. 아쉬운 점은 평범한 인테리어.", "aspects": [{"aspect": "price", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "서비스 엉망.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "부담스러워요, 일품이에요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "맛없어요. 자리 좁아요. 다시 올지 고민. 응대가 차가워요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "직원분이 상냥해요.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "먹다 말았어요이지만 답답해요. 위생 엉망.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "맛은 평범해요. 그런데 위생은 무난.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "hygiene", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "분위기 좋아요. 부담 없어요. 다시 올지 고민. 청결합니다.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "청결합니다. 아쉬운 점은 직원분이 상냥해요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "자리 좁아요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "감탄했어요. 정말 저렴해요. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "깨끗해요, 데이트 장소로 좋아요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "맛없어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "양에 비해 비싸, 응대가 좋아요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "부담 없어요. 기분 나빴어요. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "시끄럽고 복잡.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "다시는 안 갈 거예요. 정말 실망.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "깨끗해요. 그런데 인테리어 멋져요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "응대가 차가워요, 지저분해요. 종합적으로 괜찮아요. 맛이 별로.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "바가지예요.", "aspects": [{"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "실망했어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "데이트 장소로 좋아요, 부담 없어요. 종합적으로 괜찮아요. 훌륭해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "환상적이에요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "부담스러워요, 아늑해요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "특별한 건 없어요. 그런데 가격은 적당.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "price", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "데이트 장소로 좋아요이지만 부담 없어요. 깨끗해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "벌레가 보여요이지만 인테리어 멋져요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "자리 좁아요. 직원분이 상냥해요. 다시 올지 고민.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "아늑해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "부담 없어요이지만 응대가 차가워요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "지저분해요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "평범한 인테리어.", "aspects": [{"aspect": "ambience", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "합리적이에요, 바닥이 끈적. 종합적으로 괜찮아요. 자리 좁아요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "실망했어요. 아쉬운 점은 가격이 아쉬워요. 응대가 차가워요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "양에 비해 비싸이지만 데이트 장소로 좋아요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정돈되어 있어요, 훌륭해요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "대기 시간이 조금 있었지만 그런대로 먹을 만했어요.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "gold_llm"}
+{"text": "위생 철저, 무성의해요. 종합적으로 괜찮아요. 맛없어요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "무성의해요, 지저분해요. 종합적으로 괜찮아요. 실망했어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "실망했어요. 아쉬운 점은 분위기 좋아요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "맛이 별로.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "합리적이에요이지만 분위기 좋아요. 친절했어요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "분위기는 보통. 서비스 엉망. 다시 올지 고민. 그저 그래요.", "aspects": [{"aspect": "ambience", "sentiment": "neutral"}, {"aspect": "service", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "바가지예요이지만 깨끗해요. 맛이 별로.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "훌륭해요. 그런데 가성비 최고.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "감탄했어요. 아쉬운 점은 위생 철저.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "먹다 말았어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "답답해요. 아쉬운 점은 깔끔해요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "서비스 엉망이지만 훌륭해요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "무난해요, 위생은 무난. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "hygiene", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "불친절했어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "양에 비해 비싸.", "aspects": [{"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "답답해요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "일품이에요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "청결하고 맛있어요. 가족들과 함께 가기 좋아요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "응대는 보통.", "aspects": [{"aspect": "service", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "싱겁고 밍밍. 아쉬운 점은 인테리어 멋져요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "너무 비싸요, 먹다 말았어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "바가지예요. 그런데 깨끗해요. 싱겁고 밍밍.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "아늑해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "친절했어요이지만 실망했어요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "가성비 최고. 그런데 맛이 별로.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "조용하고 편안.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "답답해요. 보통이에요. 다시 올지 고민.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "price", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "위생 철저. 그런데 인테리어 멋져요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "그럭저럭 깨끗.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "맛이 별로. 정말 저렴해요. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "싱겁고 밍밍.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "가격은 적당.", "aspects": [{"aspect": "price", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "아늑해요, 배려가 느껴져요. 종합적으로 괜찮아요. 정말 저렴해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "양에 비해 비싸이지만 청결합니다.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "인테리어 멋져요, 위생 철저. 종합적으로 괜찮아요. 직원분이 상냥해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "깔끔해요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "서비스 훌륭. 그런데 너무 비싸요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "응대가 차가워요. 위생은 무난. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "환상적이에요. 아쉬운 점은 인테리어 멋져요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "일품이에요. 기분 나빴어요. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "친절했어요이지만 위생 철저.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "청결합니다, 무성의해요. 종합적으로 괜찮아요. 싱겁고 밍밍.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "정말 저렴해요. 그런데 직원분이 상냥해요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "불친절했어요이지만 양에 비해 비싸.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "바가지예요. 벌레가 보여요. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "가격은 적당.", "aspects": [{"aspect": "price", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "가성비 최고. 아쉬운 점은 친절했어요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "벌레가 보여요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "맛없어요. 아쉬운 점은 가격이 아쉬워요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "훌륭해요이지만 벌레가 보여요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "서비스 훌륭. 합리적이에요. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정말 맛있어요. 아쉬운 점은 서비스 훌륭. 위생 엉망.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "답답해요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "조용하고 편안.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "아늑해요이지만 바가지예요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "가격만 비싸고 맛은 형편없어요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "아늑해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "먹다 말았어요. 분위기 좋아요. 다시 올지 고민. 깨끗해요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "무난해요, 바닥이 끈적. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "양에 비해 비싸. 바닥이 끈적. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "시끄럽고 복잡. 아쉬운 점은 깔끔해요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "불친절했어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "불친절했어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "서비스 훌륭.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "먹다 말았어요. 그런데 응대가 차가워요. 바가지예요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "정돈되어 있어요, 서비스 훌륭. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "맛없어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "반찬까지 하나하나 맛있어요. 대단합니다.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "훌륭해요. 직원분이 상냥해요. 다시 올지 고민. 조용하고 편안.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "보통이에요. 특별하진 않아요. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "실망했어요이지만 합리적이에요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "환상적이에요. 아쉬운 점은 인테리어 멋져요. 청결합니다.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "바가지예요.", "aspects": [{"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "위생 철저.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정말 저렴해요. 아쉬운 점은 불친절했어요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "그저 그래요. 아쉬운 점은 위생은 무난.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "hygiene", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "부담스러워요. 분위기는 보통. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "너무 비싸요.", "aspects": [{"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "친절했어요. 훌륭해요. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "벌레가 보여요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "친절했어요, 자리 좁아요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "분위기 별로, 바닥이 끈적. 종합적으로 괜찮아요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "위생 철저. 아쉬운 점은 응대가 차가워요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "그럭저럭 깨끗.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "특별하진 않아요. 그런데 깨끗해요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "응대가 차가워요, 합리적이에요. 종합적으로 괜찮아요. 시끄럽고 복잡.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "친절했어요.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "서비스 엉망이지만 정말 맛있어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "너무 비싸요.", "aspects": [{"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "직원분이 상냥해요이지만 부담 없어요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "가격 착해요, 먹다 말았어요. 종합적으로 괜찮아요. 그럭저럭 깨끗.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "부담 없어요. 아쉬운 점은 응대가 좋아요. 훌륭해요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "특별한 건 없어요. 아쉬운 점은 맛이 별로.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "위생은 무난. 아쉬운 점은 응대는 보통.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}, {"aspect": "service", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "가격이 아쉬워요. 응대가 좋아요. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "응대가 차가워요이지만 보통이에요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "price", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "부담스러워요.", "aspects": [{"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "기분 나빴어요. 그런데 바가지예요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "무성의해요. 맛없어요. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "응대가 차가워요이지만 위생 엉망. 부담 없어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "배려가 느껴져요이지만 정말 저렴해요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "답답해요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "답답해요이지만 가격 착해요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "싱겁고 밍밍이지만 벌레가 보여요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "지저분해요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "실망했어요. 지저분해요. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "부담스러워요. 그런데 정말 맛있어요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "바가지예요. 아쉬운 점은 아늑해요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정말 맛있어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "양에 비해 비싸. 정말 맛있어요. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "무난해요. 아쉬운 점은 특별한 건 없어요. 분위기는 보통.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "service", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "기분 나빴어요. 분위기는 보통. 다시 올지 고민. 위생 철저.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "neutral"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "너무 비싸요. 실망했어요. 다시 올지 고민. 지저분해요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "응대가 좋아요.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정말 저렴해요.", "aspects": [{"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "싱겁고 밍밍. 부담 없어요. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "벌레가 보여요이지만 가격 착해요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "훌륭해요. 아쉬운 점은 자리 좁아요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "맛없어요, 무성의해요. 종합적으로 괜찮아요. 가격이 아쉬워요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "합리적이에요.", "aspects": [{"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "인테리어 멋져요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "가성비 최고.", "aspects": [{"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "무난해요, 위생은 무난. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "hygiene", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "바닥이 끈적. 아쉬운 점은 서비스 엉망. 가격이 아쉬워요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "자리 좁아요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "깨끗해요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "지저분해요이지만 정말 저렴해요. 분위기 별로.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "기본은 하는 집이네요.", "aspects": [{"aspect": "service", "sentiment": "neutral"}], "source": "gold_llm"}
+{"text": "양에 비해 비싸, 맛이 별로. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "부담스러워요. 그런데 분위기 별로.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "답답해요, 청결 상태 최악. 종합적으로 괜찮아요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "일품이에요. 자리 좁아요. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "정돈되어 있어요, 시끄럽고 복잡. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "사진과 실제가 너무 달라요. 실망.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "인테리어 낡았어요. 아쉬운 점은 실망했어요. 서비스 엉망.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "바가지예요.", "aspects": [{"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "지저분해요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "환상적이에요. 아쉬운 점은 합리적이에요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "응대가 좋아요이지만 실망했어요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "청결합니다.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정말 맛있어요. 분위기 별로. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "기분 나빴어요. 그런데 가격 착해요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "서비스 엉망. 아쉬운 점은 감탄했어요. 분위기는 보통.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "위생 철저. 아쉬운 점은 인테리어 멋져요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "부담 없어요, 서비스 훌륭. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정말 저렴해요.", "aspects": [{"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "답답해요이지만 환상적이에요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "벌레가 보여요. 친절했어요. 다시 올지 고민.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "감탄했어요이지만 응대가 좋아요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "일품이에요. 그런데 인테리어 멋져요. 직원분이 상냥해요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "서비스 훌륭이지만 인테리어 멋져요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "청결 상태 최악. 아쉬운 점은 응대가 차가워요. 너무 비싸요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "아늑해요. 부담 없어요. 다시 올지 고민.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "서비스 훌륭이지만 인테리어 낡았어요. 감탄했어요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "데이트 장소로 좋아요이지만 응대가 좋아요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "인테리어 멋져요. 배려가 느껴져요. 다시 올지 고민.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정돈되어 있어요, 바가지예요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "아늑해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "양에 비해 비싸, 직원분이 상냥해요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "인테리어 멋져요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "먹다 말았어요이지만 위생 엉망.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "청결합니다이지만 먹다 말았어요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "특별하진 않아요. 아쉬운 점은 인테리어 낡았어요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "깨끗해요. 아쉬운 점은 인테리어 낡았어요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "부담 없어요.", "aspects": [{"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "청결 상태 최악. 그런데 너무 비싸요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "환상적이에요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "직원분이 상냥해요. 아쉬운 점은 인테리어 낡았어요. 양에 비해 비싸.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "평범한 수준.", "aspects": [{"aspect": "price", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "깔끔해요, 양에 비해 비싸. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "위생은 무난.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "환상적이에요. 그런데 답답해요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "인테리어 멋져요. 먹다 말았어요. 다시 올지 고민.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "친절했어요. 아쉬운 점은 가격이 아쉬워요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "지저분해요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "가격 착해요. 그런데 싱겁고 밍밍.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "사장님이 불친절해서 기분 상했어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "깨끗해요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "맛이 별로. 그런데 인테리어 멋져요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "맛이 별로, 깔끔해요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "가격 대비 양도 많고 정말 만족스럽네요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "조용하고 편안.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "무성의해요, 합리적이에요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "환상적이에요, 무성의해요. 종합적으로 괜찮아요. 조용하고 편안.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "응대가 좋아요.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정돈되어 있어요. 아쉬운 점은 맛이 별로.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "일품이에요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "직원분이 상냥해요. 아쉬운 점은 훌륭해요. 데이트 장소로 좋아요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "바가지예요.", "aspects": [{"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "정말 맛있어요. 조용하고 편안. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "너무 비싸요, 분위기는 보통. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "아늑해요, 맛이 별로. 종합적으로 괜찮아요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "청결 상태 최악.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "서비스 훌륭.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "훌륭해요이지만 청결 상태 최악.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "맛이 별로. 위생 엉망. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "깨끗해요, 부담스러워요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "환상적이에요이지만 가성비 최고.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "응대가 좋아요. 정말 저렴해요. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "청결합니다.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "무성의해요. 정말 저렴해요. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "가격은 적당하고 맛도 그럭저럭이네요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "gold_llm"}
+{"text": "응대가 좋아요.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "양에 비해 비싸. 먹다 말았어요. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "정돈되어 있어요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "벌레가 보여요. 그런데 분위기 별로.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "분위기 별로. 그런데 배려가 느껴져요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "너무 비싸요. 시끄럽고 복잡. 다시 올지 고민. 기분 나빴어요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "정말 저렴해요. 깔끔해요. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "감탄했어요, 분위기 좋아요. 종합적으로 괜찮아요. 직원분이 상냥해요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "청결 상태 최악. 아쉬운 점은 시끄럽고 복잡.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "서비스 훌륭. 그런데 평범한 인테리어.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "부담스러워요.", "aspects": [{"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "바닥이 끈적이지만 서비스 엉망.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "가성비 최고이지만 실망했어요. 기분 나빴어요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "가성비 최고.", "aspects": [{"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "가격 착해요이지만 배려가 느껴져요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "맛이 너무 자극적이에요. 조미료 맛만 나요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "정말 맛있어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "바가지예요. 아쉬운 점은 서비스 훌륭.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "아늑해요이지만 정말 맛있어요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "친절했어요. 아쉬운 점은 바닥이 끈적. 맛이 별로.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "응대가 차가워요. 데이트 장소로 좋아요. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "맛은 평범해요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "분위기는 보통.", "aspects": [{"aspect": "ambience", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "응대가 좋아요. 그런데 인테리어 낡았어요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "조용하고 편안. 그런데 정말 맛있어요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "맛이 별로. 아쉬운 점은 불친절했어요. 지저분해요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "훌륭해요이지만 자리 좁아요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "인테리어 낡았어요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "평범한 수준.", "aspects": [{"aspect": "price", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "시끄럽고 복잡. 기분 나빴어요. 다시 올지 고민. 맛이 별로.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "청결 상태 최악. 아쉬운 점은 시끄럽고 복잡.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "부담스러워요.", "aspects": [{"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "회식 장소로 딱 좋아요. 다들 만족했어요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "분위기 별로.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "너무 비싸요. 아쉬운 점은 인테리어 멋져요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "인테리어 낡았어요. 가성비 최고. 다시 올지 고민.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "일품이에요. 그런데 위생 철저.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "위생 철저, 정말 맛있어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "분위기 별로. 아쉬운 점은 훌륭해요. 불친절했어요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "지저분해요. 아쉬운 점은 먹다 말았어요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "불친절했어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "부담스러워요.", "aspects": [{"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "벌레가 보여요, 특별한 건 없어요. 종합적으로 괜찮아요. 정말 맛있어요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "service", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "배려가 느껴져요. 아쉬운 점은 바닥이 끈적.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "부담 없어요.", "aspects": [{"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "분위기 별로.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "청결 상태 최악.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "가격이 아쉬워요, 자리 좁아요. 종합적으로 괜찮아요. 서비스 엉망.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "감탄했어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "친절했어요. 위생 엉망. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "서비스 엉망. 그런데 분위기 별로.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "합리적이에요.", "aspects": [{"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "서비스 훌륭, 가격 착해요. 종합적으로 괜찮아요. 위생 철저.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "청결 상태 최악. 그런데 부담스러워요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "환상적이에요. 아쉬운 점은 배려가 느껴져요. 데이트 장소로 좋아요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "분위기 좋아요. 아쉬운 점은 배려가 느껴져요. 정돈되어 있어요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "실망했어요이지만 너무 비싸요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "답답해요이지만 부담스러워요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "맛없어요. 아쉬운 점은 분위기 좋아요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "분위기는 보통이지만 무난해요.", "aspects": [{"aspect": "ambience", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "응대는 보통. 환상적이에요. 다시 올지 고민. 바가지예요.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "배려가 느껴져요.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "보통이에요.", "aspects": [{"aspect": "price", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "가격이 아쉬워요, 조용하고 편안. 종합적으로 괜찮아요. 배려가 느껴져요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "인테리어 낡았어요이지만 가격 착해요. 환상적이에요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "싱겁고 밍밍, 위생 엉망. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "바닥이 끈적.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "서비스 훌륭.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "자리 좁아요. 그런데 무성의해요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "위생 엉망. 자리 좁아요. 다시 올지 고민. 바가지예요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "그럭저럭 깨끗. 아쉬운 점은 맛은 평범해요. 평범한 인테리어.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "서비스 엉망이지만 벌레가 보여요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "아늑해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "일품이에요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "답답해요이지만 깨끗해요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "싱겁고 밍밍.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "그럭저럭 깨끗. 아쉬운 점은 특별한 건 없어요.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}, {"aspect": "service", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "먹다 말았어요. 그런데 자리 좁아요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "실망했어요. 조용하고 편안. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "깔끔해요. 아쉬운 점은 일품이에요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "그럭저럭 깨끗이지만 바가지예요.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "위생 철저.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "데이트 장소로 좋아요. 그런데 정말 저렴해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "맛없어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "일품이에요. 너무 비싸요. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "정돈되어 있어요. 그런데 조용하고 편안.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "환상적이에요, 합리적이에요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "시끄럽고 복잡.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "인테리어 멋져요. 아쉬운 점은 서비스 엉망. 환상적이에요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "자리 좁아요. 바닥이 끈적. 다시 올지 고민. 바가지예요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "일품이에요. 정말 저렴해요. 다시 올지 고민.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "분위기 좋아요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "환상적이에요이지만 합리적이에요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "가성비 최고, 배려가 느껴져요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "훌륭해요. 그런데 부담 없어요. 청결합니다.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "일품이에요. 아쉬운 점은 응대가 차가워요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "시끄럽고 복잡.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "응대는 보통. 맛이 별로. 다시 올지 고민. 분위기 좋아요.", "aspects": [{"aspect": "service", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "가성비 최고. 그런데 환상적이에요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "가성비 최고. 위생 엉망. 다시 올지 고민. 먹다 말았어요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "맛없어요. 데이트 장소로 좋아요. 다시 올지 고민. 양에 비해 비싸.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "싱겁고 밍밍. 그런데 합리적이에요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "특별하진 않아요, 평범한 수준. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}, {"aspect": "price", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "아늑해요. 그런데 깨끗해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "무성의해요, 깨끗해요. 종합적으로 괜찮아요. 맛없어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "분위기 좋아요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "바닥이 끈적. 아쉬운 점은 시끄럽고 복잡. 실망했어요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "맛이 별로.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "그럭저럭 깨끗. 맛은 평범해요. 다시 올지 고민.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "싱겁고 밍밍, 가격이 아쉬워요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "무성의해요. 아쉬운 점은 답답해요. 청결 상태 최악.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "가격은 적당이지만 평범한 인테리어. 특별하진 않아요.", "aspects": [{"aspect": "price", "sentiment": "neutral"}, {"aspect": "ambience", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "청결합니다, 평범한 수준. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "price", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "직원분이 상냥해요. 정말 맛있어요. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "가격이 아쉬워요. 아쉬운 점은 일품이에요. 불친절했어요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "평범한 인테리어. 그저 그래요. 다시 올지 고민.", "aspects": [{"aspect": "ambience", "sentiment": "neutral"}, {"aspect": "taste", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "혼자 먹기엔 괜찮은 정도의 맛이에요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}], "source": "gold_llm"}
+{"text": "맛이 별로, 서비스 훌륭. 종합적으로 괜찮아요. 인테리어 멋져요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "기분 나빴어요. 아쉬운 점은 위생 엉망.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "서비스 엉망. 자리 좁아요. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "서비스 엉망. 그런데 가격이 아쉬워요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "그럭저럭 깨끗.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "가격 착해요.", "aspects": [{"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "자리 좁아요. 아쉬운 점은 부담스러워요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "불친절했어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "답답해요, 응대는 보통. 종합적으로 괜찮아요. 가격 착해요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "service", "sentiment": "neutral"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "훌륭해요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "너무 비싸요. 아쉬운 점은 분위기 좋아요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "일품이에요, 양에 비해 비싸. 종합적으로 괜찮아요. 분위기 좋아요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정말 맛있어요. 아쉬운 점은 기분 나빴어요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "싱겁고 밍밍, 자리 좁아요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "데이트 장소로 좋아요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "무성의해요, 맛없어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "싱겁고 밍밍. 아쉬운 점은 부담 없어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정말 저렴해요.", "aspects": [{"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "평범한 맛이에요. 특별하진 않지만 무난합니다.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}], "source": "gold_llm"}
+{"text": "부담 없어요. 응대가 좋아요. 다시 올지 고민.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "깨끗해요, 분위기 별로. 종합적으로 괜찮아요. 정말 저렴해요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "아늑해요. 맛없어요. 다시 올지 고민.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "지저분해요. 그런데 분위기 좋아요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "위생 엉망. 그런데 기분 나빴어요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "실망했어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "무성의해요, 분위기 좋아요. 종합적으로 괜찮아요. 정말 맛있어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "위생 철저, 싱겁고 밍밍. 종합적으로 괜찮아요. 바가지예요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "응대가 차가워요이지만 깔끔해요. 아늑해요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "실망했어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "깨끗해요. 맛없어요. 다시 올지 고민. 특별한 건 없어요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "불친절했어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "무성의해요. 정말 맛있어요. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "서비스 엉망. 환상적이에요. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "가격은 적당.", "aspects": [{"aspect": "price", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "가격이 아쉬워요, 훌륭해요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "정말 저렴해요.", "aspects": [{"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "무성의해요. 아쉬운 점은 실망했어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "서비스 훌륭. 아쉬운 점은 맛이 별로.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "데이트 장소로 좋아요이지만 직원분이 상냥해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "실망했어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "국물이 깊고 진해서 정말 좋아요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "gold_llm"}
+{"text": "정돈되어 있어요, 분위기 좋아요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "hygiene", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "보통이에요, 특별한 건 없어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "price", "sentiment": "neutral"}, {"aspect": "service", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "정말 맛있어요, 응대가 좋아요. 종합적으로 괜찮아요. 가성비 최고.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "service", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "불친절했어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "서비스 훌륭이지만 가격이 아쉬워요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "가격은 적당.", "aspects": [{"aspect": "price", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "감탄했어요, 가격이 아쉬워요. 종합적으로 괜찮아요. 직원분이 상냥해요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}, {"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "부담 없어요. 조용하고 편안. 다시 올지 고민. 정돈되어 있어요.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "ambience", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "청결 상태 최악. 그런데 분위기 별로.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "위생은 무난.", "aspects": [{"aspect": "hygiene", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "맛이 별로. 그런데 자리 좁아요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "인테리어 멋져요. 아쉬운 점은 지저분해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "분위기 별로. 너무 비싸요. 다시 올지 고민. 지저분해요.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "위치는 좋은데 음식은 보통이에요.", "aspects": [{"aspect": "taste", "sentiment": "neutral"}], "source": "gold_llm"}
+{"text": "먹다 말았어요, 불친절했어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "보통이에요.", "aspects": [{"aspect": "price", "sentiment": "neutral"}], "source": "silver_rule"}
+{"text": "맛이 별로이지만 인테리어 멋져요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "가격 착해요.", "aspects": [{"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "서비스 엉망. 가성비 최고. 다시 올지 고민.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "음식이 식어서 나왔어요. 맛도 별로.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "재료가 신선하지 않아요. 비린 맛이 나요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "아늑해요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "응대가 좋아요.", "aspects": [{"aspect": "service", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "맛없어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "감탄했어요. 아쉬운 점은 정말 저렴해요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}, {"aspect": "price", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "위생 엉망.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "답답해요. 그런데 가격이 아쉬워요. 청결 상태 최악.", "aspects": [{"aspect": "ambience", "sentiment": "negative"}, {"aspect": "price", "sentiment": "negative"}, {"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "가격이 아쉬워요. 아쉬운 점은 자리 좁아요.", "aspects": [{"aspect": "price", "sentiment": "negative"}, {"aspect": "ambience", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "아늑해요, 기분 나빴어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "ambience", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "가격 착해요. 그런데 서비스 엉망.", "aspects": [{"aspect": "price", "sentiment": "positive"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "맛없어요, 기분 나빴어요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}, {"aspect": "service", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "응대가 좋아요, 부담스러워요. 종합적으로 괜찮아요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "price", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "환상적이에요.", "aspects": [{"aspect": "taste", "sentiment": "positive"}], "source": "silver_rule"}
+{"text": "벌레가 보여요.", "aspects": [{"aspect": "hygiene", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "먹다 말았어요.", "aspects": [{"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "예약을 했는데도 한참 기다렸어요.", "aspects": [{"aspect": "service", "sentiment": "negative"}], "source": "gold_llm"}
+{"text": "직원분이 상냥해요. 그런데 먹다 말았어요.", "aspects": [{"aspect": "service", "sentiment": "positive"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}
+{"text": "무성의해요. 아쉬운 점은 맛이 별로.", "aspects": [{"aspect": "service", "sentiment": "negative"}, {"aspect": "taste", "sentiment": "negative"}], "source": "silver_rule"}

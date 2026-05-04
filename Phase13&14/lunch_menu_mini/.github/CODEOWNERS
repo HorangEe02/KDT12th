@@ -1,0 +1,30 @@
+# =============================================================================
+# Phase11 CODEOWNERS
+# =============================================================================
+# Set the primary reviewer for each area of the repo. Update @yeong to the
+# actual GitHub username when pushing to a remote.
+# =============================================================================
+
+# Default
+*                               @yeong
+
+# Python backends
+/lunch-optimizer/               @yeong
+/NLP/nlp_mvp/                   @yeong
+/NLP/nlp_research/              @yeong
+
+# Frontend
+/dashboard-web/                 @yeong
+/sample_html/                   @yeong
+
+# Infrastructure
+/docker/                        @yeong
+/docker-compose.yml             @yeong
+/.github/                       @yeong
+/.dockerignore                  @yeong
+/.gitignore                     @yeong
+
+# Docs
+/0README.md                     @yeong
+/README.md                      @yeong
+/ROLE_SEPARATION_DECISION.md    @yeong

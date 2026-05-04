@@ -1,0 +1,44 @@
+# =============================================================================
+# Caddy reverse proxy for lunch_menu_mini
+# =============================================================================
+# - HTTPS termination via Caddy's internal CA (self-signed)
+# - Routes:
+#     /api/* → lunch-api:8000  (FastAPI lunch-optimizer)
+#     /nlp/* → nlp-api:8001    (FastAPI NLP)
+#     /*     → web:3000        (Next.js dashboard)
+# - Provides Secure Context so browser Geolocation / Kakao Maps work over LAN
+# =============================================================================
+
+{
+    auto_https disable_redirects
+    # 클라이언트가 IP 주소로 접근하면 SNI를 보내지 않음(RFC 6066).
+    # 그 경우 fallback할 hostname을 명시 → 172.30.1.39 cert로 응답.
+    default_sni 172.30.1.39
+}
+
+(routes) {
+    encode gzip zstd
+
+    handle /api/* {
+        reverse_proxy lunch-api:8000
+    }
+
+    # WebSocket — Caddy 의 reverse_proxy 는 자동 Upgrade 헤더 처리.
+    # 클라이언트(useTeamChat.ts) 가 /ws/chat/{team_id} 직접 호출 (no /api prefix).
+    handle /ws/* {
+        reverse_proxy lunch-api:8000
+    }
+
+    handle /nlp/* {
+        reverse_proxy nlp-api:8001
+    }
+
+    handle {
+        reverse_proxy web:3000
+    }
+}
+
+172.30.1.39, localhost, 127.0.0.1, *.trycloudflare.com {
+    tls internal
+    import routes
+}

@@ -1,0 +1,25 @@
+# B2 Food NER training config
+model_name: monologg/koelectra-base-v3-discriminator
+use_crf: false
+batch_size: 32
+learning_rate: 5.0e-5
+epochs: 10
+warmup_ratio: 0.1
+weight_decay: 0.01
+max_length: 256
+labels:
+  - O
+  - B-DISH
+  - I-DISH
+  - B-INGREDIENT
+  - I-INGREDIENT
+  - B-FLAVOR
+  - I-FLAVOR
+  - B-TEXTURE
+  - I-TEXTURE
+  - B-COOKING
+  - I-COOKING
+  - B-ALLERGEN
+  - I-ALLERGEN
+early_stopping_patience: 2
+metric_for_best_model: entity_f1

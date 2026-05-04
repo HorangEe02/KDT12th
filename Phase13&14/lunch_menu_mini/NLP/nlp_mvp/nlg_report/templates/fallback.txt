@@ -1,0 +1,5 @@
+{user_name}님의 {week_label} 리포트예요 🍱
+
+이번 주 총 {meal_count}회 식사하셨고, 평균 단백질 {avg_protein:.0f}g 섭취하셨어요.
+{lack_message}
+내일은 균형 잡힌 한 끼로 새로운 한 주를 시작해볼까요? ✨

@@ -1,0 +1,82 @@
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+venv/
+.venv/
+env/
+
+# ── Env / secrets ──
+.env
+.env.*
+!.env.example
+!.env.local.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials.json
+# detect-secrets baseline은 커밋 대상
+!.secrets.baseline
+
+# ── lunch-optimizer ──
+lunch-optimizer/database/phase11.db
+lunch-optimizer/logs/
+lunch-optimizer/venv/
+
+# ── NLP ──
+NLP/logs/
+NLP/nlp_mvp/rag_chatbot/chroma_store/
+!NLP/nlp_mvp/rag_chatbot/chroma_store/.gitkeep
+
+# ── NLP Research (Phase 6) ──
+NLP/nlp_research/checkpoints/
+!NLP/nlp_research/checkpoints/.gitkeep
+NLP/nlp_research/data/raw/
+NLP/nlp_research/data/splits/
+!NLP/nlp_research/data/splits/.gitkeep
+NLP/nlp_research/report/benchmarks/
+!NLP/nlp_research/report/benchmarks/.gitkeep
+NLP/nlp_research/wandb/
+
+# ── Next.js dashboard ──
+dashboard-web/node_modules/
+dashboard-web/.next/
+dashboard-web/out/
+dashboard-web/.env.local
+dashboard-web/*.log
+
+# ── DB / Logs / Caches (전역) ──
+logs/
+*.log
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+.coverage
+coverage.xml
+htmlcov/
+.mypy_cache/
+.cache/
+.hf_cache/
+
+# ── Docker 볼륨 덤프 (실수로 로컬 dump 뜰 경우) ──
+*.tar
+*.tar.gz
+docker-dump/
+
+# ── Editors / OS ──
+.DS_Store
+._*
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ── Demo presentation (push 제외, 별도 관리) ──
+*.pptx

@@ -1,0 +1,364 @@
+@import "tailwindcss";
+
+/* Pretendard (한글 시스템 폰트 — Apple SD Gothic Neo 대체) */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+
+/* ═══════════════════════════════════════════
+   오늘 뭐 먹지 — Warm Kitchen Theme
+   직장인 점심 결정 도우미 디자인 시스템.
+   ═══════════════════════════════════════════ */
+
+/* ── Light Theme (default) ──
+   `:root` 가 light 변수를 들고 있어야 next-themes 가 hydrate 되기 전
+   첫 페인트도 라이트로 표시된다. 사용자가 다크로 토글할 때만
+   [data-theme="dark"] 가 우선 적용. */
+:root,
+[data-theme="light"] {
+  --bg: #fdfaf6;
+  --s1: #ffffff;
+  --s2: #f5efe6;
+  --s3: #ebe0d1;
+  --outline: #d7c6b3;
+  --primary: #d04d32;
+  --primary-dark: #a63920;
+  --secondary: #157a59;
+  --secondary-dark: #0f5a41;
+  --tertiary: #a56512;
+  --error: #dc2626;
+  --error-dark: #b91c1c;
+  --success: #16a34a;
+  --warning: #d6a042;
+  --txt-1: #201612;
+  --txt-2: #4d3d32;
+  --txt-3: #8a7563;
+  --grid-opacity: 0.035;
+  color-scheme: light;
+}
+
+/* ── Dark Theme (Apple App Store iOS 톤) ──
+   true black 페이지 + #1C1C1E 카드 + #2C2C2E 엘리베이트 표면.
+   브랜드 액센트는 한식 오렌지 유지(차별화). */
+[data-theme="dark"] {
+  --bg: #000000;
+  --s1: #1c1c1e;
+  --s2: #2c2c2e;
+  --s3: #3a3a3c;
+  --outline: #48484a;
+  --primary: #e8593c;
+  --primary-dark: #c13f24;
+  --secondary: #30d158;       /* iOS systemGreen dark */
+  --secondary-dark: #248a3d;
+  --tertiary: #ff9f0a;        /* iOS systemOrange dark */
+  --error: #ff453a;           /* iOS systemRed dark */
+  --error-dark: #d70015;
+  --success: #30d158;
+  --warning: #ffd60a;
+  --txt-1: #ffffff;
+  --txt-2: rgba(235, 235, 245, 0.6);
+  --txt-3: rgba(235, 235, 245, 0.3);
+  --grid-opacity: 0.04;
+  color-scheme: dark;
+}
+
+/* ── Tailwind v4 Design Tokens ── */
+@theme inline {
+  /* Surface Hierarchy */
+  --color-background: var(--bg);
+  --color-surface-1: var(--s1);
+  --color-surface-2: var(--s2);
+  --color-surface-3: var(--s3);
+  --color-outline: var(--outline);
+
+  /* Accent Colors */
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-secondary-dark: var(--secondary-dark);
+  --color-tertiary: var(--tertiary);
+  --color-error: var(--error);
+  --color-error-dark: var(--error-dark);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+
+  /* Text Colors */
+  --color-text-primary: var(--txt-1);
+  --color-text-secondary: var(--txt-2);
+  --color-text-tertiary: var(--txt-3);
+
+  /* Fonts */
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-ko: 'Pretendard', sans-serif;
+}
+
+/* ── Global Reset ── */
+body {
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Minimum Font Size Enforcement ── */
+*[class*="text-[9px]"]  { font-size: 11px !important; }
+*[class*="text-[10px]"] { font-size: 12px !important; }
+*[class*="text-[11px]"] { font-size: 12px !important; }
+
+/* ── Warm Dotted Grid Background ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--color-outline) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: var(--grid-opacity);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Headings ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--color-background); }
+::-webkit-scrollbar-thumb { background: var(--color-surface-3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-outline); }
+
+/* ── Animations ── */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 4px var(--color-primary); }
+  50% { box-shadow: 0 0 12px var(--color-primary); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-surface-2) 0%,
+    var(--color-surface-3) 50%,
+    var(--color-surface-2) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+@keyframes slide-up {
+  from { transform: translateY(100%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+.animate-slide-up { animation: slide-up 0.22s ease-out; }
+
+/* ── Glass Panel (sample_html 스타일, sidebar/topnav/bottom nav) ── */
+.glass-panel {
+  background: color-mix(in srgb, var(--s1) 72%, transparent);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid color-mix(in srgb, var(--outline) 35%, transparent);
+}
+
+/* ── Bento Card (공통 카드 컨테이너) ── */
+.bento-card {
+  background: var(--s1);
+  border: 1px solid color-mix(in srgb, var(--outline) 60%, transparent);
+  border-radius: 1.25rem; /* rounded-2xl 보다 살짝 작게 */
+  padding: 1.25rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+.bento-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -10px color-mix(in srgb, var(--primary) 35%, transparent);
+  border-color: color-mix(in srgb, var(--primary) 35%, var(--outline));
+}
+.bento-card--flat {
+  /* hover lift 없이 rounded만 적용하고 싶을 때 */
+  transition: none;
+}
+.bento-card--flat:hover {
+  transform: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  border-color: color-mix(in srgb, var(--outline) 60%, transparent);
+}
+
+/* ── Leaflet Map Overrides ── */
+.leaflet-container {
+  background: var(--s2);
+  font-family: var(--font-body, "Manrope"), system-ui, sans-serif;
+  border-radius: 1.25rem;
+  z-index: 0;
+}
+.leaflet-popup-content-wrapper {
+  background: var(--s1);
+  color: var(--txt-1);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  padding: 2px 4px;
+}
+.leaflet-popup-content {
+  margin: 8px 12px;
+  line-height: 1.4;
+}
+.leaflet-popup-tip {
+  background: var(--s1);
+}
+.leaflet-container a.leaflet-popup-close-button {
+  color: var(--txt-3);
+}
+.leaflet-emoji-marker {
+  background: transparent !important;
+  border: none !important;
+}
+.leaflet-control-attribution {
+  background: color-mix(in srgb, var(--s1) 80%, transparent) !important;
+  color: var(--txt-3) !important;
+  font-size: 9px !important;
+  border-radius: 0.25rem;
+  padding: 1px 6px !important;
+}
+.leaflet-control-attribution a {
+  color: var(--primary) !important;
+}
+.leaflet-control-zoom a {
+  background: var(--s1) !important;
+  color: var(--txt-1) !important;
+  border-color: var(--outline) !important;
+}
+.leaflet-control-zoom a:hover {
+  background: var(--s2) !important;
+}
+
+/* ═══════════════════════════════════════════
+   Apple App Store iOS-style — Mobile Today Tab
+   ═══════════════════════════════════════════ */
+
+/* 한글 + 라틴 시스템 폰트 스택 — Pretendard 우선 */
+html,
+body {
+  font-family:
+    "Pretendard Variable",
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro KR",
+    "Apple SD Gothic Neo",
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 카드 — App Store hero/editorial 카드 표준 wrapper */
+.appstore-card {
+  background: var(--s1);
+  border-radius: 1.5rem; /* rounded-3xl 24px */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+[data-theme="dark"] .appstore-card {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Hero 카드 — 풀블리드 3:4 그래디언트 카드 */
+.appstore-hero {
+  position: relative;
+  border-radius: 1.5rem;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--s1);
+}
+
+/* Eyebrow — 작은 색깔 라벨 (한글에서는 caps 대신 색상+굵기) */
+.appstore-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+/* 큰 타이틀 — App Store "투데이" 스타일 */
+.appstore-title {
+  font-size: clamp(26px, 7vw, 32px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  font-weight: 800;
+  color: var(--txt-1);
+}
+
+/* "받기" 캡슐 버튼 */
+.appstore-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 16px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 700;
+  background: color-mix(in srgb, var(--txt-1) 8%, transparent);
+  color: var(--primary);
+  white-space: nowrap;
+  transition: transform 120ms ease, background 120ms ease;
+}
+.appstore-pill:active {
+  transform: scale(0.95);
+  background: color-mix(in srgb, var(--primary) 15%, transparent);
+}
+[data-theme="dark"] .appstore-pill {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* 가로 스크롤 컨테이너 — 카테고리 카드/앱 카드 가로 스와이프 */
+.appstore-hscroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+}
+.appstore-hscroll::-webkit-scrollbar {
+  display: none;
+}
+.appstore-hscroll > * {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* 텍스트 위 그래디언트 스크림 — Hero 카드 하단 */
+.appstore-scrim {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0.32) 35%,
+    rgba(0, 0, 0, 0) 60%
+  );
+}
+
+/* 분리선 (App Store divider, 모바일 row 사이) */
+.appstore-divider {
+  border-top: 1px solid color-mix(in srgb, var(--txt-1) 8%, transparent);
+}
+[data-theme="dark"] .appstore-divider {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Liquid Glass — backdrop-filter 미지원 폴백 */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .backdrop-blur-2xl,
+  .backdrop-blur-xl {
+    background: var(--s1) !important;
+  }
+}

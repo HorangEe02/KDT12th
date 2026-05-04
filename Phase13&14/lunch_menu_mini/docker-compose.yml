@@ -1,0 +1,313 @@
+# =============================================================================
+# Mini — Docker Compose orchestration
+# =============================================================================
+# Usage:
+#   cp .env.example .env        # edit API keys & ports if needed
+#   docker compose up -d        # default: web + lunch-api + nlp-api (host Ollama)
+#
+# Profiles (opt-in services):
+#   --profile docker-llm        # add containerized Ollama (Linux / no host Ollama)
+#   --profile proxy             # add Caddy reverse proxy (HTTPS, LAN sharing)
+#
+# Examples:
+#   docker compose up -d                                        # 기본 3개 서비스
+#   docker compose --profile docker-llm up -d                   # + Ollama 컨테이너
+#   docker compose --profile proxy up -d                        # + Caddy
+#   docker compose --profile docker-llm --profile proxy up -d   # 전체
+#
+# Mac 사용자(권장): 호스트 Ollama 사용 시 Metal GPU 가속 (5–10배 빠름)
+#   brew install ollama && brew services start ollama
+#   ollama pull qwen2.5:7b-instruct
+#
+# Services:
+#   - lunch-api    : FastAPI lunch-optimizer (port 8000, default)
+#   - nlp-api      : FastAPI NLP MVP + research (port 8001, default)
+#   - web          : Next.js 16 dashboard (port 3000, default)
+#   - ollama       : LLM runtime (port 11434, profile=docker-llm)
+#   - caddy        : Reverse proxy + HTTPS (ports 80/443, profile=proxy)
+#
+# Shared volumes:
+#   - mini-db      : SQLite mini.db (shared between lunch-api + nlp-api)
+#   - mini-logs    : rotating logs
+#   - mini-chroma  : RAG chatbot vector store
+#   - mini-hf      : Hugging Face model cache (~1.5GB after first warm-up)
+#   - ollama-models   : Ollama model blobs (~5GB per model)
+# =============================================================================
+
+name: lunchmenu
+
+services:
+  # ───────────────────────────────────────────────────────────────────────────
+  # Ollama (옵셔널) — 기본은 호스트 Mac의 Ollama를 사용 (Metal GPU 가속)
+  # 활성화: docker compose --profile docker-llm up -d
+  ollama:
+    profiles: ["docker-llm"]
+    image: ollama/ollama:latest
+    container_name: mini-ollama
+    restart: unless-stopped
+    ports:
+      - "${OLLAMA_PORT:-11434}:11434"
+    volumes:
+      - ollama-models:/root/.ollama
+    environment:
+      - OLLAMA_HOST=0.0.0.0:11434
+      - OLLAMA_KEEP_ALIVE=30m
+      - OLLAMA_MAX_LOADED_MODELS=1
+      - OLLAMA_NUM_PARALLEL=1
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    deploy:
+      resources:
+        limits:
+          memory: 8G
+          cpus: "4.0"
+        reservations:
+          memory: 4G
+    networks:
+      - mini
+
+  # ───────────────────────────────────────────────────────────────────────────
+  lunch-api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.lunch
+    image: mini/lunch-optimizer:latest
+    container_name: mini-lunch-api
+    restart: unless-stopped
+    depends_on: []
+    ports:
+      - "${LUNCH_API_PORT:-8000}:8000"
+    volumes:
+      # 데이터 디렉토리(/app/data)만 named volume — 코드 디렉토리(/app/database)는 이미지 사용.
+      # 이전(/app/database)에 마운트하면 image 의 코드 파일이 영구히 가려짐.
+      - mini-data:/app/data
+      - mini-logs:/app/logs
+    environment:
+      - DB_URL=sqlite:////app/data/mini.db
+      - MINI_DB_PATH=/app/data/mini.db
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      - CORS_ORIGINS=${CORS_ORIGINS:-http://localhost:3000,http://localhost:5173,http://127.0.0.1:3000,http://127.0.0.1:5173,http://172.30.1.13:3000}
+      - OFFICE_LAT=${OFFICE_LAT:-37.5665}
+      - OFFICE_LNG=${OFFICE_LNG:-126.9780}
+      - SEARCH_RADIUS=${SEARCH_RADIUS:-500}
+      - KAKAO_REST_API_KEY=${KAKAO_REST_API_KEY:-}
+      - NEXT_PUBLIC_KAKAO_MAP_KEY=${NEXT_PUBLIC_KAKAO_MAP_KEY:-}
+      - KAKAO_KA_ORIGIN=${KAKAO_KA_ORIGIN:-https://localhost:3000}
+      - DATA_GO_KR_API_KEY_DECODED=${DATA_GO_KR_API_KEY_DECODED:-}
+      - DATA_GO_KR_API_KEY_ENCODED=${DATA_GO_KR_API_KEY_ENCODED:-}
+      - FOOD_SAFETY_API_KEY=${FOOD_SAFETY_API_KEY:-}
+      # 영양 정보 dual-provider 라우팅 (data.go.kr 우선, 식품안전나라 폴백)
+      - NUTRITION_PROVIDER=${NUTRITION_PROVIDER:-data_go_kr}
+      - NUTRITION_FALLBACK_FOOD_SAFETY=${NUTRITION_FALLBACK_FOOD_SAFETY:-1}
+      - DATA_GO_KR_NUTRITION_URL=${DATA_GO_KR_NUTRITION_URL:-https://apis.data.go.kr/1471000/FoodNtrCpntDbInfo01/getFoodNtrCpntDbInq01}
+      - DATA_GO_KR_NUTRITION_NAME_PARAM=${DATA_GO_KR_NUTRITION_NAME_PARAM:-FOOD_NM_KR}
+      - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL:-}
+      - NEAREST_STATION_NAME=${NEAREST_STATION_NAME:-종로구}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      # Phase 13&14: 인증 / RBAC
+      - JWT_SECRET=${JWT_SECRET:-}
+      - JWT_EXPIRE_HOURS=${JWT_EXPIRE_HOURS:-24}
+      - ADMIN_EMAIL=${ADMIN_EMAIL:-}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD:-}
+      - ADMIN_PASSWORD_RESET=${ADMIN_PASSWORD_RESET:-0}
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8000/api/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+          cpus: "1.5"
+        reservations:
+          memory: 256M
+    networks:
+      - mini
+
+  # ───────────────────────────────────────────────────────────────────────────
+  nlp-api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.nlp
+    image: mini/nlp-api:latest
+    container_name: mini-nlp-api
+    restart: unless-stopped
+    # NOTE: Ollama 의존을 제거 — 호스트 Ollama 모드에서도 동작.
+    #       컨테이너 ollama 사용 시(--profile docker-llm), nlp-api는 lazy-connect로 처리.
+    depends_on:
+      lunch-api:
+        condition: service_started
+    ports:
+      - "${NLP_API_PORT:-8001}:8001"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      # 데이터 디렉토리(/app/data)만 named volume (lunch-api 와 동일 경로 정책)
+      - mini-data:/app/data
+      - mini-logs:/app/logs
+      - mini-chroma:/app/nlp_mvp/rag_chatbot/chroma_store
+      - mini-hf:/app/.cache/huggingface
+      # Phase 16-B 학습 가중치(약 900MB) — 이미지 비대화를 막기 위해 bind mount.
+      # 가중치를 재학습하면 컨테이너 재시작만으로 즉시 반영됨.
+      - ./NLP/nlp_research/checkpoints:/app/nlp_research/checkpoints:ro
+    environment:
+      - MINI_DB_PATH=/app/data/mini.db
+      # 기본: 호스트 Ollama (Mac Metal 가속)
+      # 컨테이너 ollama 사용 시 .env에서 LUNCHMENU_OLLAMA_URL=http://ollama:11434 로 변경
+      # ※ 변수명을 OLLAMA_HOST가 아닌 LUNCHMENU_OLLAMA_URL로 둔 이유:
+      #    호스트에서 `ollama serve` 운영 시 셸이 OLLAMA_HOST=0.0.0.0:11434 를 export함.
+      #    이 값(URL이 아닌 bind 주소)이 컴포즈 변수치환에 누수되어 nlp-api에 잘못 전달되는 것을 방지.
+      - OLLAMA_HOST=${LUNCHMENU_OLLAMA_URL:-http://host.docker.internal:11434}
+      - OLLAMA_MODEL=${OLLAMA_MODEL:-qwen2.5:7b-instruct}
+      - OLLAMA_MODEL_CHAT=${OLLAMA_MODEL_CHAT:-qwen2.5:7b-instruct}
+      - OLLAMA_MODEL_REPORT=${OLLAMA_MODEL_REPORT:-qwen2.5:7b-instruct}
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - GEMINI_MODEL_CHAT=${GEMINI_MODEL_CHAT:-gemini-2.5-pro}
+      - GEMINI_MODEL_REPORT=${GEMINI_MODEL_REPORT:-gemini-2.5-pro}
+      - GEMINI_MODEL_TOOLS=${GEMINI_MODEL_TOOLS:-gemini-2.5-pro}
+      - LLM_PROVIDER_CHAT=${LLM_PROVIDER_CHAT:-gemini}
+      - LLM_PROVIDER_REPORT=${LLM_PROVIDER_REPORT:-gemini}
+      - LLM_PROVIDER_TOOLS=${LLM_PROVIDER_TOOLS:-gemini}
+      - NLP_ADMIN_TOKEN=${NLP_ADMIN_TOKEN:-}
+      - NLP_DEV_MODE=${NLP_DEV_MODE:-0}
+      - NLP_MODEL_WHITELIST=${NLP_MODEL_WHITELIST:-}
+      - NLP_RATE_LIMIT_ENABLED=${NLP_RATE_LIMIT_ENABLED:-1}
+      - EMBEDDING_MODEL=${EMBEDDING_MODEL:-jhgan/ko-sroberta-multitask}
+      - SENTIMENT_MODEL=${SENTIMENT_MODEL:-nlp04/korean_sentiment_analysis_kcelectra}
+      - CHROMA_DB_PATH=/app/nlp_mvp/rag_chatbot/chroma_store
+      - NLP_API_PORT=8001
+      # 변수 인터폴레이션 — .env 의 NLP_API_CORS_ORIGINS 가 우선 적용됨.
+      # 미설정 시 dev 디폴트 사용.
+      - NLP_API_CORS_ORIGINS=${NLP_API_CORS_ORIGINS:-http://localhost:3000,http://127.0.0.1:3000,http://172.30.1.13:3000,http://172.30.1.39:3000,https://localhost:3000,https://127.0.0.1:3000,https://172.30.1.13:3000,https://172.30.1.39:3000,http://web:3000}
+      - NLP_SKIP_RAG_INDEX=${NLP_SKIP_RAG_INDEX:-0}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - PYTHONPATH=/app
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8001/nlp/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 90s
+    deploy:
+      resources:
+        limits:
+          memory: 3G
+          cpus: "2.5"
+        reservations:
+          memory: 1536M
+    networks:
+      - mini
+
+  # ───────────────────────────────────────────────────────────────────────────
+  web:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.web
+      args:
+        NEXT_PUBLIC_LUNCH_API: ${NEXT_PUBLIC_LUNCH_API:-http://localhost:8000/api}
+        NEXT_PUBLIC_NLP_API: ${NEXT_PUBLIC_NLP_API:-http://localhost:8001}
+        NEXT_PUBLIC_DEFAULT_USER_ID: ${NEXT_PUBLIC_DEFAULT_USER_ID:-1}
+        NEXT_PUBLIC_KAKAO_MAP_KEY: ${NEXT_PUBLIC_KAKAO_MAP_KEY:-}
+    image: mini/dashboard-web:latest
+    container_name: mini-web
+    restart: unless-stopped
+    depends_on:
+      lunch-api:
+        condition: service_started
+      nlp-api:
+        condition: service_started
+    ports:
+      - "${WEB_PORT:-3000}:3000"
+    environment:
+      - NODE_ENV=production
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:3000"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+    deploy:
+      resources:
+        limits:
+          memory: 768M
+          cpus: "1.0"
+        reservations:
+          memory: 256M
+    networks:
+      - mini
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # Caddy reverse proxy (옵셔널) — HTTPS termination for browser Geolocation /
+  # Kakao Maps over LAN. 활성화: docker compose --profile proxy up -d
+  caddy:
+    profiles: ["proxy"]
+    image: caddy:2-alpine
+    container_name: mini-caddy
+    restart: unless-stopped
+    depends_on:
+      web:
+        condition: service_started
+      lunch-api:
+        condition: service_started
+      nlp-api:
+        condition: service_started
+    ports:
+      - "${HTTP_PORT:-80}:80"
+      - "${HTTPS_PORT:-443}:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+          cpus: "0.5"
+    networks:
+      - mini
+
+# =============================================================================
+# Volumes & networks
+# =============================================================================
+volumes:
+  # NOTE: external: true 로 선언하여 기존 사용자 데이터(mini-db, mini-chroma 등)를
+  #       Compose가 "외부 관리 자원"으로 인식 → 경고 제거 + 실수 삭제 방지.
+  #       볼륨이 부재하면 사전에 `docker volume create mini-db` 등으로 생성 필요.
+  # mini-data: 데이터 전용 볼륨 (Phase 13&14 신규).
+  #   기존 mini-db 는 코드 + 데이터를 동일 디렉토리에 두어 image 코드 변경이
+  #   가려지는 문제가 있어 분리. mini-db 는 마이그레이션 후 삭제 가능.
+  mini-data:
+    name: mini-data
+  mini-db:
+    name: mini-db
+    external: true
+  mini-logs:
+    name: mini-logs
+    external: true
+  mini-chroma:
+    name: mini-chroma
+    external: true
+  mini-hf:
+    name: mini-hf
+    external: true
+  ollama-models:
+    name: mini-ollama-models
+    external: true
+  caddy-data:
+    name: mini-caddy-data
+    external: true
+  caddy-config:
+    name: mini-caddy-config
+    external: true
+
+networks:
+  mini:
+    name: mini-net
+    external: true
