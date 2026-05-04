@@ -80,3 +80,16 @@ Thumbs.db
 
 # ── Demo presentation (push 제외, 별도 관리) ──
 *.pptx
+
+# ── IDE / Tooling ──
+.claude/
+.cursorrules
+.aider*
+
+# ── DB backups / migration leftovers ──
+*.db.pre_*_migration_*
+*.db.bak
+*.sqlite.bak
+
+# ── Generated PDFs (원본 md만 commit, PDF는 로컬 빌드/Release 첨부) ──
+docs/pdf/
