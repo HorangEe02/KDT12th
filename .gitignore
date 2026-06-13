@@ -1,0 +1,86 @@
+# ===== KNU_KDT_12th 공통 .gitignore =====
+# 이미 추적 중인 파일은 영향받지 않음 (앞으로의 git add 에만 적용)
+
+# --- OS / 에디터 ---
+.DS_Store
+**/.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+venv/
+.venv/
+env/
+
+# --- Node / 프론트엔드 ---
+node_modules/
+.next/
+dist/
+out/
+build/
+*.tsbuildinfo
+.firebase/
+.turbo/
+
+# --- 비밀정보 (절대 커밋 금지) ---
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+secrets/
+service-account*.json
+*credentials*.json
+
+# --- 대용량: 데이터셋 (출처 링크로 대체) ---
+data/
+data_kaggle/
+kaggle_zip/
+*.zip
+
+# --- 대용량: 모델 가중치 / 체크포인트 (Release·HF Hub 로 별도 배포) ---
+checkpoints/
+runs/
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.safetensors
+*.onnx
+*.joblib
+
+# --- 대용량: 발표 영상 ---
+*.mp4
+*.mov
+*.MOV
+*.avi
+
+# --- 운영 DB / 캐시 ---
+*.db
+*.sqlite
+*.sqlite3
+.chroma/
+chroma_db/
+
+# --- 폐기물 / 백업 ---
+폐기/
+휴지통/
+*.bak
+
+# --- 로컬 도구 (claude code / omc) ---
+.claude/
+.omc/
+.omx/
+
+# --- 로그 ---
+logs/
+*.log
