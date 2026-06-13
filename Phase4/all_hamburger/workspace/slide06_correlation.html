@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F1DE; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #2C2C2C; padding: 15pt 30pt;
+}
+.header h1 {
+  color: #F4F1DE; font-size: 22pt; margin: 0; font-weight: bold;
+}
+.content {
+  display: flex; flex: 1; padding: 15pt 30pt;
+}
+.left {
+  width: 42%; padding-right: 15pt;
+}
+.right {
+  width: 58%;
+}
+h2 {
+  color: #E07A5F; font-size: 14pt; margin: 0 0 10pt 0; font-weight: bold;
+}
+.corr-table {
+  background: #FFFFFF; border-radius: 6pt; overflow: hidden;
+}
+.corr-row {
+  display: flex; padding: 6pt 10pt; border-bottom: 1pt solid #EEEEEE;
+}
+.corr-row.header { background: #87A96B; }
+.corr-row.header p { color: #FFFFFF; font-weight: bold; }
+.corr-row p { margin: 0; font-size: 10pt; flex: 1; }
+.corr-row .value { color: #E07A5F; font-weight: bold; }
+.note {
+  background: #E07A5F; color: #FFFFFF; padding: 10pt; border-radius: 6pt; margin-top: 10pt;
+}
+.note p { color: #FFFFFF; font-size: 10pt; margin: 0; }
+.chart-area {
+  background: #FFFFFF; border-radius: 6pt; height: 100%;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>03. 분석 - 기온-생산량 상관분석</h1>
+</div>
+<div class="content">
+  <div class="left">
+    <h2>Pearson 상관계수 (p &lt; 0.05)</h2>
+    <div class="corr-table">
+      <div class="corr-row header">
+        <p>품목</p>
+        <p>상관계수 (r)</p>
+      </div>
+      <div class="corr-row">
+        <p>Cucumbers</p>
+        <p class="value">0.77</p>
+      </div>
+      <div class="corr-row">
+        <p>Lettuce</p>
+        <p class="value">0.77</p>
+      </div>
+      <div class="corr-row">
+        <p>Tomatoes</p>
+        <p class="value">0.76</p>
+      </div>
+      <div class="corr-row">
+        <p>Wheat</p>
+        <p class="value">0.73</p>
+      </div>
+      <div class="corr-row">
+        <p>Beef</p>
+        <p class="value">0.72</p>
+      </div>
+      <div class="corr-row">
+        <p>Potatoes</p>
+        <p class="value">0.56</p>
+      </div>
+    </div>
+    <div class="note">
+      <p>모든 품목에서 통계적으로 유의미한 양의 상관관계 (r &gt; 0.5)</p>
+    </div>
+  </div>
+  <div class="right">
+    <div id="chart" class="placeholder chart-area" style="width: 100%; height: 100%;"></div>
+  </div>
+</div>
+</body>
+</html>

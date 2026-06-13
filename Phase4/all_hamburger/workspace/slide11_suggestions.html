@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F1DE; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #2C2C2C; padding: 15pt 30pt;
+}
+.header h1 {
+  color: #F4F1DE; font-size: 22pt; margin: 0; font-weight: bold;
+}
+.content {
+  display: flex; flex: 1; padding: 15pt 30pt; gap: 15pt;
+}
+.column {
+  flex: 1; background: #FFFFFF; border-radius: 6pt; overflow: hidden;
+}
+.column-header {
+  padding: 10pt 12pt;
+}
+.column-header.personal { background: #87A96B; }
+.column-header.business { background: #E07A5F; }
+.column-header.policy { background: #2C2C2C; }
+.column-header h2 {
+  color: #FFFFFF; font-size: 13pt; margin: 0; font-weight: bold;
+}
+.column-content {
+  padding: 12pt;
+}
+.item {
+  margin-bottom: 8pt; padding-left: 10pt;
+}
+.item p {
+  color: #2C2C2C; font-size: 10pt; margin: 0; line-height: 1.4;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>제언</h1>
+</div>
+<div class="content">
+  <div class="column">
+    <div class="column-header personal">
+      <h2>개인 수준</h2>
+    </div>
+    <div class="column-content">
+      <div class="item"><p>기후 변화와 식품의 연결고리 인식</p></div>
+      <div class="item"><p>로컬 푸드, 계절 식품 선호</p></div>
+      <div class="item"><p>음식물 쓰레기 감소</p></div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="column-header business">
+      <h2>기업 수준</h2>
+    </div>
+    <div class="column-content">
+      <div class="item"><p>공급망 다변화로 특정 지역 의존도 감소</p></div>
+      <div class="item"><p>기후 리스크 조기 경보 시스템 구축</p></div>
+      <div class="item"><p>기후 변화에 강건한 대체 원료 개발</p></div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="column-header policy">
+      <h2>정책 수준</h2>
+    </div>
+    <div class="column-content">
+      <div class="item"><p>식량 자급률 제고 및 농업 경쟁력 강화</p></div>
+      <div class="item"><p>기후 적응 기술 R&D 투자 확대</p></div>
+      <div class="item"><p>글로벌 식량 안보 체계 국제 협력</p></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

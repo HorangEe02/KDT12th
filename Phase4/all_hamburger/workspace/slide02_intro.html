@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F1DE; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #2C2C2C; padding: 20pt 30pt;
+}
+.header h1 {
+  color: #F4F1DE; font-size: 24pt; margin: 0; font-weight: bold;
+}
+.content {
+  display: flex; flex: 1; padding: 25pt 30pt;
+}
+.left {
+  flex: 1; padding-right: 20pt;
+}
+.right {
+  flex: 1; padding-left: 20pt; border-left: 3pt solid #87A96B;
+}
+h2 {
+  color: #E07A5F; font-size: 16pt; margin: 0 0 12pt 0; font-weight: bold;
+}
+p {
+  color: #2C2C2C; font-size: 13pt; margin: 0 0 10pt 0; line-height: 1.5;
+}
+.highlight {
+  background: #E07A5F; color: #F4F1DE; padding: 15pt;
+  border-radius: 6pt; margin-top: 15pt;
+}
+.highlight p {
+  color: #F4F1DE; font-size: 12pt; margin: 0; text-align: center;
+  font-style: italic;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>프로젝트 개요</h1>
+</div>
+<div class="content">
+  <div class="left">
+    <h2>연구 배경</h2>
+    <p>2024년 맥도날드 감자튀김 공급 이슈로 촉발된 의문:</p>
+    <p>"기후변화가 정말 우리 일상에 영향을 미치는가?"</p>
+    <h2>분석 목표</h2>
+    <p>햄버거 재료(밀, 소고기, 토마토, 감자 등)의 생산량과 기후 변화의 통계적 관계 검증</p>
+  </div>
+  <div class="right">
+    <h2>사용 데이터</h2>
+    <p><b>FAOSTAT</b> - UN 식량농업기구 공식 통계</p>
+    <p><b>Kaggle</b> - Climate Change Impact on Agriculture</p>
+    <h2>분석 기간</h2>
+    <p>1990년 ~ 2023년 (최대 33년간 데이터)</p>
+    <div class="highlight">
+      <p>"기후변화는 먼 미래가 아니라, 오늘 점심 메뉴에 영향을 미치는 현실이다"</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F1DE; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #2C2C2C; padding: 15pt 30pt;
+}
+.header h1 {
+  color: #F4F1DE; font-size: 22pt; margin: 0; font-weight: bold;
+}
+.content {
+  padding: 15pt 30pt; flex: 1;
+}
+h2 {
+  color: #E07A5F; font-size: 14pt; margin: 0 0 10pt 0; font-weight: bold;
+}
+.events-grid {
+  display: flex; flex-wrap: wrap; gap: 10pt;
+}
+.event-card {
+  width: calc(50% - 5pt); background: #FFFFFF; padding: 10pt; border-radius: 6pt;
+  border-left: 4pt solid #E07A5F;
+}
+.event-card h3 {
+  color: #2C2C2C; font-size: 11pt; margin: 0 0 4pt 0; font-weight: bold;
+}
+.event-card p {
+  color: #666666; font-size: 10pt; margin: 0 0 2pt 0;
+}
+.event-card .impact {
+  color: #E07A5F; font-weight: bold;
+}
+.summary {
+  background: #87A96B; padding: 10pt; border-radius: 6pt; margin-top: 10pt;
+}
+.summary p {
+  color: #FFFFFF; font-size: 11pt; margin: 0; text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>03. 분석 - 이상기후 이벤트 영향</h1>
+</div>
+<div class="content">
+  <h2>주요 이상기후와 생산량 변화</h2>
+  <div class="events-grid">
+    <div class="event-card">
+      <h3>2010 러시아 폭염</h3>
+      <p>밀 생산량 <span class="impact">-5.2%</span> / 1년 내 회복</p>
+    </div>
+    <div class="event-card">
+      <h3>2012 미국 옥수수벨트 가뭄</h3>
+      <p>밀 <span class="impact">-3.9%</span> / 소고기 <span class="impact">-1.2%</span></p>
+    </div>
+    <div class="event-card">
+      <h3>2019 호주 산불</h3>
+      <p>밀 <span class="impact">-2.8%</span> / 소고기 <span class="impact">-0.9%</span></p>
+    </div>
+    <div class="event-card">
+      <h3>2022 유럽 가뭄</h3>
+      <p>밀 <span class="impact">-4.1%</span> / 감자 <span class="impact">-3.5%</span></p>
+    </div>
+  </div>
+  <div class="summary">
+    <p>평균 생산량 감소: -2.9% | 밀이 가장 민감 | 대부분 1년 내 회복</p>
+  </div>
+</div>
+</body>
+</html>

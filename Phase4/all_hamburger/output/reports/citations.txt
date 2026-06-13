@@ -1,0 +1,28 @@
+
+================================================================================
+📚 데이터 출처 인용 (APA 형식)
+================================================================================
+
+[1] FAOSTAT - 작물/축산 생산량
+    FAO. (2024). FAOSTAT: Crops and livestock products.
+    Food and Agriculture Organization of the United Nations.
+    Retrieved from https://www.fao.org/faostat/en/#data/QCL
+
+[2] FAOSTAT - 기온 변화
+    FAO. (2024). FAOSTAT: Temperature change on land.
+    Food and Agriculture Organization of the United Nations.
+    Retrieved from https://www.fao.org/faostat/en/#data/ET
+
+    Note: Based on NASA Goddard Institute for Space Studies (GISTEMP) data.
+
+[3] FAOSTAT - 무역 데이터
+    FAO. (2024). FAOSTAT: Crops and livestock products (Trade).
+    Food and Agriculture Organization of the United Nations.
+    Retrieved from https://www.fao.org/faostat/en/#data/TCL
+
+[4] Kaggle - 기후-농업 영향
+    World Air Quality Index Project. (2024).
+    Climate Change Impact on Agriculture [Data set]. Kaggle.
+    https://www.kaggle.com/datasets/waqi786/climate-change-impact-on-agriculture
+
+================================================================================

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F1DE; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #2C2C2C; padding: 20pt 30pt;
+}
+.header h1 {
+  color: #F4F1DE; font-size: 24pt; margin: 0; font-weight: bold;
+}
+.content {
+  padding: 20pt 30pt; flex: 1;
+}
+h2 {
+  color: #E07A5F; font-size: 16pt; margin: 0 0 15pt 0; font-weight: bold;
+}
+.data-grid {
+  display: flex; gap: 15pt;
+}
+.data-card {
+  flex: 1; background: #FFFFFF; padding: 15pt; border-radius: 6pt;
+  border-left: 4pt solid #87A96B;
+}
+.data-card h3 {
+  color: #2C2C2C; font-size: 13pt; margin: 0 0 8pt 0; font-weight: bold;
+}
+.data-card p {
+  color: #666666; font-size: 11pt; margin: 0 0 5pt 0; line-height: 1.4;
+}
+.items {
+  display: flex; flex-wrap: wrap; gap: 8pt; margin-top: 15pt;
+}
+.item {
+  background: #87A96B; color: #FFFFFF; padding: 6pt 12pt;
+  border-radius: 4pt; font-size: 11pt;
+}
+.item p { color: #FFFFFF; margin: 0; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>01. 데이터 전처리</h1>
+</div>
+<div class="content">
+  <h2>분석 대상 데이터셋</h2>
+  <div class="data-grid">
+    <div class="data-card">
+      <h3>FAOSTAT Production</h3>
+      <p>545MB / 1,200만 행</p>
+      <p>작물/축산물 생산량</p>
+    </div>
+    <div class="data-card">
+      <h3>FAOSTAT Temperature</h3>
+      <p>15MB</p>
+      <p>지표면 기온 편차 (NASA GISTEMP 기반)</p>
+    </div>
+    <div class="data-card">
+      <h3>FAOSTAT Trade</h3>
+      <p>2.4GB / 6,000만 행</p>
+      <p>수출입 물량 및 금액</p>
+    </div>
+    <div class="data-card">
+      <h3>Kaggle Climate</h3>
+      <p>1MB</p>
+      <p>기후-농업 영향 데이터</p>
+    </div>
+  </div>
+  <h2>햄버거 재료 (분석 대상 품목)</h2>
+  <div class="items">
+    <div class="item"><p>Wheat (밀/빵)</p></div>
+    <div class="item"><p>Beef (소고기/패티)</p></div>
+    <div class="item"><p>Tomatoes (토마토/케첩)</p></div>
+    <div class="item"><p>Lettuce (양상추)</p></div>
+    <div class="item"><p>Potatoes (감자튀김)</p></div>
+    <div class="item"><p>Cucumbers (오이/피클)</p></div>
+  </div>
+</div>
+</body>
+</html>

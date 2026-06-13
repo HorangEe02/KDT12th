@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F1DE; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #2C2C2C; padding: 15pt 30pt;
+}
+.header h1 {
+  color: #F4F1DE; font-size: 22pt; margin: 0; font-weight: bold;
+}
+.content {
+  display: flex; flex: 1; padding: 15pt 30pt;
+}
+.left {
+  width: 42%; padding-right: 15pt;
+}
+.right {
+  width: 58%;
+}
+h2 {
+  color: #E07A5F; font-size: 14pt; margin: 0 0 10pt 0; font-weight: bold;
+}
+.reg-table {
+  background: #FFFFFF; border-radius: 6pt; overflow: hidden;
+}
+.reg-row {
+  display: flex; padding: 6pt 10pt; border-bottom: 1pt solid #EEEEEE;
+}
+.reg-row.header { background: #87A96B; }
+.reg-row.header p { color: #FFFFFF; font-weight: bold; font-size: 9pt; }
+.reg-row p { margin: 0; font-size: 10pt; flex: 1; }
+.interpretation {
+  background: #FFFFFF; padding: 10pt; border-radius: 6pt; margin-top: 10pt;
+  border-left: 4pt solid #E07A5F;
+}
+.interpretation p { font-size: 10pt; color: #2C2C2C; margin: 0 0 4pt 0; }
+.chart-area {
+  background: #FFFFFF; border-radius: 6pt; height: 100%;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>03. 분석 - 단순 선형 회귀분석</h1>
+</div>
+<div class="content">
+  <div class="left">
+    <h2>기온 1°C 상승 시 생산량 변화</h2>
+    <div class="reg-table">
+      <div class="reg-row header">
+        <p>품목</p>
+        <p>계수 (백만톤)</p>
+        <p>R²</p>
+      </div>
+      <div class="reg-row">
+        <p>Wheat</p>
+        <p>+49.2</p>
+        <p>0.535</p>
+      </div>
+      <div class="reg-row">
+        <p>Tomatoes</p>
+        <p>+21.9</p>
+        <p>0.581</p>
+      </div>
+      <div class="reg-row">
+        <p>Potatoes</p>
+        <p>+15.9</p>
+        <p>0.312</p>
+      </div>
+      <div class="reg-row">
+        <p>Beef</p>
+        <p>+5.9</p>
+        <p>0.523</p>
+      </div>
+      <div class="reg-row">
+        <p>Lettuce</p>
+        <p>+4.1</p>
+        <p>0.593</p>
+      </div>
+    </div>
+    <div class="interpretation">
+      <p><b>해석:</b> 기온 편차가 생산량 변동의 31%~59% 설명</p>
+    </div>
+  </div>
+  <div class="right">
+    <div id="chart" class="placeholder chart-area" style="width: 100%; height: 100%;"></div>
+  </div>
+</div>
+</body>
+</html>

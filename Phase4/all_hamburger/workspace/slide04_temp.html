@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F1DE; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #2C2C2C; padding: 20pt 30pt;
+}
+.header h1 {
+  color: #F4F1DE; font-size: 24pt; margin: 0; font-weight: bold;
+}
+.content {
+  display: flex; flex: 1; padding: 20pt 30pt;
+}
+.left {
+  width: 45%; padding-right: 20pt;
+}
+.right {
+  width: 55%;
+}
+h2 {
+  color: #E07A5F; font-size: 16pt; margin: 0 0 12pt 0; font-weight: bold;
+}
+p {
+  color: #2C2C2C; font-size: 12pt; margin: 0 0 8pt 0; line-height: 1.5;
+}
+.stat-box {
+  background: #FFFFFF; padding: 15pt; border-radius: 6pt; margin-bottom: 12pt;
+}
+.stat-box h3 {
+  color: #87A96B; font-size: 28pt; margin: 0; font-weight: bold;
+}
+.stat-box p {
+  color: #666666; font-size: 11pt; margin: 5pt 0 0 0;
+}
+.chart-area {
+  background: #FFFFFF; border-radius: 6pt; height: 100%;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>02. 시각화 - 글로벌 기온 변화 추이</h1>
+</div>
+<div class="content">
+  <div class="left">
+    <h2>핵심 발견</h2>
+    <div class="stat-box">
+      <h3>+0.84°C</h3>
+      <p>1990년 대비 2019년 기온 상승</p>
+    </div>
+    <div class="stat-box">
+      <h3>1.47°C</h3>
+      <p>2019년 기온 편차 (파리협정 1.5°C 근접)</p>
+    </div>
+    <p><b>고위도 지역(러시아)</b>이 저위도보다 더 빠르게 온난화 - 북극 증폭 현상</p>
+  </div>
+  <div class="right">
+    <div id="chart" class="placeholder chart-area" style="width: 100%; height: 100%;"></div>
+  </div>
+</div>
+</body>
+</html>

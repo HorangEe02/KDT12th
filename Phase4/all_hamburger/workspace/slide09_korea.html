@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F1DE; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #2C2C2C; padding: 15pt 30pt;
+}
+.header h1 {
+  color: #F4F1DE; font-size: 22pt; margin: 0; font-weight: bold;
+}
+.content {
+  display: flex; flex: 1; padding: 15pt 30pt;
+}
+.left {
+  width: 42%; padding-right: 15pt;
+}
+.right {
+  width: 58%;
+}
+h2 {
+  color: #E07A5F; font-size: 14pt; margin: 0 0 10pt 0; font-weight: bold;
+}
+.import-list {
+  background: #FFFFFF; padding: 12pt; border-radius: 6pt;
+}
+.import-item {
+  margin-bottom: 8pt;
+}
+.import-item h3 {
+  color: #2C2C2C; font-size: 12pt; margin: 0 0 2pt 0; font-weight: bold;
+}
+.import-item p { margin: 0; font-size: 10pt; color: #666666; }
+.import-item .change { color: #E07A5F; font-weight: bold; font-size: 16pt; }
+.warning {
+  background: #E07A5F; color: #FFFFFF; padding: 10pt; border-radius: 6pt; margin-top: 10pt;
+}
+.warning p { color: #FFFFFF; font-size: 10pt; margin: 0; text-align: center; }
+.chart-area {
+  background: #FFFFFF; border-radius: 6pt; height: 100%;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>04. 결론 - 한국의 수입 의존도</h1>
+</div>
+<div class="content">
+  <div class="left">
+    <h2>주요 품목 수입 변화 (2000-2023)</h2>
+    <div class="import-list">
+      <div class="import-item">
+        <h3>밀 (Wheat)</h3>
+        <p>3,800KT → 6,270KT</p>
+        <p class="change">+65.0%</p>
+      </div>
+      <div class="import-item">
+        <h3>소고기 (Beef)</h3>
+        <p>503KT → 1,094KT</p>
+        <p class="change">+117.4%</p>
+      </div>
+      <div class="import-item">
+        <h3>감자 (Potatoes)</h3>
+        <p>13.5KT → 75KT</p>
+        <p class="change">+456.6%</p>
+      </div>
+    </div>
+    <div class="warning">
+      <p>밀 자급률 &lt; 1% | 글로벌 기후 위기 = 한국 식탁 위기</p>
+    </div>
+  </div>
+  <div class="right">
+    <div id="chart" class="placeholder chart-area" style="width: 100%; height: 100%;"></div>
+  </div>
+</div>
+</body>
+</html>

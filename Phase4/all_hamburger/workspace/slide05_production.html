@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F1DE; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #2C2C2C; padding: 20pt 30pt;
+}
+.header h1 {
+  color: #F4F1DE; font-size: 24pt; margin: 0; font-weight: bold;
+}
+.content {
+  display: flex; flex: 1; padding: 20pt 30pt;
+}
+.left {
+  width: 40%; padding-right: 20pt;
+}
+.right {
+  width: 60%;
+}
+h2 {
+  color: #E07A5F; font-size: 16pt; margin: 0 0 12pt 0; font-weight: bold;
+}
+p {
+  color: #2C2C2C; font-size: 12pt; margin: 0 0 8pt 0; line-height: 1.5;
+}
+.growth-list {
+  background: #FFFFFF; padding: 15pt; border-radius: 6pt;
+}
+.growth-item {
+  display: flex; justify-content: space-between; padding: 6pt 0;
+  border-bottom: 1pt solid #EEEEEE;
+}
+.growth-item p { margin: 0; font-size: 12pt; }
+.growth-item .pct { color: #87A96B; font-weight: bold; }
+.chart-area {
+  background: #FFFFFF; border-radius: 6pt; height: 100%;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>02. 시각화 - 햄버거 재료 생산량 추이</h1>
+</div>
+<div class="content">
+  <div class="left">
+    <h2>품목별 생산량 변화 (2000-2023)</h2>
+    <div class="growth-list">
+      <div class="growth-item">
+        <p>Cucumbers (오이)</p>
+        <p class="pct">+94.2%</p>
+      </div>
+      <div class="growth-item">
+        <p>Tomatoes (토마토)</p>
+        <p class="pct">+67.3%</p>
+      </div>
+      <div class="growth-item">
+        <p>Lettuce (양상추)</p>
+        <p class="pct">+58.9%</p>
+      </div>
+      <div class="growth-item">
+        <p>Wheat (밀)</p>
+        <p class="pct">+47.8%</p>
+      </div>
+      <div class="growth-item">
+        <p>Potatoes (감자)</p>
+        <p class="pct">+32.4%</p>
+      </div>
+      <div class="growth-item">
+        <p>Beef (소고기)</p>
+        <p class="pct">+23.7%</p>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div id="chart" class="placeholder chart-area" style="width: 100%; height: 100%;"></div>
+  </div>
+</div>
+</body>
+</html>
