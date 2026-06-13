@@ -21,11 +21,11 @@ ZILLOW_ECONOMICS_DIR = os.path.join(DATA_DIR, 'Zillow Economics Data')
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-# ===== DB 설정 =====
+# ===== DB 설정 (비밀번호는 환경변수 MYSQL_PASSWORD 로 주입) =====
 DB_CONFIG = {
-    'host': 'localhost',
-    'user': 'root',
-    'password': '***REMOVED***',
+    'host': os.getenv('MYSQL_HOST', 'localhost'),
+    'user': os.getenv('MYSQL_USER', 'root'),
+    'password': os.getenv('MYSQL_PASSWORD', ''),
     'charset': 'utf8mb4'
 }
 DB_NAME = 'real_estate_comparison'

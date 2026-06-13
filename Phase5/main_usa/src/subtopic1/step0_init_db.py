@@ -18,11 +18,11 @@ DATA_KAGGLE_DIR = os.path.join(BASE_DIR, 'data_kaggle')
 OUTPUT_DIR = os.path.join(BASE_DIR, 'src', 'subtopic1', 'output')
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-# ── DB 접속 정보 ──
+# ── DB 접속 정보 (비밀번호는 환경변수 MYSQL_PASSWORD 로 주입) ──
 DB_CONFIG = {
-    'host': 'localhost',
-    'user': 'root',
-    'password': '***REMOVED***',
+    'host': os.getenv('MYSQL_HOST', 'localhost'),
+    'user': os.getenv('MYSQL_USER', 'root'),
+    'password': os.getenv('MYSQL_PASSWORD', ''),
     'charset': 'utf8mb4',
     'cursorclass': pymysql.cursors.DictCursor
 }
