@@ -1,315 +1,219 @@
-# 📚 KNU KDT 12기 — AI/빅데이터 전문가 양성 과정 프로젝트
+# 박준영 · Data Scientist Portfolio
 
-> **경북대학교 K-Digital Training 12기** (고용노동부 주관)
+> **통계학 학사 + AI/빅데이터 실전 프로젝트 13선**
 >
-> AI 빅데이터 전문가 양성 과정에서 수행한 **13개 Phase 미니 프로젝트** 모음입니다.
-> Python 기초부터 통계 분석, 데이터 시각화, 웹 크롤링, 머신러닝, 딥러닝, 컴퓨터 비전, 자연어 처리,
-> Next.js 풀스택 웹 서비스, FastAPI + LLM + RAG 기반 AI 대시보드까지
-> 전 파이프라인을 실전 프로젝트로 경험하며 데이터 분석 역량을 체계적으로 쌓았습니다.
+> 계명대학교 통계학과를 졸업하고, 경북대학교 **K-Digital Training 12기 AI·빅데이터 전문가 양성 과정**(고용노동부 주관, 2025.12~2026.06)에서
+> 통계 분석 → 머신러닝 → 딥러닝 → 컴퓨터 비전 → 자연어 처리 → 풀스택 AI 서비스까지
+> 데이터의 전 생애주기를 **13개 미니 프로젝트**로 직접 구현했습니다.
+> 통계적 추론으로 문제를 정의하고, ML/DL로 모델링하며, 서비스로 배포해 가치를 검증하는 것이 제 강점입니다.
 
 <br>
 
-| 항목 | 내용 |
+| | |
 |------|------|
-| **과정명** | AI 빅데이터 전문가 양성 K-Digital Training 12기 |
-| **주관** | 고용노동부 · 경북대학교 |
+| **이름** | 박준영 (Junyeong Park) |
+| **전공** | 계명대학교 통계학과 (졸업) |
+| **과정** | K-Digital Training 12기 · AI/빅데이터 전문가 양성 (경북대학교 · 고용노동부) |
 | **기간** | 2025.12 ~ 2026.06 |
-| **작성자** | 박준영 (계명대학교 통계학과 졸업) |
-| **GitHub** | [HorangEe02/KNU_KDT_12th](https://github.com/HorangEe02/KNU_KDT_12th) |
+| **GitHub** | [github.com/HorangEe02](https://github.com/HorangEe02) |
+| **포트폴리오** | [Notion 포트폴리오](https://www.notion.so/31879104c6f38039a53cfaa4b64ef712) |
 
 ---
 
-## 📋 프로젝트 목록
+## 🎯 한눈에 보는 강점
 
-| Phase | 프로젝트명 | 기간 | 과목 | 핵심 기술 | 역할 |
-|-------|----------|------|------|----------|------|
-| **[Phase 1](#phase-1--python-기초-프로젝트)** | Python 기초 프로젝트 (게임, 의료관리) | 2025.12 ~ 2026.01 | Python 프로그래밍 | Pygame, tkinter, OOP | 개인 |
-| **[Phase 2](#phase-2--흡연과-뇌졸중-상관관계-분석)** | 흡연과 뇌졸중 상관관계 분석 | 2026.01 | 의료 통계 | Pandas, 로지스틱 회귀, ML/DL | 팀 |
-| **[Phase 3](#phase-3--esports-분석-프로젝트)** | Esports 분석 프로젝트 | 2026.01 ~ 02 | 데이터 분석 | 경제/평등/의료 관점 분석 | 팀 |
-| **[Phase 4](#phase-4--기후변화와-식품-공급망-분석)** | 기후변화가 소스류 원재료에 미치는 영향 | 2026.02 | 데이터 수집과 처리 | 크롤링, 시계열 분석 | 팀 |
-| **[Phase 5](#phase-5--글로벌-내륙-거점-도시-비교)** | 글로벌 내륙 거점 도시 비교 (대구) | 2026.02 | 데이터 시각화 | Matplotlib, Seaborn, Plotly | 팀 |
-| **[Phase 6](#phase-6--의료-ai-취업동향-분석)** | 의료 AI 취업동향 크롤링 및 분석 | 2026.02 | 웹 크롤링 | Selenium, BeautifulSoup, NLP | 팀 |
-| **[Phase 7](#phase-7--mbtI혈액형-성격-이론-검증)** | MBTI/혈액형 성격 이론 검증 | 2026.03 | NumPy/통계 분석 | NumPy, 카이제곱, ANOVA, t-test | 팀 |
-| **[Phase 8](#phase-8--머신러닝-재고-관리-최적화)** | 머신러닝 기반 식료품 재고 관리 최적화 | 2026.03 | 머신러닝 | Scikit-learn, XGBoost, LightGBM, Streamlit | 팀장 |
-| **[Phase 9](#phase-9--opencv--ml-결함-자동-검수-시스템)** | OpenCV & ML 하이브리드 부품 결함 자동 검수 | 2026.03 | 컴퓨터 비전 | OpenCV, PyTorch, Autoencoder, Streamlit | 팀장 |
-| **[Phase 10](#phase-10--ai-스마트-팩토리-품질관리-시스템)** | AI 기반 스마트 팩토리 품질관리 시스템 | 2026.04 | 딥러닝 | CNN, U-Net, YOLOv8, BERT, Streamlit | 팀 |
-| **[Phase 11](#phase-11--헬창지피티-nlp-피트니스-코칭-서비스)** | 헬창지피티 — NLP 기반 피트니스 코칭 서비스 | 2026.04 | 자연어 처리 | Ollama LLM, EXAONE, NER, 감성분석, React | 팀 |
-| **[Phase 12](#phase-12--원정-응원-플래너-away-game-companion)** | 원정 응원 플래너 (KBO Away Game Companion) | 2026.04 | 풀스택 웹 / Cloud | Next.js 16, Firebase App Hosting, Gemini 2.5, React-Leaflet, Firestore | 팀 |
-| **[Phase 13 & 14](#phase-13--14--직장인-점심-추천-대시보드-lunch_menu_mini)** | 직장인 점심 추천 대시보드 (오늘 뭐 먹지) | 2026.04 ~ 2026.05 | 풀스택 AI 서비스 | FastAPI ×2, Next.js 16, Ollama/Gemini, KcELECTRA, RAG, Tool Calling, Docker, Cloudflare Tunnel | 팀 |
+- **통계적 엄밀함** — 가설검정·교란변수 통제·다변량 회귀로 "상관"과 "인과"를 구분 (전공 기반)
+- **End-to-End 모델링** — 분류·회귀·비지도학습·딥러닝·NLP를 데이터 특성에 맞게 선택·조합
+- **인사이트 → 의사결정** — SHAP/Feature Importance로 모델을 해석하고 비즈니스 액션으로 연결
+- **서비스화 역량** — 모델을 Streamlit·FastAPI·Next.js로 배포해 실제 동작하는 제품으로 완성
+- **팀 리딩** — 2개 프로젝트(Phase 8·9) 팀장으로 주제 기획·역할 분담·통합 담당
 
 ---
 
-## 🚀 Phase별 상세
+## 🧰 기술 스택 (증거 프로젝트 매핑)
 
-### Phase 1 — Python 기초 프로젝트
+| 영역 | 기술 | 대표 프로젝트 |
+|------|------|--------------|
+| **언어 · 기초** | Python, SQL, Git, OOP | Phase 1 · 전 과정 |
+| **통계 · 분석** | Pandas, NumPy, statsmodels, 로지스틱 회귀, 카이제곱·ANOVA·t-test, 효과크기 | Phase 2 · 5 · 7 |
+| **시각화** | Matplotlib, Seaborn, Plotly, Streamlit | Phase 5 · 8 · 9 · 10 |
+| **데이터 수집** | Selenium, BeautifulSoup, 공공 API 연동 | Phase 4 · 6 · 12 · 13&14 |
+| **머신러닝** | Scikit-learn, XGBoost, LightGBM, K-Means, SHAP | Phase 2 · 8 · 9 |
+| **딥러닝 · CV** | PyTorch, CNN, ResNet, U-Net, YOLOv8, Autoencoder, OpenCV | Phase 9 · 10 |
+| **NLP · LLM** | HuggingFace Transformers, KcELECTRA, BERT, NER, 감성분석, RAG(ChromaDB), Ollama, Gemini, Tool Calling | Phase 6 · 10 · 11 · 13&14 |
+| **웹 · 배포 · 인프라** | FastAPI, Next.js 16, React, Docker Compose, Firebase, Cloudflare Tunnel | Phase 11 · 12 · 13&14 |
 
-> **기간**: 2025.12.29 ~ 2026.01.12 | **과목**: Python 프로그래밍
+---
 
-| 항목 | 내용 |
+## ⭐ Featured Projects
+
+> 13개 중 데이터 사이언티스트 역량을 가장 잘 보여주는 **대표 5선**입니다.
+> 전체 목록은 [📚 전체 프로젝트](#-전체-프로젝트-13선)에서 확인할 수 있습니다.
+
+### 1. 직장인 점심 추천 통합 AI 대시보드 — *Phase 13 & 14* 🏆
+
+> **"오늘 뭐 먹지?"를 데이터로 해결한 KDT 전 과정 통합 캡스톤급 풀스택 AI 서비스**
+
+| | |
 |------|------|
-| **프로젝트** | Pygame FPS 게임 (심슨 둠) + 미니게임 6종 + tkinter 의료관리 GUI |
-| **핵심 기술** | Pygame 레이캐스팅, tkinter GUI, OOP, BFS 경로 탐색 |
-| **성과** | 3개 프로젝트 완성, NumPy 벡터 연산으로 10→60 FPS 최적화 |
-
-📂 [Phase1 폴더](./Phase1)
-
----
-
-### Phase 2 — 흡연과 뇌졸중 상관관계 분석
-
-> **기간**: 2026.01 | **과목**: 의료 통계
-
-| 항목 | 내용 |
-|------|------|
-| **데이터** | CDC BRFSS 2020 (319,795건) |
-| **연구 질문** | 교란변수 통제 후에도 흡연이 뇌졸중의 독립적 위험 요인인가? |
-| **핵심 기술** | 로지스틱 회귀, XGBoost (AUC 0.808), 딥러닝, SHAP 해석 |
-| **성과** | 흡연의 독립적 위험 인자 확인, 다변량 분석 역량 검증 |
-
-📂 [Phase2 폴더](./Phase2)
-
----
-
-### Phase 3 — Esports 분석 프로젝트
-
-> **기간**: 2026.01 ~ 02 | **과목**: 데이터 분석
-
-| 항목 | 내용 |
-|------|------|
-| **주제** | Esports는 스포츠로 인정받을 수 있는가? |
-| **분석 관점** | 경제적, 평등성, 의료적 3가지 관점에서 데이터 기반 분석 |
-| **핵심 기술** | Python, 통계 분석, 데이터 시각화 |
-
-📂 [Phase3 폴더](./Phase3)
-
----
-
-### Phase 4 — 기후변화와 식품 공급망 분석
-
-> **기간**: 2026.02 | **과목**: 데이터 수집과 처리
-
-| 항목 | 내용 |
-|------|------|
-| **주제** | 기후 변화가 햄버거 소스류(케찹, 마요네즈, 스리라차) 원재료에 미치는 영향 |
-| **핵심 기술** | 웹 크롤링, 시계열 분석, 상관관계 분석 |
-| **역할** | 소스류 파트 담당 (팀 6조) |
-
-📂 [Phase4 폴더](./Phase4)
-
----
-
-### Phase 5 — 글로벌 내륙 거점 도시 비교
-
-> **기간**: 2026.02 | **과목**: 데이터 시각화
-
-| 항목 | 내용 |
-|------|------|
-| **주제** | 글로벌 내륙 거점 도시 비교를 통한 대구광역시 발전 방향 탐구 |
-| **핵심 기술** | Matplotlib, Seaborn, Plotly, 인터랙티브 시각화 |
-| **팀** | Team 5 (백승훈, 박원호, 최규성, 박준영) |
-
-📂 [Phase5 폴더](./Phase5)
-
----
-
-### Phase 6 — 의료 AI 취업동향 분석
-
-> **기간**: 2026.02.20 ~ 02.23 | **과목**: 웹 크롤링
-
-| 항목 | 내용 |
-|------|------|
-| **주제** | 의료 AI 분야 취업 동향 크롤링 및 분석 |
-| **데이터** | 4개 소스에서 3,532건 수집 |
-| **핵심 기술** | Selenium, BeautifulSoup, 형태소 분석, 의료용어 정규화 |
-| **파이프라인** | 크롤링 → 전처리(HTML 제거, 정규화) → 분석(형태소, 트렌드) |
-
-📂 [Phase6 폴더](./Phase6)
-
----
-
-### Phase 7 — MBTI/혈액형 성격 이론 검증
-
-> **기간**: 2026.03 | **과목**: NumPy/통계 분석
-
-| 항목 | 내용 |
-|------|------|
-| **주제** | MBTI와 혈액형 — 과학인가 미신인가? 데이터로 검증 |
-| **핵심 기술** | NumPy, 카이제곱 검정, ANOVA, t-test, 효과 크기 분석 |
-| **성과** | 혈액형 성격론의 통계적 근거 부재 입증, MBTI 일부 차원의 유의미성 발견 |
-
-📂 [Phase7 폴더](./Phase7)
-
----
-
-### Phase 8 — 머신러닝 재고 관리 최적화
-
-> **기간**: 2026.03.02 ~ 03.16 | **과목**: 머신러닝 | **역할**: 팀장
-
-| 항목 | 내용 |
-|------|------|
-| **주제** | 머신러닝 기반 식료품 유통 재고 관리 최적화 시스템 |
-| **데이터** | Kaggle E-Grocery (1,000 SKU × 37열) |
-| **핵심 기술** | LightGBM (Acc 99%), XGBoost (R²=0.948), K-Means 클러스터링, SHAP |
-| **대시보드** | Streamlit WMS v3.5 (7페이지, 듀얼 모드, 20+ ML 모델) |
-| **팀** | 굿핏 — 박준영(팀장), 이현아, 권효중, 정이랑 |
-| **특징** | 분류·회귀·비지도학습 3종 ML + Feature Importance 3중 교차검증 + EOQ 시뮬레이션 |
-
-📂 [Phase8 폴더](./Phase8)
-
----
-
-### Phase 9 — OpenCV & ML 결함 자동 검수 시스템
-
-> **기간**: 2026.03.20 ~ 03.23 | **과목**: 컴퓨터 비전 | **역할**: 팀장
-
-| 항목 | 내용 |
-|------|------|
-| **주제** | OpenCV & ML 하이브리드 부품 결함 자동 검수 시스템 |
-| **데이터** | Kaggle Severstal (12,568장 → **150,816 패치**, stride=128 오버랩) |
-| **핵심 성과** | Stage 1 DL **93.25%** / Stage 2 DL **88.60%** / AE Recall **96.0%** |
-| **핵심 인사이트** | 교차 도메인 검증: ML 51.6% > DL 14.4% → **"데이터 > 아키텍처"** |
-| **대시보드** | Streamlit 8탭 (듀얼 모드: 시뮬레이터/인사이트) |
-| **팀** | Vision-Q — 박준영(팀장) |
-| **특징** | ML 7종 + DL(ResNet-18) + Autoencoder + 교차 도메인 검증 + 합성 강건성 테스트 |
-
-📂 [Phase9 폴더](./Phase9)
-
----
-
-### Phase 10 — AI 스마트 팩토리 품질관리 시스템
-
-> **기간**: 2026.04.01 ~ 04.02 | **과목**: 딥러닝
-
-| 항목 | 내용 |
-|------|------|
-| **주제** | 딥러닝을 활용한 제조 공정 품질 검사 자동화 및 설비 예지보전 통합 플랫폼 |
-| **핵심 기술** | CNN 이미지 분류, U-Net 세그먼테이션, YOLOv8 객체탐지, BERT/LSTM 텍스트 분류 |
-| **소주제** | A. 주조 제품 불량 분류 · B. 표면 균열 세그먼테이션 · C. PCB 결함 탐지 · D. 설비 고장 예측 |
-| **활용 도구** | PyTorch, Ultralytics, HuggingFace Transformers, Streamlit, Google Colab |
-| **팀** | KPJ 팩토리 (4명, 소주제별 1인 담당) |
-
-📂 [Phase10 폴더](./Phase10)
-
----
-
-### Phase 11 — 헬창지피티: NLP 피트니스 코칭 서비스
-
-> **기간**: 2026.04.07 ~ 04.13 | **과목**: 자연어 처리
-
-| 항목 | 내용 |
-|------|------|
-| **주제** | LLM 기반 맞춤형 피트니스 토탈 코칭 서비스 (헬창지피티) |
-| **핵심 기술** | Ollama 로컬 LLM (EXAONE, Qwen, Gemma), NER, 텍스트 분류, 감성분석, 텍스트 생성 |
-| **파이프라인** | 4단계 NLP: 프로필 분석(기) → 식단 생성(승) → 운동 루틴(전) → 동기부여 피드백(결) |
-| **주요 기능** | 인바디 이미지 OCR 파싱, 자연어 목표 분류, 맞춤 식단/운동 추천, 운동일기 감성분석 |
-| **프론트엔드** | React + Vite + Tailwind CSS |
-| **팀** | 오운완 4팀 |
-
-📂 [Phase11 폴더](./Phase11)
-
----
-
-### Phase 12 — 원정 응원 플래너 (Away Game Companion)
-
-> **기간**: 2026.04 | **과목**: 풀스택 웹 / Cloud 배포
-
-| 항목 | 내용 |
-|------|------|
-| **주제** | KBO 10개 구단 · 전국 8개 도시 · 연간 720경기 — 원정 응원러를 위한 올인원 플래너 |
-| **핵심 기능** | 6 페이지 (matches/map/places/ai/badges/share) + Gemini Tool Calling + 3-tier 길찾기 폴백 (Kakao → OSRM → Haversine) + Stadium Tour 10구장 체크 |
-| **핵심 기술** | Next.js 16 (App Router · SSR · UIMessageStream) · React 19.2 · Tailwind v4 · Zustand · React-Leaflet · Cloud Firestore |
-| **AI 통합** | Gemini 2.5 Flash Lite 스트리밍 챗봇 + 6 tool calling + Multi-Agent + 🎬 demoMode (Mock 시나리오) |
-| **배포** | Firebase App Hosting (Cloud Run · `asia-east1`) · GitHub auto-rollout · Secret Manager 7종 · 모바일 자동 테스트 138/138 PASS |
-| **데이터** | scikit-learn 승률 모델 → TS 이식 · 정적 JSON (schedule · stadiums · POI) · KMA 단기예보 · TourAPI |
-| **모바일 최적화** | viewport meta · safe-area-inset · 44px 터치 타깃 · BottomSheet snap 동적화 · iPad 반응형 사이드바 |
-| **성과** | 6 페이지 라이브 배포 · 138 모바일 자동 테스트 PASS · Streamlit → Next.js 마이그레이션 완주 |
-
-📂 [Phase12 폴더](./Phase12) · 🌐 [Live Demo](https://my-web-app--mini12-310f5.asia-east1.hosted.app)
-
----
-
-### Phase 13 & 14 — 직장인 점심 추천 대시보드 (lunch_menu_mini)
-
-> **기간**: 2026.04 ~ 2026.05 | **주제**: "오늘 뭐 먹지?"를 데이터로 해결
-
-| 항목 | 내용 |
-|------|------|
-| **주제** | 날씨 · 영양 · 팀 선호도 · 음식점 정보 4축을 통합 분석하여 매일 점심 의사결정을 자동화하는 풀스택 AI 대시보드 |
-| **백엔드** | `lunch-optimizer` (FastAPI · 음식점/날씨/영양/투표/사용자 32 엔드포인트 · 17,402개 음식점 SQLite) + `nlp-api` (FastAPI · NLP MVP 5모듈 + Research v2 + Tool Calling 18 엔드포인트) |
-| **NLP 모듈** | KcELECTRA 감성 분석 · 메뉴 정규화 · RAG 챗봇 (ChromaDB) · NLG 주간 리포트 · ABSA(Aspect-Based Sentiment) · Food NER · Multi-turn Tool Calling |
-| **프런트엔드** | Next.js 16 PWA (7 페이지: Dashboard / Discovery / Weather / Nutrition / Concierge / Vote / Insights) · TanStack Query · Kakao Maps · BottomNav 모바일 최적화 |
-| **인프라** | Docker Compose 5-서비스 (lunch-api · nlp-api · web · ollama · caddy) · Caddy HTTPS internal CA · Cloudflare quick tunnel + Firebase Hosting 데모 자동화 (`scripts/deploy_demo.sh`) |
-| **LLM 토글** | 호스트 Ollama (qwen2.5:7b) ↔ Google Gemini 2.5 Pro 런타임 토글 · Settings 패널 UI 제어 |
-| **운영** | 외장 SSD → 내장 SSD 마이그레이션 · Quick tunnel 만료 자동 갱신 절차 · Phase 13 인증/RBAC · Phase 14 자연어 영양 입력 |
-| **특징** | 데이터 파이프라인 + ML/NLP + 풀스택 + 인프라 + 데모 배포까지 K-Digital Training 12기 전 과정 통합 적용 |
+| **문제** | 직장인의 반복되는 점심 의사결정 피로(Decision Fatigue), 편향된 식사 패턴, 주간 영양 불균형 |
+| **접근** | 날씨·영양·팀 선호도·음식점 4축을 하나의 파이프라인으로 통합 + 가중 점수 추천 + NLP 7모듈 |
+| **NLP** | KcELECTRA 감성분석 · 메뉴 정규화 · RAG 챗봇(ChromaDB) · ABSA · Food NER · Multi-turn Tool Calling · NLG 주간 리포트 |
+| **규모** | FastAPI ×2 (50 엔드포인트) · 음식점 **17,402개** SQLite · Next.js 16 PWA 7페이지 |
+| **인프라** | Docker Compose 5-서비스(api·nlp·web·ollama·caddy) · Cloudflare Tunnel · LLM 런타임 토글(Ollama ↔ Gemini) · 데모 배포 자동화 |
+| **기술** | FastAPI · Next.js 16 · KcELECTRA · ChromaDB · Ollama/Gemini · Docker · Caddy · TanStack Query |
+| **역할** | 팀 |
 
 📂 [Phase13&14 폴더](./Phase13%2614)
 
 ---
 
-## 🛠️ 기술 스택 성장 로드맵
+### 2. OpenCV & ML 하이브리드 부품 결함 자동 검수 — *Phase 9* (팀장)
 
-```
-Phase 1  ─── Python 기초 (Pygame, tkinter, OOP)
-    │
-Phase 2  ─── 통계 분석 (Pandas, 로지스틱 회귀, XGBoost)
-    │
-Phase 3  ─── 데이터 분석 (다관점 분석, 시각화)
-    │
-Phase 4  ─── 데이터 수집 (웹 크롤링, 시계열)
-    │
-Phase 5  ─── 데이터 시각화 (Matplotlib, Seaborn, Plotly)
-    │
-Phase 6  ─── 웹 크롤링 (Selenium, BeautifulSoup, NLP)
-    │
-Phase 7  ─── 통계 검정 (NumPy, 카이제곱, ANOVA, t-test)
-    │
-Phase 8  ─── 머신러닝 (Scikit-learn, XGBoost, LightGBM, Streamlit WMS)
-    │
-Phase 9  ─── 컴퓨터 비전 (OpenCV, PyTorch, ResNet-18, Autoencoder, Streamlit)
-    │
-Phase 10 ─── 딥러닝 (CNN, U-Net, YOLOv8, BERT, HuggingFace Transformers)
-    │
-Phase 11 ─── 자연어 처리 (Ollama LLM, EXAONE, NER, 감성분석, React)
-    │
-Phase 12 ─── 풀스택 웹 / Cloud (Next.js 16, Firebase App Hosting, Gemini Tool Calling, React-Leaflet)
-    │
-Phase 13&14 ─── 통합 AI 서비스 (FastAPI ×2, NLP MVP+Research v2, RAG, Tool Calling, Docker, Cloudflare Tunnel)
-```
+> **철강 표면 4종 결함 2-Stage 자동 검수 + "데이터 > 아키텍처"를 실증한 교차 도메인 검증**
 
----
-
-## 📊 프로젝트 규모 통계
-
-| Phase | 파일 수 | README 크기 | 주요 산출물 |
-|-------|---------|------------|-----------|
-| Phase 1 | 73개 | 13.4KB | FPS 게임, 미니게임 6종, 의료관리 GUI |
-| Phase 2 | 22개 | 10.6KB | 분석 보고서, 시각화 차트 |
-| Phase 3 | 271개 | 4.2KB | 경제/평등/의료 3관점 분석 |
-| Phase 4 | 55개 | 13.0KB | 크롤링 데이터, 분석 보고서 |
-| Phase 5 | 163개 | 22.5KB | 인터랙티브 시각화, 발표자료 |
-| Phase 6 | 370개 | 28.8KB | 크롤링 파이프라인, NLP 분석 |
-| Phase 7 | 153개 | 75.8KB | 통계 검정 보고서, 시각화 |
-| Phase 8 | 428개 | 66.8KB | Streamlit WMS v3.5, 4개 소주제 보고서 |
-| Phase 9 | 162개 | 47.2KB | 12개 노트북, Streamlit 8탭, 5개 보고서 |
-| Phase 10 | 150개 | 34.5KB | 4개 소주제 DL 모델, Streamlit 대시보드 |
-| Phase 11 | 149개 | 18.3KB | NLP 파이프라인, React 프론트엔드, 기능설명서 |
-| Phase 12 | 443개 | 28.2KB | Next.js 16 풀스택, Firebase App Hosting 라이브 배포, Gemini Tool Calling, React-Leaflet 지도 |
-| Phase 13&14 | 457개 | 36.2KB | FastAPI ×2, Next.js PWA, NLP MVP+Research v2, RAG 챗봇, Docker Compose 5-서비스, 데모 배포 자동화 |
-| **합계** | **2,896개** | — | **13개 Phase 프로젝트 완성** |
-
----
-
-## 👤 작성자
-
-| 항목 | 내용 |
+| | |
 |------|------|
-| **이름** | 박준영 |
-| **학교** | 계명대학교 통계학과 (졸업) |
-| **과정** | K-Digital Training 12기 AI/빅데이터 전문가 양성 |
-| **GitHub** | [HorangEe02](https://github.com/HorangEe02) |
-| **포트폴리오** | [Notion 포트폴리오](https://www.notion.so/31879104c6f38039a53cfaa4b64ef712) |
+| **문제** | 제조 품질검사 자동화 — 산업 규모(15만 장+) 이미지 결함 분류 파이프라인 구축 |
+| **데이터** | Kaggle Severstal 12,568장 → **150,816 패치**(256×256, stride=128, 50% 오버랩) |
+| **접근** | 2-Stage(이진 → 4종 분류) · OpenCV 전처리 · ML 7종 · DL(ResNet-18) · Autoencoder 이상탐지 |
+| **성과** | Stage1 DL **90.87%** / Stage2 DL **86.01%** / AE Recall **96.0%** · Streamlit 8탭 대시보드 |
+| **핵심 인사이트** | Severstal→NEU 교차 도메인 검증에서 ML **51.6%** > DL **14.4%** → 일반화에는 *아키텍처보다 데이터가 중요*함을 실증 |
+| **기술** | OpenCV · Scikit-learn · PyTorch · Autoencoder · Streamlit |
+| **역할** | **팀장** (Vision-Q) |
+
+📂 [Phase9 폴더](./Phase9)
 
 ---
 
-*본 레포지토리는 경북대학교 K-Digital Training AI/빅데이터 전문가 양성 12기 과정에서 수행한 미니 프로젝트 모음입니다.*
+### 3. 머신러닝 기반 재고 관리 최적화 WMS — *Phase 8* (팀장)
+
+> **하나의 데이터셋으로 분류·회귀·비지도학습을 아우른 중소 유통 재고 최적화 시스템**
+
+| | |
+|------|------|
+| **문제** | 중소 유통업체의 WMS 부재(ERP 도입률 16.3%) → 과잉 재고 폐기·품절 반복 |
+| **접근** | 4개 소주제 — 재고상태 분류 · 판매량 예측 · 폐기위험 예측 · 발주전략 클러스터링 + EOQ 시뮬레이션 |
+| **성과** | LightGBM Acc **99%** · XGBoost **R²=0.948** · K-Means 군집별 발주전략 · Feature Importance 3중 교차검증 · SHAP 해석 |
+| **산출물** | Streamlit WMS v3.5 — 7페이지, 듀얼 모드, 20+ ML 모델 탑재 대시보드 |
+| **기술** | Scikit-learn · XGBoost · LightGBM · K-Means · SHAP · Streamlit |
+| **역할** | **팀장** (굿핏) |
+
+📂 [Phase8 폴더](./Phase8)
+
+---
+
+### 4. 흡연과 뇌졸중 상관관계 분석 — *Phase 2*
+
+> **통계학 전공 강점을 살린 의료 통계 — 교란변수 통제 후에도 흡연이 독립 위험요인인지 검증**
+
+| | |
+|------|------|
+| **연구 질문** | 나이·성별·BMI·음주·신체활동을 통제한 후에도 흡연은 뇌졸중 위험을 높이는가? |
+| **데이터** | CDC BRFSS 2020 — **319,795명** × 18변수 (결측치 0%) |
+| **접근** | 카이제곱·Cramér's V → 다변량 로지스틱 회귀(Crude → 완전보정 OR) → 상호작용·층화 분석 → VIF → ML/DL 비교 |
+| **성과** | 흡연자 발생률 **5.17%** vs 비흡연자 2.80%(1.85배) · 완전보정 후에도 유의 · XGBoost AUC **0.808** · PyTorch(Focal Loss) 앙상블 · SHAP 해석 |
+| **기술** | Pandas · statsmodels · Scikit-learn · XGBoost · PyTorch · SHAP |
+| **역할** | 팀 |
+
+📂 [Phase2 폴더](./Phase2)
+
+---
+
+### 5. KBO 원정 응원 플래너 — *Phase 12* 🌐
+
+> **데이터 모델을 실서비스로 — Gemini Tool Calling 챗봇이 탑재된 라이브 풀스택 웹앱**
+
+| | |
+|------|------|
+| **주제** | KBO 10개 구단·전국 8개 도시·연간 720경기 원정 응원러를 위한 올인원 플래너 (6페이지) |
+| **데이터 → 서비스** | scikit-learn 승률 예측 모델을 TypeScript로 이식 · 3-tier 길찾기 폴백(Kakao → OSRM → Haversine) |
+| **AI 통합** | Gemini 2.5 Flash Lite 스트리밍 챗봇 + 6 Tool Calling + Multi-Agent |
+| **성과** | Firebase App Hosting **라이브 배포** · 모바일 자동 테스트 **138/138 PASS** · Secret Manager 7종 · GitHub auto-rollout |
+| **기술** | Next.js 16 · React 19 · Gemini 2.5 · React-Leaflet · Cloud Firestore · Firebase App Hosting |
+| **역할** | 팀 |
+
+📂 [Phase12 폴더](./Phase12) · 🌐 [Live Demo](https://my-web-app--mini12-310f5.asia-east1.hosted.app)
+
+---
+
+## 📚 전체 프로젝트 (13선)
+
+| Phase | 프로젝트 | 기간 | 분야 | 핵심 기술 | 역할 |
+|-------|---------|------|------|----------|------|
+| **[1](./Phase1)** | Python 기초 (Pygame FPS·미니게임·tkinter GUI) | 2025.12~2026.01 | Python | Pygame 레이캐스팅, tkinter, OOP | 개인 |
+| **[2](./Phase2)** ⭐ | 흡연과 뇌졸중 상관관계 분석 | 2026.01 | 의료 통계 | 로지스틱 회귀, XGBoost(AUC 0.808), SHAP | 팀 |
+| **[3](./Phase3)** | Esports 분석 (경제·평등·의료 3관점) | 2026.01~02 | 데이터 분석 | Pandas, 통계 분석, 시각화 | 팀 |
+| **[4](./Phase4)** | 기후변화가 소스류 원재료에 미치는 영향 | 2026.02 | 데이터 수집 | 크롤링, 시계열 분석 | 팀 |
+| **[5](./Phase5)** | 글로벌 내륙 거점 도시 비교 (대구) | 2026.02 | 데이터 시각화 | Matplotlib, Seaborn, Plotly | 팀 |
+| **[6](./Phase6)** | 의료 AI 취업동향 크롤링·분석 | 2026.02 | 웹 크롤링 | Selenium, BeautifulSoup, 형태소 분석 | 팀 |
+| **[7](./Phase7)** | MBTI/혈액형 성격 이론 검증 | 2026.03 | 통계 검정 | NumPy, 카이제곱, ANOVA, t-test | 팀 |
+| **[8](./Phase8)** ⭐ | ML 재고 관리 최적화 WMS | 2026.03 | 머신러닝 | LightGBM, XGBoost, K-Means, SHAP, Streamlit | **팀장** |
+| **[9](./Phase9)** ⭐ | OpenCV & ML 결함 자동 검수 | 2026.03 | 컴퓨터 비전 | OpenCV, PyTorch, Autoencoder, Streamlit | **팀장** |
+| **[10](./Phase10)** | AI 스마트 팩토리 품질관리 | 2026.04 | 딥러닝 | CNN, U-Net, YOLOv8, BERT | 팀 |
+| **[11](./Phase11)** | 헬창지피티 — NLP 피트니스 코칭 | 2026.04 | 자연어 처리 | Ollama LLM, NER, 감성분석, React | 팀 |
+| **[12](./Phase12)** ⭐ | 원정 응원 플래너 (KBO) | 2026.04 | 풀스택/Cloud | Next.js 16, Firebase, Gemini Tool Calling | 팀 |
+| **[13&14](./Phase13%2614)** ⭐ | 직장인 점심 추천 통합 AI 대시보드 | 2026.04~05 | 풀스택 AI | FastAPI×2, Next.js, RAG, KcELECTRA, Docker | 팀 |
+
+> ⭐ = Featured (상세는 위 [Featured Projects](#-featured-projects) 참고)
+
+---
+
+## 🛠️ 역량 성장 로드맵
+
+```
+Phase 1     Python 기초          Pygame · tkinter · OOP
+   │
+Phase 2~3   통계·데이터 분석      로지스틱 회귀 · XGBoost · 다관점 분석
+   │
+Phase 4~6   수집·시각화·크롤링    Selenium · BeautifulSoup · Plotly
+   │
+Phase 7     통계 검정            NumPy · 카이제곱 · ANOVA · t-test
+   │
+Phase 8     머신러닝             LightGBM · XGBoost · K-Means · SHAP
+   │
+Phase 9     컴퓨터 비전          OpenCV · ResNet-18 · Autoencoder
+   │
+Phase 10    딥러닝               CNN · U-Net · YOLOv8 · BERT
+   │
+Phase 11    자연어 처리          Ollama LLM · NER · 감성분석
+   │
+Phase 12    풀스택/Cloud         Next.js 16 · Firebase · Gemini Tool Calling
+   │
+Phase 13&14 통합 AI 서비스       FastAPI ×2 · RAG · KcELECTRA · Docker · Tunnel
+```
+
+---
+
+## 📊 프로젝트 규모
+
+| Phase | 파일 수 | 주요 산출물 |
+|-------|---------|-----------|
+| 1 | 73 | FPS 게임, 미니게임 6종, 의료관리 GUI |
+| 2 | 22 | 분석 보고서, 시각화 차트 |
+| 3 | 271 | 경제/평등/의료 3관점 분석 |
+| 4 | 55 | 크롤링 데이터, 분석 보고서 |
+| 5 | 163 | 인터랙티브 시각화, 발표자료 |
+| 6 | 370 | 크롤링 파이프라인, NLP 분석 |
+| 7 | 153 | 통계 검정 보고서, 시각화 |
+| 8 | 428 | Streamlit WMS v3.5, 4개 소주제 보고서 |
+| 9 | 162 | 12개 노트북, Streamlit 8탭, 5개 보고서 |
+| 10 | 150 | 4개 소주제 DL 모델, Streamlit 대시보드 |
+| 11 | 149 | NLP 파이프라인, React 프론트엔드 |
+| 12 | 443 | Next.js 16 풀스택, Firebase 라이브 배포 |
+| 13&14 | 457 | FastAPI ×2, Next.js PWA, RAG 챗봇, Docker 5-서비스 |
+| **합계** | **~2,900** | **13개 Phase 프로젝트 완성** |
+
+---
+
+## 📫 Contact
+
+| | |
+|------|------|
+| **GitHub** | [github.com/HorangEe02](https://github.com/HorangEe02) |
+| **Email** | catlife9029@gmail.com |
+| **Notion 포트폴리오** | [바로가기](https://www.notion.so/31879104c6f38039a53cfaa4b64ef712) |
+
+---
+
+*본 레포지토리는 경북대학교 K-Digital Training AI/빅데이터 전문가 양성 12기 과정에서 수행한 미니 프로젝트 모음입니다. 각 Phase 폴더에 상세 README가 포함되어 있습니다.*
