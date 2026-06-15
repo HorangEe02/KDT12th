@@ -1,3 +1,5 @@
+**한국어** | [English](./README.en.md)
+
 # 박준영 · Data Scientist Portfolio
 
 > **통계학 학사 + AI/빅데이터 실전 프로젝트 13선**
