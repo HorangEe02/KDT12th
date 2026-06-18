@@ -49,7 +49,7 @@
 
 ## ⭐ Featured Projects
 
-> 13개 중 데이터 사이언티스트 역량을 가장 잘 보여주는 **대표 5선**입니다.
+> 13개 중 데이터 사이언티스트 역량을 가장 잘 보여주는 **대표 6선**입니다.
 > 전체 목록은 [📚 전체 프로젝트](#-전체-프로젝트-13선)에서 확인할 수 있습니다.
 
 ### 1. 직장인 점심 추천 통합 AI 대시보드 — *Phase 13 & 14* 🏆
@@ -122,7 +122,25 @@
 
 ---
 
-### 5. KBO 원정 응원 플래너 — *Phase 12* 🌐
+### 5. 헬창지피티 — NLP 피트니스 코칭 — *Phase 11*
+
+> **자연어 한 문장을 프로필 분석, 식단 생성, 운동 루틴, 피드백까지 연결한 4단계 NLP 코칭 서비스**
+
+| | |
+|------|------|
+| **문제** | 운동을 시작하고 싶지만 전문 지식이 부족한 사용자가 식단·운동·피드백 정보를 각각 따로 찾아야 하는 불편 |
+| **접근** | 자연어 입력 → 프로필 분석 → 식단 생성 → 운동 루틴 설계 → 운동 일지 감성 분석 및 동기부여 피드백 |
+| **NLP** | NER · 목표 유형 분류 · 키워드 추출 · 식단/운동 텍스트 생성 · 감성 분석 · 요약 · 검색 기반 운동 정보 제공 |
+| **LLM/검색** | Ollama 기반 로컬 LLM · EXAONE 계열 모델 활용 · sentence-transformers/FAISS · BM25 검색 구조 |
+| **산출물** | React 기반 피트니스 코칭 UI, 4단계 NLP 파이프라인, 모델/파라미터 비교 대시보드 설계 |
+| **기술** | React · Tailwind CSS · FastAPI · Ollama LLM · NER · 감성분석 · sentence-transformers · BM25 |
+| **역할** | 팀 |
+
+📂 [Phase11 폴더](./Phase11)
+
+---
+
+### 6. KBO 원정 응원 플래너 — *Phase 12* 🌐
 
 > **데이터 모델을 실서비스로 — Gemini Tool Calling 챗봇이 탑재된 라이브 풀스택 웹앱**
 
@@ -153,7 +171,7 @@
 | **[8](./Phase8)** ⭐ | ML 재고 관리 최적화 WMS | 2026.03 | 머신러닝 | LightGBM, XGBoost, K-Means, SHAP, Streamlit | **팀장** |
 | **[9](./Phase9)** ⭐ | OpenCV & ML 결함 자동 검수 | 2026.03 | 컴퓨터 비전 | OpenCV, PyTorch, Autoencoder, Streamlit | **팀장** |
 | **[10](./Phase10)** | AI 스마트 팩토리 품질관리 | 2026.04 | 딥러닝 | CNN, U-Net, YOLOv8, BERT | 팀 |
-| **[11](./Phase11)** | 헬창지피티 — NLP 피트니스 코칭 | 2026.04 | 자연어 처리 | Ollama LLM, NER, 감성분석, React | 팀 |
+| **[11](./Phase11)** ⭐ | 헬창지피티 — NLP 피트니스 코칭 | 2026.04 | 자연어 처리 | Ollama LLM, NER, 감성분석, React | 팀 |
 | **[12](./Phase12)** ⭐ | 원정 응원 플래너 (KBO) | 2026.04 | 풀스택/Cloud | Next.js 16, Firebase, Gemini Tool Calling | 팀 |
 | **[13&14](./Phase13%2614)** ⭐ | 직장인 점심 추천 통합 AI 대시보드 | 2026.04~05 | 풀스택 AI | FastAPI×2, Next.js, RAG, KcELECTRA, Docker | 팀 |
 
